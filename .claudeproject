@@ -1,0 +1,22 @@
+# Controlled Dynamics Inc - Claude Code Project Configuration
+
+This is a Next.js project for Controlled Dynamics Inc., a precision engineering and motion control solutions company.
+
+## Project Information
+- **Name:** Controlled Dynamics Inc.
+- **Domain:** controlleddynamicsinc.com
+- **Framework:** Next.js 16 with App Router
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+
+## Quick Commands
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm start` - Start production server
+- `./EXECUTE_DEPLOYMENT.sh` - Deploy to Heroku
+
+## URLs
+- Development: http://localhost:3000
+- Production: https://controlleddynamicsinc.com
+- Heroku: https://controlleddynamicsinc-9454610b5597.herokuapp.com
+- GitHub: https://github.com/watchdogpedro/controlleddynamicsinc.com

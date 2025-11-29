@@ -1,36 +1,146 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Controlled Dynamics Inc. Website
+
+Professional website for Controlled Dynamics Inc. - Precision Engineering & Advanced Motion Control Solutions
+
+## Tech Stack
+
+- **Framework:** Next.js 14 (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Deployment:** Heroku
+- **Repository:** GitHub
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js 18+ installed
+- npm or yarn package manager
+- Git
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/watchdogpedro/controlleddynamicsinc.com.git
+cd controlleddynamicsinc.com
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Set up environment variables:
+```bash
+cp .env.example .env.local
+```
+Edit `.env.local` with your configuration.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Run the development server:
+```bash
+npm run dev
+```
 
-## Learn More
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-To learn more about Next.js, take a look at the following resources:
+## Available Scripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm start` - Start production server
+- `npm run lint` - Run ESLint
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Project Structure
 
-## Deploy on Vercel
+```
+controlleddynamicsinc.com/
+├── app/                    # Next.js App Router pages
+│   ├── layout.tsx         # Root layout
+│   ├── page.tsx           # Homepage
+│   └── globals.css        # Global styles
+├── public/                # Static assets
+├── .env.example           # Environment variables template
+├── .env.local            # Local environment (not committed)
+└── package.json          # Dependencies
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Heroku Deployment
+
+1. Login to Heroku:
+```bash
+heroku login
+```
+
+2. Create Heroku app:
+```bash
+heroku create controlleddynamicsinc
+```
+
+3. Set up automatic deploys from GitHub:
+   - Go to Heroku Dashboard
+   - Navigate to your app
+   - Click "Deploy" tab
+   - Connect to GitHub repository
+   - Enable automatic deploys from main branch
+
+4. Configure environment variables in Heroku:
+```bash
+heroku config:set NEXT_PUBLIC_SITE_URL=https://controlleddynamicsinc.com
+```
+
+### Custom Domain Setup
+
+1. Add domain in Heroku:
+```bash
+heroku domains:add controlleddynamicsinc.com
+heroku domains:add www.controlleddynamicsinc.com
+```
+
+2. Update DNS at Porkbun:
+   - Add CNAME record: `www` → `[your-app].herokuapp.com`
+   - Add ALIAS/ANAME record: `@` → `[your-app].herokuapp.com`
+
+## Domain Information
+
+- **Domain:** controlleddynamicsinc.com
+- **Registrar:** Porkbun.com
+- **Nameservers:**
+  - curitiba.ns.porkbun.com
+  - fortaleza.ns.porkbun.com
+  - maceio.ns.porkbun.com
+  - salvador.ns.porkbun.com
+
+## Development
+
+### Adding New Pages
+
+Create new pages in the `app/` directory:
+
+```tsx
+// app/about/page.tsx
+export default function About() {
+  return <div>About Page</div>;
+}
+```
+
+### Styling
+
+This project uses Tailwind CSS. Customize the theme in `tailwind.config.ts`.
+
+## Repository
+
+- **GitHub:** https://github.com/watchdogpedro/controlleddynamicsinc.com
+- **Live Site:** https://controlleddynamicsinc.com (pending deployment)
+
+## License
+
+Copyright © 2024 Controlled Dynamics Inc. All rights reserved.
+
+## Contact
+
+For questions or support, contact: Paul Denman
+- Email: watchdogpedro@gmail.com
+- Organization: Winfield Tech

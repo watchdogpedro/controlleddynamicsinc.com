@@ -10,14 +10,16 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0A1628]">
       {/* Hero Background Image */}
-      <div className="absolute inset-0">
-        <Image
-          src="/robotics-hero.png"
-          alt="Advanced Robotics Manufacturing"
-          fill
-          className="object-cover opacity-70"
-          priority
-        />
+      <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
+        <div className="relative w-full h-[70%]">
+          <Image
+            src="/robotics-hero.png"
+            alt="Advanced Robotics Manufacturing"
+            fill
+            className="object-cover opacity-70"
+            priority
+          />
+        </div>
         {/* Dark overlay for better text readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#0A1628]/30 via-[#0A1628]/40 to-[#0A1628]/60" />
       </div>

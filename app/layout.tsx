@@ -1,25 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "Controlled Dynamics Inc. | Precision Engineering & Motion Control",
-  description: "Advanced motion control solutions and precision engineering services for industrial applications. Expert engineering excellence and innovative technology.",
-  keywords: ["motion control", "precision engineering", "industrial automation", "control systems"],
+  title: "Controlled Dynamics Inc. | Advanced Industrial Structural Systems",
+  description: "Mission-critical aluminum framing systems powered by breakthrough AngleLock technology. 10x stronger than T-slot, 50% faster assembly. Engineering tomorrow's foundations today.",
+  keywords: ["aluminum framing", "industrial structures", "AngleLock technology", "aerospace", "life sciences", "semiconductor", "robotics", "modular systems"],
   authors: [{ name: "Controlled Dynamics Inc." }],
   openGraph: {
-    title: "Controlled Dynamics Inc.",
-    description: "Precision Engineering & Advanced Motion Control Solutions",
+    title: "Controlled Dynamics Inc. | Advanced Industrial Structural Systems",
+    description: "Engineering structures without limits. Mission-critical aluminum framing systems powered by breakthrough AngleLock technology.",
     url: "https://controlleddynamicsinc.com",
     siteName: "Controlled Dynamics Inc.",
     type: "website",
@@ -33,9 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className="antialiased">
         {children}
       </body>
     </html>

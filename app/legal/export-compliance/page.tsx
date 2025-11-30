@@ -384,11 +384,10 @@ export default function ExportCompliancePage() {
               </p>
               <div className="bg-gray-50 p-6 rounded-lg border border-gray-200 my-6">
                 <p className="font-bold mb-2">Export Compliance Officer</p>
-                <p className="font-semibold">Winfield Technologies Inc.</p>
-                <p>DBA: Controlled Dynamics Inc.</p>
+                <p className="font-semibold">Controlled Dynamics Inc.</p>
                 <p>Email: export.compliance@controlleddynamicsinc.com</p>
                 <p>Phone: [Your Phone Number]</p>
-                <p>Address: [Minnesota Business Address]</p>
+                <p>Address: [Your Business Address]</p>
               </div>
 
               <div className="bg-red-50 border-l-4 border-red-600 p-6 my-8">

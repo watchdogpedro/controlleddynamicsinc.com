@@ -62,18 +62,10 @@ export default function TermsOfSalePage() {
               <h2>1. Acceptance of Terms</h2>
               <p>
                 These Terms of Sale ("Terms") govern all sales of structural systems, components, and related products
-                ("Products") by <strong>Controlled Dynamics Inc., a division of Winfield Technologies Inc.</strong>
+                ("Products") by <strong>Controlled Dynamics Inc.</strong>
                 ("Seller," "we," "us") to commercial buyers ("Buyer," "you").
                 By submitting a purchase order or accepting delivery, you agree to be bound by these Terms.
               </p>
-
-              <div className="bg-gray-50 border-l-4 border-blue-600 p-4 my-6">
-                <p className="text-sm text-gray-700">
-                  <strong>Legal Entity:</strong> Winfield Technologies Inc., a Minnesota corporation<br />
-                  <strong>DBA:</strong> Controlled Dynamics Inc. | Seekon.ai<br />
-                  <strong>Principal Office:</strong> Minnesota, United States
-                </p>
-              </div>
 
               <h2>2. B2B Commercial Sales Only</h2>
               <p>
@@ -368,12 +360,11 @@ export default function TermsOfSalePage() {
                 For questions regarding these Terms of Sale, please contact:
               </p>
               <div className="bg-gray-50 p-6 rounded-lg border border-gray-200 my-6">
-                <p className="font-bold mb-2">Winfield Technologies Inc.</p>
-                <p className="font-semibold">DBA: Controlled Dynamics Inc.</p>
+                <p className="font-bold mb-2">Controlled Dynamics Inc.</p>
                 <p>Legal Department</p>
                 <p>Email: legal@controlleddynamicsinc.com</p>
                 <p>Phone: [Your Phone Number]</p>
-                <p>Address: [Minnesota Business Address]</p>
+                <p>Address: [Your Business Address]</p>
               </div>
 
               <div className="bg-blue-50 border-l-4 border-blue-600 p-6 my-8">

@@ -102,10 +102,7 @@ export default function Footer() {
             <div className="flex flex-col md:flex-row items-center gap-4">
               <div className="text-center md:text-left">
                 <p className="text-white/50 text-sm">
-                  &copy; {currentYear} Winfield Technologies Inc. All rights reserved.
-                </p>
-                <p className="text-white/40 text-xs">
-                  DBA: Controlled Dynamics Inc. | Seekon.ai
+                  &copy; {currentYear} Controlled Dynamics Inc. All rights reserved.
                 </p>
               </div>
               <div className="flex gap-4 text-sm">

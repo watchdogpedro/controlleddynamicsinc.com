@@ -2,14 +2,28 @@
 
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
+import Image from 'next/image';
 import Button from '@/components/ui/Button';
 import Container from '@/components/ui/Container';
 
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0A1628]">
+      {/* Hero Background Image */}
+      <div className="absolute inset-0">
+        <Image
+          src="/robotics-hero.png"
+          alt="Advanced Robotics Manufacturing"
+          fill
+          className="object-cover opacity-40"
+          priority
+        />
+        {/* Dark overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0A1628]/60 via-[#0A1628]/70 to-[#0A1628]/90" />
+      </div>
+
       {/* Animated Grid Background */}
-      <div className="absolute inset-0 opacity-20">
+      <div className="absolute inset-0 opacity-10">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">

@@ -94,7 +94,7 @@ export default function Hero() {
             <br />
             powered by breakthrough <span className="font-bold">AngleLock</span> technology.
             <br className="hidden sm:block" />
-            <span className="text-[#C9A227]">Stronger than steel. Lighter than aluminum. Infinitely configurable.</span>
+            <span className="text-[#C9A227]">Better than steel. Lighter than aluminum. Infinitely configurable.</span>
           </motion.p>
 
           <motion.div

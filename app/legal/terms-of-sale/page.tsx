@@ -309,20 +309,20 @@ export default function TermsOfSalePage() {
               <h2>15. Governing Law and Dispute Resolution</h2>
               <h3>15.1 Governing Law</h3>
               <p>
-                These Terms shall be governed by the laws of the State of Minnesota without regard to conflicts of law principles.
+                These Terms shall be governed by the laws of the State of Wisconsin without regard to conflicts of law principles.
                 The United Nations Convention on Contracts for the International Sale of Goods (CISG) does not apply.
               </p>
 
               <h3>15.2 Jurisdiction and Venue</h3>
               <p>
                 Any legal action arising from these Terms shall be brought exclusively in state or federal courts located in
-                Minnesota. Buyer consents to personal jurisdiction and venue in such courts.
+                Ozaukee County, Wisconsin. Buyer consents to personal jurisdiction and venue in such courts.
               </p>
 
               <h3>15.3 Arbitration Option</h3>
               <p>
                 For disputes exceeding $50,000, either party may elect binding arbitration under American Arbitration Association
-                (AAA) Commercial Arbitration Rules. Arbitration shall occur in Minnesota.
+                (AAA) Commercial Arbitration Rules. Arbitration shall occur in Wisconsin.
               </p>
 
               <h2>16. General Provisions</h2>
@@ -364,7 +364,7 @@ export default function TermsOfSalePage() {
                 <p>Legal Department</p>
                 <p>Email: legal@controlleddynamicsinc.com</p>
                 <p>Phone: [Your Phone Number]</p>
-                <p>Address: [Your Business Address]</p>
+                <p>Address: Grafton, Wisconsin, USA</p>
               </div>
 
               <div className="bg-blue-50 border-l-4 border-blue-600 p-6 my-8">

@@ -246,7 +246,7 @@ export default function PrivacyPolicyPage() {
                 <p className="font-semibold">Controlled Dynamics Inc.</p>
                 <p>Email: privacy@controlleddynamicsinc.com</p>
                 <p>Phone: [Your Phone Number]</p>
-                <p>Address: [Your Business Address]</p>
+                <p>Address: Grafton, Wisconsin, USA</p>
               </div>
 
               <div className="bg-blue-50 border-l-4 border-blue-600 p-6 my-8">

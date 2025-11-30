@@ -92,7 +92,7 @@ export default function Hero() {
           >
             Mission-critical aluminum framing systems
             <br />
-            powered by breakthrough AngleLock technology.
+            powered by breakthrough <span className="font-bold">AngleLock</span> technology.
             <br className="hidden sm:block" />
             <span className="text-[#C9A227]">Stronger than steel. Lighter than aluminum. Infinitely configurable.</span>
           </motion.p>

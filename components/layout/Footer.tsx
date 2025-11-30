@@ -99,9 +99,24 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-white/50 text-sm">
-              &copy; {currentYear} {COMPANY_INFO.name}. All rights reserved.
-            </p>
+            <div className="flex flex-col md:flex-row items-center gap-4">
+              <p className="text-white/50 text-sm">
+                &copy; {currentYear} {COMPANY_INFO.name}. All rights reserved.
+              </p>
+              <div className="flex gap-4 text-sm">
+                <Link href="/legal/terms-of-sale" className="text-white/50 hover:text-[#C9A227] transition-colors">
+                  Terms of Sale
+                </Link>
+                <span className="text-white/30">|</span>
+                <Link href="/legal/privacy-policy" className="text-white/50 hover:text-[#C9A227] transition-colors">
+                  Privacy Policy
+                </Link>
+                <span className="text-white/30">|</span>
+                <Link href="/legal/export-compliance" className="text-white/50 hover:text-[#C9A227] transition-colors">
+                  Export Compliance
+                </Link>
+              </div>
+            </div>
             <p className="text-white/50 text-sm">
               Powered by <span className="text-[#C9A227]">AngleLock Technology</span>
             </p>

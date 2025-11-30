@@ -43,10 +43,18 @@ export default function PrivacyPolicyPage() {
 
               <h2>1. Introduction</h2>
               <p>
-                Controlled Dynamics Inc. ("we," "us," "our") respects the privacy of our business customers and partners.
-                This Privacy Policy describes how we collect, use, disclose, and protect business information in connection
-                with our B2B sales of industrial structural systems.
+                <strong>Controlled Dynamics Inc., a division of Winfield Technologies Inc.</strong> ("we," "us," "our")
+                respects the privacy of our business customers and partners. This Privacy Policy describes how we collect,
+                use, disclose, and protect business information in connection with our B2B sales of industrial structural systems.
               </p>
+
+              <div className="bg-gray-50 border-l-4 border-blue-600 p-4 my-6">
+                <p className="text-sm text-gray-700">
+                  <strong>Legal Entity:</strong> Winfield Technologies Inc., a Minnesota corporation<br />
+                  <strong>DBA:</strong> Controlled Dynamics Inc. | Seekon.ai<br />
+                  <strong>Data Controller:</strong> Winfield Technologies Inc.
+                </p>
+              </div>
 
               <h2>2. Scope - B2B Only</h2>
               <p>
@@ -243,10 +251,11 @@ export default function PrivacyPolicyPage() {
               </p>
               <div className="bg-gray-50 p-6 rounded-lg border border-gray-200 my-6">
                 <p className="font-bold mb-2">Privacy Officer</p>
-                <p>Controlled Dynamics Inc.</p>
+                <p className="font-semibold">Winfield Technologies Inc.</p>
+                <p>DBA: Controlled Dynamics Inc.</p>
                 <p>Email: privacy@controlleddynamicsinc.com</p>
                 <p>Phone: [Your Phone Number]</p>
-                <p>Address: [Your Business Address]</p>
+                <p>Address: [Minnesota Business Address]</p>
               </div>
 
               <div className="bg-blue-50 border-l-4 border-blue-600 p-6 my-8">

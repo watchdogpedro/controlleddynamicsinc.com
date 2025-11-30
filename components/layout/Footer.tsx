@@ -100,9 +100,14 @@ export default function Footer() {
         <div className="mt-12 pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex flex-col md:flex-row items-center gap-4">
-              <p className="text-white/50 text-sm">
-                &copy; {currentYear} {COMPANY_INFO.name}. All rights reserved.
-              </p>
+              <div className="text-center md:text-left">
+                <p className="text-white/50 text-sm">
+                  &copy; {currentYear} Winfield Technologies Inc. All rights reserved.
+                </p>
+                <p className="text-white/40 text-xs">
+                  DBA: Controlled Dynamics Inc. | Seekon.ai
+                </p>
+              </div>
               <div className="flex gap-4 text-sm">
                 <Link href="/legal/terms-of-sale" className="text-white/50 hover:text-[#C9A227] transition-colors">
                   Terms of Sale

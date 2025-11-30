@@ -62,9 +62,18 @@ export default function TermsOfSalePage() {
               <h2>1. Acceptance of Terms</h2>
               <p>
                 These Terms of Sale ("Terms") govern all sales of structural systems, components, and related products
-                ("Products") by Controlled Dynamics Inc. ("Seller," "we," "us") to commercial buyers ("Buyer," "you").
+                ("Products") by <strong>Controlled Dynamics Inc., a division of Winfield Technologies Inc.</strong>
+                ("Seller," "we," "us") to commercial buyers ("Buyer," "you").
                 By submitting a purchase order or accepting delivery, you agree to be bound by these Terms.
               </p>
+
+              <div className="bg-gray-50 border-l-4 border-blue-600 p-4 my-6">
+                <p className="text-sm text-gray-700">
+                  <strong>Legal Entity:</strong> Winfield Technologies Inc., a Minnesota corporation<br />
+                  <strong>DBA:</strong> Controlled Dynamics Inc. | Seekon.ai<br />
+                  <strong>Principal Office:</strong> Minnesota, United States
+                </p>
+              </div>
 
               <h2>2. B2B Commercial Sales Only</h2>
               <p>
@@ -308,20 +317,20 @@ export default function TermsOfSalePage() {
               <h2>15. Governing Law and Dispute Resolution</h2>
               <h3>15.1 Governing Law</h3>
               <p>
-                These Terms shall be governed by the laws of the State of [Your State] without regard to conflicts of law principles.
+                These Terms shall be governed by the laws of the State of Minnesota without regard to conflicts of law principles.
                 The United Nations Convention on Contracts for the International Sale of Goods (CISG) does not apply.
               </p>
 
               <h3>15.2 Jurisdiction and Venue</h3>
               <p>
                 Any legal action arising from these Terms shall be brought exclusively in state or federal courts located in
-                [Your County], [Your State]. Buyer consents to personal jurisdiction and venue in such courts.
+                Minnesota. Buyer consents to personal jurisdiction and venue in such courts.
               </p>
 
               <h3>15.3 Arbitration Option</h3>
               <p>
                 For disputes exceeding $50,000, either party may elect binding arbitration under American Arbitration Association
-                (AAA) Commercial Arbitration Rules. Arbitration shall occur in [Your City], [Your State].
+                (AAA) Commercial Arbitration Rules. Arbitration shall occur in Minnesota.
               </p>
 
               <h2>16. General Provisions</h2>
@@ -359,11 +368,12 @@ export default function TermsOfSalePage() {
                 For questions regarding these Terms of Sale, please contact:
               </p>
               <div className="bg-gray-50 p-6 rounded-lg border border-gray-200 my-6">
-                <p className="font-bold mb-2">Controlled Dynamics Inc.</p>
+                <p className="font-bold mb-2">Winfield Technologies Inc.</p>
+                <p className="font-semibold">DBA: Controlled Dynamics Inc.</p>
                 <p>Legal Department</p>
                 <p>Email: legal@controlleddynamicsinc.com</p>
                 <p>Phone: [Your Phone Number]</p>
-                <p>Address: [Your Business Address]</p>
+                <p>Address: [Minnesota Business Address]</p>
               </div>
 
               <div className="bg-blue-50 border-l-4 border-blue-600 p-6 my-8">

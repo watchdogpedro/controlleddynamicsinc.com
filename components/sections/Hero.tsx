@@ -15,11 +15,11 @@ export default function Hero() {
           src="/robotics-hero.png"
           alt="Advanced Robotics Manufacturing"
           fill
-          className="object-cover opacity-40"
+          className="object-cover opacity-70"
           priority
         />
         {/* Dark overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0A1628]/60 via-[#0A1628]/70 to-[#0A1628]/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0A1628]/30 via-[#0A1628]/40 to-[#0A1628]/60" />
       </div>
 
       {/* Animated Grid Background */}

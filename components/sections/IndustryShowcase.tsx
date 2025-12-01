@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { Plane, FlaskConical, Cpu, Bot, Factory } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import Container from '@/components/ui/Container';
 import Card from '@/components/ui/Card';
 import { INDUSTRIES } from '@/lib/constants';
@@ -13,6 +14,14 @@ const iconMap = {
   Cpu,
   Bot,
   Factory
+};
+
+const imageMap: { [key: string]: string } = {
+  'aerospace-defense': '/Aerospace CDI.png',
+  'life-sciences': '/Life Sciences CDI.png',
+  'semiconductor': '/Semiconductor CDI.png',
+  'robotics-automation': '/Robotics Automation CDI.png',
+  'general-industrial': '/General Industrial CDI.png'
 };
 
 export default function IndustryShowcase() {
@@ -47,20 +56,31 @@ export default function IndustryShowcase() {
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
               >
                 <Link href={`/industries/${industry.id}`}>
-                  <Card hover className="p-8 h-full group">
-                    <div className="flex flex-col h-full">
+                  <Card hover className="relative overflow-hidden p-8 h-full group">
+                    {/* Background Image */}
+                    <div className="absolute inset-0 z-0">
+                      <Image
+                        src={imageMap[industry.id]}
+                        alt={industry.name}
+                        fill
+                        className="object-cover opacity-20 group-hover:opacity-30 transition-opacity duration-300"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-white via-white/95 to-white/80" />
+                    </div>
+
+                    <div className="relative z-10 flex flex-col h-full">
                       <div className="w-14 h-14 bg-[#0A1628] rounded-lg flex items-center justify-center mb-4 group-hover:bg-[#C9A227] transition-colors duration-300">
                         <Icon className="w-7 h-7 text-white" />
                       </div>
-                      
+
                       <h3 className="font-['Barlow_Condensed'] text-2xl font-bold text-[#0A1628] mb-3 group-hover:text-[#C9A227] transition-colors duration-300">
                         {industry.name}
                       </h3>
-                      
+
                       <p className="text-[#6B7C93] text-sm leading-relaxed flex-grow">
                         {industry.description}
                       </p>
-                      
+
                       <div className="mt-4 text-[#C9A227] font-semibold text-sm flex items-center gap-2 group-hover:gap-3 transition-all duration-300">
                         Learn More
                         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

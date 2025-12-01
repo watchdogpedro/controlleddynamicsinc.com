@@ -3,10 +3,13 @@
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import Image from 'next/image';
+import { useState } from 'react';
 import Button from '@/components/ui/Button';
 import Container from '@/components/ui/Container';
+import VideoModal from '@/components/ui/VideoModal';
 
 export default function Hero() {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0A1628]">
       {/* Hero Background Image */}
@@ -74,7 +77,9 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <Button size="lg">Explore Solutions</Button>
-            <Button variant="ghost" size="lg">Watch Overview</Button>
+            <Button variant="ghost" size="lg" onClick={() => setIsVideoOpen(true)}>
+              Watch Overview
+            </Button>
           </motion.div>
         </motion.div>
 
@@ -87,6 +92,13 @@ export default function Hero() {
           <ChevronDown className="w-8 h-8 text-white/50" />
         </motion.div>
       </Container>
+
+      {/* Video Modal */}
+      <VideoModal
+        isOpen={isVideoOpen}
+        onClose={() => setIsVideoOpen(false)}
+        videoId="xk0k2WJvEdo"
+      />
     </section>
   );
 }

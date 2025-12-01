@@ -193,12 +193,12 @@ export default function ManufacturingPage() {
                 src="/manufacturing-hero.png"
                 alt="Precision Manufacturing Excellence"
                 fill
-                className="object-cover opacity-70"
+                className="object-cover opacity-85"
                 priority
               />
             </div>
             {/* Dark overlay for better text readability */}
-            <div className="absolute inset-0 bg-gradient-to-b from-[#0A1628]/30 via-[#0A1628]/40 to-[#0A1628]/60" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#0A1628]/20 via-[#0A1628]/30 to-[#0A1628]/50" />
           </div>
 
           {/* Animated Grid Background */}

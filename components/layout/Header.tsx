@@ -125,7 +125,9 @@ export default function Header() {
           </div>
 
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <Button size="sm">Request Quote</Button>
+            <a href="/contact">
+              <Button size="sm">Request Quote</Button>
+            </a>
           </div>
         </nav>
 
@@ -158,7 +160,9 @@ export default function Header() {
                 </div>
               ))}
               <div className="px-3 pt-2">
-                <Button className="w-full" size="sm">Request Quote</Button>
+                <a href="/contact">
+                  <Button className="w-full" size="sm">Request Quote</Button>
+                </a>
               </div>
             </div>
           </div>

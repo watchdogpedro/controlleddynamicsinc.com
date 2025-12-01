@@ -480,11 +480,11 @@ export const COMPANY_INFO = {
   vision: 'Engineering Tomorrow\'s Foundations Today',
   mission: 'To be the premier provider of advanced modular structural systems for industries where precision, reliability, and performance are non-negotiable.',
   email: 'info@controlleddynamicsinc.com',
-  phone: '+1 (555) 123-4567',
+  phone: '(262) 421-8840',
   address: {
-    street: '123 Industrial Way',
-    city: 'Tech City',
-    state: 'CA',
-    zip: '12345'
+    street: '1058 Overland Court',
+    city: 'Grafton',
+    state: 'WI',
+    zip: '53024'
   }
 };

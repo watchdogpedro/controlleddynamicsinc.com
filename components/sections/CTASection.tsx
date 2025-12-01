@@ -27,13 +27,17 @@ export default function CTASection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg" className="group">
-              Request a Quote
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button variant="ghost" size="lg">
-              Contact Us
-            </Button>
+            <a href="/contact">
+              <Button size="lg" className="group">
+                Request a Quote
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </a>
+            <a href="/contact">
+              <Button variant="ghost" size="lg">
+                Contact Us
+              </Button>
+            </a>
           </div>
 
           <p className="mt-8 text-white/50 text-sm">

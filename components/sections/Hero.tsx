@@ -76,7 +76,9 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <Button size="lg">Explore Solutions</Button>
+            <a href="/contact">
+              <Button size="lg">Request Quote</Button>
+            </a>
             <Button variant="ghost" size="lg" onClick={() => setIsVideoOpen(true)}>
               Watch Overview
             </Button>

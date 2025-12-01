@@ -269,8 +269,12 @@ export default function FAQPage() {
                 technology can solve your structural challenges.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg">Schedule a Consultation</Button>
-                <Button variant="ghost" size="lg">Contact Us</Button>
+                <a href="/contact">
+                  <Button size="lg">Schedule a Consultation</Button>
+                </a>
+                <a href="/contact">
+                  <Button variant="ghost" size="lg">Contact Us</Button>
+                </a>
               </div>
             </div>
           </Container>

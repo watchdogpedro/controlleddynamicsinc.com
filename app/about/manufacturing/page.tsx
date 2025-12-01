@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { Factory, Award, Cog, Cpu, Shield, CheckCircle2, Zap, Target } from 'lucide-react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -182,29 +183,105 @@ export default function ManufacturingPage() {
   return (
     <>
       <Header />
-      <main className="pt-20">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-[#0A1628] to-[#1E3A5F] py-20">
-          <Container>
+      <main>
+        {/* Hero Section with Background Image */}
+        <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-[#0A1628]">
+          {/* Hero Background Image */}
+          <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
+            <div className="relative w-full h-[70%]">
+              <Image
+                src="/manufacturing-hero.png"
+                alt="Precision Manufacturing Excellence"
+                fill
+                className="object-cover opacity-70"
+                priority
+              />
+            </div>
+            {/* Dark overlay for better text readability */}
+            <div className="absolute inset-0 bg-gradient-to-b from-[#0A1628]/30 via-[#0A1628]/40 to-[#0A1628]/60" />
+          </div>
+
+          {/* Animated Grid Background */}
+          <div className="absolute inset-0 opacity-10">
+            <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="grid-manufacturing" width="40" height="40" patternUnits="userSpaceOnUse">
+                  <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#C9A227" strokeWidth="0.5"/>
+                </pattern>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#grid-manufacturing)" />
+            </svg>
+          </div>
+
+          {/* Animated Particles */}
+          <div className="absolute inset-0">
+            {[...Array(15)].map((_, i) => {
+              const randomX = (i * 17) % 100;
+              const randomY = (i * 23) % 100;
+              const randomDuration = 3 + (i % 3);
+              const randomDelay = (i % 5) * 0.4;
+
+              return (
+                <motion.div
+                  key={i}
+                  className="absolute w-1 h-1 bg-[#C9A227] rounded-full"
+                  style={{
+                    left: `${randomX}%`,
+                    top: `${randomY}%`,
+                  }}
+                  animate={{
+                    y: [0, -30, 0],
+                    opacity: [0.2, 0.8, 0.2],
+                  }}
+                  transition={{
+                    duration: randomDuration,
+                    repeat: Infinity,
+                    delay: randomDelay,
+                  }}
+                />
+              );
+            })}
+          </div>
+
+          <Container className="relative z-10 pt-32 pb-20">
             <motion.div
               className="max-w-4xl mx-auto text-center"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <div className="inline-block mb-6">
-                <div className="w-24 h-24 bg-[#C9A227] rounded-2xl flex items-center justify-center mx-auto">
+              <motion.div
+                className="inline-block mb-6"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              >
+                <div className="w-24 h-24 bg-[#C9A227] rounded-2xl flex items-center justify-center mx-auto shadow-2xl">
                   <Factory className="w-12 h-12 text-[#0A1628]" />
                 </div>
-              </div>
-              <h1 className="font-['Barlow_Condensed'] text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6">
-                Manufacturing Excellence
-              </h1>
-              <p className="text-xl text-white/80 leading-relaxed">
+              </motion.div>
+
+              <motion.h1
+                className="font-['Barlow_Condensed'] text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+              >
+                Manufacturing
+                <br />
+                <span className="text-[#C9A227]">Excellence</span>
+              </motion.h1>
+
+              <motion.p
+                className="text-lg sm:text-xl lg:text-2xl text-white/80 leading-relaxed max-w-3xl mx-auto"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              >
                 State-of-the-art engineering and manufacturing capabilities supporting mission-critical
-                applications across aerospace, semiconductor, life sciences, and advanced manufacturing
-                industries.
-              </p>
+                applications across <span className="text-[#C9A227] font-semibold">aerospace, semiconductor, life sciences,</span> and
+                advanced manufacturing industries.
+              </motion.p>
             </motion.div>
           </Container>
         </section>

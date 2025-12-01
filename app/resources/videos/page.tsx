@@ -4,6 +4,8 @@ import { useState } from 'react';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
 import VideoModal from '@/components/ui/VideoModal';
+import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
 import { Play, FileText, Download, ExternalLink } from 'lucide-react';
 import { videos, videoCategories, getVideoThumbnail } from '@/lib/video-data';
 import type { VideoData } from '@/lib/video-data';
@@ -17,7 +19,9 @@ export default function VideosPage() {
     : videos.filter((video: VideoData) => video.category === selectedCategory);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#0A1628] via-[#1E3A5F] to-[#0A1628]">
+    <>
+      <Header />
+      <div className="min-h-screen bg-gradient-to-b from-[#0A1628] via-[#1E3A5F] to-[#0A1628]">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10"></div>
@@ -396,6 +400,8 @@ export default function VideosPage() {
           videoId={selectedVideo}
         />
       )}
-    </div>
+      </div>
+      <Footer />
+    </>
   );
 }

@@ -114,8 +114,9 @@ export const videos: VideoData[] = [
 
 /**
  * Helper function to get video thumbnail URL
+ * Uses sddefault (640x480) as default which is more reliable than maxres
  */
-export function getVideoThumbnail(youtubeId: string, quality: 'default' | 'hq' | 'mq' | 'sd' | 'maxres' = 'maxres'): string {
+export function getVideoThumbnail(youtubeId: string, quality: 'default' | 'hq' | 'mq' | 'sd' | 'maxres' = 'sd'): string {
   const qualityMap = {
     'default': 'default',
     'mq': 'mqdefault',

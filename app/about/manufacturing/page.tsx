@@ -213,36 +213,6 @@ export default function ManufacturingPage() {
             </svg>
           </div>
 
-          {/* Animated Particles */}
-          <div className="absolute inset-0">
-            {[...Array(15)].map((_, i) => {
-              const randomX = (i * 17) % 100;
-              const randomY = (i * 23) % 100;
-              const randomDuration = 3 + (i % 3);
-              const randomDelay = (i % 5) * 0.4;
-
-              return (
-                <motion.div
-                  key={i}
-                  className="absolute w-1 h-1 bg-[#C9A227] rounded-full"
-                  style={{
-                    left: `${randomX}%`,
-                    top: `${randomY}%`,
-                  }}
-                  animate={{
-                    y: [0, -30, 0],
-                    opacity: [0.2, 0.8, 0.2],
-                  }}
-                  transition={{
-                    duration: randomDuration,
-                    repeat: Infinity,
-                    delay: randomDelay,
-                  }}
-                />
-              );
-            })}
-          </div>
-
           <Container className="relative z-10 pt-32 pb-20">
             <motion.div
               className="max-w-4xl mx-auto text-center"

@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { notFound } from 'next/navigation';
+import Image from 'next/image';
 import { Plane, FlaskConical, Cpu, Bot, Factory, CheckCircle2, AlertCircle, TrendingUp, Award } from 'lucide-react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -16,6 +17,14 @@ const iconMap = {
   Cpu,
   Bot,
   Factory
+};
+
+const imageMap: { [key: string]: string } = {
+  'aerospace-defense': '/Aerospace CDI.png',
+  'life-sciences': '/Life Sciences CDI.png',
+  'semiconductor': '/Semiconductor CDI.png',
+  'robotics-automation': '/Robotics Automation CDI.png',
+  'general-industrial': '/General Industrial CDI.png'
 };
 
 export default async function IndustryDetailPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -33,8 +42,25 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-[#0A1628] to-[#1E3A5F] py-20">
-          <Container>
+        <section className="relative overflow-hidden bg-gradient-to-br from-[#0A1628] to-[#1E3A5F] py-20">
+          {/* Background Image with Gradient Blend */}
+          <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 flex items-center justify-end">
+              <div className="relative w-full md:w-2/3 lg:w-1/2 h-full">
+                <Image
+                  src={imageMap[industry.id]}
+                  alt={industry.name}
+                  fill
+                  className="object-cover object-center"
+                  priority
+                />
+              </div>
+            </div>
+            {/* Gradient overlay - blends from dark blue on left to transparent on right */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#0A1628] via-[#0A1628]/95 to-[#0A1628]/30" />
+          </div>
+
+          <Container className="relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

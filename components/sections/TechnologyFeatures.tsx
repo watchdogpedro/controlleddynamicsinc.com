@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Shield, Zap, Wrench, Infinity } from 'lucide-react';
+import Image from 'next/image';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
 import { TECHNOLOGY_FEATURES } from '@/lib/constants';
@@ -25,7 +26,7 @@ export default function TechnologyFeatures() {
 
       <Container className="relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Side - Visual Placeholder */}
+          {/* Left Side - Tank Image */}
           <motion.div
             className="relative"
             initial={{ opacity: 0, x: -20 }}
@@ -33,16 +34,15 @@ export default function TechnologyFeatures() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="aspect-square bg-gradient-to-br from-[#1E3A5F] to-[#2C4A6E] rounded-2xl p-8 flex items-center justify-center border-2 border-[#C9A227]/30">
-              <div className="text-center">
-                <div className="text-6xl mb-4">🔒</div>
-                <p className="text-[#C9A227] font-['Barlow_Condensed'] text-3xl font-bold mb-2">
-                  AngleLock
-                </p>
-                <p className="text-white/70 text-sm">
-                  Patented 5-Plane Anchoring System
-                </p>
-              </div>
+            <div className="relative w-full rounded-2xl overflow-hidden border-2 border-[#C9A227]/30 bg-gradient-to-br from-[#1E3A5F] to-[#2C4A6E]">
+              <Image
+                src="/AngleLock Controlled Dynamics Tank.jpg"
+                alt="AngleLock Tank Support Structure"
+                width={1536}
+                height={864}
+                className="w-full h-auto"
+                priority
+              />
             </div>
           </motion.div>
 

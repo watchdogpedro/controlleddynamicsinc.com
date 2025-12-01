@@ -77,7 +77,7 @@ export default function IndustryShowcase() {
                         {industry.name}
                       </h3>
 
-                      <p className="text-[#6B7C93] text-sm leading-relaxed flex-grow">
+                      <p className="text-[#6B7C93] text-sm leading-relaxed flex-grow font-bold">
                         {industry.description}
                       </p>
 

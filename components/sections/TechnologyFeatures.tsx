@@ -108,9 +108,11 @@ export default function TechnologyFeatures() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <Button variant="primary" size="lg">
-                Discover the Technology
-              </Button>
+              <a href="/technology">
+                <Button variant="primary" size="lg">
+                  Discover the Technology
+                </Button>
+              </a>
             </motion.div>
           </div>
         </div>

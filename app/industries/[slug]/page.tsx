@@ -2,11 +2,12 @@
 
 import { motion } from 'framer-motion';
 import { notFound } from 'next/navigation';
-import { Plane, FlaskConical, Cpu, Bot, Factory, CheckCircle2 } from 'lucide-react';
+import { Plane, FlaskConical, Cpu, Bot, Factory, CheckCircle2, AlertCircle, TrendingUp, Award } from 'lucide-react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
+import Card from '@/components/ui/Card';
 import { INDUSTRIES } from '@/lib/constants';
 
 const iconMap = {
@@ -17,8 +18,9 @@ const iconMap = {
   Factory
 };
 
-export default function IndustryDetailPage({ params }: { params: { slug: string } }) {
-  const industry = INDUSTRIES.find(ind => ind.id === params.slug);
+export default async function IndustryDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const industry = INDUSTRIES.find(ind => ind.id === slug);
 
   if (!industry) {
     notFound();
@@ -53,7 +55,7 @@ export default function IndustryDetailPage({ params }: { params: { slug: string 
           </Container>
         </section>
 
-        {/* Overview Section */}
+        {/* Industry Challenges */}
         <section className="py-20 bg-white">
           <Container>
             <div className="grid lg:grid-cols-2 gap-12 items-start">
@@ -63,19 +65,24 @@ export default function IndustryDetailPage({ params }: { params: { slug: string 
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                <h2 className="font-['Barlow_Condensed'] text-4xl font-bold text-[#0A1628] mb-6">
-                  Industry Challenges
-                </h2>
+                <div className="flex items-center gap-3 mb-6">
+                  <AlertCircle className="w-8 h-8 text-[#EF4444]" />
+                  <h2 className="font-['Barlow_Condensed'] text-4xl font-bold text-[#0A1628]">
+                    Industry Challenges
+                  </h2>
+                </div>
                 <p className="text-[#6B7C93] leading-relaxed mb-6">
-                  The {industry.name.toLowerCase()} sector demands structural systems that can withstand 
-                  extreme conditions while maintaining precision and reliability. Traditional framing 
-                  solutions often fall short in critical applications.
+                  The {industry.name.toLowerCase()} sector faces unique structural challenges that
+                  traditional framing systems struggle to address effectively.
                 </p>
-                <p className="text-[#6B7C93] leading-relaxed">
-                  Our AngleLock technology provides the mechanical strength and vibration resistance 
-                  required for mission-critical applications, with the flexibility to adapt as your 
-                  requirements evolve.
-                </p>
+                <ul className="space-y-3">
+                  {industry.challenges?.map((challenge) => (
+                    <li key={challenge} className="flex items-start gap-3">
+                      <span className="text-[#EF4444] text-xl mt-1">×</span>
+                      <span className="text-[#6B7C93]">{challenge}</span>
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
 
               <motion.div
@@ -84,48 +91,85 @@ export default function IndustryDetailPage({ params }: { params: { slug: string 
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                <div className="bg-[#F4F6F8] rounded-xl p-8">
-                  <h3 className="font-['Barlow_Condensed'] text-2xl font-bold text-[#0A1628] mb-6">
-                    Why AngleLock?
-                  </h3>
-                  <ul className="space-y-4">
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-6 h-6 text-[#C9A227] flex-shrink-0 mt-0.5" />
-                      <div>
-                        <strong className="text-[#0A1628]">10x Stronger:</strong>
-                        <span className="text-[#6B7C93]"> Mechanically locked joints rival welded steel</span>
-                      </div>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-6 h-6 text-[#C9A227] flex-shrink-0 mt-0.5" />
-                      <div>
-                        <strong className="text-[#0A1628]">Vibration Resistant:</strong>
-                        <span className="text-[#6B7C93]"> Connections tighten under load</span>
-                      </div>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-6 h-6 text-[#C9A227] flex-shrink-0 mt-0.5" />
-                      <div>
-                        <strong className="text-[#0A1628]">Cleanroom Compatible:</strong>
-                        <span className="text-[#6B7C93]"> Non-particle shedding, easy to clean</span>
-                      </div>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-6 h-6 text-[#C9A227] flex-shrink-0 mt-0.5" />
-                      <div>
-                        <strong className="text-[#0A1628]">Rapid Assembly:</strong>
-                        <span className="text-[#6B7C93]"> 50% faster than traditional methods</span>
-                      </div>
-                    </li>
-                  </ul>
+                <div className="flex items-center gap-3 mb-6">
+                  <TrendingUp className="w-8 h-8 text-[#C9A227]" />
+                  <h2 className="font-['Barlow_Condensed'] text-4xl font-bold text-[#0A1628]">
+                    AngleLock Benefits
+                  </h2>
                 </div>
+                <p className="text-[#6B7C93] leading-relaxed mb-6">
+                  Our AngleLock technology directly addresses these challenges with proven
+                  performance in demanding {industry.name.toLowerCase()} applications.
+                </p>
+                <ul className="space-y-3">
+                  {industry.benefits?.map((benefit) => (
+                    <li key={benefit} className="flex items-start gap-3">
+                      <CheckCircle2 className="w-6 h-6 text-[#C9A227] flex-shrink-0 mt-0.5" />
+                      <span className="text-[#6B7C93]">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
             </div>
           </Container>
         </section>
 
+        {/* Project Example */}
+        {industry.projectExample && (
+          <section className="py-20 bg-[#F4F6F8]">
+            <Container>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <div className="flex items-center gap-3 mb-12 justify-center">
+                  <Award className="w-8 h-8 text-[#C9A227]" />
+                  <h2 className="font-['Barlow_Condensed'] text-4xl font-bold text-[#0A1628] text-center">
+                    Project Example
+                  </h2>
+                </div>
+
+                <Card className="p-8 md:p-12 max-w-5xl mx-auto">
+                  <h3 className="font-['Barlow_Condensed'] text-3xl font-bold text-[#0A1628] mb-6">
+                    {industry.projectExample.title}
+                  </h3>
+
+                  <div className="grid md:grid-cols-2 gap-8 mb-8">
+                    <div>
+                      <div className="text-sm font-semibold text-[#C9A227] mb-2 uppercase">The Challenge</div>
+                      <p className="text-[#6B7C93] leading-relaxed">
+                        {industry.projectExample.challenge}
+                      </p>
+                    </div>
+                    <div>
+                      <div className="text-sm font-semibold text-[#C9A227] mb-2 uppercase">Our Solution</div>
+                      <p className="text-[#6B7C93] leading-relaxed">
+                        {industry.projectExample.solution}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="bg-gradient-to-br from-[#0A1628] to-[#1E3A5F] rounded-xl p-8">
+                    <div className="text-sm font-semibold text-[#C9A227] mb-4 uppercase">Results</div>
+                    <div className="grid sm:grid-cols-2 gap-4">
+                      {industry.projectExample.results.map((result, idx) => (
+                        <div key={idx} className="flex items-start gap-3">
+                          <CheckCircle2 className="w-5 h-5 text-[#C9A227] flex-shrink-0 mt-0.5" />
+                          <span className="text-white/90">{result}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </Card>
+              </motion.div>
+            </Container>
+          </section>
+        )}
+
         {/* Applications Section */}
-        <section className="py-20 bg-[#F4F6F8]">
+        <section className="py-20 bg-white">
           <Container>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -144,7 +188,7 @@ export default function IndustryDetailPage({ params }: { params: { slug: string 
                 {industry.applications.map((app, idx) => (
                   <motion.div
                     key={app}
-                    className="bg-white rounded-lg p-6 border border-gray-200"
+                    className="bg-[#F4F6F8] rounded-lg p-6 border border-gray-200"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -161,20 +205,82 @@ export default function IndustryDetailPage({ params }: { params: { slug: string 
           </Container>
         </section>
 
-        {/* CTA Section */}
+        {/* Why AngleLock Section */}
         <section className="py-20 bg-[#0A1628]">
           <Container>
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <h2 className="font-['Barlow_Condensed'] text-4xl font-bold text-white mb-6">
+                  Why {industry.name} Companies Choose AngleLock
+                </h2>
+                <p className="text-white/80 leading-relaxed mb-6">
+                  Leading {industry.name.toLowerCase()} organizations depend on AngleLock technology
+                  because traditional aluminum framing and welded steel structures can't deliver
+                  the combination of strength, precision, and flexibility their applications demand.
+                </p>
+                <p className="text-white/80 leading-relaxed">
+                  Our patented 5-plane anchoring system creates mechanically locked joints that
+                  actually tighten under vibration while maintaining the modularity needed for
+                  evolving production requirements.
+                </p>
+              </motion.div>
+
+              <motion.div
+                className="grid grid-cols-2 gap-6"
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                  <div className="text-5xl font-bold text-[#C9A227] font-['Barlow_Condensed'] mb-2">
+                    10x
+                  </div>
+                  <p className="text-white/90 text-sm font-semibold">Stronger than T-slot</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                  <div className="text-5xl font-bold text-[#C9A227] font-['Barlow_Condensed'] mb-2">
+                    0
+                  </div>
+                  <p className="text-white/90 text-sm font-semibold">Maintenance Required</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                  <div className="text-5xl font-bold text-[#C9A227] font-['Barlow_Condensed'] mb-2">
+                    50%
+                  </div>
+                  <p className="text-white/90 text-sm font-semibold">Faster Assembly</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                  <div className="text-5xl font-bold text-[#C9A227] font-['Barlow_Condensed'] mb-2">
+                    ∞
+                  </div>
+                  <p className="text-white/90 text-sm font-semibold">Reconfigurations</p>
+                </div>
+              </motion.div>
+            </div>
+          </Container>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-white">
+          <Container>
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="font-['Barlow_Condensed'] text-4xl sm:text-5xl font-bold text-white mb-6">
+              <h2 className="font-['Barlow_Condensed'] text-4xl sm:text-5xl font-bold text-[#0A1628] mb-6">
                 Ready to Discuss Your {industry.name} Project?
               </h2>
-              <p className="text-lg text-white/80 mb-8">
-                Our engineering team has extensive experience in {industry.name.toLowerCase()} applications.
-                Let's design the perfect solution for your requirements.
+              <p className="text-lg text-[#6B7C93] mb-8">
+                Our engineering team has extensive experience designing structural solutions for
+                {industry.name.toLowerCase()} applications. Let's discuss how AngleLock technology
+                can solve your specific challenges.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg">Request a Quote</Button>
-                <Button variant="ghost" size="lg">Download Technical Specs</Button>
+                <Button size="lg">Schedule a Consultation</Button>
+                <Button variant="ghost" size="lg">View Our Process</Button>
               </div>
             </div>
           </Container>

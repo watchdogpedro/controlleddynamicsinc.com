@@ -25,10 +25,20 @@ export default function Header() {
       items: SOLUTIONS.map(sol => ({ name: sol.name, href: `/solutions/${sol.id}` }))
     },
     {
+      name: 'Products',
+      href: '/products',
+      hasDropdown: false
+    },
+    {
       name: 'Technology',
       href: '/technology',
       hasDropdown: true,
       items: TECHNOLOGY_MENU
+    },
+    {
+      name: 'Process',
+      href: '/process',
+      hasDropdown: false
     },
     {
       name: 'Resources',

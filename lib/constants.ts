@@ -454,17 +454,11 @@ export const SOLUTIONS = [
 
 export const TECHNOLOGY_MENU = [
   { name: 'AngleLock Overview', href: '/technology' },
-  { name: 'Technical Specifications', href: '/technology/specifications' },
-  { name: 'Strength Comparison', href: '/technology/comparison' },
-  { name: 'Design Guidelines', href: '/technology/guidelines' }
+  { name: 'Technical Specifications', href: '/technology/specifications' }
 ];
 
 export const RESOURCES_MENU = [
   { name: 'FAQ', href: '/faq' },
-  { name: 'CAD Library', href: '/resources/cad-library' },
-  { name: 'Case Studies', href: '/resources/case-studies' },
-  { name: 'Technical Documentation', href: '/resources/documentation' },
-  { name: 'White Papers', href: '/resources/white-papers' },
   { name: 'Videos', href: '/resources/videos' }
 ];
 

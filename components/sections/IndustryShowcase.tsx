@@ -63,9 +63,9 @@ export default function IndustryShowcase() {
                         src={imageMap[industry.id]}
                         alt={industry.name}
                         fill
-                        className="object-cover opacity-20 group-hover:opacity-30 transition-opacity duration-300"
+                        className="object-cover opacity-60 group-hover:opacity-70 transition-opacity duration-300"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-white via-white/95 to-white/80" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-white/60 via-white/50 to-white/40" />
                     </div>
 
                     <div className="relative z-10 flex flex-col h-full">

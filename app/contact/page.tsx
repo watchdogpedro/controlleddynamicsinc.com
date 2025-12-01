@@ -46,7 +46,7 @@ export default function ContactPage() {
                   transition={{ duration: 0.6 }}
                 >
                   <h2 className="font-['Barlow_Condensed'] text-3xl font-bold text-[#0A1628] mb-6">
-                    Request a Quote
+                    Request Information or a Quote
                   </h2>
                   <form className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-6">

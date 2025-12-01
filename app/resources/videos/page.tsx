@@ -100,7 +100,7 @@ export default function VideosPage() {
                     <img
                       src={getVideoThumbnail(video.youtubeId)}
                       alt={video.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 brightness-110"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 brightness-150 contrast-110"
                       onError={(e) => {
                         // Fallback to default quality if maxres doesn't exist
                         const target = e.target as HTMLImageElement;
@@ -109,7 +109,7 @@ export default function VideosPage() {
                     />
                     <button
                       onClick={() => setSelectedVideo(video.youtubeId)}
-                      className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/50 transition-colors"
+                      className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition-colors"
                     >
                       <div className="w-16 h-16 flex items-center justify-center rounded-full bg-[#C9A227] group-hover:scale-110 transition-transform">
                         <Play className="w-8 h-8 text-[#0A1628] ml-1" fill="currentColor" />

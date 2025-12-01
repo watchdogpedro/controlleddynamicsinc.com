@@ -9,22 +9,26 @@ export default function TrustBar() {
   ];
 
   return (
-    <section className="bg-[#F4F6F8] py-8">
+    <section className="bg-[#F4F6F8] py-10">
       <Container>
-        <p className="text-center text-[#6B7C93] text-sm sm:text-base font-medium">
-          Trusted by industry leaders in{' '}
-          <span className="hidden sm:inline">
-            {industries.map((industry, idx) => (
-              <span key={industry}>
-                <span className="text-[#2C4A6E] font-semibold">{industry}</span>
-                {idx < industries.length - 1 && ' | '}
-              </span>
-            ))}
-          </span>
-          <span className="sm:hidden">
-            <span className="text-[#2C4A6E] font-semibold">Aerospace, Life Sciences, Semiconductor & More</span>
-          </span>
-        </p>
+        <div className="text-center max-w-4xl mx-auto">
+          <p className="text-[#6B7C93] text-lg sm:text-xl lg:text-2xl font-medium mb-2">
+            Trusted by industry leaders in
+          </p>
+          <p className="text-[#2C4A6E] text-xl sm:text-2xl lg:text-3xl font-bold">
+            <span className="hidden sm:inline">
+              {industries.map((industry, idx) => (
+                <span key={industry}>
+                  {industry}
+                  {idx < industries.length - 1 && ' | '}
+                </span>
+              ))}
+            </span>
+            <span className="sm:hidden">
+              Aerospace, Life Sciences, Semiconductor & More
+            </span>
+          </p>
+        </div>
       </Container>
     </section>
   );

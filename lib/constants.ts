@@ -459,7 +459,8 @@ export const TECHNOLOGY_MENU = [
 
 export const RESOURCES_MENU = [
   { name: 'FAQ', href: '/faq' },
-  { name: 'Videos', href: '/resources/videos' }
+  { name: 'Videos', href: '/resources/videos' },
+  { name: 'Podcasts', href: '/resources/podcasts' }
 ];
 
 export const ABOUT_MENU = [

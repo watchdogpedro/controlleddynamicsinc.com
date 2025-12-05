@@ -1,0 +1,187 @@
+# AngleLock Technology - Controlled Dynamics Inc.
+
+## Company Overview
+Controlled Dynamics Inc.
+Engineering Tomorrow's Foundations Today
+
+Vision: Engineering Tomorrow's Foundations Today
+
+Mission: To be the premier provider of advanced modular structural systems for industries where precision, reliability, and performance are non-negotiable.
+
+## AngleLock Technology Overview
+
+AngleLock is a revolutionary aluminum framing system featuring patented self-aligning brackets with angled fasteners that create mechanically locked joints—10x stronger than traditional T-slot systems.
+
+### The Problem with Traditional T-Slot Systems
+
+Traditional aluminum framing relies on friction-based T-slot connections. While adequate for light-duty applications, these systems have critical weaknesses in demanding industrial environments:
+
+- Connections loosen over time, especially under vibration
+- Limited strength requires oversized components
+- Frequent maintenance and re-tightening required
+- Cannot achieve the rigidity needed for precision equipment
+
+### The AngleLock Solution
+
+AngleLock technology uses angled fasteners that create 5 planes of anchoring, resulting in a mechanically locked connection that actually tightens under load and vibration.
+
+**5 Planes of Mechanical Anchoring** - This is the core breakthrough that separates AngleLock from friction-based systems.
+
+## Key Performance Advantages
+
+### 10x Stronger
+Mechanically locked joints rival welded steel strength while outperforming traditional T-slot systems by 10x.
+
+### 50% Faster Assembly
+Self-aligning brackets and pre-assembled kits reduce assembly time by half compared to traditional methods.
+
+### Zero Maintenance
+Connections actually tighten over time under vibration. No loosening, no adjustments, no downtime.
+
+### Infinite Flexibility
+Fully modular and reconfigurable without weakening. Disassemble and rebuild as needs evolve.
+
+## Technical Specifications
+
+### Materials & Construction
+- **Extrusions:** 6105-T5 architectural grade aluminum
+- **Fasteners:** M6 bolts, 180 in-lb torque standard
+- **Finish:** Clear anodized, Class I (corrosion resistant)
+- **Weight:** 1/3 the weight of steel with 2x strength-to-weight ratio
+
+### Performance Characteristics
+- **Joint Strength:** 10x traditional T-slot connections
+- **Vibration:** Self-tightening under dynamic loads
+- **FEA Compatible:** Predictable, bonded joints enable accurate analysis
+- **Maintenance:** Zero maintenance required over lifetime
+
+## Why Mechanical Locks Beat Friction
+
+Traditional T-slot framing systems rely entirely on friction to hold connections together. A bolt presses against the T-slot wall, and the friction between surfaces resists movement. This works fine for static, light-duty applications, but fails in demanding industrial environments.
+
+### Fundamental Limitations of Friction-Based Systems:
+
+1. **Vibration Loosening**: Repeated dynamic loads gradually overcome friction, causing bolts to loosen. This is why T-slot structures require constant retightening.
+
+2. **Limited Load Capacity**: Friction can only resist so much force. Higher loads require impractically high bolt torques or oversized components.
+
+3. **Unpredictable Performance**: Friction coefficients vary with surface finish, contamination, temperature, and wear. Performance degrades over time.
+
+4. **Single Failure Plane**: Friction acts in only one direction. Multi-axis loads easily overcome the connection.
+
+### How AngleLock's Mechanical Lock Works:
+
+AngleLock replaces friction with mechanical interlocking across five planes:
+
+1. **Angled Fastener Geometry**: Rather than pressing straight down, AngleLock fasteners enter at an angle, creating wedge-action mechanical interference.
+
+2. **Self-Alignment**: The bracket geometry guides fasteners into perfect alignment, ensuring consistent mechanical engagement every time.
+
+3. **Five-Plane Anchoring**: The angled fastener creates mechanical interference in five different planes simultaneously, not just one.
+
+4. **Load-Responsive Tightening**: Under vibration and dynamic loads, the mechanical wedge actually seats more firmly rather than loosening.
+
+5. **Predictable Performance**: Unlike friction, mechanical interlocking is deterministic. FEA models can accurately predict joint behavior because geometry, not surface conditions, determines performance.
+
+### Real-World Impact:
+
+**Machine Bases:** Precision equipment maintains calibration because the base structure doesn't shift or deflect over time.
+
+**Robotics:** Cobot mounting systems stay rigid through millions of cycles without maintenance.
+
+**Cleanrooms:** No particle generation from loosening connections. No maintenance personnel entering the controlled environment to retighten bolts.
+
+**Heavy Equipment:** Support loads that would require massive T-slot profiles with much lighter AngleLock structures.
+
+**Vibration Resistance:** Self-tightening under the very conditions that destroy friction-based connections.
+
+The fundamental advantage is simple: **mechanical locks respond to physics, while friction fights against it**. When vibration hits a friction joint, it reduces the normal force and the connection loosens. When vibration hits a mechanical lock, the wedge action seats more firmly.
+
+## Industries Served
+
+### Aerospace & Defense
+Ground support equipment, satellite assembly fixtures, avionics test stands, and flight simulator platforms.
+
+**Key Benefits:**
+- Vibration-proof connections eliminate test fixture drift
+- Modular design allows rapid reconfiguration for new programs
+- Non-particle shedding aluminum suitable for cleanrooms
+- 10x strength advantage handles heavy aerospace equipment
+
+### Life Sciences
+Cleanroom infrastructure, lab equipment frames, bioprocessing equipment, and pharmaceutical manufacturing.
+
+**Key Benefits:**
+- Clear anodized finish prevents particle generation
+- Easy to clean surfaces support strict hygiene protocols
+- Corrosion resistant for repeated chemical exposure
+- Tool-less reconfiguration supports process changes
+
+### Semiconductor
+Fab equipment frames, wafer handling systems, vibration-isolated platforms, and EUV support structures.
+
+**Key Benefits:**
+- Superior vibration damping protects sensitive processes
+- Cleanroom-certified materials prevent wafer contamination
+- Precision tolerances support automated wafer handling
+- Modular design enables fast fab layout changes
+
+### Robotics & Automation
+Robot cell enclosures, cobot mounting systems, AGV frames, and high-speed assembly platforms.
+
+**Key Benefits:**
+- Vibration-proof design maintains robot calibration
+- Modular panels support quick access and reconfiguration
+- Precision mounting points for cameras and sensors
+- Lightweight aluminum enables easy relocation
+
+### General Industrial
+Machine bases, work platforms, industrial carts, custom equipment guarding, and material handling.
+
+**Key Benefits:**
+- Load capacity rivals welded steel at lower cost
+- Vibration resistance reduces maintenance and downtime
+- Casters and modular design enable easy relocation
+- No welding or specialized labor required for installation
+
+## Solutions Overview
+
+### Machine Bases & Frames
+Ultra-rigid structural frames for precision equipment and heavy machinery featuring superior vibration control, heavy-duty load capacity, precision leveling & alignment, and modular reconfigurability.
+
+### Enclosures & Guarding
+Safety enclosures and machine guarding systems that meet industrial standards including OSHA & ANSI compliance, modular panel systems, quick-access solutions, and easy reconfiguration.
+
+### Cleanroom Systems
+Contamination-free structural systems for controlled environments featuring ISO cleanroom compatibility, superior cleanliness, chemical resistance, and tool-less reconfiguration.
+
+### Work Platforms & Stations
+Ergonomic workstations and elevated platforms for assembly and maintenance with height adjustability, ergonomic optimization, integrated accessories, and scalable configurations.
+
+### Custom Engineering
+Tailored structural solutions designed to exact specifications including full design services, FEA & structural analysis, rapid prototyping, and turnkey solutions.
+
+## Core Values
+
+**Excellence:** Uncompromising quality in every structural solution we deliver
+
+**Partnership:** Collaborative relationships built on trust and transparency
+
+**Innovation:** Continuously advancing structural engineering technology
+
+**Precision:** Engineered solutions that meet exact specifications
+
+## Statistics
+
+- 2500+ Projects Delivered
+- 50+ Industries Served
+- 15+ Years of Innovation
+- 100,000+ Engineering Hours
+
+## Contact Information
+Controlled Dynamics Inc.
+1058 Overland Court
+Grafton, WI 53024
+Phone: (262) 421-8840
+Email: info@controlleddynamicsinc.com
+Website: https://controlleddynamicsinc.com

@@ -55,6 +55,26 @@ export const podcasts: PodcastData[] = [
     duration: '14:38',
     episode: 1,
     date: '2025-12-01'
+  },
+  {
+    id: '2',
+    title: 'Why Mechanical Locks Beat Friction',
+    description: 'Discover why mechanical locks outperform friction-based connections in demanding industrial applications. Explore the fundamental problems with friction-based T-slot systems, how vibration destroys friction connections but strengthens mechanical locks, the physics behind AngleLock\'s 5-plane mechanical anchoring system, and real-world applications in precision equipment, robotics, and cleanrooms.',
+    youtubeId: 'vd_YqTbLYlc',
+    category: 'Technical Deep Dive',
+    duration: '13:32',
+    episode: 2,
+    date: '2025-12-05'
+  },
+  {
+    id: '3',
+    title: '10x Stronger Than Traditional T-Slot Systems',
+    description: 'How does AngleLock achieve 10x the strength of traditional aluminum framing systems? Learn about the strength advantage of mechanical locks vs. friction, how AngleLock handles heavy loads with lighter profiles, applications in aerospace, semiconductor, and heavy equipment, and why engineers can design with confidence using structural performance that rivals welded steel.',
+    youtubeId: 'U2TxI7mL_Uc',
+    category: 'Technology Overview',
+    duration: '13:41',
+    episode: 3,
+    date: '2025-12-05'
   }
 ];
 

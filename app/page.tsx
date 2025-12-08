@@ -6,10 +6,15 @@ import IndustryShowcase from '@/components/sections/IndustryShowcase';
 import TechnologyFeatures from '@/components/sections/TechnologyFeatures';
 import Statistics from '@/components/sections/Statistics';
 import CTASection from '@/components/sections/CTASection';
+import StructuredData, { organizationSchema, productSchema } from '@/components/seo/StructuredData';
+import NewsletterSignup from '@/components/newsletter/NewsletterSignup';
+import Container from '@/components/ui/Container';
 
 export default function Home() {
   return (
     <>
+      <StructuredData data={organizationSchema} />
+      <StructuredData data={productSchema} />
       <Header />
       <main>
         <Hero />
@@ -17,6 +22,20 @@ export default function Home() {
         <IndustryShowcase />
         <TechnologyFeatures />
         <Statistics />
+
+        {/* Newsletter Section */}
+        <section className="py-20 bg-white">
+          <Container>
+            <div className="max-w-3xl mx-auto">
+              <NewsletterSignup
+                variant="card"
+                title="Engineering Insights Delivered to Your Inbox"
+                description="Join 500+ engineers and manufacturers getting expert articles on aluminum framing systems, T-slot alternatives, and structural engineering best practices."
+              />
+            </div>
+          </Container>
+        </section>
+
         <CTASection />
       </main>
       <Footer />

@@ -1,23 +1,40 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import Container from '@/components/ui/Container';
 import { INDUSTRIES, SOLUTIONS, COMPANY_INFO } from '@/lib/constants';
+import NewsletterSignup from '@/components/newsletter/NewsletterSignup';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-[#0A1628] text-white">
+      {/* Newsletter Bar */}
+      <div className="bg-gradient-to-r from-[#C9A227] to-[#E0B830] py-8">
+        <Container>
+          <div className="max-w-4xl mx-auto">
+            <NewsletterSignup
+              variant="inline"
+              title="Stay Ahead with Industry Insights"
+              description="Get expert articles on aluminum framing, engineering guides, and the latest in modular construction."
+              className="bg-transparent border-none"
+            />
+          </div>
+        </Container>
+      </div>
+
       <Container className="py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Company Info */}
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-[#C9A227] rounded-lg flex items-center justify-center">
-                <span className="text-[#0A1628] font-bold text-xl font-['Barlow_Condensed']">CD</span>
-              </div>
-              <span className="text-white font-bold text-lg font-['Barlow_Condensed'] tracking-wide">
-                CONTROLLED<br/>DYNAMICS
-              </span>
+            <div className="mb-4">
+              <Image
+                src="/Controlled Dynamics LOGO.png"
+                alt="Controlled Dynamics Inc."
+                width={360}
+                height={100}
+                className="h-20 w-auto"
+              />
             </div>
             <p className="text-white/70 text-sm mb-4">
               {COMPANY_INFO.tagline}
@@ -73,6 +90,16 @@ export default function Footer() {
               <li>
                 <Link href="/technology" className="text-white/70 hover:text-[#C9A227] transition-colors text-sm">
                   Technology
+                </Link>
+              </li>
+              <li>
+                <Link href="/compare/t-slot" className="text-white/70 hover:text-[#C9A227] transition-colors text-sm">
+                  AngleLock vs T-Slot
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog" className="text-white/70 hover:text-[#C9A227] transition-colors text-sm">
+                  Blog & Articles
                 </Link>
               </li>
               <li>

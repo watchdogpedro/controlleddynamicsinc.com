@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import Container from '@/components/ui/Container';
@@ -62,12 +63,14 @@ export default function Header() {
             <Link href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Controlled Dynamics Inc.</span>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-[#C9A227] rounded-lg flex items-center justify-center">
-                  <span className="text-[#0A1628] font-bold text-xl font-['Barlow_Condensed']">CD</span>
-                </div>
-                <span className="text-white font-bold text-xl font-['Barlow_Condensed'] tracking-wide">
-                  CONTROLLED DYNAMICS
-                </span>
+                <Image
+                  src="/Controlled Dynamics LOGO.png"
+                  alt="Controlled Dynamics Inc."
+                  width={360}
+                  height={100}
+                  className="h-20 w-auto"
+                  priority
+                />
               </div>
             </Link>
           </div>

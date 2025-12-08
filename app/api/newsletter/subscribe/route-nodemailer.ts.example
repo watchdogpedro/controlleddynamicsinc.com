@@ -1,0 +1,76 @@
+// ALTERNATIVE IMPLEMENTATION USING NODEMAILER
+// To use this version:
+// 1. Run: npm install nodemailer
+// 2. Rename this file to route.ts (replace the existing one)
+// 3. Set up SMTP credentials in .env.local
+
+import { NextResponse } from 'next/server';
+import nodemailer from 'nodemailer';
+
+export async function POST(request: Request) {
+  try {
+    const { email } = await request.json();
+
+    // Validate email
+    if (!email || !email.includes('@')) {
+      return NextResponse.json(
+        { error: 'Invalid email address' },
+        { status: 400 }
+      );
+    }
+
+    // Get user info for context
+    const userAgent = request.headers.get('user-agent') || 'Unknown';
+    const referer = request.headers.get('referer') || 'Direct';
+    const timestamp = new Date().toISOString();
+
+    // Configure email transporter
+    // Use your email provider's SMTP settings
+    const transporter = nodemailer.createTransporter({
+      host: process.env.SMTP_HOST || 'smtp.gmail.com', // e.g., smtp.gmail.com
+      port: parseInt(process.env.SMTP_PORT || '587'),
+      secure: false, // true for 465, false for other ports
+      auth: {
+        user: process.env.SMTP_USER, // Your email
+        pass: process.env.SMTP_PASSWORD, // Your email password or app password
+      },
+    });
+
+    // Email content
+    const mailOptions = {
+      from: process.env.SMTP_USER,
+      to: 'info@anglelock.com',
+      subject: `New Newsletter Signup: ${email}`,
+      text: `
+New Newsletter Signup
+=====================
+
+Email: ${email}
+Date/Time: ${timestamp}
+Source Page: ${referer}
+User Agent: ${userAgent}
+
+---
+This is an automated notification from controlleddynamicsinc.com newsletter signup form.
+      `.trim(),
+      replyTo: email
+    };
+
+    // Send email
+    await transporter.sendMail(mailOptions);
+
+    console.log('Newsletter signup forwarded:', email);
+
+    return NextResponse.json(
+      { message: 'Successfully subscribed to newsletter' },
+      { status: 200 }
+    );
+
+  } catch (error) {
+    console.error('Newsletter subscription error:', error);
+    return NextResponse.json(
+      { error: 'Failed to process subscription' },
+      { status: 500 }
+    );
+  }
+}

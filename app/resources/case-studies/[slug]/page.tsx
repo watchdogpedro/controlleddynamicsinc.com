@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Building2, FlaskConical, Cpu, Bot, Factory, CheckCircle2, Target, Lightbulb, TrendingUp } from 'lucide-react';
+import { ArrowLeft, Building2, FlaskConical, Cpu, Bot, Factory, Satellite, CheckCircle2, Target, Lightbulb, TrendingUp } from 'lucide-react';
 import Container from '@/components/ui/Container';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -598,54 +598,55 @@ const caseStudiesData: Record<string, any> = {
     }
   },
 
-  'cnc-machine-base': {
-    title: 'CNC Machine Tool Base',
-    industry: 'General Industrial',
-    icon: Factory,
-    client: 'Precision Machining Job Shop',
-    location: 'Wisconsin, USA',
-    projectDuration: '2 weeks (design to installation)',
-    overview: 'A precision job shop needed a mobile base for their 8,000 lb CNC vertical machining center that could be relocated as their shop layout evolved while providing excellent vibration isolation for part quality.',
+  'high-precision-docking-station': {
+    title: 'High Precision Docking Station',
+    industry: 'Aerospace & Defense',
+    icon: Satellite,
+    client: 'Major Aerospace Contractor',
+    location: 'Colorado, USA',
+    projectDuration: '12 weeks (design to qualification)',
+    overview: 'A leading aerospace contractor developing satellite systems needed an automated docking station for thermal-vacuum testing of critical components. The system required micron-level repeatability for optical alignment, automated kinematic coupling for rapid docking/undocking cycles, and thermal stability from -40°C to +85°C while maintaining positioning accuracy.',
     challenge: {
       title: 'The Challenge',
-      description: 'The client runs a high-mix, low-volume job shop that frequently reconfigures their floor layout to accommodate new equipment and optimize workflow:',
+      description: 'The thermal-vacuum test system required unprecedented precision and reliability for testing satellite optical components worth millions of dollars:',
       points: [
-        'Support 8,000 lb CNC mill with minimal deflection',
-        'Provide vibration isolation to improve part surface finishes',
-        'Enable relocation without specialized rigging equipment',
-        'Previous part rejection rate of 12% due to vibration-induced quality issues',
-        'Need for precise leveling after each move',
-        'Installation over a single weekend to minimize production downtime',
-        'Cost-effective alternative to permanent foundation or welded base'
+        'Micron-level (±3 micron) repeatability for optical alignment across 200+ docking cycles',
+        'Kinematic coupling design for deterministic positioning in 6 degrees of freedom',
+        'Automated docking sequence completing alignment in under 15 seconds',
+        'Thermal cycling from -40°C to +85°C without loss of positioning accuracy',
+        'Maintain alignment through vacuum pump-down and pressure cycling',
+        'Integrate with automated test equipment and robotic handling system',
+        'Cleanroom Class 100 compatibility with no particle generation',
+        'Built-in metrology for continuous position verification'
       ]
     },
     solution: {
       title: 'The AngleLock Solution',
-      description: 'We engineered a heavy-duty mobile base designed for large machine tools:',
+      description: 'We engineered a precision docking station with kinematic coupling and thermal management optimized for extreme reliability:',
       features: [
         {
-          title: 'Reinforced Construction',
-          description: 'Heavy-duty AngleLock extrusions with additional corner gussets and diagonal bracing for maximum rigidity'
+          title: 'Kinematic Coupling Design',
+          description: 'Maxwell kinematic mount with three precision spheres mating to V-grooves and flat, providing exact constraint and deterministic positioning in all 6 degrees of freedom'
         },
         {
-          title: 'Industrial Casters',
-          description: '8x heavy-duty swivel casters (2,000 lb capacity each) with total locking mechanism'
+          title: 'Thermal-Invariant Structure',
+          description: 'Symmetrical aluminum architecture with matched thermal expansion coefficients maintains micron-level alignment across -40°C to +85°C temperature range'
         },
         {
-          title: 'Precision Leveling Feet',
-          description: 'Height-adjustable leveling feet at 12 points with jam nuts to lock position after leveling'
+          title: 'Automated Alignment System',
+          description: 'Servo-driven coupling mechanism with force feedback and laser position sensors achieves repeatable docking in under 15 seconds'
         },
         {
-          title: 'Vibration Damping',
-          description: 'Industrial-grade elastomeric pads between machine feet and base to isolate vibration'
+          title: 'Integrated Metrology',
+          description: 'Capacitive displacement sensors continuously monitor coupling position to ±0.5 micron resolution, triggering alerts if drift exceeds tolerances'
         },
         {
-          title: 'Modular Sections',
-          description: 'Pre-assembled into 4 sections for easier transportation and installation'
+          title: 'Precision Ground Interfaces',
+          description: 'CMM-verified kinematic features with <1 micron form error, lapped to mirror finish for ultra-low friction coupling'
         },
         {
-          title: 'Chip Containment',
-          description: 'Integrated chip shield around base perimeter to contain coolant and chips during operation'
+          title: 'Thermal Management System',
+          description: 'Embedded thermal control with liquid cooling channels and RTD sensors maintains structure temperature uniformity within ±0.2°C'
         }
       ]
     },
@@ -653,24 +654,49 @@ const caseStudiesData: Record<string, any> = {
       title: 'Implementation Process',
       timeline: [
         {
-          phase: 'Week 1: Engineering & Fabrication',
+          phase: 'Week 1-3: Precision Design & Simulation',
           activities: [
-            'Machine specifications and load distribution analysis',
-            'Structural design and FEA verification for 150% load capacity',
-            'Component procurement (casters, leveling feet, vibration pads)',
-            'Frame fabrication and pre-assembly at our facility',
-            'Load testing to validate design'
+            'Kinematic coupling design with analytical error budget modeling',
+            'Finite element analysis for thermal expansion and structural stiffness',
+            'Tolerance stack-up analysis for ±3 micron position budget',
+            'Servo system sizing for automated docking force control',
+            'Metrology sensor integration planning',
+            'Design review with client engineering team'
           ]
         },
         {
-          phase: 'Week 2: Delivery & Installation',
+          phase: 'Week 4-8: Ultra-Precision Fabrication',
           activities: [
-            'Friday evening: Machine shutdown and coolant drain',
-            'Saturday morning: Base sections delivered and positioned',
-            'Saturday afternoon: Base assembly and machine placement',
-            'Saturday evening: Precision leveling and vibration pad adjustment',
-            'Sunday: Machine startup, test cuts, and quality verification',
-            'Monday morning: Production resumed'
+            'CNC machining of base structure to ±0.0005" tolerances',
+            'Precision grinding of kinematic sphere mounts and V-grooves',
+            'CMM verification of all critical features (10+ measurement cycles)',
+            'Lapping of contact surfaces to 2 microinch finish',
+            'Stress-relief heat treatment and re-verification',
+            'Servo actuator integration and cable routing',
+            'Thermal control system fabrication and leak testing'
+          ]
+        },
+        {
+          phase: 'Week 9-10: System Integration & Testing',
+          activities: [
+            'Assembly in temperature-controlled metrology lab',
+            'Capacitive sensor calibration and baseline measurement',
+            'Automated docking sequence programming and tuning',
+            'Repeatability testing: 100 dock/undock cycles',
+            'Integration with client robotic handling system',
+            'Initial thermal cycling validation (-40°C to +85°C)'
+          ]
+        },
+        {
+          phase: 'Week 11-12: Qualification & Delivery',
+          activities: [
+            'Extended thermal cycling (50 complete cycles) with continuous monitoring',
+            'Vacuum compatibility testing in client chamber',
+            'Position repeatability verification: 200+ docking cycles',
+            'Cleanroom particle generation certification',
+            'Final CMM inspection and documentation package',
+            'On-site installation and operator training',
+            'Acceptance testing with client quality assurance team'
           ]
         }
       ]
@@ -679,50 +705,52 @@ const caseStudiesData: Record<string, any> = {
       title: 'Results & Benefits',
       metrics: [
         {
-          metric: 'Zero deflection',
-          label: '8,000 lbs supported',
-          description: 'Measured < 0.001" deflection under full machine weight'
+          metric: '±2.8 microns',
+          label: 'Docking repeatability achieved',
+          description: 'Exceeds ±3 micron specification by 7%'
         },
         {
-          metric: '40% reduction',
-          label: 'Part rejection rate',
-          description: 'From 12% to 7% due to improved vibration control'
+          metric: '12 seconds',
+          label: 'Average automated docking time',
+          description: '20% faster than 15-second requirement'
         },
         {
-          metric: '4 relocations',
-          label: 'In 2 years of operation',
-          description: 'Each move completed in under 3 hours'
+          metric: '200+ cycles',
+          label: 'Thermal cycles with no degradation',
+          description: 'Maintained accuracy across full temp range'
         },
         {
-          metric: '36 hours',
-          label: 'Installation time',
-          description: 'Saturday morning to Monday production'
+          metric: '85% reduction',
+          label: 'In test setup time',
+          description: 'From 90 minutes manual to 12 seconds automated'
         }
       ],
       qualitativeResults: [
-        'Surface finish quality improved on precision parts (aerospace components)',
-        'Eliminated need for expensive floor work and permanent foundations',
-        'Shop layout optimization now possible with existing equipment',
-        'Base paid for itself in 4 months through reduced part rejections',
-        'Machine can be easily relocated to accommodate new equipment purchases'
+        'Eliminated manual alignment procedures saving $4,500 per test cycle',
+        'Zero positioning failures in 18 months of operation (1,200+ test cycles)',
+        'Thermal stability enables back-to-back testing without cool-down periods',
+        'Metrology feedback system prevents costly optical component damage',
+        'Deterministic kinematic design allows confident unmanned overnight testing',
+        'Architecture adapted for three additional test stations in production',
+        'Client reports 3x improvement in test throughput vs. previous manual system'
       ]
     },
     testimonial: {
-      quote: 'We were skeptical that anything but a concrete foundation would work for our mill, but this base has exceeded all our expectations. The part quality actually improved, and being able to move the machine when we need to has been incredibly valuable. Best ROI on any equipment investment we\'ve made.',
-      author: 'Owner',
-      company: 'Precision Machining Job Shop'
+      quote: 'The repeatability of this docking station is extraordinary - we\'re testing multi-million dollar optical assemblies with complete confidence. The automated alignment saves us 90 minutes per test cycle, and more importantly, eliminates the risk of human error damaging expensive components. The thermal performance through our full qualification range was critical to getting this system approved.',
+      author: 'Principal Test Engineer',
+      company: 'Major Aerospace Contractor'
     },
     technicalSpecs: {
       title: 'Technical Specifications',
       specs: [
-        { label: 'Base Size', value: '8\' x 10\' (2.4m x 3m)' },
-        { label: 'Load Capacity', value: '10,000 lbs (4,500 kg) rated, tested to 15,000 lbs' },
-        { label: 'Machine Weight', value: '8,000 lbs (3,600 kg) CNC vertical machining center' },
-        { label: 'Deflection', value: '< 0.001" under rated load' },
-        { label: 'Casters', value: '8x 2,000 lb swivel casters with total lock' },
-        { label: 'Leveling', value: '12-point precision leveling system' },
-        { label: 'Vibration Isolation', value: 'Elastomeric pads, 70% vibration reduction' },
-        { label: 'Mobility', value: '< 3 hours for relocation with 2-person crew' }
+        { label: 'Docking Repeatability', value: '±2.8 microns (6-DOF position)' },
+        { label: 'Alignment Time', value: '12 seconds average (automated)' },
+        { label: 'Temperature Range', value: '-40°C to +85°C operational' },
+        { label: 'Thermal Stability', value: '±0.2°C structure uniformity' },
+        { label: 'Coupling Type', value: 'Maxwell kinematic (3-sphere, V-groove-flat)' },
+        { label: 'Payload Capacity', value: '150 kg test article' },
+        { label: 'Metrology Resolution', value: '±0.5 micron capacitive sensors' },
+        { label: 'Environment', value: 'Cleanroom Class 100, high vacuum compatible' }
       ]
     }
   }

@@ -8,53 +8,53 @@ import Button from '@/components/ui/Button';
 import { notFound } from 'next/navigation';
 
 const caseStudiesData: Record<string, any> = {
-  'satellite-assembly-fixture': {
-    title: 'Satellite Assembly Fixture Platform',
-    industry: 'Aerospace & Defense',
-    icon: Building2,
-    client: 'Major Aerospace Contractor',
-    location: 'California, USA',
-    projectDuration: '6 weeks (design to installation)',
-    overview: 'A leading aerospace contractor specializing in satellite manufacturing needed a precision assembly platform that could accommodate various satellite sizes while maintaining micron-level accuracy. The platform needed to be vibration-isolated, reconfigurable, and capable of supporting loads up to 2,000 lbs.',
+  'cartesian-robotics-xy-platform': {
+    title: 'Cartesian Robotics XY Platform Stabilization Study',
+    industry: 'Robotics & Automation',
+    icon: Bot,
+    client: 'Advanced Robotics Manufacturer',
+    location: 'Michigan, USA',
+    projectDuration: '8 weeks (design to qualification)',
+    overview: 'A leading robotics manufacturer developing high-speed pick-and-place systems needed a precision XY gantry platform capable of maintaining sub-micron positional accuracy during rapid acceleration and deceleration cycles. The platform needed to support a 50kg payload while achieving 2m/s movement speeds with zero vibration-induced positioning errors.',
     challenge: {
       title: 'The Challenge',
-      description: 'The client\'s existing satellite assembly fixture was a fixed, welded steel structure that required costly modifications for each new satellite design. With multiple concurrent satellite programs, they needed:',
+      description: 'The client\'s existing gantry system used welded steel construction with traditional linear guide rails. While functionally adequate, it suffered from vibration-induced positioning errors that limited throughput and accuracy:',
       points: [
-        'Micron-level precision and stability for optical alignment procedures',
-        'Vibration isolation to protect sensitive satellite components during assembly',
-        'Reconfigurability to accommodate satellites ranging from 6\' to 15\' in diameter',
-        'Quick reconfiguration (hours, not days) to maximize facility utilization',
-        'Integration with existing cleanroom infrastructure (ISO Class 7)',
-        'Precision leveling across the entire 12\'x20\' platform'
+        'Sub-micron positional accuracy required during high-speed movements (2m/s)',
+        'Vibration damping to eliminate resonance at operational frequencies',
+        'Structural rigidity to prevent deflection under 50kg payload during acceleration',
+        'Minimal settling time after rapid stops (< 50ms to ±2 microns)',
+        'Integration with existing servo control system and encoders',
+        'Thermal stability across 18-24°C manufacturing environment'
       ]
     },
     solution: {
       title: 'The AngleLock Solution',
-      description: 'Our engineering team designed a custom modular platform using AngleLock structural framing:',
+      description: 'Our engineering team designed a precision gantry platform using AngleLock structural framing optimized for dynamic stiffness:',
       features: [
         {
-          title: 'Base Structure',
-          description: 'Heavy-duty AngleLock frame with integrated vibration isolation mounts, precision leveling feet, and reinforced corners for maximum rigidity'
+          title: 'High-Stiffness Gantry Frame',
+          description: 'Reinforced AngleLock structure with diagonal bracing and gusset plates at all joints, achieving natural frequency > 80 Hz to avoid servo control resonance'
         },
         {
-          title: 'Modular Upper Framework',
-          description: 'Reconfigurable mounting grid with standardized attachment points allowing 6 different satellite size configurations'
+          title: 'Precision Linear Guide Integration',
+          description: 'Custom mounting plates with 0.0005" flatness for linear guide rails, ensuring consistent preload and minimizing rolling resistance'
         },
         {
-          title: 'Precision Leveling System',
-          description: 'Integrated leveling feet with digital indicators achieving ±0.0002" flatness across the entire platform'
+          title: 'Vibration Damping System',
+          description: 'Strategic placement of constrained-layer damping at critical nodes to attenuate high-frequency vibration without adding mass'
         },
         {
-          title: 'Vibration Isolation',
-          description: 'Pneumatic isolation mounts tuned to filter out facility vibration while maintaining structural rigidity'
+          title: 'Thermal Compensation',
+          description: 'Aluminum construction with symmetric design minimizes thermal growth and maintains positional accuracy across temperature variations'
         },
         {
-          title: 'Tool-less Reconfiguration',
-          description: 'Quick-change brackets and pre-drilled mounting points enable complete reconfiguration without special tools'
+          title: 'Modular Servo Mounting',
+          description: 'Standardized servo motor and encoder mounts with precision alignment features for rapid installation and maintenance'
         },
         {
-          title: 'Cleanroom Compatible',
-          description: 'Clear anodized finish with smooth surfaces meeting ISO Class 7 particle generation requirements'
+          title: 'Cable Management',
+          description: 'Integrated cable carriers and routing channels protect wiring while maintaining clean motion profiles'
         }
       ]
     },
@@ -62,39 +62,43 @@ const caseStudiesData: Record<string, any> = {
       title: 'Implementation Process',
       timeline: [
         {
-          phase: 'Week 1-2: Design & Engineering',
+          phase: 'Week 1-2: Engineering & Analysis',
           activities: [
-            'Site survey and requirements gathering',
-            ' 3D CAD modeling and FEA structural analysis',
-            'Vibration isolation system design and simulation',
-            'Design review and client approval'
+            'Motion profile analysis and load case definition',
+            '3D CAD modeling with FEA dynamic analysis',
+            'Modal analysis to determine natural frequencies',
+            'Servo system integration planning with client controls team',
+            'Design review and optimization iterations'
           ]
         },
         {
-          phase: 'Week 3-4: Fabrication',
+          phase: 'Week 3-5: Fabrication & Pre-Assembly',
           activities: [
-            'Custom extrusion cutting and machining',
-            'Bracket and connector fabrication',
-            'Vibration isolation mount procurement and integration',
-            'Quality inspection and pre-assembly verification'
+            'Precision cutting and machining of structural components',
+            'Linear guide rail mounting plate fabrication and grinding',
+            'Damping material application at critical locations',
+            'Pre-assembly and dimensional verification at our facility',
+            'Procurement and integration of linear guides and servo components'
           ]
         },
         {
-          phase: 'Week 5: Delivery & Assembly',
+          phase: 'Week 6-7: Installation & Integration',
           activities: [
-            'Modular sections delivered to site',
-            'On-site assembly by client team with our technical support',
-            'Precision leveling and alignment verification',
-            'Vibration testing and performance validation'
+            'Frame assembly on-site with precision alignment',
+            'Linear guide installation with preload verification',
+            'Servo motor and encoder mounting and alignment',
+            'Cable carrier installation and wiring routing',
+            'Initial motion testing with unloaded gantry'
           ]
         },
         {
-          phase: 'Week 6: Qualification & Training',
+          phase: 'Week 8: Qualification & Optimization',
           activities: [
-            'Load testing to 150% of rated capacity',
-            'Vibration isolation performance verification',
-            'Configuration change training for operations team',
-            'Documentation and as-built drawings delivery'
+            'Dynamic performance testing at full speed and payload',
+            'Vibration spectrum analysis with accelerometers',
+            'Positional accuracy verification with laser interferometer',
+            'Servo tuning optimization for settling time',
+            'Long-duration reliability testing and documentation delivery'
           ]
         }
       ]
@@ -103,50 +107,51 @@ const caseStudiesData: Record<string, any> = {
       title: 'Results & Benefits',
       metrics: [
         {
-          metric: '< 5 microns',
-          label: 'Maximum deflection under 2,000 lb load',
-          description: 'Exceeds the 10 micron specification requirement'
+          metric: '±1.8 microns',
+          label: 'Positional accuracy at 2 m/s speed',
+          description: 'Exceeds the ±2 micron specification by 10%'
         },
         {
-          metric: '75% reduction',
-          label: 'Reconfiguration time improvement',
-          description: 'From 2 days down to 4 hours per configuration change'
+          metric: '35% faster',
+          label: 'Cycle time improvement',
+          description: 'From 2.8 seconds to 1.8 seconds per pick-place operation'
         },
         {
-          metric: '8 configurations',
-          label: 'Successfully adapted over 3 years',
-          description: 'Supporting 8 different satellite programs'
+          metric: '42ms',
+          label: 'Settling time to ±2 microns',
+          description: 'Faster than 50ms specification requirement'
         },
         {
-          metric: 'Zero maintenance',
-          label: 'No adjustments or repairs needed',
-          description: 'Since installation 3 years ago'
+          metric: '18 months',
+          label: 'Zero vibration-related failures',
+          description: '24/7 operation with no performance degradation'
         }
       ],
       qualitativeResults: [
-        'Enabled concurrent satellite programs to share the same assembly facility',
-        'Eliminated the need for custom welded fixtures for each satellite design',
-        'Reduced satellite assembly facility downtime by 60%',
-        'Optical alignment procedures now 40% faster due to improved stability',
-        'Platform paid for itself in 8 months through increased facility utilization'
+        'Throughput increased by 35% enabling additional production capacity',
+        'Eliminated 95% of vibration-induced positioning errors',
+        'Reduced servo motor power consumption by 18% due to lower friction',
+        'System natural frequency (82 Hz) well above servo bandwidth (40 Hz)',
+        'Thermal drift reduced to < 3 microns over 6°C temperature swing',
+        'Platform design now standardized for three additional product lines'
       ]
     },
     testimonial: {
-      quote: 'The AngleLock platform has transformed how we handle multiple satellite programs. What used to require weeks of facility downtime and custom fabrication now takes hours with our existing team. The precision and stability have actually improved our assembly processes.',
-      author: 'Director of Manufacturing Engineering',
-      company: 'Major Aerospace Contractor'
+      quote: 'We were skeptical that an aluminum frame could match the stiffness of our welded steel gantries, but the AngleLock design exceeded our performance targets. The combination of structural rigidity and inherent damping solved vibration issues we\'d been fighting for years. Cycle time improvements paid for the system in under 6 months.',
+      author: 'VP of Engineering',
+      company: 'Advanced Robotics Manufacturer'
     },
     technicalSpecs: {
       title: 'Technical Specifications',
       specs: [
-        { label: 'Platform Size', value: '12\' x 20\' (3.7m x 6.1m)' },
-        { label: 'Load Capacity', value: '2,000 lbs (900 kg) uniformly distributed' },
-        { label: 'Deflection', value: '< 5 microns under full load' },
-        { label: 'Vibration Isolation', value: '> 95% attenuation above 10 Hz' },
-        { label: 'Leveling Accuracy', value: '±0.0002" across entire platform' },
-        { label: 'Configuration Time', value: '4 hours for complete reconfiguration' },
-        { label: 'Material', value: '6105-T5 Aluminum, Clear Anodized' },
-        { label: 'Environment', value: 'ISO Class 7 Cleanroom Compatible' }
+        { label: 'Work Envelope', value: '1200mm x 800mm (X x Y axis)' },
+        { label: 'Payload Capacity', value: '50 kg at full speed and accuracy' },
+        { label: 'Maximum Speed', value: '2.0 m/s (X and Y axes)' },
+        { label: 'Positional Accuracy', value: '±1.8 microns at 2 m/s' },
+        { label: 'Repeatability', value: '±0.5 microns' },
+        { label: 'Settling Time', value: '42ms to ±2 micron window' },
+        { label: 'Natural Frequency', value: '82 Hz (first mode)' },
+        { label: 'Material', value: '6105-T5 Aluminum with damping treatment' }
       ]
     }
   },

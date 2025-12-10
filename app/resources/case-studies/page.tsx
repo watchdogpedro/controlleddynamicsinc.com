@@ -14,14 +14,14 @@ export const metadata: Metadata = {
 
 const caseStudies = [
   {
-    id: 'satellite-assembly-fixture',
-    title: 'Satellite Assembly Fixture Platform',
-    industry: 'Aerospace & Defense',
-    icon: Building2,
-    description: 'Major aerospace contractor needed a 12\'x20\' vibration-isolated platform for satellite integration with micron-level precision requirements.',
-    challenge: 'Micron-level precision for satellite assembly',
-    results: ['< 5 micron deflection under 2,000 lb load', 'Reconfiguration time: 2 days → 4 hours', '8 reconfigurations over 3 years', 'Zero maintenance since installation'],
-    image: '/images/case-studies/satellite-assembly.jpg'
+    id: 'cartesian-robotics-xy-platform',
+    title: 'Cartesian Robotics XY Platform Stabilization Study',
+    industry: 'Robotics & Automation',
+    icon: Bot,
+    description: 'Advanced robotics manufacturer needed a precision XY gantry platform with sub-micron stability for high-speed pick-and-place operations.',
+    challenge: 'Sub-micron stability during high-speed robotic movements',
+    results: ['< 2 micron positional accuracy at 2m/s speeds', 'Cycle time improved by 35%', 'Zero vibration-related failures in 18 months', 'Payload capacity: 50kg with full precision'],
+    image: '/images/case-studies/cartesian-robotics.jpg'
   },
   {
     id: 'pharmaceutical-equipment-base',

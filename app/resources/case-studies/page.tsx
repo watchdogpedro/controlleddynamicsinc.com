@@ -24,14 +24,14 @@ const caseStudies = [
     image: '/images/case-studies/cartesian-robotics.jpg'
   },
   {
-    id: 'pharmaceutical-equipment-base',
-    title: 'Pharmaceutical Manufacturing Equipment Base',
-    industry: 'Life Sciences',
-    icon: FlaskConical,
-    description: 'Pharmaceutical manufacturer required equipment base for ISO Class 7 cleanroom supporting 3,500 lb bioprocessing equipment.',
-    challenge: 'ISO Class 7 cleanroom compatibility with frequent relocations',
-    results: ['Passed ISO 14644-1 Class 7 certification', 'Relocated 3 times in 18 months', 'Withstands daily chemical washdowns', 'Installation: 6 hours vs 2 days'],
-    image: '/images/case-studies/pharmaceutical-base.jpg'
+    id: 'linear-shaft-motor-gantry',
+    title: 'Linear Shaft Motor Gantry System',
+    industry: 'Semiconductor',
+    icon: Cpu,
+    description: 'Semiconductor equipment manufacturer needed ultra-precision gantry for wafer inspection with linear shaft motors and nanometer-level accuracy.',
+    challenge: 'Nanometer positioning with zero cogging and thermal stability',
+    results: ['±50 nanometer repeatability achieved', 'Zero cogging torque ripple', '0.1°C thermal stability maintained', 'Throughput increased 45%'],
+    image: '/images/case-studies/linear-motor-gantry.jpg'
   },
   {
     id: 'wafer-inspection-system',

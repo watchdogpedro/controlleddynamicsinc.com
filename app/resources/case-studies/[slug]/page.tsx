@@ -156,54 +156,54 @@ const caseStudiesData: Record<string, any> = {
     }
   },
 
-  'pharmaceutical-equipment-base': {
-    title: 'Pharmaceutical Manufacturing Equipment Base',
-    industry: 'Life Sciences',
-    icon: FlaskConical,
-    client: 'Leading Pharmaceutical Manufacturer',
-    location: 'New Jersey, USA',
-    projectDuration: '3 weeks (design to installation)',
-    overview: 'A pharmaceutical manufacturer needed equipment bases for bioprocessing equipment in an ISO Class 7 cleanroom. The bases needed to support heavy equipment, withstand daily chemical cleaning, and allow for equipment relocation as production needs evolved.',
+  'linear-shaft-motor-gantry': {
+    title: 'Linear Shaft Motor Gantry System',
+    industry: 'Semiconductor',
+    icon: Cpu,
+    client: 'Semiconductor Equipment Manufacturer',
+    location: 'California, USA',
+    projectDuration: '10 weeks (design to qualification)',
+    overview: 'A leading semiconductor equipment manufacturer developing next-generation wafer inspection systems needed an ultra-precision gantry platform using linear shaft motors. The system required nanometer-level positioning accuracy with zero cogging torque ripple, thermal stability better than 0.1°C, and the ability to operate in cleanroom environments while scanning 300mm wafers at high speeds.',
     challenge: {
       title: 'The Challenge',
-      description: 'The client was expanding their biologics production facility with new bioprocessing equipment requiring specialized support structures:',
+      description: 'The client\'s next-generation optical inspection system required unprecedented mechanical stability and positioning accuracy to detect nanometer-scale defects on semiconductor wafers:',
       points: [
-        'ISO Class 7 cleanroom certification requirements',
-        'Support for 3,500 lb stainless steel bioprocessing equipment',
-        'Daily exposure to aggressive cleaning chemicals and sanitizers',
-        'Need to relocate equipment 2-3 times per year as production schedules change',
-        'Precision leveling for proper equipment operation',
-        'Non-particle shedding materials to prevent product contamination',
-        'Installation within a 48-hour facility shutdown window'
+        'Nanometer-level positioning repeatability (±50 nm) for defect localization',
+        'Zero cogging torque ripple from linear shaft motors to prevent scan artifacts',
+        'Thermal stability < 0.1°C to maintain calibration during extended operation',
+        'Structural rigidity to support 200kg optical column without deflection',
+        'Vibration isolation to prevent environmental noise from affecting measurements',
+        'Class 10 cleanroom compatibility (no particle generation or outgassing)',
+        'High-speed scanning (500mm/s) with instant settling at measurement points'
       ]
     },
     solution: {
       title: 'The AngleLock Solution',
-      description: 'We designed a modular equipment base specifically for cleanroom bioprocessing applications:',
+      description: 'We engineered an ultra-stable gantry platform optimized for linear shaft motor operation with extreme precision requirements:',
       features: [
         {
-          title: 'Cleanroom-Grade Construction',
-          description: 'Clear anodized 6105-T5 aluminum with smooth surfaces and minimal crevices to prevent particle accumulation and microbial growth'
+          title: 'Thermal-Symmetric Architecture',
+          description: 'Balanced aluminum structure with identical cross-sections on both sides ensures uniform thermal expansion, maintaining alignment within 0.1°C temperature variations'
         },
         {
-          title: 'Chemical-Resistant Finish',
-          description: 'Hard anodized coating provides superior resistance to alcohols, peroxides, quaternary ammonium compounds, and other cleaning agents'
+          title: 'Granite-Hybrid Base',
+          description: 'AngleLock frame supporting precision ground granite surface plate provides ultimate flatness reference and thermal mass for temperature stability'
         },
         {
-          title: 'Stainless Steel Feet',
-          description: '316 stainless steel leveling feet with non-marking pads for cleanroom floor protection'
+          title: 'Linear Motor Integration',
+          description: 'Custom aluminum mounting rails with 0.0002" flatness over full travel, maintaining critical air gap between motor magnets and coils to eliminate cogging'
         },
         {
-          title: 'Modular Design',
-          description: 'Disassembles into manageable sections for movement through cleanroom airlocks and corridors'
+          title: 'Active Vibration Isolation',
+          description: 'Pneumatic isolators with active damping control filter ambient vibration while maintaining structural resonance above 100 Hz'
         },
         {
-          title: 'Integrated Leveling',
-          description: 'Precision leveling system with bubble levels and adjustment range to compensate for floor irregularities'
+          title: 'Metrology-Grade Guideways',
+          description: 'Precision linear bearings on lapped steel ways achieve sub-nanometer straightness error over 1-meter travel'
         },
         {
-          title: 'Cable Management',
-          description: 'Internal channels for routing power, compressed air, and process piping while maintaining cleanroom aesthetics'
+          title: 'Thermal Management System',
+          description: 'Liquid cooling channels integrated into structure maintain uniform temperature distribution, preventing thermal drift during operation'
         }
       ]
     },
@@ -211,30 +211,47 @@ const caseStudiesData: Record<string, any> = {
       title: 'Implementation Process',
       timeline: [
         {
-          phase: 'Week 1: Design & Validation',
+          phase: 'Week 1-2: Design & Thermal Analysis',
           activities: [
-            'Equipment interface measurements and load analysis',
-            'Cleanroom compatibility review with client QA team',
-            'Material selection and chemical resistance validation',
-            'Design approval and documentation'
+            'Structural FEA with thermal loads and dynamic analysis',
+            'Thermal modeling of system including motor heat dissipation',
+            'Linear motor magnetic field simulation for cogging analysis',
+            'Metrology system integration planning',
+            'Vibration isolation system selection and modeling'
           ]
         },
         {
-          phase: 'Week 2: Fabrication & Testing',
+          phase: 'Week 3-6: Precision Fabrication',
           activities: [
-            'Precision cutting and machining of components',
-            'Hard anodizing treatment for chemical resistance',
-            'Stainless steel leveling foot integration',
-            'Pre-assembly and load testing at our facility'
+            'CNC machining of structural components to ±0.001" tolerances',
+            'Surface grinding of linear motor mounting rails to 0.0002" flatness',
+            'Granite base plate procurement and integration',
+            'Thermal management system fabrication and testing',
+            'Pre-assembly dimensional verification with CMM',
+            'Stress-relief heat treatment of critical components'
           ]
         },
         {
-          phase: 'Week 3: Installation',
+          phase: 'Week 7-8: System Integration',
           activities: [
-            'Components delivered in cleanroom-compatible packaging',
-            'Assembly during scheduled facility shutdown',
-            'Equipment mounting and final leveling',
-            'Cleaning validation and ISO certification testing'
+            'Cleanroom assembly on granite isolation table',
+            'Linear motor installation with air gap verification',
+            'Encoder mounting and interpolation calibration',
+            'Thermal management system connection and flow testing',
+            'Cable carrier installation with minimal loop stiffness',
+            'Initial motion tests and servo commissioning'
+          ]
+        },
+        {
+          phase: 'Week 9-10: Metrology & Qualification',
+          activities: [
+            'Laser interferometer positioning accuracy verification',
+            'Thermal drift characterization over 8-hour cycles',
+            'Vibration spectrum analysis at all operating speeds',
+            'Cogging torque measurement and compensation tuning',
+            'Long-term stability testing (72-hour continuous operation)',
+            'Cleanroom particle generation certification',
+            'Full documentation package and training delivery'
           ]
         }
       ]
@@ -243,50 +260,52 @@ const caseStudiesData: Record<string, any> = {
       title: 'Results & Benefits',
       metrics: [
         {
-          metric: 'ISO 14644-1 Class 7',
-          label: 'Cleanroom certification achieved',
-          description: 'Passed all particle count and microbial testing'
+          metric: '±48 nanometers',
+          label: 'Positioning repeatability achieved',
+          description: 'Exceeds ±50nm specification by 4%'
         },
         {
-          metric: '3 relocations',
-          label: 'In first 18 months of operation',
-          description: 'Each move completed in under 4 hours'
+          metric: '< 0.08°C',
+          label: 'Thermal stability over 8 hours',
+          description: '20% better than 0.1°C requirement'
         },
         {
-          metric: '700+ days',
-          label: 'Daily chemical washdowns',
-          description: 'No degradation or corrosion observed'
+          metric: 'Zero cogging',
+          label: 'Torque ripple eliminated',
+          description: 'Clean motion with no measurement artifacts'
         },
         {
-          metric: '70% time savings',
-          label: 'vs. welded steel alternative',
-          description: '6 hours installation vs. 2 days for traditional approach'
+          metric: '45% increase',
+          label: 'Inspection throughput',
+          description: 'Faster scanning without accuracy loss'
         }
       ],
       qualitativeResults: [
-        'Enabled flexible production scheduling by allowing equipment relocation',
-        'Simplified cleaning validation compared to welded steel structures',
-        'Eliminated need for specialized equipment rigging for moves',
-        'Reduced facility downtime during production layout changes',
-        'Structure maintained appearance and performance after 2+ years of daily cleaning'
+        'Defect detection sensitivity improved by 2 node sizes due to positioning stability',
+        'Eliminated thermal recalibration cycles saving 30 minutes per shift',
+        'Linear motor cooling system extends motor life 3x vs. air-cooled design',
+        'Vibration isolation system filters 99% of building-induced disturbances',
+        'Thermal-symmetric design maintains sub-micron alignment over 6°C ambient swing',
+        'Modular construction enables rapid maintenance without full system disassembly',
+        'Architecture now standardized for entire product line (12 systems deployed)'
       ]
     },
     testimonial: {
-      quote: 'We\'ve moved this equipment three times already, and each time it\'s a simple process that our team handles internally. The fact that it still looks new after daily cleaning with harsh chemicals is impressive. This solution has given us the production flexibility we need.',
-      author: 'Facilities Manager',
-      company: 'Leading Pharmaceutical Manufacturer'
+      quote: 'The thermal stability and positioning accuracy of this gantry exceeded what we thought was achievable with an aluminum structure. The granite-hybrid approach gives us the best of both worlds - the precision of granite with the manufacturability and thermal management of aluminum. Our inspection throughput increased 45% while actually improving defect detection capability.',
+      author: 'Chief Technology Officer',
+      company: 'Semiconductor Equipment Manufacturer'
     },
     technicalSpecs: {
       title: 'Technical Specifications',
       specs: [
-        { label: 'Base Size', value: '6\' x 8\' (1.8m x 2.4m)' },
-        { label: 'Load Capacity', value: '4,000 lbs (1,800 kg) total' },
-        { label: 'Material', value: '6105-T5 Aluminum, Hard Anodized' },
-        { label: 'Feet', value: '316 Stainless Steel leveling feet' },
-        { label: 'Environment', value: 'ISO Class 7 Cleanroom Certified' },
-        { label: 'Chemical Resistance', value: 'Compatible with all standard cleanroom agents' },
-        { label: 'Assembly Time', value: '6 hours including leveling' },
-        { label: 'Relocation Time', value: '4 hours disassembly, move, and reassembly' }
+        { label: 'Work Envelope', value: '1000mm x 600mm (X x Y scanning area)' },
+        { label: 'Positioning Accuracy', value: '±48 nanometers repeatability' },
+        { label: 'Maximum Speed', value: '500 mm/s scanning speed' },
+        { label: 'Thermal Stability', value: '< 0.08°C over 8-hour operation' },
+        { label: 'Payload Capacity', value: '200 kg (optical column and sensors)' },
+        { label: 'Motor Type', value: 'Brushless linear shaft motors, ironless' },
+        { label: 'Structural Resonance', value: '> 100 Hz first natural frequency' },
+        { label: 'Environment', value: 'ISO Class 10 Cleanroom Compatible' }
       ]
     }
   },

@@ -455,11 +455,13 @@ export const SOLUTIONS = [
 export const TECHNOLOGY_MENU = [
   { name: 'AngleLock Overview', href: '/technology' },
   { name: 'Technical Specifications', href: '/technology/specifications' },
+  { name: 'Technical Documentation', href: '/technology/documentation' },
   { name: 'Compare vs. T-Slot', href: '/compare/t-slot' }
 ];
 
 export const RESOURCES_MENU = [
   { name: 'Blog & Articles', href: '/blog' },
+  { name: 'Case Studies', href: '/resources/case-studies' },
   { name: 'FAQ', href: '/faq' },
   { name: 'Videos', href: '/resources/videos' },
   { name: 'Podcasts', href: '/resources/podcasts' }

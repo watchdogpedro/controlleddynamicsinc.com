@@ -144,9 +144,9 @@ export default function CaseStudiesPage() {
                           </ul>
                         </div>
 
-                        <Link href={`/resources/case-studies/${study.id}`}>
+                        <Link href={`/contact?caseStudy=${encodeURIComponent(study.title)}`}>
                           <Button variant="primary">
-                            Read Full Case Study
+                            Request Case Study
                             <ArrowRight className="ml-2 w-4 h-4" />
                           </Button>
                         </Link>

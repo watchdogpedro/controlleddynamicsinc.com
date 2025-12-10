@@ -955,18 +955,18 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
           <Container>
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-[#0A1628] mb-4">
-                Need a Custom Solution?
+                Want the Full Case Study Details?
               </h2>
               <p className="text-lg text-slate-700 mb-8">
-                Every project is unique. Let our engineering team design the perfect structural solution for your specific requirements.
+                Request the complete case study with detailed technical information, photos, and specifications. Or let our engineering team design a custom solution for your specific requirements.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact">
-                  <Button size="lg">Request a Consultation</Button>
+                <Link href={`/contact?caseStudy=${encodeURIComponent(study.title)}`}>
+                  <Button size="lg">Request Full Case Study</Button>
                 </Link>
-                <Link href="/resources/case-studies">
+                <Link href="/contact">
                   <Button size="lg" variant="secondary">
-                    View More Case Studies
+                    Request Custom Solution
                   </Button>
                 </Link>
               </div>

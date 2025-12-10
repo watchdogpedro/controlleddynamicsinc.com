@@ -1,159 +1,12 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Clock, Send, FileText } from 'lucide-react';
-import { useSearchParams } from 'next/navigation';
-import { Suspense } from 'react';
+import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
 import { COMPANY_INFO } from '@/lib/constants';
-
-function ContactForm() {
-  const searchParams = useSearchParams();
-  const caseStudy = searchParams.get('caseStudy');
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6 }}
-    >
-      {caseStudy && (
-        <div className="mb-8 p-6 bg-gradient-to-r from-[#C9A227]/10 to-[#C9A227]/5 border-l-4 border-[#C9A227] rounded-r-lg">
-          <div className="flex items-start gap-4">
-            <div className="p-3 bg-[#C9A227] rounded-lg">
-              <FileText className="w-6 h-6 text-[#0A1628]" />
-            </div>
-            <div>
-              <h3 className="text-xl font-bold text-[#0A1628] mb-2">
-                Case Study Request
-              </h3>
-              <p className="text-lg text-[#2C4A6E] font-semibold">
-                {caseStudy}
-              </p>
-              <p className="text-sm text-slate-600 mt-1">
-                Fill out the form below and we'll send you the complete case study with detailed information about this project.
-              </p>
-            </div>
-          </div>
-        </div>
-      )}
-
-      <h2 className="font-['Barlow_Condensed'] text-3xl font-bold text-[#0A1628] mb-6">
-        {caseStudy ? 'Your Information' : 'Request Information or a Quote'}
-      </h2>
-      <form className="space-y-6">
-        {caseStudy && (
-          <input type="hidden" name="caseStudyRequest" value={caseStudy} />
-        )}
-
-        <div className="grid md:grid-cols-2 gap-6">
-          <div>
-            <label className="block text-sm font-semibold text-[#0A1628] mb-2">
-              First Name *
-            </label>
-            <input
-              type="text"
-              name="firstName"
-              required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C9A227] focus:border-transparent"
-              placeholder="John"
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-semibold text-[#0A1628] mb-2">
-              Last Name *
-            </label>
-            <input
-              type="text"
-              name="lastName"
-              required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C9A227] focus:border-transparent"
-              placeholder="Doe"
-            />
-          </div>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-6">
-          <div>
-            <label className="block text-sm font-semibold text-[#0A1628] mb-2">
-              Email *
-            </label>
-            <input
-              type="email"
-              name="email"
-              required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C9A227] focus:border-transparent"
-              placeholder="john@company.com"
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-semibold text-[#0A1628] mb-2">
-              Phone
-            </label>
-            <input
-              type="tel"
-              name="phone"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C9A227] focus:border-transparent"
-              placeholder="+1 (555) 123-4567"
-            />
-          </div>
-        </div>
-
-        <div>
-          <label className="block text-sm font-semibold text-[#0A1628] mb-2">
-            Company
-          </label>
-          <input
-            type="text"
-            name="company"
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C9A227] focus:border-transparent"
-            placeholder="Your Company Name"
-          />
-        </div>
-
-        <div>
-          <label className="block text-sm font-semibold text-[#0A1628] mb-2">
-            Industry
-          </label>
-          <select
-            name="industry"
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C9A227] focus:border-transparent"
-          >
-            <option>Select Industry</option>
-            <option>Aerospace & Defense</option>
-            <option>Life Sciences</option>
-            <option>Semiconductor</option>
-            <option>Robotics & Automation</option>
-            <option>General Industrial</option>
-            <option>Other</option>
-          </select>
-        </div>
-
-        <div>
-          <label className="block text-sm font-semibold text-[#0A1628] mb-2">
-            {caseStudy ? 'Additional Questions or Comments' : 'Project Description *'}
-          </label>
-          <textarea
-            name="message"
-            required={!caseStudy}
-            rows={6}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C9A227] focus:border-transparent"
-            placeholder={caseStudy ? 'Any specific questions about this case study or your application?' : 'Tell us about your project requirements...'}
-          />
-        </div>
-
-        <Button type="submit" size="lg" className="w-full sm:w-auto">
-          <Send className="w-5 h-5 mr-2" />
-          {caseStudy ? 'Request Case Study' : 'Send Message'}
-        </Button>
-      </form>
-    </motion.div>
-  );
-}
 
 export default function ContactPage() {
   return (
@@ -186,9 +39,109 @@ export default function ContactPage() {
             <div className="grid lg:grid-cols-3 gap-12">
               {/* Contact Form */}
               <div className="lg:col-span-2">
-                <Suspense fallback={<div>Loading...</div>}>
-                  <ContactForm />
-                </Suspense>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <h2 className="font-['Barlow_Condensed'] text-3xl font-bold text-[#0A1628] mb-6">
+                    Request Information or a Quote
+                  </h2>
+                  <form className="space-y-6">
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div>
+                        <label className="block text-sm font-semibold text-[#0A1628] mb-2">
+                          First Name *
+                        </label>
+                        <input
+                          type="text"
+                          required
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C9A227] focus:border-transparent"
+                          placeholder="John"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-semibold text-[#0A1628] mb-2">
+                          Last Name *
+                        </label>
+                        <input
+                          type="text"
+                          required
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C9A227] focus:border-transparent"
+                          placeholder="Doe"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div>
+                        <label className="block text-sm font-semibold text-[#0A1628] mb-2">
+                          Email *
+                        </label>
+                        <input
+                          type="email"
+                          required
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C9A227] focus:border-transparent"
+                          placeholder="john@company.com"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-semibold text-[#0A1628] mb-2">
+                          Phone
+                        </label>
+                        <input
+                          type="tel"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C9A227] focus:border-transparent"
+                          placeholder="+1 (555) 123-4567"
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-semibold text-[#0A1628] mb-2">
+                        Company
+                      </label>
+                      <input
+                        type="text"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C9A227] focus:border-transparent"
+                        placeholder="Your Company Name"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-semibold text-[#0A1628] mb-2">
+                        Industry
+                      </label>
+                      <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C9A227] focus:border-transparent">
+                        <option>Select Industry</option>
+                        <option>Aerospace & Defense</option>
+                        <option>Life Sciences</option>
+                        <option>Semiconductor</option>
+                        <option>Robotics & Automation</option>
+                        <option>General Industrial</option>
+                        <option>Other</option>
+                      </select>
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-semibold text-[#0A1628] mb-2">
+                        Project Description *
+                      </label>
+                      <textarea
+                        required
+                        rows={6}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C9A227] focus:border-transparent"
+                        placeholder="Tell us about your project requirements..."
+                      />
+                    </div>
+
+                    <Button type="submit" size="lg" className="w-full sm:w-auto">
+                      <Send className="w-5 h-5 mr-2" />
+                      Send Message
+                    </Button>
+                  </form>
+                </motion.div>
               </div>
 
               {/* Contact Info */}

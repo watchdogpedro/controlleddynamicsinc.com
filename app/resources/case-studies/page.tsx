@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowRight, Building2, FlaskConical, Cpu, Bot, Factory, Satellite } from 'lucide-react';
+import { ArrowRight, Building2, FlaskConical, Cpu, Bot, Factory } from 'lucide-react';
 import Container from '@/components/ui/Container';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -14,24 +14,24 @@ export const metadata: Metadata = {
 
 const caseStudies = [
   {
-    id: 'cartesian-robotics-xy-platform',
-    title: 'Cartesian Robotics XY Platform Stabilization Study',
-    industry: 'Robotics & Automation',
-    icon: Bot,
-    description: 'Advanced robotics manufacturer needed a precision XY gantry platform with sub-micron stability for high-speed pick-and-place operations.',
-    challenge: 'Sub-micron stability during high-speed robotic movements',
-    results: ['< 2 micron positional accuracy at 2m/s speeds', 'Cycle time improved by 35%', 'Zero vibration-related failures in 18 months', 'Payload capacity: 50kg with full precision'],
-    image: '/images/case-studies/cartesian-robotics.jpg'
+    id: 'satellite-assembly-fixture',
+    title: 'Satellite Assembly Fixture Platform',
+    industry: 'Aerospace & Defense',
+    icon: Building2,
+    description: 'Major aerospace contractor needed a 12\'x20\' vibration-isolated platform for satellite integration with micron-level precision requirements.',
+    challenge: 'Micron-level precision for satellite assembly',
+    results: ['< 5 micron deflection under 2,000 lb load', 'Reconfiguration time: 2 days → 4 hours', '8 reconfigurations over 3 years', 'Zero maintenance since installation'],
+    image: '/images/case-studies/satellite-assembly.jpg'
   },
   {
-    id: 'linear-shaft-motor-gantry',
-    title: 'Linear Shaft Motor Gantry System',
-    industry: 'Semiconductor',
-    icon: Cpu,
-    description: 'Semiconductor equipment manufacturer needed ultra-precision gantry for wafer inspection with linear shaft motors and nanometer-level accuracy.',
-    challenge: 'Nanometer positioning with zero cogging and thermal stability',
-    results: ['±50 nanometer repeatability achieved', 'Zero cogging torque ripple', '0.1°C thermal stability maintained', 'Throughput increased 45%'],
-    image: '/images/case-studies/linear-motor-gantry.jpg'
+    id: 'pharmaceutical-equipment-base',
+    title: 'Pharmaceutical Manufacturing Equipment Base',
+    industry: 'Life Sciences',
+    icon: FlaskConical,
+    description: 'Pharmaceutical manufacturer required equipment base for ISO Class 7 cleanroom supporting 3,500 lb bioprocessing equipment.',
+    challenge: 'ISO Class 7 cleanroom compatibility with frequent relocations',
+    results: ['Passed ISO 14644-1 Class 7 certification', 'Relocated 3 times in 18 months', 'Withstands daily chemical washdowns', 'Installation: 6 hours vs 2 days'],
+    image: '/images/case-studies/pharmaceutical-base.jpg'
   },
   {
     id: 'wafer-inspection-system',
@@ -54,14 +54,14 @@ const caseStudies = [
     image: '/images/case-studies/cobot-cell.jpg'
   },
   {
-    id: 'high-precision-docking-station',
-    title: 'High Precision Docking Station',
-    industry: 'Aerospace & Defense',
-    icon: Satellite,
-    description: 'Aerospace contractor needed automated docking station for satellite component testing with micron-level repeatability across thermal cycles.',
-    challenge: 'Micron-level repeatability with automated alignment and thermal cycling',
-    results: ['±3 micron docking repeatability achieved', 'Automated alignment in <15 seconds', '200+ thermal cycles with no degradation', '85% reduction in setup time'],
-    image: '/images/case-studies/docking-station.jpg'
+    id: 'cnc-machine-base',
+    title: 'CNC Machine Tool Base',
+    industry: 'General Industrial',
+    icon: Factory,
+    description: 'Job shop needed mobile base for 8,000 lb CNC mill that could be relocated as floor layout changed.',
+    challenge: 'Heavy machinery with vibration isolation and mobility',
+    results: ['Supports 8,000 lbs with zero deflection', '40% reduction in part rejection rate', 'Relocated 4 times in 2 years', 'Saturday install, Monday production'],
+    image: '/images/case-studies/cnc-base.jpg'
   }
 ];
 
@@ -144,9 +144,9 @@ export default function CaseStudiesPage() {
                           </ul>
                         </div>
 
-                        <Link href={`/contact?caseStudy=${encodeURIComponent(study.title)}`}>
+                        <Link href={`/resources/case-studies/${study.id}`}>
                           <Button variant="primary">
-                            Request Case Study
+                            Read Full Case Study
                             <ArrowRight className="ml-2 w-4 h-4" />
                           </Button>
                         </Link>

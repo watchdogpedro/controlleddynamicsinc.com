@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Building2, FlaskConical, Cpu, Bot, Factory, Satellite, CheckCircle2, Target, Lightbulb, TrendingUp } from 'lucide-react';
+import { ArrowLeft, Building2, FlaskConical, Cpu, Bot, Factory, CheckCircle2, Target, Lightbulb, TrendingUp } from 'lucide-react';
 import Container from '@/components/ui/Container';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -8,53 +8,53 @@ import Button from '@/components/ui/Button';
 import { notFound } from 'next/navigation';
 
 const caseStudiesData: Record<string, any> = {
-  'cartesian-robotics-xy-platform': {
-    title: 'Cartesian Robotics XY Platform Stabilization Study',
-    industry: 'Robotics & Automation',
-    icon: Bot,
-    client: 'Advanced Robotics Manufacturer',
-    location: 'Michigan, USA',
-    projectDuration: '8 weeks (design to qualification)',
-    overview: 'A leading robotics manufacturer developing high-speed pick-and-place systems needed a precision XY gantry platform capable of maintaining sub-micron positional accuracy during rapid acceleration and deceleration cycles. The platform needed to support a 50kg payload while achieving 2m/s movement speeds with zero vibration-induced positioning errors.',
+  'satellite-assembly-fixture': {
+    title: 'Satellite Assembly Fixture Platform',
+    industry: 'Aerospace & Defense',
+    icon: Building2,
+    client: 'Major Aerospace Contractor',
+    location: 'California, USA',
+    projectDuration: '6 weeks (design to installation)',
+    overview: 'A leading aerospace contractor specializing in satellite manufacturing needed a precision assembly platform that could accommodate various satellite sizes while maintaining micron-level accuracy. The platform needed to be vibration-isolated, reconfigurable, and capable of supporting loads up to 2,000 lbs.',
     challenge: {
       title: 'The Challenge',
-      description: 'The client\'s existing gantry system used welded steel construction with traditional linear guide rails. While functionally adequate, it suffered from vibration-induced positioning errors that limited throughput and accuracy:',
+      description: 'The client\'s existing satellite assembly fixture was a fixed, welded steel structure that required costly modifications for each new satellite design. With multiple concurrent satellite programs, they needed:',
       points: [
-        'Sub-micron positional accuracy required during high-speed movements (2m/s)',
-        'Vibration damping to eliminate resonance at operational frequencies',
-        'Structural rigidity to prevent deflection under 50kg payload during acceleration',
-        'Minimal settling time after rapid stops (< 50ms to ±2 microns)',
-        'Integration with existing servo control system and encoders',
-        'Thermal stability across 18-24°C manufacturing environment'
+        'Micron-level precision and stability for optical alignment procedures',
+        'Vibration isolation to protect sensitive satellite components during assembly',
+        'Reconfigurability to accommodate satellites ranging from 6\' to 15\' in diameter',
+        'Quick reconfiguration (hours, not days) to maximize facility utilization',
+        'Integration with existing cleanroom infrastructure (ISO Class 7)',
+        'Precision leveling across the entire 12\'x20\' platform'
       ]
     },
     solution: {
       title: 'The AngleLock Solution',
-      description: 'Our engineering team designed a precision gantry platform using AngleLock structural framing optimized for dynamic stiffness:',
+      description: 'Our engineering team designed a custom modular platform using AngleLock structural framing:',
       features: [
         {
-          title: 'High-Stiffness Gantry Frame',
-          description: 'Reinforced AngleLock structure with diagonal bracing and gusset plates at all joints, achieving natural frequency > 80 Hz to avoid servo control resonance'
+          title: 'Base Structure',
+          description: 'Heavy-duty AngleLock frame with integrated vibration isolation mounts, precision leveling feet, and reinforced corners for maximum rigidity'
         },
         {
-          title: 'Precision Linear Guide Integration',
-          description: 'Custom mounting plates with 0.0005" flatness for linear guide rails, ensuring consistent preload and minimizing rolling resistance'
+          title: 'Modular Upper Framework',
+          description: 'Reconfigurable mounting grid with standardized attachment points allowing 6 different satellite size configurations'
         },
         {
-          title: 'Vibration Damping System',
-          description: 'Strategic placement of constrained-layer damping at critical nodes to attenuate high-frequency vibration without adding mass'
+          title: 'Precision Leveling System',
+          description: 'Integrated leveling feet with digital indicators achieving ±0.0002" flatness across the entire platform'
         },
         {
-          title: 'Thermal Compensation',
-          description: 'Aluminum construction with symmetric design minimizes thermal growth and maintains positional accuracy across temperature variations'
+          title: 'Vibration Isolation',
+          description: 'Pneumatic isolation mounts tuned to filter out facility vibration while maintaining structural rigidity'
         },
         {
-          title: 'Modular Servo Mounting',
-          description: 'Standardized servo motor and encoder mounts with precision alignment features for rapid installation and maintenance'
+          title: 'Tool-less Reconfiguration',
+          description: 'Quick-change brackets and pre-drilled mounting points enable complete reconfiguration without special tools'
         },
         {
-          title: 'Cable Management',
-          description: 'Integrated cable carriers and routing channels protect wiring while maintaining clean motion profiles'
+          title: 'Cleanroom Compatible',
+          description: 'Clear anodized finish with smooth surfaces meeting ISO Class 7 particle generation requirements'
         }
       ]
     },
@@ -62,43 +62,39 @@ const caseStudiesData: Record<string, any> = {
       title: 'Implementation Process',
       timeline: [
         {
-          phase: 'Week 1-2: Engineering & Analysis',
+          phase: 'Week 1-2: Design & Engineering',
           activities: [
-            'Motion profile analysis and load case definition',
-            '3D CAD modeling with FEA dynamic analysis',
-            'Modal analysis to determine natural frequencies',
-            'Servo system integration planning with client controls team',
-            'Design review and optimization iterations'
+            'Site survey and requirements gathering',
+            ' 3D CAD modeling and FEA structural analysis',
+            'Vibration isolation system design and simulation',
+            'Design review and client approval'
           ]
         },
         {
-          phase: 'Week 3-5: Fabrication & Pre-Assembly',
+          phase: 'Week 3-4: Fabrication',
           activities: [
-            'Precision cutting and machining of structural components',
-            'Linear guide rail mounting plate fabrication and grinding',
-            'Damping material application at critical locations',
-            'Pre-assembly and dimensional verification at our facility',
-            'Procurement and integration of linear guides and servo components'
+            'Custom extrusion cutting and machining',
+            'Bracket and connector fabrication',
+            'Vibration isolation mount procurement and integration',
+            'Quality inspection and pre-assembly verification'
           ]
         },
         {
-          phase: 'Week 6-7: Installation & Integration',
+          phase: 'Week 5: Delivery & Assembly',
           activities: [
-            'Frame assembly on-site with precision alignment',
-            'Linear guide installation with preload verification',
-            'Servo motor and encoder mounting and alignment',
-            'Cable carrier installation and wiring routing',
-            'Initial motion testing with unloaded gantry'
+            'Modular sections delivered to site',
+            'On-site assembly by client team with our technical support',
+            'Precision leveling and alignment verification',
+            'Vibration testing and performance validation'
           ]
         },
         {
-          phase: 'Week 8: Qualification & Optimization',
+          phase: 'Week 6: Qualification & Training',
           activities: [
-            'Dynamic performance testing at full speed and payload',
-            'Vibration spectrum analysis with accelerometers',
-            'Positional accuracy verification with laser interferometer',
-            'Servo tuning optimization for settling time',
-            'Long-duration reliability testing and documentation delivery'
+            'Load testing to 150% of rated capacity',
+            'Vibration isolation performance verification',
+            'Configuration change training for operations team',
+            'Documentation and as-built drawings delivery'
           ]
         }
       ]
@@ -107,103 +103,102 @@ const caseStudiesData: Record<string, any> = {
       title: 'Results & Benefits',
       metrics: [
         {
-          metric: '±1.8 microns',
-          label: 'Positional accuracy at 2 m/s speed',
-          description: 'Exceeds the ±2 micron specification by 10%'
+          metric: '< 5 microns',
+          label: 'Maximum deflection under 2,000 lb load',
+          description: 'Exceeds the 10 micron specification requirement'
         },
         {
-          metric: '35% faster',
-          label: 'Cycle time improvement',
-          description: 'From 2.8 seconds to 1.8 seconds per pick-place operation'
+          metric: '75% reduction',
+          label: 'Reconfiguration time improvement',
+          description: 'From 2 days down to 4 hours per configuration change'
         },
         {
-          metric: '42ms',
-          label: 'Settling time to ±2 microns',
-          description: 'Faster than 50ms specification requirement'
+          metric: '8 configurations',
+          label: 'Successfully adapted over 3 years',
+          description: 'Supporting 8 different satellite programs'
         },
         {
-          metric: '18 months',
-          label: 'Zero vibration-related failures',
-          description: '24/7 operation with no performance degradation'
+          metric: 'Zero maintenance',
+          label: 'No adjustments or repairs needed',
+          description: 'Since installation 3 years ago'
         }
       ],
       qualitativeResults: [
-        'Throughput increased by 35% enabling additional production capacity',
-        'Eliminated 95% of vibration-induced positioning errors',
-        'Reduced servo motor power consumption by 18% due to lower friction',
-        'System natural frequency (82 Hz) well above servo bandwidth (40 Hz)',
-        'Thermal drift reduced to < 3 microns over 6°C temperature swing',
-        'Platform design now standardized for three additional product lines'
+        'Enabled concurrent satellite programs to share the same assembly facility',
+        'Eliminated the need for custom welded fixtures for each satellite design',
+        'Reduced satellite assembly facility downtime by 60%',
+        'Optical alignment procedures now 40% faster due to improved stability',
+        'Platform paid for itself in 8 months through increased facility utilization'
       ]
     },
     testimonial: {
-      quote: 'We were skeptical that an aluminum frame could match the stiffness of our welded steel gantries, but the AngleLock design exceeded our performance targets. The combination of structural rigidity and inherent damping solved vibration issues we\'d been fighting for years. Cycle time improvements paid for the system in under 6 months.',
-      author: 'VP of Engineering',
-      company: 'Advanced Robotics Manufacturer'
+      quote: 'The AngleLock platform has transformed how we handle multiple satellite programs. What used to require weeks of facility downtime and custom fabrication now takes hours with our existing team. The precision and stability have actually improved our assembly processes.',
+      author: 'Director of Manufacturing Engineering',
+      company: 'Major Aerospace Contractor'
     },
     technicalSpecs: {
       title: 'Technical Specifications',
       specs: [
-        { label: 'Work Envelope', value: '1200mm x 800mm (X x Y axis)' },
-        { label: 'Payload Capacity', value: '50 kg at full speed and accuracy' },
-        { label: 'Maximum Speed', value: '2.0 m/s (X and Y axes)' },
-        { label: 'Positional Accuracy', value: '±1.8 microns at 2 m/s' },
-        { label: 'Repeatability', value: '±0.5 microns' },
-        { label: 'Settling Time', value: '42ms to ±2 micron window' },
-        { label: 'Natural Frequency', value: '82 Hz (first mode)' },
-        { label: 'Material', value: '6105-T5 Aluminum with damping treatment' }
+        { label: 'Platform Size', value: '12\' x 20\' (3.7m x 6.1m)' },
+        { label: 'Load Capacity', value: '2,000 lbs (900 kg) uniformly distributed' },
+        { label: 'Deflection', value: '< 5 microns under full load' },
+        { label: 'Vibration Isolation', value: '> 95% attenuation above 10 Hz' },
+        { label: 'Leveling Accuracy', value: '±0.0002" across entire platform' },
+        { label: 'Configuration Time', value: '4 hours for complete reconfiguration' },
+        { label: 'Material', value: '6105-T5 Aluminum, Clear Anodized' },
+        { label: 'Environment', value: 'ISO Class 7 Cleanroom Compatible' }
       ]
     }
   },
 
-  'linear-shaft-motor-gantry': {
-    title: 'Linear Shaft Motor Gantry System',
-    industry: 'Semiconductor',
-    icon: Cpu,
-    client: 'Semiconductor Equipment Manufacturer',
-    location: 'California, USA',
-    projectDuration: '10 weeks (design to qualification)',
-    overview: 'A leading semiconductor equipment manufacturer developing next-generation wafer inspection systems needed an ultra-precision gantry platform using linear shaft motors. The system required nanometer-level positioning accuracy with zero cogging torque ripple, thermal stability better than 0.1°C, and the ability to operate in cleanroom environments while scanning 300mm wafers at high speeds.',
+  'pharmaceutical-equipment-base': {
+    title: 'Pharmaceutical Manufacturing Equipment Base',
+    industry: 'Life Sciences',
+    icon: FlaskConical,
+    client: 'Leading Pharmaceutical Manufacturer',
+    location: 'New Jersey, USA',
+    projectDuration: '3 weeks (design to installation)',
+    overview: 'A pharmaceutical manufacturer needed equipment bases for bioprocessing equipment in an ISO Class 7 cleanroom. The bases needed to support heavy equipment, withstand daily chemical cleaning, and allow for equipment relocation as production needs evolved.',
     challenge: {
       title: 'The Challenge',
-      description: 'The client\'s next-generation optical inspection system required unprecedented mechanical stability and positioning accuracy to detect nanometer-scale defects on semiconductor wafers:',
+      description: 'The client was expanding their biologics production facility with new bioprocessing equipment requiring specialized support structures:',
       points: [
-        'Nanometer-level positioning repeatability (±50 nm) for defect localization',
-        'Zero cogging torque ripple from linear shaft motors to prevent scan artifacts',
-        'Thermal stability < 0.1°C to maintain calibration during extended operation',
-        'Structural rigidity to support 200kg optical column without deflection',
-        'Vibration isolation to prevent environmental noise from affecting measurements',
-        'Class 10 cleanroom compatibility (no particle generation or outgassing)',
-        'High-speed scanning (500mm/s) with instant settling at measurement points'
+        'ISO Class 7 cleanroom certification requirements',
+        'Support for 3,500 lb stainless steel bioprocessing equipment',
+        'Daily exposure to aggressive cleaning chemicals and sanitizers',
+        'Need to relocate equipment 2-3 times per year as production schedules change',
+        'Precision leveling for proper equipment operation',
+        'Non-particle shedding materials to prevent product contamination',
+        'Installation within a 48-hour facility shutdown window'
       ]
     },
     solution: {
       title: 'The AngleLock Solution',
-      description: 'We engineered an ultra-stable gantry platform optimized for linear shaft motor operation with extreme precision requirements:',
+      description: 'We designed a modular equipment base specifically for cleanroom bioprocessing applications:',
       features: [
         {
-          title: 'Thermal-Symmetric Architecture',
-          description: 'Balanced aluminum structure with identical cross-sections on both sides ensures uniform thermal expansion, maintaining alignment within 0.1°C temperature variations'
+          title: 'Cleanroom-Grade Construction',
+          description: 'Clear anodized 6105-T5 aluminum with smooth surfaces and minimal crevices to prevent particle accumulation and microbial growth'
         },
         {
-          title: 'Granite-Hybrid Base',
-          description: 'AngleLock frame supporting precision ground granite surface plate provides ultimate flatness reference and thermal mass for temperature stability'
+          title: 'Chemical-Resistant Finish',
+          description: 'Hard anodized coating provides superior resistance to alcohols, peroxides, quaternary ammonium compounds, and other cleaning agents'
         },
         {
-          title: 'Linear Motor Integration',
-          description: 'Custom aluminum mounting rails with 0.0002" flatness over full travel, maintaining critical air gap between motor magnets and coils to eliminate cogging'
+          title: 'Stainless Steel Feet',
+          description: '316 stainless steel leveling feet with non-marking pads for cleanroom floor protection'
         },
         {
-          title: 'Active Vibration Isolation',
-          description: 'Pneumatic isolators with active damping control filter ambient vibration while maintaining structural resonance above 100 Hz'
+          title: 'Modular Design',
+          description: 'Disassembles into manageable sections for movement through cleanroom airlocks and corridors'
         },
         {
-          title: 'Metrology-Grade Guideways',
-          description: 'Precision linear bearings on lapped steel ways achieve sub-nanometer straightness error over 1-meter travel'
+          title: 'Integrated Leveling',
+          description: 'Precision leveling system with bubble levels and adjustment range to compensate for floor irregularities'
         },
         {
-          title: 'Thermal Management System',
-          description: 'Liquid cooling channels integrated into structure maintain uniform temperature distribution, preventing thermal drift during operation'
+          title: 'Cable Management',
+          description: 'Internal channels for routing power, compressed air, and process piping while maintaining cleanroom aesthetics'
         }
       ]
     },
@@ -211,47 +206,30 @@ const caseStudiesData: Record<string, any> = {
       title: 'Implementation Process',
       timeline: [
         {
-          phase: 'Week 1-2: Design & Thermal Analysis',
+          phase: 'Week 1: Design & Validation',
           activities: [
-            'Structural FEA with thermal loads and dynamic analysis',
-            'Thermal modeling of system including motor heat dissipation',
-            'Linear motor magnetic field simulation for cogging analysis',
-            'Metrology system integration planning',
-            'Vibration isolation system selection and modeling'
+            'Equipment interface measurements and load analysis',
+            'Cleanroom compatibility review with client QA team',
+            'Material selection and chemical resistance validation',
+            'Design approval and documentation'
           ]
         },
         {
-          phase: 'Week 3-6: Precision Fabrication',
+          phase: 'Week 2: Fabrication & Testing',
           activities: [
-            'CNC machining of structural components to ±0.001" tolerances',
-            'Surface grinding of linear motor mounting rails to 0.0002" flatness',
-            'Granite base plate procurement and integration',
-            'Thermal management system fabrication and testing',
-            'Pre-assembly dimensional verification with CMM',
-            'Stress-relief heat treatment of critical components'
+            'Precision cutting and machining of components',
+            'Hard anodizing treatment for chemical resistance',
+            'Stainless steel leveling foot integration',
+            'Pre-assembly and load testing at our facility'
           ]
         },
         {
-          phase: 'Week 7-8: System Integration',
+          phase: 'Week 3: Installation',
           activities: [
-            'Cleanroom assembly on granite isolation table',
-            'Linear motor installation with air gap verification',
-            'Encoder mounting and interpolation calibration',
-            'Thermal management system connection and flow testing',
-            'Cable carrier installation with minimal loop stiffness',
-            'Initial motion tests and servo commissioning'
-          ]
-        },
-        {
-          phase: 'Week 9-10: Metrology & Qualification',
-          activities: [
-            'Laser interferometer positioning accuracy verification',
-            'Thermal drift characterization over 8-hour cycles',
-            'Vibration spectrum analysis at all operating speeds',
-            'Cogging torque measurement and compensation tuning',
-            'Long-term stability testing (72-hour continuous operation)',
-            'Cleanroom particle generation certification',
-            'Full documentation package and training delivery'
+            'Components delivered in cleanroom-compatible packaging',
+            'Assembly during scheduled facility shutdown',
+            'Equipment mounting and final leveling',
+            'Cleaning validation and ISO certification testing'
           ]
         }
       ]
@@ -260,52 +238,50 @@ const caseStudiesData: Record<string, any> = {
       title: 'Results & Benefits',
       metrics: [
         {
-          metric: '±48 nanometers',
-          label: 'Positioning repeatability achieved',
-          description: 'Exceeds ±50nm specification by 4%'
+          metric: 'ISO 14644-1 Class 7',
+          label: 'Cleanroom certification achieved',
+          description: 'Passed all particle count and microbial testing'
         },
         {
-          metric: '< 0.08°C',
-          label: 'Thermal stability over 8 hours',
-          description: '20% better than 0.1°C requirement'
+          metric: '3 relocations',
+          label: 'In first 18 months of operation',
+          description: 'Each move completed in under 4 hours'
         },
         {
-          metric: 'Zero cogging',
-          label: 'Torque ripple eliminated',
-          description: 'Clean motion with no measurement artifacts'
+          metric: '700+ days',
+          label: 'Daily chemical washdowns',
+          description: 'No degradation or corrosion observed'
         },
         {
-          metric: '45% increase',
-          label: 'Inspection throughput',
-          description: 'Faster scanning without accuracy loss'
+          metric: '70% time savings',
+          label: 'vs. welded steel alternative',
+          description: '6 hours installation vs. 2 days for traditional approach'
         }
       ],
       qualitativeResults: [
-        'Defect detection sensitivity improved by 2 node sizes due to positioning stability',
-        'Eliminated thermal recalibration cycles saving 30 minutes per shift',
-        'Linear motor cooling system extends motor life 3x vs. air-cooled design',
-        'Vibration isolation system filters 99% of building-induced disturbances',
-        'Thermal-symmetric design maintains sub-micron alignment over 6°C ambient swing',
-        'Modular construction enables rapid maintenance without full system disassembly',
-        'Architecture now standardized for entire product line (12 systems deployed)'
+        'Enabled flexible production scheduling by allowing equipment relocation',
+        'Simplified cleaning validation compared to welded steel structures',
+        'Eliminated need for specialized equipment rigging for moves',
+        'Reduced facility downtime during production layout changes',
+        'Structure maintained appearance and performance after 2+ years of daily cleaning'
       ]
     },
     testimonial: {
-      quote: 'The thermal stability and positioning accuracy of this gantry exceeded what we thought was achievable with an aluminum structure. The granite-hybrid approach gives us the best of both worlds - the precision of granite with the manufacturability and thermal management of aluminum. Our inspection throughput increased 45% while actually improving defect detection capability.',
-      author: 'Chief Technology Officer',
-      company: 'Semiconductor Equipment Manufacturer'
+      quote: 'We\'ve moved this equipment three times already, and each time it\'s a simple process that our team handles internally. The fact that it still looks new after daily cleaning with harsh chemicals is impressive. This solution has given us the production flexibility we need.',
+      author: 'Facilities Manager',
+      company: 'Leading Pharmaceutical Manufacturer'
     },
     technicalSpecs: {
       title: 'Technical Specifications',
       specs: [
-        { label: 'Work Envelope', value: '1000mm x 600mm (X x Y scanning area)' },
-        { label: 'Positioning Accuracy', value: '±48 nanometers repeatability' },
-        { label: 'Maximum Speed', value: '500 mm/s scanning speed' },
-        { label: 'Thermal Stability', value: '< 0.08°C over 8-hour operation' },
-        { label: 'Payload Capacity', value: '200 kg (optical column and sensors)' },
-        { label: 'Motor Type', value: 'Brushless linear shaft motors, ironless' },
-        { label: 'Structural Resonance', value: '> 100 Hz first natural frequency' },
-        { label: 'Environment', value: 'ISO Class 10 Cleanroom Compatible' }
+        { label: 'Base Size', value: '6\' x 8\' (1.8m x 2.4m)' },
+        { label: 'Load Capacity', value: '4,000 lbs (1,800 kg) total' },
+        { label: 'Material', value: '6105-T5 Aluminum, Hard Anodized' },
+        { label: 'Feet', value: '316 Stainless Steel leveling feet' },
+        { label: 'Environment', value: 'ISO Class 7 Cleanroom Certified' },
+        { label: 'Chemical Resistance', value: 'Compatible with all standard cleanroom agents' },
+        { label: 'Assembly Time', value: '6 hours including leveling' },
+        { label: 'Relocation Time', value: '4 hours disassembly, move, and reassembly' }
       ]
     }
   },
@@ -598,55 +574,54 @@ const caseStudiesData: Record<string, any> = {
     }
   },
 
-  'high-precision-docking-station': {
-    title: 'High Precision Docking Station',
-    industry: 'Aerospace & Defense',
-    icon: Satellite,
-    client: 'Major Aerospace Contractor',
-    location: 'Colorado, USA',
-    projectDuration: '12 weeks (design to qualification)',
-    overview: 'A leading aerospace contractor developing satellite systems needed an automated docking station for thermal-vacuum testing of critical components. The system required micron-level repeatability for optical alignment, automated kinematic coupling for rapid docking/undocking cycles, and thermal stability from -40°C to +85°C while maintaining positioning accuracy.',
+  'cnc-machine-base': {
+    title: 'CNC Machine Tool Base',
+    industry: 'General Industrial',
+    icon: Factory,
+    client: 'Precision Machining Job Shop',
+    location: 'Wisconsin, USA',
+    projectDuration: '2 weeks (design to installation)',
+    overview: 'A precision job shop needed a mobile base for their 8,000 lb CNC vertical machining center that could be relocated as their shop layout evolved while providing excellent vibration isolation for part quality.',
     challenge: {
       title: 'The Challenge',
-      description: 'The thermal-vacuum test system required unprecedented precision and reliability for testing satellite optical components worth millions of dollars:',
+      description: 'The client runs a high-mix, low-volume job shop that frequently reconfigures their floor layout to accommodate new equipment and optimize workflow:',
       points: [
-        'Micron-level (±3 micron) repeatability for optical alignment across 200+ docking cycles',
-        'Kinematic coupling design for deterministic positioning in 6 degrees of freedom',
-        'Automated docking sequence completing alignment in under 15 seconds',
-        'Thermal cycling from -40°C to +85°C without loss of positioning accuracy',
-        'Maintain alignment through vacuum pump-down and pressure cycling',
-        'Integrate with automated test equipment and robotic handling system',
-        'Cleanroom Class 100 compatibility with no particle generation',
-        'Built-in metrology for continuous position verification'
+        'Support 8,000 lb CNC mill with minimal deflection',
+        'Provide vibration isolation to improve part surface finishes',
+        'Enable relocation without specialized rigging equipment',
+        'Previous part rejection rate of 12% due to vibration-induced quality issues',
+        'Need for precise leveling after each move',
+        'Installation over a single weekend to minimize production downtime',
+        'Cost-effective alternative to permanent foundation or welded base'
       ]
     },
     solution: {
       title: 'The AngleLock Solution',
-      description: 'We engineered a precision docking station with kinematic coupling and thermal management optimized for extreme reliability:',
+      description: 'We engineered a heavy-duty mobile base designed for large machine tools:',
       features: [
         {
-          title: 'Kinematic Coupling Design',
-          description: 'Maxwell kinematic mount with three precision spheres mating to V-grooves and flat, providing exact constraint and deterministic positioning in all 6 degrees of freedom'
+          title: 'Reinforced Construction',
+          description: 'Heavy-duty AngleLock extrusions with additional corner gussets and diagonal bracing for maximum rigidity'
         },
         {
-          title: 'Thermal-Invariant Structure',
-          description: 'Symmetrical aluminum architecture with matched thermal expansion coefficients maintains micron-level alignment across -40°C to +85°C temperature range'
+          title: 'Industrial Casters',
+          description: '8x heavy-duty swivel casters (2,000 lb capacity each) with total locking mechanism'
         },
         {
-          title: 'Automated Alignment System',
-          description: 'Servo-driven coupling mechanism with force feedback and laser position sensors achieves repeatable docking in under 15 seconds'
+          title: 'Precision Leveling Feet',
+          description: 'Height-adjustable leveling feet at 12 points with jam nuts to lock position after leveling'
         },
         {
-          title: 'Integrated Metrology',
-          description: 'Capacitive displacement sensors continuously monitor coupling position to ±0.5 micron resolution, triggering alerts if drift exceeds tolerances'
+          title: 'Vibration Damping',
+          description: 'Industrial-grade elastomeric pads between machine feet and base to isolate vibration'
         },
         {
-          title: 'Precision Ground Interfaces',
-          description: 'CMM-verified kinematic features with <1 micron form error, lapped to mirror finish for ultra-low friction coupling'
+          title: 'Modular Sections',
+          description: 'Pre-assembled into 4 sections for easier transportation and installation'
         },
         {
-          title: 'Thermal Management System',
-          description: 'Embedded thermal control with liquid cooling channels and RTD sensors maintains structure temperature uniformity within ±0.2°C'
+          title: 'Chip Containment',
+          description: 'Integrated chip shield around base perimeter to contain coolant and chips during operation'
         }
       ]
     },
@@ -654,49 +629,24 @@ const caseStudiesData: Record<string, any> = {
       title: 'Implementation Process',
       timeline: [
         {
-          phase: 'Week 1-3: Precision Design & Simulation',
+          phase: 'Week 1: Engineering & Fabrication',
           activities: [
-            'Kinematic coupling design with analytical error budget modeling',
-            'Finite element analysis for thermal expansion and structural stiffness',
-            'Tolerance stack-up analysis for ±3 micron position budget',
-            'Servo system sizing for automated docking force control',
-            'Metrology sensor integration planning',
-            'Design review with client engineering team'
+            'Machine specifications and load distribution analysis',
+            'Structural design and FEA verification for 150% load capacity',
+            'Component procurement (casters, leveling feet, vibration pads)',
+            'Frame fabrication and pre-assembly at our facility',
+            'Load testing to validate design'
           ]
         },
         {
-          phase: 'Week 4-8: Ultra-Precision Fabrication',
+          phase: 'Week 2: Delivery & Installation',
           activities: [
-            'CNC machining of base structure to ±0.0005" tolerances',
-            'Precision grinding of kinematic sphere mounts and V-grooves',
-            'CMM verification of all critical features (10+ measurement cycles)',
-            'Lapping of contact surfaces to 2 microinch finish',
-            'Stress-relief heat treatment and re-verification',
-            'Servo actuator integration and cable routing',
-            'Thermal control system fabrication and leak testing'
-          ]
-        },
-        {
-          phase: 'Week 9-10: System Integration & Testing',
-          activities: [
-            'Assembly in temperature-controlled metrology lab',
-            'Capacitive sensor calibration and baseline measurement',
-            'Automated docking sequence programming and tuning',
-            'Repeatability testing: 100 dock/undock cycles',
-            'Integration with client robotic handling system',
-            'Initial thermal cycling validation (-40°C to +85°C)'
-          ]
-        },
-        {
-          phase: 'Week 11-12: Qualification & Delivery',
-          activities: [
-            'Extended thermal cycling (50 complete cycles) with continuous monitoring',
-            'Vacuum compatibility testing in client chamber',
-            'Position repeatability verification: 200+ docking cycles',
-            'Cleanroom particle generation certification',
-            'Final CMM inspection and documentation package',
-            'On-site installation and operator training',
-            'Acceptance testing with client quality assurance team'
+            'Friday evening: Machine shutdown and coolant drain',
+            'Saturday morning: Base sections delivered and positioned',
+            'Saturday afternoon: Base assembly and machine placement',
+            'Saturday evening: Precision leveling and vibration pad adjustment',
+            'Sunday: Machine startup, test cuts, and quality verification',
+            'Monday morning: Production resumed'
           ]
         }
       ]
@@ -705,52 +655,50 @@ const caseStudiesData: Record<string, any> = {
       title: 'Results & Benefits',
       metrics: [
         {
-          metric: '±2.8 microns',
-          label: 'Docking repeatability achieved',
-          description: 'Exceeds ±3 micron specification by 7%'
+          metric: 'Zero deflection',
+          label: '8,000 lbs supported',
+          description: 'Measured < 0.001" deflection under full machine weight'
         },
         {
-          metric: '12 seconds',
-          label: 'Average automated docking time',
-          description: '20% faster than 15-second requirement'
+          metric: '40% reduction',
+          label: 'Part rejection rate',
+          description: 'From 12% to 7% due to improved vibration control'
         },
         {
-          metric: '200+ cycles',
-          label: 'Thermal cycles with no degradation',
-          description: 'Maintained accuracy across full temp range'
+          metric: '4 relocations',
+          label: 'In 2 years of operation',
+          description: 'Each move completed in under 3 hours'
         },
         {
-          metric: '85% reduction',
-          label: 'In test setup time',
-          description: 'From 90 minutes manual to 12 seconds automated'
+          metric: '36 hours',
+          label: 'Installation time',
+          description: 'Saturday morning to Monday production'
         }
       ],
       qualitativeResults: [
-        'Eliminated manual alignment procedures saving $4,500 per test cycle',
-        'Zero positioning failures in 18 months of operation (1,200+ test cycles)',
-        'Thermal stability enables back-to-back testing without cool-down periods',
-        'Metrology feedback system prevents costly optical component damage',
-        'Deterministic kinematic design allows confident unmanned overnight testing',
-        'Architecture adapted for three additional test stations in production',
-        'Client reports 3x improvement in test throughput vs. previous manual system'
+        'Surface finish quality improved on precision parts (aerospace components)',
+        'Eliminated need for expensive floor work and permanent foundations',
+        'Shop layout optimization now possible with existing equipment',
+        'Base paid for itself in 4 months through reduced part rejections',
+        'Machine can be easily relocated to accommodate new equipment purchases'
       ]
     },
     testimonial: {
-      quote: 'The repeatability of this docking station is extraordinary - we\'re testing multi-million dollar optical assemblies with complete confidence. The automated alignment saves us 90 minutes per test cycle, and more importantly, eliminates the risk of human error damaging expensive components. The thermal performance through our full qualification range was critical to getting this system approved.',
-      author: 'Principal Test Engineer',
-      company: 'Major Aerospace Contractor'
+      quote: 'We were skeptical that anything but a concrete foundation would work for our mill, but this base has exceeded all our expectations. The part quality actually improved, and being able to move the machine when we need to has been incredibly valuable. Best ROI on any equipment investment we\'ve made.',
+      author: 'Owner',
+      company: 'Precision Machining Job Shop'
     },
     technicalSpecs: {
       title: 'Technical Specifications',
       specs: [
-        { label: 'Docking Repeatability', value: '±2.8 microns (6-DOF position)' },
-        { label: 'Alignment Time', value: '12 seconds average (automated)' },
-        { label: 'Temperature Range', value: '-40°C to +85°C operational' },
-        { label: 'Thermal Stability', value: '±0.2°C structure uniformity' },
-        { label: 'Coupling Type', value: 'Maxwell kinematic (3-sphere, V-groove-flat)' },
-        { label: 'Payload Capacity', value: '150 kg test article' },
-        { label: 'Metrology Resolution', value: '±0.5 micron capacitive sensors' },
-        { label: 'Environment', value: 'Cleanroom Class 100, high vacuum compatible' }
+        { label: 'Base Size', value: '8\' x 10\' (2.4m x 3m)' },
+        { label: 'Load Capacity', value: '10,000 lbs (4,500 kg) rated, tested to 15,000 lbs' },
+        { label: 'Machine Weight', value: '8,000 lbs (3,600 kg) CNC vertical machining center' },
+        { label: 'Deflection', value: '< 0.001" under rated load' },
+        { label: 'Casters', value: '8x 2,000 lb swivel casters with total lock' },
+        { label: 'Leveling', value: '12-point precision leveling system' },
+        { label: 'Vibration Isolation', value: 'Elastomeric pads, 70% vibration reduction' },
+        { label: 'Mobility', value: '< 3 hours for relocation with 2-person crew' }
       ]
     }
   }
@@ -1007,18 +955,18 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
           <Container>
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-[#0A1628] mb-4">
-                Want the Full Case Study Details?
+                Need a Custom Solution?
               </h2>
               <p className="text-lg text-slate-700 mb-8">
-                Request the complete case study with detailed technical information, photos, and specifications. Or let our engineering team design a custom solution for your specific requirements.
+                Every project is unique. Let our engineering team design the perfect structural solution for your specific requirements.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href={`/contact?caseStudy=${encodeURIComponent(study.title)}`}>
-                  <Button size="lg">Request Full Case Study</Button>
-                </Link>
                 <Link href="/contact">
+                  <Button size="lg">Request a Consultation</Button>
+                </Link>
+                <Link href="/resources/case-studies">
                   <Button size="lg" variant="secondary">
-                    Request Custom Solution
+                    View More Case Studies
                   </Button>
                 </Link>
               </div>

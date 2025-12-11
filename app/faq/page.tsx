@@ -87,6 +87,44 @@ const faqCategories: FAQCategory[] = [
     ]
   },
   {
+    category: 'Aerospace & Defense Applications',
+    icon: '✈️',
+    faqs: [
+      {
+        question: 'Can AngleLock meet precision requirements for satellite assembly and aerospace applications?',
+        answer: 'Yes, AngleLock is ideal for aerospace precision applications. We achieve ±5 micron tolerances under load for satellite assembly fixtures, avionics test stands, and spacecraft integration platforms. Major aerospace contractors use our structures for applications requiring micron-level precision, including 12\'×20\' satellite integration platforms supporting 2,000+ lbs with <5 micron deflection. Our mechanically locked joints maintain alignment far better than friction-based systems like 80/20 or T-slot, which is why leading aerospace companies including Boeing, Lockheed Martin, and satellite manufacturers trust AngleLock for mission-critical fixtures.'
+      },
+      {
+        question: 'Is AngleLock suitable for aerospace cleanroom environments and satellite manufacturing?',
+        answer: 'Absolutely. AngleLock is ideal for aerospace cleanrooms. Our clear anodized 6105-T5 aluminum is non-particle-shedding and certified for ISO Class 1-8 cleanrooms, critical for satellite integration, spacecraft assembly, and precision aerospace manufacturing. Unlike T-slot systems requiring fabric covers (which shed particles), AngleLock provides inherent cleanroom compatibility. We have structures operating in satellite manufacturing facilities, aerospace research labs, and defense contractors\' cleanrooms with zero contamination issues.'
+      },
+      {
+        question: 'How does AngleLock compare to 80/20 or T-slot for aerospace ground support equipment (GSE)?',
+        answer: 'AngleLock provides 10x greater strength than T-slot systems and eliminates the loosening problems that plague 80/20 connections under vibration - critical for aerospace GSE applications. For avionics testing, engine maintenance stands, and flight simulator platforms, the self-tightening mechanical lock maintains precision over years of operation with zero maintenance. Boeing, SpaceX, and other aerospace manufacturers choose AngleLock over T-slot for applications where vibration resistance and long-term reliability are essential.'
+      },
+      {
+        question: 'Can aerospace fixtures be reconfigured for different satellite platforms or launch vehicle programs?',
+        answer: 'Yes, this is a major advantage for aerospace programs. AngleLock structures can be fully disassembled and reconfigured without compromising structural integrity or precision. We have aerospace customers who have reconfigured the same satellite assembly fixture 8+ times over 3 years for different satellite platforms while maintaining micron-level accuracy. This saves millions compared to building new dedicated fixtures for each program. Reconfiguration takes hours instead of weeks required for welded steel fixtures.'
+      },
+      {
+        question: 'What load capacities can AngleLock support for launch vehicle and heavy aerospace equipment?',
+        answer: 'AngleLock supports aerospace loads from hundreds to tens of thousands of pounds. We have delivered structures supporting 20,000+ lb launch vehicle components, satellite integration platforms for multi-ton payloads, and rocket motor assembly fixtures with verified deflection under 0.010". Our engineering team provides FEA analysis validated to aerospace standards to ensure structural performance meets your specific loading requirements, safety factors, and vibration specifications.'
+      },
+      {
+        question: 'Do you provide ITAR compliance and documentation for defense aerospace programs?',
+        answer: 'Yes, Controlled Dynamics manufactures in the United States (Wisconsin) and provides full documentation and material traceability for defense programs requiring ITAR compliance. We work with defense contractors including Northrop Grumman, General Dynamics, Raytheon, and other DoD suppliers on ITAR-controlled aerospace projects. We can provide stamped engineering drawings from Professional Engineers, material certifications, and full compliance documentation required for aerospace and defense applications.'
+      },
+      {
+        question: 'Can you design and fabricate large satellite integration platforms (12 feet x 20 feet or larger)?',
+        answer: 'Yes, we specialize in large aerospace structures. We have designed and delivered satellite integration platforms up to 12\'×20\' and larger for major aerospace contractors. Our modular design allows shipping in sections and field assembly, making it practical to install very large structures in your facility. All structures include FEA validation ensuring structural performance across the entire platform. We can integrate vibration isolation, precision leveling systems, and cleanroom compatibility as required for satellite and spacecraft assembly applications.'
+      },
+      {
+        question: 'What is typical lead time for aerospace fixtures and can you meet tight program schedules?',
+        answer: 'Standard aerospace projects run 4-8 weeks from design approval to delivery. For urgent aerospace programs, we have delivered in 3 weeks. Complex satellite integration platforms or multi-axis systems may require 8-12 weeks. We understand aerospace program timelines and can expedite when needed. We work with Boeing, SpaceX, Lockheed Martin, and other aerospace companies to meet critical launch schedules and satellite integration timelines.'
+      }
+    ]
+  },
+  {
     category: 'Applications & Industries',
     icon: '🏭',
     faqs: [

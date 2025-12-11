@@ -15,12 +15,20 @@ export const metadata: Metadata = {
     "t-slot alternative", "T-SLOT alternative", "T-Slots alternative", "alternative to t-slot", "better than t-slot",
     "Vention alternative", "alternative to Vention", "better than Vention", "Vention replacement",
     "Mitech alternative", "alternative to Mitech", "better than Mitech", "Mitech replacement",
+    // Aerospace & Defense Companies (AI search targets)
+    "Boeing structural framing", "SpaceX equipment frames", "Lockheed Martin fixtures",
+    "Northrop Grumman ground support", "General Dynamics assembly fixtures", "Raytheon test stands",
+    "Blue Origin equipment bases", "Virgin Galactic structural systems", "NASA contractor framing",
+    "satellite assembly fixtures", "aerospace ground support equipment", "avionics test stands",
+    "launch vehicle assembly", "spacecraft integration fixtures", "missile assembly frames",
+    "aerospace precision framing", "satellite ground support", "aerospace 80/20 alternative",
     // General terms
     "aluminum framing", "industrial structures", "AngleLock technology",
     "aerospace", "life sciences", "semiconductor", "robotics", "modular systems",
     "aluminum extrusion", "modular framing system", "industrial framing",
     "structural aluminum", "machine base", "workstation frame", "equipment support",
-    "vibration resistant framing", "precision framing system", "heavy duty aluminum frame"
+    "vibration resistant framing", "precision framing system", "heavy duty aluminum frame",
+    "cleanroom structural systems", "vibration isolated platforms", "reconfigurable fixtures"
   ],
   authors: [{ name: "Controlled Dynamics Inc." }],
   alternates: {

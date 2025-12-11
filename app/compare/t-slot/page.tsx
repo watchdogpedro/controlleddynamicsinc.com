@@ -44,7 +44,7 @@ export default function CompareTSlotPage() {
     },
     {
       category: 'Vibration Resistance',
-      anglelock: 'Self-tightening under vibration',
+      anglelock: 'Stays tight under vibration',
       tslot: 'Loosens over time, requires retightening',
       advantage: 'anglelock'
     },
@@ -80,7 +80,7 @@ export default function CompareTSlotPage() {
     },
     {
       category: 'Material',
-      anglelock: '6105-T5 architectural grade aluminum',
+      anglelock: '6005A T6/ 6061 T6 architectural grade aluminum',
       tslot: '6105-T5 aluminum',
       advantage: 'both'
     }

@@ -59,12 +59,16 @@ export default function AerospaceCompaniesPage() {
               </p>
 
               <div className="flex flex-wrap gap-4">
-                <Button size="lg" href="/contact">
-                  Request Engineering Consultation
-                </Button>
-                <Button size="lg" variant="secondary" href="/resources/case-studies">
-                  View Aerospace Case Studies
-                </Button>
+                <Link href="/contact">
+                  <Button size="lg">
+                    Request Engineering Consultation
+                  </Button>
+                </Link>
+                <Link href="/resources/case-studies">
+                  <Button size="lg" variant="secondary">
+                    View Aerospace Case Studies
+                  </Button>
+                </Link>
               </div>
             </div>
           </Container>
@@ -354,10 +358,12 @@ export default function AerospaceCompaniesPage() {
                   Our aerospace engineering team is ready to help you design the perfect structural solution
                   for your satellite, aircraft, launch vehicle, or defense application.
                 </p>
-                <Button size="lg" href="/contact">
-                  Request Engineering Consultation
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Button>
+                <Link href="/contact">
+                  <Button size="lg">
+                    Request Engineering Consultation
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Button>
+                </Link>
               </div>
             </div>
           </Container>
@@ -438,12 +444,16 @@ export default function AerospaceCompaniesPage() {
                 Discover why aerospace and defense contractors trust AngleLock for mission-critical structural solutions.
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
-                <Button size="lg" href="/contact">
-                  Contact Aerospace Team
-                </Button>
-                <Button size="lg" variant="secondary" href="/resources/case-studies">
-                  Download Case Studies
-                </Button>
+                <Link href="/contact">
+                  <Button size="lg">
+                    Contact Aerospace Team
+                  </Button>
+                </Link>
+                <Link href="/resources/case-studies">
+                  <Button size="lg" variant="secondary">
+                    Download Case Studies
+                  </Button>
+                </Link>
               </div>
             </div>
           </Container>

@@ -132,7 +132,7 @@ export default function MarketReportCTA({ variant = 'default' }: MarketReportCTA
                   className="relative bg-[#0A1628] rounded-r-lg shadow-2xl overflow-hidden"
                   style={{
                     width: '100%',
-                    aspectRatio: '8.5 / 11',
+                    aspectRatio: '11 / 8.5',
                     transform: 'rotateY(-5deg) translateX(12px)',
                     transformOrigin: 'left center',
                     boxShadow: '20px 20px 60px rgba(10, 22, 40, 0.3), -5px 0 20px rgba(0,0,0,0.2)'

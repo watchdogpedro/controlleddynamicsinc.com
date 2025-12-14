@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[DOCUMENT TITLE] - Controlled Dynamics Inc.</title>
+    <style>
+        /* ============================================
+           CONTROLLED DYNAMICS EXECUTIVE REPORT TEMPLATE
+           Standard 8.5 x 11" format with wide left margin
+           Use this template for all whitepapers, application notes, and reports
+           ============================================ */
+
+        @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+        /* Page Setup for 11 x 8.5 inch printing (LANDSCAPE) */
+        @page {
+            size: letter landscape;
+            margin: 0.75in 0.75in 0.75in 1.5in; /* Wide left margin for notes/binding */
+        }
+
+        @media print {
+            .page-break { page-break-before: always; }
+            .no-print { display: none; }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 11pt;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: white;
+            max-width: 11in; /* Landscape width */
+            margin: 0 auto;
+            padding: 0.75in 0.75in 0.75in 1.5in;
+        }
+
+        /* Brand Colors */
+        :root {
+            --navy: #0A1628;
+            --navy-light: #1E3A5F;
+            --gold: #C9A227;
+            --gold-light: #E0B830;
+            --gray: #6B7C93;
+            --gray-light: #F4F6F8;
+        }
+
+        /* Cover Page Template */
+        .cover {
+            min-height: 7in; /* Adjusted for landscape (8.5" page height) */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 1.5in 0;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            margin: -0.75in -0.75in -0.75in -1.5in;
+            padding: 1.5in 1.5in 1.25in 2.5in;
+            color: white;
+        }
+
+        .cover-logo {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 24pt;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 0.5in;
+        }
+
+        .cover-category {
+            font-size: 10pt;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 0.25in;
+        }
+
+        .cover-title {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 48pt;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 0.25in;
+            color: #FFFFFF; /* Bright white for maximum contrast */
+        }
+
+        .cover-subtitle {
+            font-size: 18pt;
+            font-weight: 300;
+            line-height: 1.4;
+            margin-bottom: 1in;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 6in;
+        }
+
+        .cover-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.5in;
+            margin-bottom: 1in;
+        }
+
+        .cover-stat {
+            border-left: 4px solid var(--gold);
+            padding-left: 15px;
+        }
+
+        .cover-stat-value {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 36pt;
+            font-weight: 700;
+            color: var(--gold);
+            line-height: 1;
+        }
+
+        .cover-stat-label {
+            font-size: 10pt;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 5px;
+        }
+
+        .cover-footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 9pt;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            color: var(--navy);
+            margin-top: 24pt;
+            margin-bottom: 12pt;
+        }
+
+        h1 {
+            font-size: 32pt;
+            border-bottom: 4px solid var(--gold);
+            padding-bottom: 10pt;
+            margin-bottom: 20pt;
+        }
+
+        h2 {
+            font-size: 24pt;
+            color: var(--navy);
+            margin-top: 36pt;
+        }
+
+        h3 {
+            font-size: 16pt;
+            color: var(--navy);
+            margin-top: 24pt;
+        }
+
+        h4 {
+            font-size: 13pt;
+            color: var(--navy);
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 12pt;
+            text-align: justify;
+        }
+
+        /* Callout Boxes */
+        .callout {
+            background: var(--gray-light);
+            border-left: 4px solid var(--gold);
+            padding: 20pt;
+            margin: 20pt 0;
+        }
+
+        .callout-title {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 14pt;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 10pt;
+        }
+
+        .callout.highlight {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            color: white;
+            border-left: 4px solid var(--gold);
+        }
+
+        .callout.highlight .callout-title {
+            color: var(--gold);
+        }
+
+        /* Statistics Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20pt;
+            margin: 24pt 0;
+        }
+
+        .stat-box {
+            background: white;
+            border: 2px solid var(--gray-light);
+            padding: 20pt;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 36pt;
+            font-weight: 700;
+            color: var(--gold);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 9pt;
+            color: var(--gray);
+            margin-top: 8pt;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20pt 0;
+            font-size: 10pt;
+        }
+
+        thead {
+            background: var(--navy);
+            color: white;
+        }
+
+        th {
+            padding: 12pt;
+            text-align: left;
+            font-weight: 600;
+            font-size: 10pt;
+        }
+
+        td {
+            padding: 10pt 12pt;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        tr:nth-child(even) {
+            background: var(--gray-light);
+        }
+
+        .table-highlight {
+            background: rgba(201, 162, 39, 0.1) !important;
+            font-weight: 600;
+        }
+
+        /* Lists */
+        ul, ol {
+            margin: 12pt 0 12pt 24pt;
+        }
+
+        li {
+            margin-bottom: 8pt;
+        }
+
+        .checklist li {
+            list-style: none;
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .checklist li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: 700;
+            font-size: 14pt;
+        }
+
+        /* Section Numbers */
+        .section-number {
+            display: inline-block;
+            width: 36pt;
+            height: 36pt;
+            background: var(--gold);
+            color: var(--navy);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 36pt;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 18pt;
+            font-weight: 700;
+            margin-right: 12pt;
+            vertical-align: middle;
+        }
+
+        /* Charts */
+        .chart-container {
+            background: var(--gray-light);
+            padding: 20pt;
+            margin: 20pt 0;
+            border-radius: 8px;
+        }
+
+        .bar-chart {
+            display: flex;
+            flex-direction: column;
+            gap: 12pt;
+        }
+
+        .bar {
+            display: flex;
+            align-items: center;
+            gap: 12pt;
+        }
+
+        .bar-label {
+            font-size: 9pt;
+            font-weight: 600;
+            min-width: 120pt;
+            color: var(--navy);
+        }
+
+        .bar-fill-container {
+            flex: 1;
+            height: 24pt;
+            background: white;
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 8pt;
+            color: var(--navy);
+            font-weight: 700;
+            font-size: 9pt;
+        }
+
+        /* Key Findings Box */
+        .key-findings {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            color: white;
+            padding: 24pt;
+            margin: 24pt 0;
+            border-radius: 8px;
+        }
+
+        .key-findings h3 {
+            color: var(--gold);
+            margin-top: 0;
+        }
+
+        .key-findings ul li {
+            margin-bottom: 12pt;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ============================================
+     COVER PAGE
+     Replace placeholders with your content
+     ============================================ -->
+<div class="cover page-break">
+    <div>
+        <div class="cover-logo">CONTROLLED DYNAMICS</div>
+        <div class="cover-category">[Document Category - e.g., Application Note, Technical Whitepaper]</div>
+        <h1 class="cover-title">[DOCUMENT<br>TITLE<br>HERE]</h1>
+        <p class="cover-subtitle">[Subtitle or description of the document content]</p>
+    </div>
+
+    <div class="cover-stats">
+        <div class="cover-stat">
+            <div class="cover-stat-value">[Stat]</div>
+            <div class="cover-stat-label">[Label]</div>
+        </div>
+        <div class="cover-stat">
+            <div class="cover-stat-value">[Stat]</div>
+            <div class="cover-stat-label">[Label]</div>
+        </div>
+        <div class="cover-stat">
+            <div class="cover-stat-value">[Stat]</div>
+            <div class="cover-stat-label">[Label]</div>
+        </div>
+    </div>
+
+    <div class="cover-footer">
+        <div>Controlled Dynamics Inc. | Grafton, Wisconsin</div>
+        <div>[Month Year]</div>
+    </div>
+</div>
+
+<!-- ============================================
+     CONTENT PAGES
+     Add your content here
+     Use .page-break class to start new pages
+     ============================================ -->
+<div class="page-break">
+    <h1><span class="section-number">1</span> [Section Title]</h1>
+
+    <p>[Your content here]</p>
+
+    <!-- Example: Key Findings Box -->
+    <div class="key-findings">
+        <h3>Key Points</h3>
+        <ul class="checklist">
+            <li>Point one</li>
+            <li>Point two</li>
+            <li>Point three</li>
+        </ul>
+    </div>
+
+    <!-- Example: Statistics Grid -->
+    <div class="stats-grid">
+        <div class="stat-box">
+            <div class="stat-value">$XXB</div>
+            <div class="stat-label">Market Size</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">XX%</div>
+            <div class="stat-label">Growth Rate</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">XXx</div>
+            <div class="stat-label">Improvement</div>
+        </div>
+    </div>
+
+    <!-- Example: Callout Box -->
+    <div class="callout">
+        <div class="callout-title">Important Note</div>
+        <p>Highlighted information or key takeaway.</p>
+    </div>
+
+    <!-- Example: Highlighted Callout -->
+    <div class="callout highlight">
+        <div class="callout-title">Critical Information</div>
+        <p>Important information with dark background.</p>
+    </div>
+
+    <h2>Subsection Title</h2>
+
+    <!-- Example: Table -->
+    <table>
+        <thead>
+            <tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+                <th>Column 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Data</td>
+                <td>Data</td>
+                <td class="table-highlight">Highlighted</td>
+            </tr>
+            <tr>
+                <td>Data</td>
+                <td>Data</td>
+                <td>Data</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Example: Bar Chart -->
+    <div class="chart-container">
+        <h4>Chart Title</h4>
+        <div class="bar-chart">
+            <div class="bar">
+                <div class="bar-label">Category 1</div>
+                <div class="bar-fill-container">
+                    <div class="bar-fill" style="width: 60%;">$XXM</div>
+                </div>
+            </div>
+            <div class="bar">
+                <div class="bar-label">Category 2</div>
+                <div class="bar-fill-container">
+                    <div class="bar-fill" style="width: 100%;">$XXM</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Example: Checklist -->
+    <ul class="checklist">
+        <li>Item one with checkmark</li>
+        <li>Item two with checkmark</li>
+        <li>Item three with checkmark</li>
+    </ul>
+</div>
+
+<!-- ============================================
+     BACK COVER / CONTACT PAGE
+     Standard contact information
+     ============================================ -->
+<div class="page-break">
+    <div style="min-height: 9in; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+        <div style="max-width: 5in;">
+            <h2 style="font-size: 32pt; color: var(--navy); margin-bottom: 20pt;">Contact Us</h2>
+            <p style="font-size: 14pt; color: var(--gray); margin-bottom: 40pt;">Discover how AngleLock technology can solve your structural challenges.</p>
+
+            <div style="background: var(--gray-light); padding: 30pt; border-radius: 8px; margin-bottom: 40pt;">
+                <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 24pt; font-weight: 700; color: var(--gold); margin-bottom: 20pt;">CONTROLLED DYNAMICS INC.</div>
+                <p style="margin-bottom: 10pt;"><strong>Address:</strong> 1058 Overland Court, Grafton, WI 53024</p>
+                <p style="margin-bottom: 10pt;"><strong>Phone:</strong> (262) 421-8840</p>
+                <p style="margin-bottom: 10pt;"><strong>Email:</strong> info@controlleddynamicsinc.com</p>
+                <p><strong>Web:</strong> www.controlleddynamicsinc.com</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20pt; font-size: 10pt;">
+                <div>
+                    <strong>Technical Specifications</strong><br>
+                    www.controlleddynamicsinc.com/technology
+                </div>
+                <div>
+                    <strong>Case Studies</strong><br>
+                    www.controlleddynamicsinc.com/resources
+                </div>
+                <div>
+                    <strong>ROI Calculator</strong><br>
+                    www.controlleddynamicsinc.com/roi-calculator
+                </div>
+                <div>
+                    <strong>Request Consultation</strong><br>
+                    www.controlleddynamicsinc.com/contact
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 60pt; padding-top: 20pt; border-top: 1px solid var(--gray-light); font-size: 8pt; color: var(--gray);">
+        <p><strong>Document Version 1.0 | [Month Year]</strong></p>
+        <p style="margin-top: 10pt;">© [Year] Controlled Dynamics Inc. All rights reserved.</p>
+    </div>
+</div>
+
+</body>
+</html>

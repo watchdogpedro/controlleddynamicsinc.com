@@ -1,6 +1,41 @@
 import { NextResponse } from 'next/server';
 import { readFileSync } from 'fs';
 import { join } from 'path';
+import { google } from 'googleapis';
+import nodemailer from 'nodemailer';
+
+// Initialize Google Sheets API
+async function getGoogleSheetsClient() {
+  const credentials = process.env.GOOGLE_SHEETS_CREDENTIALS;
+  if (!credentials) {
+    throw new Error('GOOGLE_SHEETS_CREDENTIALS not configured');
+  }
+
+  const auth = new google.auth.GoogleAuth({
+    credentials: JSON.parse(credentials),
+    scopes: ['https://www.googleapis.com/auth/spreadsheets'],
+  });
+
+  return google.sheets({ version: 'v4', auth });
+}
+
+// Initialize Gmail SMTP client
+function getEmailTransporter() {
+  const gmailUser = process.env.GMAIL_USER;
+  const gmailAppPassword = process.env.GMAIL_APP_PASSWORD;
+
+  if (!gmailUser || !gmailAppPassword) {
+    throw new Error('Gmail credentials not configured');
+  }
+
+  return nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: gmailUser,
+      pass: gmailAppPassword,
+    },
+  });
+}
 
 export async function POST(request: Request) {
   try {
@@ -19,8 +54,12 @@ export async function POST(request: Request) {
     const userAgent = request.headers.get('user-agent') || 'Unknown';
     const referer = request.headers.get('referer') || 'Direct';
     const timestamp = new Date().toISOString();
+    const formattedDate = new Date().toLocaleString('en-US', {
+      timeZone: 'America/Chicago',
+      dateStyle: 'short',
+      timeStyle: 'short'
+    });
 
-    // Log the lead data
     console.log('New lead capture:', {
       email,
       firstName,
@@ -32,27 +71,49 @@ export async function POST(request: Request) {
       referer
     });
 
-    const resendApiKey = process.env.RESEND_API_KEY;
+    // 1. SAVE TO GOOGLE SHEETS
+    try {
+      const sheets = await getGoogleSheetsClient();
+      const spreadsheetId = process.env.GOOGLE_SHEETS_ID;
 
-    if (!resendApiKey) {
-      console.error('RESEND_API_KEY not configured');
-      return NextResponse.json(
-        {
-          error: 'Email service not configured. Please contact support.',
-          note: 'Admin: Set RESEND_API_KEY environment variable.'
-        },
-        { status: 500 }
-      );
+      if (spreadsheetId) {
+        await sheets.spreadsheets.values.append({
+          spreadsheetId,
+          range: 'Leads!A:I', // Assuming sheet named "Leads"
+          valueInputOption: 'USER_ENTERED',
+          requestBody: {
+            values: [
+              [
+                formattedDate,
+                email,
+                firstName || '',
+                lastName || '',
+                company || '',
+                phone || '',
+                application || '',
+                referer,
+                userAgent
+              ]
+            ],
+          },
+        });
+        console.log('Lead saved to Google Sheets');
+      }
+    } catch (sheetError) {
+      console.error('Google Sheets error (continuing):', sheetError);
+      // Don't fail the request if Sheets fails - still send emails
     }
 
-    // Read PDF file and convert to base64
+    // 2. SEND EMAILS
+    const transporter = getEmailTransporter();
+
+    // Read PDF file
     const pdfPath = join(process.cwd(), 'public', 'downloads', 'Market_Opportunity_Report_2025.pdf');
     const pdfBuffer = readFileSync(pdfPath);
-    const pdfBase64 = pdfBuffer.toString('base64');
 
-    // Prepare personalized email to user
     const recipientName = firstName ? `${firstName}${lastName ? ' ' + lastName : ''}` : 'there';
-    const userEmailSubject = 'Your Market Opportunity Report 2025 - Controlled Dynamics Inc.';
+
+    // A. Send PDF to the user
     const userEmailHtml = `
 <!DOCTYPE html>
 <html>
@@ -118,36 +179,23 @@ export async function POST(request: Request) {
 </html>
     `;
 
-    // Send report email to user
-    const userEmailResponse = await fetch('https://api.resend.com/emails', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${resendApiKey}`,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        from: 'Controlled Dynamics <noreply@controlleddynamicsinc.com>',
-        to: [email],
-        subject: userEmailSubject,
-        html: userEmailHtml,
-        attachments: [
-          {
-            filename: 'Market_Opportunity_Report_2025.pdf',
-            content: pdfBase64,
-          }
-        ]
-      })
+    await transporter.sendMail({
+      from: `"Controlled Dynamics Inc." <${process.env.GMAIL_USER}>`,
+      to: email,
+      subject: 'Your Market Opportunity Report 2025 - Controlled Dynamics Inc.',
+      html: userEmailHtml,
+      attachments: [
+        {
+          filename: 'Market_Opportunity_Report_2025.pdf',
+          content: pdfBuffer,
+        }
+      ]
     });
 
-    if (!userEmailResponse.ok) {
-      const error = await userEmailResponse.text();
-      console.error('Resend API error (user email):', error);
-      throw new Error('Failed to send report email to user');
-    }
+    console.log('Report sent to user:', email);
 
-    // Send notification to internal team about new lead
-    const internalEmailSubject = `New Lead: ${email}${company ? ` (${company})` : ''}`;
-    const internalEmailHtml = `
+    // B. Send notification to you (watchdogpedro@gmail.com)
+    const notificationEmailHtml = `
 <!DOCTYPE html>
 <html>
 <head>
@@ -183,7 +231,7 @@ export async function POST(request: Request) {
 
     <div class="field">
       <span class="label">Timestamp:</span>
-      <span class="value">${timestamp}</span>
+      <span class="value">${formattedDate}</span>
     </div>
 
     <p style="margin-top: 20px; color: #6b7280; font-size: 12px;">
@@ -195,28 +243,15 @@ export async function POST(request: Request) {
 </html>
     `;
 
-    // Send internal notification
-    await fetch('https://api.resend.com/emails', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${resendApiKey}`,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        from: 'Lead Capture <noreply@controlleddynamicsinc.com>',
-        to: ['info@anglelock.com'],
-        subject: internalEmailSubject,
-        html: internalEmailHtml,
-        reply_to: email
-      })
+    await transporter.sendMail({
+      from: `"Lead Capture Bot" <${process.env.GMAIL_USER}>`,
+      to: 'watchdogpedro@gmail.com',
+      replyTo: email,
+      subject: `🔔 New Lead: ${email}${company ? ` (${company})` : ''}`,
+      html: notificationEmailHtml,
     });
 
-    // TODO: Add Google Sheets integration here
-    // This is where you would append the lead data to a Google Sheet
-    // Example implementation would use the Google Sheets API
-    // For now, we're logging to console and sending emails
-
-    console.log('Lead capture successful:', email);
+    console.log('Notification sent to watchdogpedro@gmail.com');
 
     return NextResponse.json(
       {
@@ -230,7 +265,7 @@ export async function POST(request: Request) {
     console.error('Lead capture error:', error);
     return NextResponse.json(
       {
-        error: error instanceof Error ? error.message : 'Failed to process request'
+        error: error instanceof Error ? error.message : 'Failed to process request. Please try again or contact us directly.'
       },
       { status: 500 }
     );

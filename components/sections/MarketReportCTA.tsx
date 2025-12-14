@@ -142,9 +142,9 @@ export default function MarketReportCTA({ variant = 'default' }: MarketReportCTA
                     transition: { duration: 0.3 }
                   }}
                 >
-                  {/* Actual Report Cover Image */}
+                  {/* Full Report Cover Page */}
                   <Image
-                    src="/market-report-cover.png"
+                    src="/report-cover-full.png"
                     alt="Market Opportunity Report 2025 Cover"
                     fill
                     className="object-cover"

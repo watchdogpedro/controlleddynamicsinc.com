@@ -62,16 +62,14 @@ export default function Header() {
           <div className="flex lg:flex-1">
             <Link href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Controlled Dynamics Inc.</span>
-              <div className="flex items-center gap-3">
-                <Image
-                  src="/Controlled Dynamics LOGO.png"
-                  alt="Controlled Dynamics Inc."
-                  width={360}
-                  height={100}
-                  className="h-20 w-auto"
-                  priority
-                />
-              </div>
+              <Image
+                src="/Controlled Dynamics LOGO.png"
+                alt="Controlled Dynamics Inc."
+                width={252}
+                height={70}
+                className="h-10 sm:h-12 md:h-14 w-auto object-contain"
+                priority
+              />
             </Link>
           </div>
 

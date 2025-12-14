@@ -117,6 +117,18 @@
             overflow: hidden;
         }
 
+        .cover-hero-image {
+            position: absolute;
+            top: 50%;
+            right: 1.5in;
+            transform: translateY(-50%);
+            width: 4in;
+            height: auto;
+            z-index: 1;
+            opacity: 0.9;
+            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5));
+        }
+
         .cover::after {
             content: '';
             position: absolute;
@@ -129,7 +141,8 @@
         }
 
         .cover-content {
-            z-index: 1;
+            z-index: 2;
+            position: relative;
         }
 
         .cover-logo {
@@ -555,6 +568,9 @@
      COVER PAGE
      ============================================ -->
 <div class="cover">
+    <!-- Hero Image -->
+    <img src="../public/market-report-cover.png" alt="AngleLock Mechanical Locking Technology" class="cover-hero-image">
+
     <div class="cover-content">
         <div class="cover-logo">CONTROLLED DYNAMICS INC.</div>
         <div class="cover-category">Market Analysis Report 2025</div>

@@ -5,6 +5,7 @@ import TrustBar from '@/components/sections/TrustBar';
 import IndustryShowcase from '@/components/sections/IndustryShowcase';
 import TechnologyFeatures from '@/components/sections/TechnologyFeatures';
 import Statistics from '@/components/sections/Statistics';
+import MarketReportCTA from '@/components/sections/MarketReportCTA';
 import CTASection from '@/components/sections/CTASection';
 import StructuredData, { organizationSchema, productSchema } from '@/components/seo/StructuredData';
 import NewsletterSignup from '@/components/newsletter/NewsletterSignup';
@@ -22,6 +23,9 @@ export default function Home() {
         <IndustryShowcase />
         <TechnologyFeatures />
         <Statistics />
+
+        {/* Market Report Download */}
+        <MarketReportCTA variant="default" />
 
         {/* Newsletter Section */}
         <section className="py-20 bg-white">

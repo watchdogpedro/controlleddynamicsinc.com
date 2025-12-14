@@ -9,6 +9,7 @@ import Footer from '@/components/layout/Footer';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
+import MarketReportCTA from '@/components/sections/MarketReportCTA';
 import { INDUSTRIES } from '@/lib/constants';
 
 const iconMap = {
@@ -192,6 +193,18 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
               </motion.div>
             </Container>
           </section>
+        )}
+
+        {/* Market Report CTA - Show only for relevant industries */}
+        {(industry.id === 'semiconductor' || industry.id === 'robotics-automation' || industry.id === 'aerospace-defense') && (
+          <MarketReportCTA
+            variant={
+              industry.id === 'semiconductor' ? 'semiconductor' :
+              industry.id === 'robotics-automation' ? 'robotics' :
+              industry.id === 'aerospace-defense' ? 'aerospace' :
+              'default'
+            }
+          />
         )}
 
         {/* Applications Section */}

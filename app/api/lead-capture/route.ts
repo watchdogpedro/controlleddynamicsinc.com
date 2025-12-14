@@ -79,7 +79,7 @@ export async function POST(request: Request) {
       if (spreadsheetId) {
         await sheets.spreadsheets.values.append({
           spreadsheetId,
-          range: 'Leads!A:I', // Assuming sheet named "Leads"
+          range: 'Sheet1!A:I', // Sheet tab name
           valueInputOption: 'USER_ENTERED',
           requestBody: {
             values: [

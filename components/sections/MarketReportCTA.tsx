@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Download, TrendingUp, BarChart3 } from 'lucide-react';
+import Image from 'next/image';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
 
@@ -128,7 +129,7 @@ export default function MarketReportCTA({ variant = 'default' }: MarketReportCTA
 
                 {/* Main Book Cover */}
                 <motion.div
-                  className="relative bg-gradient-to-br from-[#0A1628] via-[#1E3A5F] to-[#0A1628] rounded-r-lg shadow-2xl overflow-hidden"
+                  className="relative bg-[#0A1628] rounded-r-lg shadow-2xl overflow-hidden"
                   style={{
                     width: '100%',
                     aspectRatio: '8.5 / 11',
@@ -141,51 +142,14 @@ export default function MarketReportCTA({ variant = 'default' }: MarketReportCTA
                     transition: { duration: 0.3 }
                   }}
                 >
-                  {/* Cover Content */}
-                  <div className="relative h-full p-8 flex flex-col justify-between">
-                    {/* Top Section */}
-                    <div>
-                      <div className="text-[#C9A227] font-['Barlow_Condensed'] font-bold text-sm tracking-wider mb-2">
-                        CONTROLLED DYNAMICS INC.
-                      </div>
-                      <div className="text-[#C9A227]/60 text-xs uppercase tracking-widest mb-6">
-                        Market Analysis Report 2025
-                      </div>
-
-                      <h3 className="font-['Barlow_Condensed'] text-3xl sm:text-4xl font-bold text-white leading-tight mb-3">
-                        THE STRUCTURAL<br />
-                        ALUMINUM<br />
-                        REVOLUTION
-                      </h3>
-
-                      <p className="text-white/70 text-xs leading-relaxed max-w-xs">
-                        Market Opportunities in Modular Construction & Advanced Manufacturing
-                      </p>
-                    </div>
-
-                    {/* Bottom Section - Stats */}
-                    <div className="grid grid-cols-2 gap-3">
-                      <div className="border-l-2 border-[#C9A227] pl-3">
-                        <div className="text-[#C9A227] font-['Barlow_Condensed'] text-2xl font-bold leading-none">
-                          $47.4B
-                        </div>
-                        <div className="text-white/60 text-[10px] mt-1">
-                          Total Market 2030
-                        </div>
-                      </div>
-                      <div className="border-l-2 border-[#C9A227] pl-3">
-                        <div className="text-[#C9A227] font-['Barlow_Condensed'] text-2xl font-bold leading-none">
-                          21.5%
-                        </div>
-                        <div className="text-white/60 text-[10px] mt-1">
-                          CAGR Growth Rate
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Decorative Circle */}
-                    <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#C9A227]/5 rounded-full blur-3xl -z-10" />
-                  </div>
+                  {/* Actual Report Cover Image */}
+                  <Image
+                    src="/market-report-cover.png"
+                    alt="Market Opportunity Report 2025 Cover"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
 
                   {/* Page Edges Effect */}
                   <div className="absolute right-0 top-2 bottom-2 w-1 bg-white/10" />

@@ -1,10 +1,12 @@
 'use client';
 
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Download, TrendingUp, BarChart3 } from 'lucide-react';
 import Image from 'next/image';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
+import LeadCaptureModal from '@/components/modals/LeadCaptureModal';
 
 interface MarketReportCTAProps {
   variant?: 'robotics' | 'semiconductor' | 'aerospace' | 'default';
@@ -35,8 +37,14 @@ const variantContent = {
 
 export default function MarketReportCTA({ variant = 'default' }: MarketReportCTAProps) {
   const content = variantContent[variant];
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
+    <>
+      <LeadCaptureModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     <section className="py-20 bg-gradient-to-br from-[#F4F6F8] to-white overflow-hidden">
       <Container>
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -80,16 +88,14 @@ export default function MarketReportCTA({ variant = 'default' }: MarketReportCTA
             </div>
 
             {/* CTA Button */}
-            <a
-              href="/downloads/Market_Opportunity_Report_2025.pdf"
-              download
-              className="inline-block"
+            <Button
+              size="lg"
+              className="group"
+              onClick={() => setIsModalOpen(true)}
             >
-              <Button size="lg" className="group">
-                <Download className="w-5 h-5 mr-2 group-hover:animate-bounce" />
-                Download Full Report (PDF)
-              </Button>
-            </a>
+              <Download className="w-5 h-5 mr-2 group-hover:animate-bounce" />
+              Get Free Report
+            </Button>
 
             <p className="text-sm text-[#6B7C93] mt-4">
               9 pages | Executive summary, market analysis, financial projections | Updated January 2025
@@ -176,5 +182,6 @@ export default function MarketReportCTA({ variant = 'default' }: MarketReportCTA
         </div>
       </Container>
     </section>
+    </>
   );
 }

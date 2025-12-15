@@ -477,7 +477,7 @@ export const COMPANY_INFO = {
   name: 'Controlled Dynamics Inc.',
   tagline: 'Engineering Tomorrow\'s Foundations Today',
   vision: 'Engineering Tomorrow\'s Foundations Today',
-  mission: 'To be the premier provider of advanced modular structural systems for industries where precision, reliability, and performance are non-negotiable.',
+  mission: 'We redefine industries. We proved it with Blanking Systems, and we\'re proving it again with AngleLock—a structural system so advanced it eliminates every limitation of conventional technology.',
   email: 'info@controlleddynamicsinc.com',
   phone: '(262) 421-8840',
   address: {

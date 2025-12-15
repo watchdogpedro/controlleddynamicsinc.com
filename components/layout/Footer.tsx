@@ -93,6 +93,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/partners" className="text-white/70 hover:text-[#C9A227] transition-colors text-sm">
+                  Partners
+                </Link>
+              </li>
+              <li>
                 <Link href="/compare/t-slot" className="text-white/70 hover:text-[#C9A227] transition-colors text-sm">
                   AngleLock vs T-Slot
                 </Link>
@@ -146,9 +151,16 @@ export default function Footer() {
                 </Link>
               </div>
             </div>
-            <p className="text-white/50 text-sm">
-              Powered by <span className="text-[#C9A227]">AngleLock Technology</span>
-            </p>
+            <Link href="/partners" className="flex items-center gap-2 text-white/50 hover:text-[#C9A227] transition-colors text-sm group">
+              <span>Built with</span>
+              <Image
+                src="/AngleLock Logo.png"
+                alt="AngleLock"
+                width={100}
+                height={30}
+                className="h-6 w-auto opacity-80 group-hover:opacity-100 transition-opacity"
+              />
+            </Link>
           </div>
         </div>
       </Container>

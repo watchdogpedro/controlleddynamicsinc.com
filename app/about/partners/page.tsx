@@ -43,7 +43,7 @@ export default function PartnersPage() {
       integration: 'Controlled Dynamics builds large-scale, custom-engineered structural systems using AngleLock components as the core building blocks—combining their breakthrough component technology with our system integration expertise.'
     },
     {
-      name: 'Nippon Pulse',
+      name: 'Nippon Pulse America',
       logo: null, // Will add if they provide logo
       url: 'https://nipponpulse.com',
       category: 'Motion Control Systems',
@@ -189,7 +189,11 @@ export default function PartnersPage() {
                             className="h-16 w-auto mb-4"
                           />
                         ) : (
-                          <h3 className="font-['Barlow_Condensed'] text-4xl font-bold text-white mb-2">
+                          <h3 className={`font-['Barlow_Condensed'] text-4xl font-bold mb-2 ${
+                            partner.name === 'Nippon Pulse America'
+                              ? 'text-[#FF0000]'
+                              : 'text-white'
+                          }`}>
                             {partner.name}
                           </h3>
                         )}

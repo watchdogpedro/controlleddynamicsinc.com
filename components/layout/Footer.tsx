@@ -151,14 +151,14 @@ export default function Footer() {
                 </Link>
               </div>
             </div>
-            <Link href="/partners" className="flex items-center gap-2 text-white/50 hover:text-[#C9A227] transition-colors text-sm group">
-              <span>Built with</span>
+            <Link href="/partners" className="flex items-center gap-3 hover:opacity-80 transition-opacity group">
+              <span className="text-white/70 text-sm">Built with</span>
               <Image
-                src="/AngleLock Logo.png"
-                alt="AngleLock"
-                width={100}
-                height={30}
-                className="h-6 w-auto opacity-80 group-hover:opacity-100 transition-opacity"
+                src="/AngleLock_white.png"
+                alt="AngleLock - Controlled Dynamics"
+                width={180}
+                height={80}
+                className="h-12 w-auto"
               />
             </Link>
           </div>

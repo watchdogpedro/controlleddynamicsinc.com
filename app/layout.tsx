@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import BackgroundMusic from "@/components/ui/BackgroundMusic";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://controlleddynamicsinc.com'),
@@ -81,7 +80,6 @@ export default function RootLayout({
     <html lang="en">
       <body className="antialiased">
         {children}
-        <BackgroundMusic />
       </body>
     </html>
   );

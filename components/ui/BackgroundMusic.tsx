@@ -4,16 +4,21 @@ import { useState, useEffect, useRef } from 'react';
 import { Volume2, VolumeX, X } from 'lucide-react';
 
 export default function BackgroundMusic() {
+  const [mounted, setMounted] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
-  const [volume, setVolume] = useState(0.15); // Very low default volume (15%)
+  const [volume, setVolume] = useState(0.15);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
+  // Only run on client after mount to prevent SSR hydration issues
   useEffect(() => {
+    setMounted(true);
+
     // Check if user previously dismissed the player
     const dismissed = localStorage.getItem('backgroundMusicDismissed');
     if (dismissed === 'true') {
       setIsDismissed(true);
+      return;
     }
 
     // Check if user had music playing before
@@ -63,7 +68,9 @@ export default function BackgroundMusic() {
     localStorage.setItem('backgroundMusicPlaying', 'false');
   };
 
-  if (isDismissed) {
+  // Don't render until mounted on client (which only happens if not previously dismissed)
+  // or if dismissed during this session
+  if (!mounted || isDismissed) {
     return null;
   }
 
@@ -78,7 +85,7 @@ export default function BackgroundMusic() {
       />
 
       {/* Floating music player */}
-      <div className="fixed bottom-6 right-6 z-50">
+      <div className="fixed bottom-6 right-6 z-[9999]">
         <div className="bg-white/95 backdrop-blur-sm shadow-lg rounded-full border border-gray-200 p-3 flex items-center gap-3">
           {/* Play/Pause Button */}
           <button

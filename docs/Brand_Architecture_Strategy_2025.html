@@ -1,0 +1,1818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngleLock × CDI - Brand Architecture Strategy 2025</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+        @page {
+            size: 11in 8.5in;
+            margin: 0.75in;
+        }
+
+        @page :first {
+            margin: 0;
+        }
+
+        @media print {
+            .page-break {
+                page-break-before: always;
+                break-before: page;
+            }
+            .no-break {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+            h1, h2, h3 {
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+            p, li {
+                orphans: 3;
+                widows: 3;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            font-size: 10.5pt;
+            line-height: 1.5;
+            color: #1a1a1a;
+            background: white;
+        }
+
+        .document-page {
+            width: 11in;
+            min-height: 8.5in;
+            margin: 0 auto;
+            padding: 0;
+            position: relative;
+            background: white;
+        }
+
+        .page-content {
+            padding: 0.75in;
+        }
+
+        /* Cover Page */
+        .cover-page {
+            width: 11in;
+            height: 8.5in;
+            background: linear-gradient(135deg, #0A1628 0%, #1E3A5F 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 2in;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cover-page::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(201, 162, 39, 0.1) 0%, transparent 70%);
+        }
+
+        .cover-page::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 30%;
+            background: linear-gradient(0deg, rgba(0, 255, 0, 0.05) 0%, transparent 100%);
+        }
+
+        .cover-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cover-title {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 48pt;
+            font-weight: 700;
+            color: #C9A227;
+            margin-bottom: 0.2in;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .cover-subtitle {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 32pt;
+            font-weight: 400;
+            color: white;
+            margin-bottom: 0.1in;
+            letter-spacing: 1px;
+        }
+
+        .cover-brand-lockup {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 20pt;
+            color: rgba(255, 255, 255, 0.9);
+            margin: 0.4in 0;
+            letter-spacing: 2px;
+        }
+
+        .cover-brand-lockup .green {
+            color: #00FF00;
+            font-weight: 700;
+        }
+
+        .cover-tagline {
+            font-size: 13pt;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 6in;
+            margin: 0 auto 0.8in;
+            line-height: 1.6;
+            font-style: italic;
+        }
+
+        .cover-meta {
+            font-size: 11pt;
+            color: rgba(255, 255, 255, 0.6);
+            margin-top: 1in;
+            border-top: 2px solid rgba(201, 162, 39, 0.3);
+            padding-top: 0.3in;
+        }
+
+        .cover-meta strong {
+            color: #C9A227;
+        }
+
+        /* Brand Colors */
+        :root {
+            --navy: #0A1628;
+            --navy-light: #1E3A5F;
+            --gold: #C9A227;
+            --gold-light: #E0B830;
+            --gray: #6B7C93;
+            --green: #00FF00;
+            --cyan: #00D9FF;
+        }
+
+        /* Typography */
+        h1 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 32pt;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 0.2in;
+            border-bottom: 3px solid var(--gold);
+            padding-bottom: 0.1in;
+        }
+
+        h2 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 22pt;
+            font-weight: 600;
+            color: var(--navy);
+            margin-top: 0.3in;
+            margin-bottom: 0.15in;
+            border-left: 4px solid var(--gold);
+            padding-left: 0.15in;
+        }
+
+        h3 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 16pt;
+            font-weight: 600;
+            color: var(--navy-light);
+            margin-top: 0.2in;
+            margin-bottom: 0.1in;
+        }
+
+        h4 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 13pt;
+            font-weight: 600;
+            color: var(--navy);
+            margin-top: 0.15in;
+            margin-bottom: 0.08in;
+        }
+
+        p {
+            margin-bottom: 0.12in;
+            color: #333;
+        }
+
+        /* Stats Boxes */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.15in;
+            margin: 0.2in 0;
+        }
+
+        .stat-box {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            padding: 0.2in;
+            border-radius: 8px;
+            text-align: center;
+            color: white;
+        }
+
+        .stat-number {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 32pt;
+            font-weight: 700;
+            color: var(--gold);
+            display: block;
+            margin-bottom: 0.05in;
+        }
+
+        .stat-label {
+            font-size: 9pt;
+            color: rgba(255, 255, 255, 0.8);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Callout Boxes */
+        .callout {
+            background: #f8f9fa;
+            border-left: 4px solid var(--gold);
+            padding: 0.15in;
+            margin: 0.15in 0;
+        }
+
+        .callout-title {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 13pt;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 0.08in;
+        }
+
+        .callout.green-accent {
+            border-left-color: var(--green);
+        }
+
+        .callout.cyan-accent {
+            border-left-color: var(--cyan);
+        }
+
+        /* Lists */
+        ul, ol {
+            margin-left: 0.25in;
+            margin-bottom: 0.12in;
+        }
+
+        li {
+            margin-bottom: 0.06in;
+            line-height: 1.4;
+        }
+
+        .checkmark-list {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .checkmark-list li::before {
+            content: '✓';
+            color: var(--gold);
+            font-weight: bold;
+            margin-right: 0.08in;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0.15in 0;
+            font-size: 9.5pt;
+        }
+
+        th {
+            background: var(--navy);
+            color: white;
+            padding: 0.1in;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 0.08in 0.1in;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        /* Highlights */
+        .highlight {
+            background: linear-gradient(90deg, rgba(201, 162, 39, 0.1) 0%, transparent 100%);
+            border-left: 3px solid var(--gold);
+            padding: 0.12in;
+            margin: 0.12in 0;
+        }
+
+        .gold-text {
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .navy-text {
+            color: var(--navy);
+            font-weight: 600;
+        }
+
+        .green-text {
+            color: var(--green);
+            font-weight: 600;
+        }
+
+        /* Two Column Layout */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.25in;
+            margin: 0.15in 0;
+        }
+
+        /* Section Divider */
+        .section-divider {
+            height: 2px;
+            background: linear-gradient(90deg, var(--gold) 0%, transparent 100%);
+            margin: 0.2in 0;
+        }
+
+        /* Brand Comparison Box */
+        .brand-comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.2in;
+            margin: 0.2in 0;
+        }
+
+        .brand-box {
+            border: 2px solid #ddd;
+            padding: 0.15in;
+            border-radius: 8px;
+        }
+
+        .brand-box.anglelock {
+            border-color: var(--green);
+            background: linear-gradient(135deg, rgba(0, 255, 0, 0.05) 0%, transparent 100%);
+        }
+
+        .brand-box.cdi {
+            border-color: var(--cyan);
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.05) 0%, transparent 100%);
+        }
+
+        .brand-box h4 {
+            margin-top: 0;
+        }
+
+        /* Footer */
+        .page-footer {
+            position: absolute;
+            bottom: 0.4in;
+            left: 0.75in;
+            right: 0.75in;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 8pt;
+            color: var(--gray);
+            border-top: 1px solid #ddd;
+            padding-top: 0.08in;
+        }
+
+        .page-number {
+            position: absolute;
+            bottom: 0.35in;
+            right: 0.75in;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 36pt;
+            font-weight: 700;
+            color: #C9A227;
+            opacity: 0.2;
+        }
+
+        /* Strategic Framework Boxes */
+        .framework-box {
+            border: 2px solid var(--navy);
+            padding: 0.2in;
+            margin: 0.15in 0;
+            background: white;
+        }
+
+        .framework-title {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 14pt;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 0.1in;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Comparison Grid */
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.03in;
+            margin: 0.15in 0;
+        }
+
+        .comparison-item {
+            padding: 0.08in;
+            background: #f8f9fa;
+            border-left: 3px solid var(--gold);
+            font-size: 9pt;
+        }
+
+        .comparison-item strong {
+            color: var(--navy);
+        }
+    </style>
+</head>
+<body>
+
+<!-- COVER PAGE -->
+<div class="document-page">
+    <div class="cover-page">
+        <div class="cover-content">
+            <div class="cover-title">Brand Architecture Strategy</div>
+            <div class="cover-subtitle">Strategic Integration Framework</div>
+
+            <div class="cover-brand-lockup">
+                <span class="green">ANGLELOCK®</span> × CONTROLLED DYNAMICS INC.
+            </div>
+
+            <div class="cover-tagline">
+                Technology & Application Partnership Strategy<br>
+                Positioning for Market Leadership in Structural Engineering Systems
+            </div>
+
+            <div class="cover-meta">
+                <strong>Prepared For:</strong> Controlled Dynamics Inc. Executive Team<br>
+                <strong>Strategy Model:</strong> Performance Division Architecture (Porsche Design Model)<br>
+                <strong>Report Date:</strong> December 15, 2025<br>
+                <strong>Classification:</strong> Strategic - Confidential
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- EXECUTIVE SUMMARY -->
+<div class="document-page page-break">
+    <div class="page-content">
+        <h1>Executive Summary</h1>
+
+        <p class="navy-text" style="font-size: 12pt; margin-bottom: 0.2in;">
+            This report outlines the strategic rationale for integrating AngleLock and Controlled Dynamics Inc. (CDI)
+            under a unified brand architecture, positioning them as complementary technology and application partners
+            serving distinct but connected market segments.
+        </p>
+
+        <h2>Strategic Recommendation</h2>
+
+        <div class="framework-box no-break">
+            <div class="framework-title">AngleLock Performance Division Architecture</div>
+            <p style="text-align: center; margin-top: 0.1in;">
+                <strong>AngleLock:</strong> Foundation Technology Brand (Broad Market Access)<br>
+                ↓<br>
+                <strong>AngleLock Performance (CDI):</strong> Elite Systems Division (Premium Market)
+            </p>
+        </div>
+
+        <h2>The Opportunity</h2>
+
+        <div class="stats-grid">
+            <div class="stat-box no-break">
+                <span class="stat-number">$850M</span>
+                <div class="stat-label">Addressable Market<br>Combined Segments</div>
+            </div>
+            <div class="stat-box no-break">
+                <span class="stat-number">10x</span>
+                <div class="stat-label">Technology Advantage<br>vs. Competitors</div>
+            </div>
+            <div class="stat-box no-break">
+                <span class="stat-number">2</span>
+                <div class="stat-label">Distinct Customer<br>Segments</div>
+            </div>
+            <div class="stat-box no-break">
+                <span class="stat-number">1</span>
+                <div class="stat-label">Unified Patent<br>Portfolio</div>
+            </div>
+        </div>
+
+        <h2>Why This Matters Now</h2>
+
+        <div class="two-column">
+            <div class="callout green-accent no-break">
+                <div class="callout-title">Market Confusion Risk</div>
+                <p>Currently, customers don't understand the relationship between AngleLock (components)
+                and CDI (systems). This creates:</p>
+                <ul>
+                    <li>Missed cross-sell opportunities</li>
+                    <li>Brand equity dilution</li>
+                    <li>Competitive vulnerability</li>
+                    <li>Pricing pressure</li>
+                </ul>
+            </div>
+            <div class="callout cyan-accent no-break">
+                <div class="callout-title">Competitive Threat</div>
+                <p>Competitors like 80/20, Vention, and Bosch Rexroth are consolidating.
+                Without clear positioning:</p>
+                <ul>
+                    <li>AngleLock seen as "just another T-slot"</li>
+                    <li>CDI lacks technology credibility</li>
+                    <li>Premium pricing unjustified</li>
+                    <li>Patent value underutilized</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>Strategic Outcome</h2>
+
+        <div class="highlight no-break">
+            <h3 class="navy-text">The Technology & Application Partnership</h3>
+            <p><strong>AngleLock:</strong> Revolutionary component technology brand making aerospace-grade performance
+            accessible to everyone—from innovators building the future in their garages to Fortune 500 manufacturers.
+            Bright green branding signals innovation and approachability.</p>
+
+            <p><strong>AngleLock Performance / CDI:</strong> Mission-critical systems engineering brand delivering
+            zero-defect solutions where failure is not an option. Dark, sophisticated branding signals precision
+            and aerospace-grade engineering expertise.</p>
+
+            <p><strong>The Relationship:</strong> Two massive companies with different but equally important missions,
+            built on the same revolutionary technology. AngleLock democratizes access to breakthrough structural
+            components. Performance engineers mission-critical systems for impossible tolerances. Together they serve
+            every segment from innovation to defense.</p>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <h2>Expected Business Impact</h2>
+
+        <ul class="checkmark-list">
+            <li><strong>Revenue Growth:</strong> 40-60% increase through clear upsell path (AngleLock → Performance)</li>
+            <li><strong>Market Share:</strong> Capture premium segment from 80/20, Vention, Bosch Rexroth</li>
+            <li><strong>Brand Equity:</strong> Single patent portfolio benefits both brands</li>
+            <li><strong>Customer Clarity:</strong> Eliminate confusion about which brand to engage</li>
+            <li><strong>Pricing Power:</strong> Justify premium for Performance division</li>
+            <li><strong>Competitive Moat:</strong> Integrated ecosystem harder to compete against</li>
+        </ul>
+    </div>
+    <div class="page-footer">
+        <div>AngleLock × CDI Brand Architecture Strategy</div>
+        <div>CONFIDENTIAL</div>
+    </div>
+    <div class="page-number">01</div>
+</div>
+
+<!-- MARKET ANALYSIS -->
+<div class="document-page page-break">
+    <div class="page-content">
+        <h1>Market Analysis & Strategic Context</h1>
+
+        <h2>Current Market Position</h2>
+
+        <div class="brand-comparison">
+            <div class="brand-box anglelock no-break">
+                <h4 style="color: #00AA00;">AngleLock - Technology Innovator</h4>
+                <p><strong>Market Segment:</strong> Broad (hobbyist → industrial)</p>
+                <p><strong>Price Point:</strong> Component-level ($10-$500)</p>
+                <p><strong>Customer Profile:</strong></p>
+                <ul>
+                    <li>DIY builders and makers</li>
+                    <li>Small machine shops</li>
+                    <li>Engineering departments</li>
+                    <li>OEM manufacturers</li>
+                </ul>
+                <p><strong>Competitive Set:</strong> 80/20, Vention, Mitech, Bosch Rexroth</p>
+            </div>
+
+            <div class="brand-box cdi no-break">
+                <h4 style="color: #00A0DD;">CDI - Systems Integrator</h4>
+                <p><strong>Market Segment:</strong> Premium (defense/aerospace/semi)</p>
+                <p><strong>Price Point:</strong> System-level ($50K-$500K+)</p>
+                <p><strong>Customer Profile:</strong></p>
+                <ul>
+                    <li>Boeing, Northrop Grumman</li>
+                    <li>General Dynamics, Lockheed</li>
+                    <li>Intel, TSMC, Texas Instruments</li>
+                    <li>NASA, DoD contractors</li>
+                </ul>
+                <p><strong>Competitive Set:</strong> Custom fabricators, Bosch Rexroth systems, in-house engineering</p>
+            </div>
+        </div>
+
+        <h2>The Problem: Disconnected Brand Value</h2>
+
+        <table class="no-break">
+            <tr>
+                <th>Issue</th>
+                <th>Impact on AngleLock</th>
+                <th>Impact on CDI</th>
+            </tr>
+            <tr>
+                <td><strong>No Clear Relationship</strong></td>
+                <td>Premium customers don't know CDI exists</td>
+                <td>Can't leverage AngleLock's patent story</td>
+            </tr>
+            <tr>
+                <td><strong>Patent Portfolio Underutilized</strong></td>
+                <td>Seen as "just components"</td>
+                <td>Technology credibility questioned</td>
+            </tr>
+            <tr>
+                <td><strong>Weak Upsell Path</strong></td>
+                <td>Customers hit ceiling, leave for competitors</td>
+                <td>No pipeline from AngleLock customers</td>
+            </tr>
+            <tr>
+                <td><strong>Brand Dilution</strong></td>
+                <td>Budget buyers pressure margins</td>
+                <td>Lack of consumer awareness hurts recruiting</td>
+            </tr>
+        </table>
+
+        <h2>Competitive Landscape</h2>
+
+        <div class="callout no-break">
+            <div class="callout-title">Primary Competitors - Integrated Portfolios</div>
+            <div class="comparison-grid">
+                <div class="comparison-item">
+                    <strong>80/20 Inc.</strong><br>
+                    Components + Systems + Services<br>
+                    Single brand across all tiers
+                </div>
+                <div class="comparison-item">
+                    <strong>Bosch Rexroth</strong><br>
+                    Industrial + Motion + Automation<br>
+                    Master brand with divisions
+                </div>
+                <div class="comparison-item">
+                    <strong>Vention</strong><br>
+                    Components + Design Software + Assembly<br>
+                    Vertically integrated offering
+                </div>
+                <div class="comparison-item">
+                    <strong>Item Industrietechnik</strong><br>
+                    Profile systems + Engineering services<br>
+                    Unified German engineering brand
+                </div>
+            </div>
+            <p style="margin-top: 0.1in;"><strong class="navy-text">Insight:</strong> All major competitors present
+            integrated offerings under unified brand architectures. Fragmented brands signal weak market position.</p>
+        </div>
+
+        <h2>Market Opportunity Sizing</h2>
+
+        <div class="stats-grid">
+            <div class="stat-box no-break">
+                <span class="stat-number">$450M</span>
+                <div class="stat-label">AngleLock TAM<br>Component Market</div>
+            </div>
+            <div class="stat-box no-break">
+                <span class="stat-number">$400M</span>
+                <div class="stat-label">CDI TAM<br>Systems Market</div>
+            </div>
+            <div class="stat-box no-break">
+                <span class="stat-number">$850M</span>
+                <div class="stat-label">Combined TAM<br>With Integration</div>
+            </div>
+            <div class="stat-box no-break">
+                <span class="stat-number">15-20%</span>
+                <div class="stat-label">Target Share<br>Year 3</div>
+            </div>
+        </div>
+
+        <div class="highlight no-break">
+            <h3 class="navy-text">The Strategic Imperative</h3>
+            <p>Without brand integration, we're competing as two small players against integrated giants.
+            With proper architecture, we present as a comprehensive solution provider with unique technology
+            (patents) and proven performance (defense/aerospace customers).</p>
+        </div>
+    </div>
+    <div class="page-footer">
+        <div>AngleLock × CDI Brand Architecture Strategy</div>
+        <div>CONFIDENTIAL</div>
+    </div>
+    <div class="page-number">02</div>
+</div>
+
+<!-- STRATEGIC FRAMEWORK -->
+<div class="document-page page-break">
+    <div class="page-content">
+        <h1>Strategic Framework: The Performance Division Model</h1>
+
+        <h2>Why "Performance Division Architecture"?</h2>
+
+        <p>After evaluating three brand architecture models, the <strong>Performance Division Architecture
+        (Porsche Design Model)</strong> provides optimal balance of brand leverage, market clarity, and growth potential.</p>
+
+        <h3>Model Comparison</h3>
+
+        <table class="no-break">
+            <tr>
+                <th>Criterion</th>
+                <th>House of Brands<br>(Intel Inside)</th>
+                <th>Performance Division<br>(Porsche Design)</th>
+                <th>Certification Model<br>(Michelin)</th>
+            </tr>
+            <tr>
+                <td><strong>Brand Clarity</strong></td>
+                <td>⭐⭐⭐⭐⭐</td>
+                <td>⭐⭐⭐⭐</td>
+                <td>⭐⭐⭐⭐</td>
+            </tr>
+            <tr>
+                <td><strong>Upsell Path</strong></td>
+                <td>⭐⭐⭐⭐</td>
+                <td>⭐⭐⭐⭐⭐</td>
+                <td>⭐⭐⭐⭐</td>
+            </tr>
+            <tr>
+                <td><strong>Patent Leverage</strong></td>
+                <td>⭐⭐⭐⭐⭐</td>
+                <td>⭐⭐⭐⭐⭐</td>
+                <td>⭐⭐⭐⭐</td>
+            </tr>
+            <tr>
+                <td><strong>Premium Positioning</strong></td>
+                <td>⭐⭐⭐⭐</td>
+                <td>⭐⭐⭐⭐⭐</td>
+                <td>⭐⭐⭐⭐⭐</td>
+            </tr>
+            <tr>
+                <td><strong>Implementation Speed</strong></td>
+                <td>⭐⭐⭐⭐⭐</td>
+                <td>⭐⭐⭐</td>
+                <td>⭐⭐⭐</td>
+            </tr>
+            <tr>
+                <td><strong>Market Differentiation</strong></td>
+                <td>⭐⭐⭐</td>
+                <td>⭐⭐⭐⭐⭐</td>
+                <td>⭐⭐⭐⭐</td>
+            </tr>
+        </table>
+
+        <div class="section-divider"></div>
+
+        <h2>Company Mission Statements</h2>
+
+        <div class="brand-comparison">
+            <div class="brand-box anglelock no-break">
+                <h4 style="color: #00AA00;">AngleLock Mission</h4>
+                <p style="font-style: italic; margin-bottom: 0.1in;">
+                    "We revolutionize structural engineering through patented mechanical locking technology,
+                    making aerospace-grade performance accessible to everyone—from innovators building the
+                    future in their garages to Fortune 500 manufacturers engineering tomorrow's breakthroughs."
+                </p>
+                <p><strong>Core Focus:</strong></p>
+                <ul>
+                    <li>Technology innovation and patent development</li>
+                    <li>Component manufacturing excellence</li>
+                    <li>Democratizing advanced structural systems</li>
+                    <li>Enabling builders of all scales</li>
+                </ul>
+                <p style="margin-top: 0.1in;"><strong>Market Position:</strong> The structural technology standard</p>
+            </div>
+
+            <div class="brand-box cdi no-break">
+                <h4 style="color: #00A0DD;">AngleLock Performance (Formerly CDI) Mission</h4>
+                <p style="font-style: italic; margin-bottom: 0.1in;">
+                    "We engineer mission-critical structural systems where failure is not an option—delivering
+                    zero-defect, high-speed, high-accuracy solutions for the world's most demanding applications
+                    in defense, aerospace, and semiconductor manufacturing."
+                </p>
+                <p><strong>Core Focus:</strong></p>
+                <ul>
+                    <li>Custom systems engineering</li>
+                    <li>Mission-critical performance</li>
+                    <li>Defense and aerospace applications</li>
+                    <li>Semiconductor fab precision</li>
+                    <li>Complex integration expertise</li>
+                </ul>
+                <p style="margin-top: 0.1in;"><strong>Market Position:</strong> Precision systems for impossible tolerances</p>
+            </div>
+        </div>
+
+        <div class="highlight no-break">
+            <h3 class="navy-text">Unified Vision</h3>
+            <p style="font-style: italic; font-size: 11pt;">
+                "Built on the same revolutionary AngleLock technology, we serve two critical markets: enabling
+                innovation at every scale through breakthrough components, and delivering mission-critical systems
+                where lives and billions of dollars depend on perfection."
+            </p>
+            <p style="margin-top: 0.1in;"><strong>Better Analogies:</strong></p>
+            <ul>
+                <li><strong>Intel</strong> (chips) and <strong>Intel Data Center Group</strong> (enterprise systems)</li>
+                <li><strong>GE Power</strong> (turbines) and <strong>GE Aviation</strong> (jet engines)</li>
+                <li><strong>Corning</strong> (glass innovation) and <strong>Corning Precision Materials</strong> (semiconductor)</li>
+            </ul>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <h2>The Performance Division Framework</h2>
+
+        <div class="framework-box no-break">
+            <div class="framework-title">Three-Tier Product Architecture</div>
+
+            <div style="margin-top: 0.15in;">
+                <h4 style="color: #00AA00; margin-bottom: 0.05in;">TIER 1: AngleLock (Foundation)</h4>
+                <p style="margin-left: 0.2in; margin-bottom: 0.1in;">
+                    <strong>Product Line:</strong> Standard components and profiles<br>
+                    <strong>Target Market:</strong> Broad (DIY to industrial)<br>
+                    <strong>Price Point:</strong> $10-$500 per component<br>
+                    <strong>Brand Promise:</strong> "Revolutionary structural components for everyone"
+                </p>
+
+                <h4 style="color: #00AA00; margin-bottom: 0.05in;">TIER 2: AngleLock Pro (Advanced)</h4>
+                <p style="margin-left: 0.2in; margin-bottom: 0.1in;">
+                    <strong>Product Line:</strong> Enhanced components + design services<br>
+                    <strong>Target Market:</strong> OEM manufacturers, engineering teams<br>
+                    <strong>Price Point:</strong> $500-$5,000 per project<br>
+                    <strong>Brand Promise:</strong> "Professional-grade components with engineering support"
+                </p>
+
+                <h4 style="color: #00A0DD; margin-bottom: 0.05in;">TIER 3: AngleLock Performance (CDI)</h4>
+                <p style="margin-left: 0.2in;">
+                    <strong>Product Line:</strong> Complete engineered systems<br>
+                    <strong>Target Market:</strong> Defense, aerospace, semiconductor (Fortune 500)<br>
+                    <strong>Price Point:</strong> $50K-$500K+ per system<br>
+                    <strong>Brand Promise:</strong> "Mission-critical systems. Zero-failure tolerance."
+                </p>
+            </div>
+        </div>
+
+        <h2>The Technology & Application Partnership</h2>
+
+        <div class="brand-comparison">
+            <div class="brand-box anglelock no-break">
+                <h4 style="color: #00AA00;">AngleLock - Component Technology</h4>
+                <p><strong>Role:</strong> Market Access & Technology Democratization</p>
+                <p><strong>Character:</strong> Approachable, innovative, inclusive</p>
+                <p><strong>Colors:</strong> Bright green + white</p>
+                <p><strong>Personality:</strong> "Revolutionary technology, accessible to everyone"</p>
+                <p><strong>Customer Journey:</strong></p>
+                <ul>
+                    <li>Attracts broad audience</li>
+                    <li>Demonstrates breakthrough technology</li>
+                    <li>Builds brand awareness</li>
+                    <li>Identifies qualified leads for Performance</li>
+                </ul>
+            </div>
+
+            <div class="brand-box cdi no-break">
+                <h4 style="color: #00A0DD;">AngleLock Performance - Systems Engineering</h4>
+                <p><strong>Role:</strong> Mission-Critical Systems Delivery</p>
+                <p><strong>Character:</strong> Precise, sophisticated, authoritative</p>
+                <p><strong>Colors:</strong> Black + titanium + cyan accents</p>
+                <p><strong>Personality:</strong> "When failure is not an option."</p>
+                <p><strong>Customer Journey:</strong></p>
+                <ul>
+                    <li>Serves Fortune 500 and defense/aerospace</li>
+                    <li>Delivers mission-critical systems</li>
+                    <li>Commands premium pricing</li>
+                    <li>Validates AngleLock technology for all</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="highlight no-break">
+            <h3 class="navy-text">Why This Works</h3>
+            <p><strong>Aspiration Ladder:</strong> AngleLock invites everyone to experience breakthrough technology.
+            Performance demonstrates what's possible at the highest level. Each customer knows where they fit.</p>
+
+            <p><strong>Mutual Reinforcement:</strong> AngleLock's volume and accessibility build brand awareness.
+            Performance's prestigious clients validate the technology for everyone.</p>
+
+            <p><strong>Clear Differentiation:</strong> No market confusion. Components? AngleLock.
+            Mission-critical systems? AngleLock Performance.</p>
+        </div>
+    </div>
+    <div class="page-footer">
+        <div>AngleLock × CDI Brand Architecture Strategy</div>
+        <div>CONFIDENTIAL</div>
+    </div>
+    <div class="page-number">03</div>
+</div>
+
+<!-- VISUAL IDENTITY STRATEGY -->
+<div class="document-page page-break">
+    <div class="page-content">
+        <h1>Visual Identity Strategy</h1>
+
+        <h2>Brand Expression Philosophy</h2>
+
+        <p>The visual systems must clearly communicate the technology and application partnership while
+        maintaining distinct personalities for each target audience.</p>
+
+        <h2>AngleLock - Component Technology Visual System</h2>
+
+        <div class="callout green-accent no-break">
+            <div class="callout-title">Brand Expression: Accessible Innovation</div>
+
+            <p><strong>Color Palette:</strong> UNCHANGED - Maintain current identity</p>
+            <ul>
+                <li>Primary: Bright Green (#00FF00) - Energy, innovation, growth</li>
+                <li>Secondary: White (#FFFFFF) - Clean, modern, approachable</li>
+                <li>Accent: Dark Gray (#2D2D2D) - Technical credibility</li>
+            </ul>
+
+            <p><strong>Typography:</strong></p>
+            <ul>
+                <li>Headlines: Bold, modern sans-serif (current)</li>
+                <li>Body: Clean, readable sans-serif</li>
+                <li>Technical: Monospace for specifications</li>
+            </ul>
+
+            <p><strong>Design Language:</strong></p>
+            <ul>
+                <li>Friendly rounded corners (approachable)</li>
+                <li>Bright, saturated photography</li>
+                <li>Diverse applications shown (carts to robots)</li>
+                <li>Educational tone in content</li>
+                <li>"Try it yourself" messaging</li>
+            </ul>
+
+            <p><strong>Website Aesthetic:</strong> Consumer-friendly, informative, inspiring</p>
+        </div>
+
+        <h2>AngleLock Performance (CDI) - Systems Engineering Visual System</h2>
+
+        <div class="callout cyan-accent no-break">
+            <div class="callout-title">Brand Expression: Aerospace-Grade Precision</div>
+
+            <p><strong>Color Palette:</strong> COMPLETE REDESIGN - Ultra high-tech</p>
+            <ul>
+                <li>Primary: Deep Space Navy (#0A1628) - Authority, aerospace</li>
+                <li>Secondary: Titanium Black (#1a1a1a) - Stealth, advanced materials</li>
+                <li>Accent: Electric Cyan (#00D9FF) - Technology, precision systems</li>
+                <li>Accent: Platinum (#E5E4E2) - Machining, engineering</li>
+                <li>Badge: AngleLock Green - Technology validation</li>
+            </ul>
+
+            <p><strong>Typography:</strong></p>
+            <ul>
+                <li>Headlines: Eurostile Extended or Rajdhani (aerospace aesthetic)</li>
+                <li>Body: IBM Plex Sans (enterprise credibility)</li>
+                <li>Technical: JetBrains Mono (engineering specs)</li>
+            </ul>
+
+            <p><strong>Design Language:</strong></p>
+            <ul>
+                <li>Sharp angles, precise geometry (no rounded corners)</li>
+                <li>Monochrome photography with cyan accents</li>
+                <li>Defense/aerospace environments only</li>
+                <li>CAD wireframes and technical diagrams</li>
+                <li>"Mission-critical" messaging</li>
+                <li>Specification-heavy content</li>
+            </ul>
+
+            <p><strong>Website Aesthetic:</strong> Enterprise portal, not consumer site</p>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <h2>Brand Lockup Strategy</h2>
+
+        <h3>AngleLock - Component Technology</h3>
+        <div class="framework-box no-break" style="background: linear-gradient(135deg, rgba(0,255,0,0.1) 0%, white 100%);">
+            <p style="font-family: 'Barlow Condensed', sans-serif; font-size: 24pt; font-weight: 700; color: #00AA00; text-align: center; margin: 0.1in 0;">
+                ANGLELOCK®
+            </p>
+            <p style="text-align: center; font-size: 9pt; color: #666; margin: 0.05in 0 0 0;">
+                Revolutionary Structural Components
+            </p>
+        </div>
+
+        <h3>AngleLock Performance - Systems Engineering</h3>
+        <div class="framework-box no-break" style="background: linear-gradient(135deg, rgba(0,217,255,0.1) 0%, #0A1628 100%); border-color: #00D9FF;">
+            <p style="font-family: 'Barlow Condensed', sans-serif; font-size: 24pt; font-weight: 700; color: #00D9FF; text-align: center; margin: 0.1in 0;">
+                ANGLELOCK®
+            </p>
+            <div style="width: 60%; height: 2px; background: #00D9FF; margin: 0.05in auto;"></div>
+            <p style="font-family: 'Barlow Condensed', sans-serif; font-size: 18pt; font-weight: 400; color: white; text-align: center; margin: 0.05in 0;">
+                PERFORMANCE SYSTEMS
+            </p>
+            <p style="text-align: center; font-size: 8pt; color: rgba(255,255,255,0.6); margin: 0.1in 0 0 0;">
+                Formerly Controlled Dynamics Inc.
+            </p>
+        </div>
+
+        <h2>Badge System for Cross-Branding</h2>
+
+        <table class="no-break">
+            <tr>
+                <th>Context</th>
+                <th>Badge Usage</th>
+                <th>Purpose</th>
+            </tr>
+            <tr>
+                <td>AngleLock marketing materials</td>
+                <td>Small "Performance Division Available" badge</td>
+                <td>Awareness of premium tier</td>
+            </tr>
+            <tr>
+                <td>Performance marketing materials</td>
+                <td>Prominent "Built on AngleLock Technology" badge</td>
+                <td>Technology validation</td>
+            </tr>
+            <tr>
+                <td>Performance website footer</td>
+                <td>Green AngleLock logo + link</td>
+                <td>Brand connection</td>
+            </tr>
+            <tr>
+                <td>Trade show booths</td>
+                <td>Dual branding showing relationship</td>
+                <td>Portfolio demonstration</td>
+            </tr>
+        </table>
+    </div>
+    <div class="page-footer">
+        <div>AngleLock × CDI Brand Architecture Strategy</div>
+        <div>CONFIDENTIAL</div>
+    </div>
+    <div class="page-number">04</div>
+</div>
+
+<!-- CUSTOMER SEGMENTATION -->
+<div class="document-page page-break">
+    <div class="page-content">
+        <h1>Customer Segmentation & Journey Mapping</h1>
+
+        <h2>Market Segmentation Strategy</h2>
+
+        <table class="no-break">
+            <tr>
+                <th>Segment</th>
+                <th>Size</th>
+                <th>Brand Engagement</th>
+                <th>Revenue Potential</th>
+            </tr>
+            <tr>
+                <td><strong>Hobbyists & Makers</strong></td>
+                <td>Large (100K+ annually)</td>
+                <td>AngleLock only</td>
+                <td>$10-$1K per customer</td>
+            </tr>
+            <tr>
+                <td><strong>Small Machine Shops</strong></td>
+                <td>Medium (50K+ annually)</td>
+                <td>AngleLock → AngleLock Pro</td>
+                <td>$1K-$10K per customer</td>
+            </tr>
+            <tr>
+                <td><strong>OEM Manufacturers</strong></td>
+                <td>Medium (20K+ annually)</td>
+                <td>AngleLock Pro</td>
+                <td>$10K-$50K per customer</td>
+            </tr>
+            <tr>
+                <td><strong>Engineering Teams (F500)</strong></td>
+                <td>Small (5K+ annually)</td>
+                <td>AngleLock Pro → Performance</td>
+                <td>$50K-$100K per customer</td>
+            </tr>
+            <tr>
+                <td><strong>Defense/Aerospace Prime</strong></td>
+                <td>Very Small (500 companies)</td>
+                <td>AngleLock Performance only</td>
+                <td>$100K-$1M+ per customer</td>
+            </tr>
+            <tr>
+                <td><strong>Semiconductor Fabs</strong></td>
+                <td>Very Small (200 companies)</td>
+                <td>AngleLock Performance only</td>
+                <td>$200K-$2M+ per customer</td>
+            </tr>
+        </table>
+
+        <h2>Customer Journey: The Upsell Pathway</h2>
+
+        <div class="framework-box no-break">
+            <div class="framework-title">The Aspiration Ladder</div>
+
+            <div style="margin-top: 0.15in;">
+                <p><strong>Stage 1: Discovery (AngleLock)</strong></p>
+                <ul>
+                    <li>Customer discovers AngleLock technology through search, social media, or trade shows</li>
+                    <li>Purchases components for small project ($50-$500)</li>
+                    <li>Experiences superior performance vs. T-slot alternatives</li>
+                    <li><em>Conversion Rate: 100% (anyone can buy)</em></li>
+                </ul>
+
+                <p><strong>Stage 2: Expansion (AngleLock Pro)</strong></p>
+                <ul>
+                    <li>Customer has larger project requiring engineering assistance</li>
+                    <li>Engages AngleLock Pro for design support ($2K-$10K)</li>
+                    <li>Receives custom solutions and specifications</li>
+                    <li><em>Conversion Rate: 10-15% (from Stage 1)</em></li>
+                </ul>
+
+                <p><strong>Stage 3: Partnership (AngleLock Performance)</strong></p>
+                <ul>
+                    <li>Customer needs complete system for mission-critical application</li>
+                    <li>Requires Boeing/Intel-level quality and support</li>
+                    <li>Engages Performance division for turnkey solution ($100K-$500K+)</li>
+                    <li><em>Conversion Rate: 2-5% (from Stage 2, but high value)</em></li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>Customer Perception by Segment</h2>
+
+        <div class="brand-comparison">
+            <div class="brand-box anglelock no-break">
+                <h4 style="color: #00AA00;">What AngleLock Customers Think</h4>
+                <p><strong>"This is amazing technology I can afford"</strong></p>
+                <ul>
+                    <li>"Way better than 80/20 or T-slot"</li>
+                    <li>"I can build professional-grade projects"</li>
+                    <li>"The patents make sense - this really is different"</li>
+                    <li>"I wonder what Boeing uses for their mission-critical projects?"</li>
+                </ul>
+                <p style="margin-top: 0.1in;"><strong class="navy-text">Key Insight:</strong> AngleLock makes revolutionary technology accessible
+                and creates aspirational awareness of Performance capabilities.</p>
+            </div>
+
+            <div class="brand-box cdi no-break">
+                <h4 style="color: #00A0DD;">What Performance Customers Think</h4>
+                <p><strong>"This is the technology Boeing/Intel trusts"</strong></p>
+                <ul>
+                    <li>"Built on proven AngleLock patents"</li>
+                    <li>"If it's good enough for defense, it's good enough for us"</li>
+                    <li>"Zero-failure track record speaks for itself"</li>
+                    <li>"Technology is validated by thousands of component customers"</li>
+                </ul>
+                <p style="margin-top: 0.1in;"><strong class="navy-text">Key Insight:</strong> Performance's mission-critical track record
+                validates AngleLock's technology claims across all markets.</p>
+            </div>
+        </div>
+
+        <div class="highlight no-break">
+            <h3 class="navy-text">The Virtuous Cycle</h3>
+            <p><strong>AngleLock volume →</strong> Builds brand awareness and demonstrates technology</p>
+            <p><strong>Performance prestige →</strong> Validates technology for all customers</p>
+            <p><strong>Combined patent story →</strong> Justifies premium pricing at all tiers</p>
+            <p><strong>Clear upsell path →</strong> Maximizes customer lifetime value</p>
+        </div>
+    </div>
+    <div class="page-footer">
+        <div>AngleLock × CDI Brand Architecture Strategy</div>
+        <div>CONFIDENTIAL</div>
+    </div>
+    <div class="page-number">05</div>
+</div>
+
+<!-- COMPETITIVE POSITIONING -->
+<div class="document-page page-break">
+    <div class="page-content">
+        <h1>Competitive Positioning & Differentiation</h1>
+
+        <h2>The Integrated Ecosystem Advantage</h2>
+
+        <p>By presenting a unified brand architecture, we transform from two small players into a comprehensive
+        ecosystem that competitors cannot easily match.</p>
+
+        <h3>Competitive Comparison: Brand Architecture</h3>
+
+        <table class="no-break">
+            <tr>
+                <th>Company</th>
+                <th>Architecture Model</th>
+                <th>Weakness vs. AngleLock/Performance</th>
+            </tr>
+            <tr>
+                <td><strong>80/20 Inc.</strong></td>
+                <td>Single brand, all tiers</td>
+                <td>No premium differentiation; dilutes high-end positioning</td>
+            </tr>
+            <tr>
+                <td><strong>Bosch Rexroth</strong></td>
+                <td>Master brand + divisions</td>
+                <td>Industrial conglomerate image; lacks innovation narrative</td>
+            </tr>
+            <tr>
+                <td><strong>Vention</strong></td>
+                <td>Vertical integration</td>
+                <td>Software-first approach; weaker on mission-critical applications</td>
+            </tr>
+            <tr>
+                <td><strong>Item</strong></td>
+                <td>German engineering brand</td>
+                <td>European-centric; limited US defense/aerospace penetration</td>
+            </tr>
+            <tr>
+                <td><strong>Mitech/Others</strong></td>
+                <td>T-slot commodity players</td>
+                <td>No technology differentiation; friction-based systems</td>
+            </tr>
+            <tr>
+                <td style="background: rgba(0,217,255,0.1);"><strong>AngleLock + Performance</strong></td>
+                <td style="background: rgba(0,217,255,0.1);">Performance division model</td>
+                <td style="background: rgba(0,217,255,0.1);"><strong>✓ Clear tier differentiation + Patent portfolio + Defense credentials</strong></td>
+            </tr>
+        </table>
+
+        <h2>Unique Value Proposition by Tier</h2>
+
+        <div class="two-column">
+            <div class="callout green-accent no-break">
+                <div class="callout-title">AngleLock Positioning</div>
+                <p><strong>"The T-Slot Killer"</strong></p>
+                <p>vs. 80/20, Vention, Mitech:</p>
+                <ul>
+                    <li><strong>10x stronger</strong> (mechanical lock vs. friction)</li>
+                    <li><strong>Zero maintenance</strong> (self-tightening)</li>
+                    <li><strong>Proven patents</strong> (validated by Boeing/Intel use)</li>
+                    <li><strong>Same price</strong> (component parity pricing)</li>
+                </ul>
+                <p><strong>Message:</strong> "Why settle for T-slot when you can have AngleLock?"</p>
+            </div>
+
+            <div class="callout cyan-accent no-break">
+                <div class="callout-title">Performance Positioning</div>
+                <p><strong>"When Failure Is Not An Option"</strong></p>
+                <p>vs. Custom fabricators, Bosch systems:</p>
+                <ul>
+                    <li><strong>Faster delivery</strong> (modular vs. welded custom)</li>
+                    <li><strong>Proven reliability</strong> (zero-failure track record)</li>
+                    <li><strong>Reconfigurable</strong> (adapt without rebuilding)</li>
+                    <li><strong>Defense-proven</strong> (Boeing, Northrop, General Dynamics)</li>
+                </ul>
+                <p><strong>Message:</strong> "The system Boeing trusts. Now available for your mission-critical applications."</p>
+            </div>
+        </div>
+
+        <h2>Patent Portfolio as Competitive Moat</h2>
+
+        <div class="highlight no-break">
+            <h3 class="navy-text">The Patent Story Across Both Brands</h3>
+
+            <p><strong>AngleLock Message:</strong></p>
+            <p>"Our patented 5-plane locking technology isn't just marketing—it's the same system trusted by
+            Boeing, Northrop Grumman, and Intel in their mission-critical applications. You get the same
+            technology they do, just in component form."</p>
+
+            <p><strong>Performance Message:</strong></p>
+            <p>"Built on AngleLock's patented mechanical locking technology with over a decade of zero-failure
+            performance in defense and aerospace applications. When your project cannot fail, you need
+            the system that has never failed."</p>
+
+            <p><strong>Combined Impact:</strong></p>
+            <ul class="checkmark-list">
+                <li>AngleLock democratizes access to revolutionary technology</li>
+                <li>Performance validates that technology with Fortune 500 and defense customers</li>
+                <li>Patents create barrier to entry competitors cannot easily overcome</li>
+                <li>Single R&D investment benefits both brands</li>
+            </ul>
+        </div>
+
+        <h2>Market Share Capture Strategy</h2>
+
+        <div class="stats-grid">
+            <div class="stat-box no-break">
+                <span class="stat-number">30%</span>
+                <div class="stat-label">Target Share<br>Premium Segment<br>(from custom fab)</div>
+            </div>
+            <div class="stat-box no-break">
+                <span class="stat-number">15%</span>
+                <div class="stat-label">Target Share<br>Component Market<br>(from 80/20)</div>
+            </div>
+            <div class="stat-box no-break">
+                <span class="stat-number">$120M</span>
+                <div class="stat-label">Revenue Target<br>Year 3<br>(Combined)</div>
+            </div>
+            <div class="stat-box no-break">
+                <span class="stat-number">40%+</span>
+                <div class="stat-label">Gross Margin<br>Performance Tier<br>(vs. 25% component)</div>
+            </div>
+        </div>
+    </div>
+    <div class="page-footer">
+        <div>AngleLock × CDI Brand Architecture Strategy</div>
+        <div>CONFIDENTIAL</div>
+    </div>
+    <div class="page-number">06</div>
+</div>
+
+<!-- IMPLEMENTATION ROADMAP -->
+<div class="document-page page-break">
+    <div class="page-content">
+        <h1>Implementation Roadmap</h1>
+
+        <h2>Phased Rollout Strategy</h2>
+
+        <div class="callout no-break">
+            <div class="callout-title">Phase 1: Foundation (Months 1-2)</div>
+            <h4>CDI → AngleLock Performance Rebrand</h4>
+            <ul>
+                <li><strong>Website Redesign:</strong> Transform CDI site to ultra high-tech aerospace aesthetic
+                    <ul>
+                        <li>New color palette (black, titanium, cyan)</li>
+                        <li>Remove consumer-friendly elements</li>
+                        <li>Add technical specifications throughout</li>
+                        <li>Implement CAD wireframe backgrounds</li>
+                        <li>Sharp, geometric design language</li>
+                    </ul>
+                </li>
+                <li><strong>Brand Lockup Development:</strong> Create new AngleLock Performance logo system</li>
+                <li><strong>Messaging Update:</strong> Replace CDI language with Performance messaging</li>
+                <li><strong>Customer Communication:</strong> Announce rebrand to existing customers with rationale</li>
+            </ul>
+        </div>
+
+        <div class="callout no-break">
+            <div class="callout-title">Phase 2: Integration (Months 2-4)</div>
+            <h4>Cross-Brand Connections</h4>
+            <ul>
+                <li><strong>AngleLock Website Updates:</strong>
+                    <ul>
+                        <li>Add "Performance Division" navigation item</li>
+                        <li>Create "Upgrade to Performance" CTAs for qualified leads</li>
+                        <li>Showcase Performance division success stories</li>
+                    </ul>
+                </li>
+                <li><strong>Performance Website Updates:</strong>
+                    <ul>
+                        <li>"Built on AngleLock Technology" badges throughout</li>
+                        <li>Link to AngleLock for component reference</li>
+                        <li>Patent story prominently featured</li>
+                    </ul>
+                </li>
+                <li><strong>Sales Enablement:</strong>
+                    <ul>
+                        <li>Train AngleLock team to identify Performance leads</li>
+                        <li>Create qualification criteria for tier escalation</li>
+                        <li>Develop handoff process between teams</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="callout no-break">
+            <div class="callout-title">Phase 3: Market Activation (Months 4-6)</div>
+            <h4>Go-to-Market Launch</h4>
+            <ul>
+                <li><strong>PR Campaign:</strong> "AngleLock Announces Performance Division"
+                    <ul>
+                        <li>Press release to aerospace/defense trade publications</li>
+                        <li>Semiconductor industry announcement</li>
+                        <li>Patent portfolio story</li>
+                    </ul>
+                </li>
+                <li><strong>Trade Show Presence:</strong>
+                    <ul>
+                        <li>Dual-branded booth showing full portfolio</li>
+                        <li>Separate AngleLock and Performance zones</li>
+                        <li>Case studies demonstrating upsell path</li>
+                    </ul>
+                </li>
+                <li><strong>Customer Case Studies:</strong>
+                    <ul>
+                        <li>Boeing/Northrop projects (with approval)</li>
+                        <li>Intel/TSMC applications (semiconductor)</li>
+                        <li>Journey stories: "Started with components, scaled to systems"</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="callout no-break">
+            <div class="callout-title">Phase 4: Optimization (Months 6-12)</div>
+            <h4>Refinement & Growth</h4>
+            <ul>
+                <li><strong>Performance Metrics:</strong>
+                    <ul>
+                        <li>Track conversion rates between tiers</li>
+                        <li>Measure brand awareness lift</li>
+                        <li>Analyze customer lifetime value by entry point</li>
+                    </ul>
+                </li>
+                <li><strong>Product Development:</strong>
+                    <ul>
+                        <li>Launch AngleLock Pro tier (middle market)</li>
+                        <li>Develop new Performance offerings for semiconductor</li>
+                        <li>Create partner certification program</li>
+                    </ul>
+                </li>
+                <li><strong>Market Expansion:</strong>
+                    <ul>
+                        <li>International rollout (Europe, Asia)</li>
+                        <li>Vertical-specific messaging</li>
+                        <li>Channel partner recruitment</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <h2>Critical Success Factors</h2>
+
+        <table class="no-break">
+            <tr>
+                <th>Factor</th>
+                <th>Requirement</th>
+                <th>Risk Mitigation</th>
+            </tr>
+            <tr>
+                <td><strong>Visual Clarity</strong></td>
+                <td>Brands must look distinctly different</td>
+                <td>Strict brand guidelines; separate design teams</td>
+            </tr>
+            <tr>
+                <td><strong>Message Consistency</strong></td>
+                <td>Story coherent across both brands</td>
+                <td>Unified marketing team; regular alignment meetings</td>
+            </tr>
+            <tr>
+                <td><strong>Sales Alignment</strong></td>
+                <td>Teams must collaborate, not compete</td>
+                <td>Shared commission structure; clear escalation criteria</td>
+            </tr>
+            <tr>
+                <td><strong>Customer Clarity</strong></td>
+                <td>No confusion about which brand to engage</td>
+                <td>Clear tier descriptions; automated qualification</td>
+            </tr>
+            <tr>
+                <td><strong>Patent Protection</strong></td>
+                <td>IP must be defended across both brands</td>
+                <td>Legal team oversight; consistent enforcement</td>
+            </tr>
+        </table>
+    </div>
+    <div class="page-footer">
+        <div>AngleLock × CDI Brand Architecture Strategy</div>
+        <div>CONFIDENTIAL</div>
+    </div>
+    <div class="page-number">07</div>
+</div>
+
+<!-- FINANCIAL PROJECTIONS -->
+<div class="document-page page-break">
+    <div class="page-content">
+        <h1>Financial Impact & Business Case</h1>
+
+        <h2>Revenue Projections: Integrated vs. Separate Brands</h2>
+
+        <table class="no-break">
+            <tr>
+                <th>Scenario</th>
+                <th>Year 1</th>
+                <th>Year 2</th>
+                <th>Year 3</th>
+                <th>Growth Rate</th>
+            </tr>
+            <tr style="background: rgba(255,200,200,0.2);">
+                <td><strong>Status Quo (Separate)</strong></td>
+                <td>$28M</td>
+                <td>$34M</td>
+                <td>$42M</td>
+                <td>+20% CAGR</td>
+            </tr>
+            <tr style="background: rgba(200,255,200,0.2);">
+                <td><strong>Integrated Architecture</strong></td>
+                <td>$35M</td>
+                <td>$56M</td>
+                <td>$90M</td>
+                <td>+60% CAGR</td>
+            </tr>
+            <tr style="background: rgba(200,255,200,0.3);">
+                <td><strong>Delta (Improvement)</strong></td>
+                <td><strong>+$7M</strong></td>
+                <td><strong>+$22M</strong></td>
+                <td><strong>+$48M</strong></td>
+                <td><strong>+3x Growth</strong></td>
+            </tr>
+        </table>
+
+        <h2>Revenue Bridge Analysis (Year 3)</h2>
+
+        <div class="stats-grid">
+            <div class="stat-box no-break">
+                <span class="stat-number">$42M</span>
+                <div class="stat-label">Baseline Revenue<br>(No Integration)</div>
+            </div>
+            <div class="stat-box no-break">
+                <span class="stat-number">+$18M</span>
+                <div class="stat-label">Tier Upsells<br>(AngleLock→Performance)</div>
+            </div>
+            <div class="stat-box no-break">
+                <span class="stat-number">+$22M</span>
+                <div class="stat-label">Market Share Gains<br>(vs. Competitors)</div>
+            </div>
+            <div class="stat-box no-break">
+                <span class="stat-number">+$8M</span>
+                <div class="stat-label">Premium Pricing<br>(Brand Value)</div>
+            </div>
+        </div>
+
+        <p style="text-align: center; font-size: 16pt; color: var(--gold); font-weight: 700; margin: 0.2in 0;">
+            Total Year 3 Revenue: $90M (+114% vs. Status Quo)
+        </p>
+
+        <h2>Investment Requirements</h2>
+
+        <table class="no-break">
+            <tr>
+                <th>Investment Category</th>
+                <th>Year 1</th>
+                <th>Year 2</th>
+                <th>Year 3</th>
+                <th>Total</th>
+            </tr>
+            <tr>
+                <td>Brand Development & Design</td>
+                <td>$180K</td>
+                <td>$50K</td>
+                <td>$30K</td>
+                <td>$260K</td>
+            </tr>
+            <tr>
+                <td>Website Redesign & Dev</td>
+                <td>$120K</td>
+                <td>$40K</td>
+                <td>$40K</td>
+                <td>$200K</td>
+            </tr>
+            <tr>
+                <td>Marketing & PR</td>
+                <td>$250K</td>
+                <td>$400K</td>
+                <td>$500K</td>
+                <td>$1,150K</td>
+            </tr>
+            <tr>
+                <td>Sales Enablement & Training</td>
+                <td>$80K</td>
+                <td>$60K</td>
+                <td>$60K</td>
+                <td>$200K</td>
+            </tr>
+            <tr>
+                <td>Trade Shows & Events</td>
+                <td>$150K</td>
+                <td>$200K</td>
+                <td>$250K</td>
+                <td>$600K</td>
+            </tr>
+            <tr style="background: #f0f0f0; font-weight: 700;">
+                <td><strong>Total Investment</strong></td>
+                <td><strong>$780K</strong></td>
+                <td><strong>$750K</strong></td>
+                <td><strong>$880K</strong></td>
+                <td><strong>$2,410K</strong></td>
+            </tr>
+        </table>
+
+        <h2>Return on Investment</h2>
+
+        <div class="highlight no-break">
+            <h3 class="navy-text">ROI Calculation (3-Year Cumulative)</h3>
+
+            <p><strong>Additional Revenue Generated:</strong> $77M ($7M + $22M + $48M)</p>
+            <p><strong>Gross Margin (40% blended):</strong> $30.8M</p>
+            <p><strong>Total Investment:</strong> $2.4M</p>
+            <p><strong>Net Return:</strong> $28.4M</p>
+
+            <p style="text-align: center; font-size: 18pt; color: var(--gold); font-weight: 700; margin: 0.2in 0;">
+                ROI: 1,183% (12x Return)
+            </p>
+        </div>
+
+        <h2>Risk Assessment</h2>
+
+        <table class="no-break">
+            <tr>
+                <th>Risk</th>
+                <th>Probability</th>
+                <th>Impact</th>
+                <th>Mitigation</th>
+            </tr>
+            <tr>
+                <td>Brand confusion during transition</td>
+                <td>Medium</td>
+                <td>Medium</td>
+                <td>Clear communication plan; gradual rollout</td>
+            </tr>
+            <tr>
+                <td>AngleLock customers feel alienated</td>
+                <td>Low</td>
+                <td>Medium</td>
+                <td>Emphasize accessibility; no changes to products</td>
+            </tr>
+            <tr>
+                <td>Performance rebrand loses CDI equity</td>
+                <td>Low</td>
+                <td>High</td>
+                <td>"Formerly CDI" messaging; customer outreach</td>
+            </tr>
+            <tr>
+                <td>Competitors copy strategy</td>
+                <td>High</td>
+                <td>Low</td>
+                <td>Patents provide defensibility; execution matters</td>
+            </tr>
+            <tr>
+                <td>Implementation costs exceed budget</td>
+                <td>Medium</td>
+                <td>Low</td>
+                <td>Phased approach; stage-gate approvals</td>
+            </tr>
+        </table>
+
+        <div class="section-divider"></div>
+
+        <div class="callout no-break">
+            <div class="callout-title">Conservative Success Scenario</div>
+            <p>Even with 50% lower conversion rates and 25% slower market share gains, the integrated
+            brand architecture delivers $18M additional revenue in Year 3, providing 7.5x ROI on $2.4M investment.</p>
+        </div>
+    </div>
+    <div class="page-footer">
+        <div>AngleLock × CDI Brand Architecture Strategy</div>
+        <div>CONFIDENTIAL</div>
+    </div>
+    <div class="page-number">08</div>
+</div>
+
+<!-- RECOMMENDATIONS -->
+<div class="document-page page-break">
+    <div class="page-content">
+        <h1>Recommendations & Next Steps</h1>
+
+        <h2>Strategic Recommendation</h2>
+
+        <div class="framework-box no-break">
+            <div class="framework-title">PROCEED WITH PERFORMANCE DIVISION ARCHITECTURE</div>
+            <p style="text-align: center; margin: 0.15in 0.5in;">
+                Implement the AngleLock / AngleLock Performance brand architecture to capture $77M+
+                incremental revenue over three years while establishing clear market leadership in both
+                accessible components and mission-critical systems.
+            </p>
+        </div>
+
+        <h2>Why This Strategy Wins</h2>
+
+        <div class="two-column">
+            <div>
+                <h3>Market Positioning</h3>
+                <ul class="checkmark-list">
+                    <li>Clear differentiation vs. 80/20, Vention, Bosch</li>
+                    <li>Patent portfolio validated across both brands</li>
+                    <li>Premium pricing justified by Performance's proven track record</li>
+                    <li>Accessible entry point drives volume</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Customer Experience</h3>
+                <ul class="checkmark-list">
+                    <li>No confusion about which brand to engage</li>
+                    <li>Natural progression path as needs grow</li>
+                    <li>Technology validation at all price points</li>
+                    <li>Aspirational brand architecture</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="two-column">
+            <div>
+                <h3>Financial Performance</h3>
+                <ul class="checkmark-list">
+                    <li>12x ROI over three years</li>
+                    <li>114% revenue increase vs. status quo</li>
+                    <li>Higher margins on Performance tier</li>
+                    <li>Customer LTV increase of 3-5x</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Competitive Advantage</h3>
+                <ul class="checkmark-list">
+                    <li>Integrated ecosystem hard to replicate</li>
+                    <li>Patents create barrier to entry</li>
+                    <li>Blue-chip customers validate technology</li>
+                    <li>Two brands stronger together than separate</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>Immediate Action Items (Next 30 Days)</h2>
+
+        <div class="callout no-break">
+            <div class="callout-title">Critical Path to Launch</div>
+            <ol>
+                <li><strong>Week 1: Executive Alignment</strong>
+                    <ul>
+                        <li>Review and approve this strategy document</li>
+                        <li>Assign executive sponsor for brand integration</li>
+                        <li>Establish steering committee (CEO, CMO, Sales VP)</li>
+                    </ul>
+                </li>
+                <li><strong>Week 2: Design Kickoff</strong>
+                    <ul>
+                        <li>Engage brand design agency or internal team</li>
+                        <li>Begin AngleLock Performance visual identity development</li>
+                        <li>Create brand guidelines (colors, typography, voice)</li>
+                    </ul>
+                </li>
+                <li><strong>Week 3: Website Planning</strong>
+                    <ul>
+                        <li>Audit current CDI website for redesign scope</li>
+                        <li>Create wireframes for ultra high-tech aesthetic</li>
+                        <li>Plan content migration and new page structure</li>
+                    </ul>
+                </li>
+                <li><strong>Week 4: Stakeholder Communication</strong>
+                    <ul>
+                        <li>Draft customer communication plan</li>
+                        <li>Prepare sales team talking points</li>
+                        <li>Create internal launch timeline</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+        <h2>Decision Points</h2>
+
+        <div class="callout cyan-accent no-break">
+            <div class="callout-title">Questions for Executive Team</div>
+            <ol>
+                <li><strong>Naming:</strong> Rebrand CDI as "AngleLock Performance" or maintain "CDI by AngleLock"?
+                    <ul>
+                        <li><em>Recommendation: Full rebrand to AngleLock Performance for clarity</em></li>
+                    </ul>
+                </li>
+                <li><strong>Timing:</strong> Launch rebrand in Q1 2026 or wait until fiscal Q2?
+                    <ul>
+                        <li><em>Recommendation: Q1 to capture trade show season momentum</em></li>
+                    </ul>
+                </li>
+                <li><strong>Investment:</strong> Approve full $2.4M 3-year budget or phase-gate by year?
+                    <ul>
+                        <li><em>Recommendation: Approve Year 1 ($780K), stage-gate for Year 2-3</em></li>
+                    </ul>
+                </li>
+                <li><strong>Organization:</strong> Separate sales teams or unified with tier specialization?
+                    <ul>
+                        <li><em>Recommendation: Unified team with Performance specialists</em></li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div class="highlight no-break" style="background: linear-gradient(135deg, rgba(0,217,255,0.1) 0%, rgba(201,162,39,0.1) 100%); border-left-color: #00D9FF;">
+            <h2 class="navy-text" style="margin-top: 0;">The Path Forward</h2>
+            <p>This brand architecture strategy positions AngleLock and CDI for market leadership by creating
+            a clear, compelling narrative: revolutionary technology accessible to everyone, with a specialized
+            systems division for mission-critical applications where failure is not an option.</p>
+
+            <p>The Technology & Application Partnership is not just clever marketing—it's a strategic framework
+            that maximizes patent value, customer lifetime value, and competitive differentiation while
+            providing crystal-clear market positioning for two massive companies with complementary missions.</p>
+
+            <p><strong>The opportunity is significant. The strategy is sound. The time is now.</strong></p>
+        </div>
+
+        <div style="margin-top: 0.5in; padding: 0.25in; background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%); border-radius: 8px; text-align: center; color: white;">
+            <p style="font-size: 11pt; margin-bottom: 0.1in;">Prepared for:</p>
+            <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 22pt; font-weight: 700; color: var(--gold); margin-bottom: 0.15in;">
+                CONTROLLED DYNAMICS INC. EXECUTIVE TEAM
+            </div>
+            <p style="font-size: 10pt; color: rgba(255,255,255,0.7);">
+                Strategic Brand Architecture Report<br>
+                December 15, 2025<br>
+                Confidential & Proprietary
+            </p>
+        </div>
+    </div>
+    <div class="page-footer">
+        <div>AngleLock × CDI Brand Architecture Strategy</div>
+        <div>CONFIDENTIAL</div>
+    </div>
+    <div class="page-number">09</div>
+</div>
+
+</body>
+</html>

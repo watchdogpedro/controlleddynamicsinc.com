@@ -93,7 +93,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/partners" className="text-white/70 hover:text-[#C9A227] transition-colors text-sm">
+                <Link href="/about/partners" className="text-white/70 hover:text-[#C9A227] transition-colors text-sm">
                   Partners
                 </Link>
               </li>
@@ -151,7 +151,7 @@ export default function Footer() {
                 </Link>
               </div>
             </div>
-            <Link href="/partners" className="flex items-center gap-3 hover:opacity-80 transition-opacity group">
+            <Link href="/about/partners" className="flex items-center gap-3 hover:opacity-80 transition-opacity group">
               <span className="text-white/70 text-sm">Built with</span>
               <Image
                 src="/AngleLock_white.png"

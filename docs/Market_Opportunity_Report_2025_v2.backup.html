@@ -1,0 +1,1784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Structural Aluminum Revolution - Market Opportunity Report 2025</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+        /* ============================================
+           PROFESSIONAL PDF DESIGN - 2025 STANDARDS
+           Based on McKinsey/BCG layout principles
+           ============================================ */
+
+        /* Page Setup - Landscape 11" x 8.5" */
+        @page {
+            size: 11in 8.5in;
+            margin: 0.75in 0.75in 0.75in 1.5in; /* Consistent margins, wide left */
+        }
+
+        @page :first {
+            margin: 0;
+        }
+
+        /* Print-specific rules */
+        @media print {
+            /* Force page breaks */
+            .page-break {
+                page-break-before: always;
+                break-before: page;
+            }
+
+            /* Prevent blocks from breaking across pages */
+            .callout, .stats-grid, .stat-box, table, figure, .chart-container,
+            .key-findings, .comparison-table, .market-data, .source-box {
+                page-break-inside: avoid;
+                break-inside: avoid;
+                -webkit-column-break-inside: avoid;
+            }
+
+            /* Keep headings with following content */
+            h1, h2, h3, h4 {
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+
+            /* Orphans and widows */
+            p, li {
+                orphans: 3;
+                widows: 3;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            font-size: 10pt;
+            line-height: 1.5;
+            color: #1a1a1a;
+            background: white;
+            counter-reset: page figure table;
+        }
+
+        .document-page {
+            width: 11in;
+            min-height: 8.5in;
+            margin: 0 auto;
+            padding: 0.75in 0.75in 1in 1.5in;
+            position: relative;
+            background: white;
+        }
+
+        /* Page Numbers - Large on bottom right */
+        .page-number {
+            position: absolute;
+            bottom: 0.35in;
+            right: 0.75in;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 36pt;
+            font-weight: 700;
+            color: #C9A227;
+            opacity: 0.3;
+        }
+
+        /* Brand Colors */
+        :root {
+            --navy: #0A1628;
+            --navy-light: #1E3A5F;
+            --gold: #C9A227;
+            --gold-light: #E0B830;
+            --gray: #6B7C93;
+            --gray-light: #F4F6F8;
+        }
+
+        /* ============================================
+           COVER PAGE
+           ============================================ */
+        .cover {
+            width: 11in;
+            height: 8.5in;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            color: white;
+            padding: 1.5in 2in 1.5in 2in;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cover-hero-image {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            width: 4.5in;
+            height: auto;
+            z-index: 1;
+            opacity: 0.9;
+            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5));
+        }
+
+        .cover::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            right: -50px;
+            width: 400px;
+            height: 400px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="rgba(201,162,39,0.1)"/></svg>');
+            background-size: cover;
+        }
+
+        .cover-content {
+            z-index: 2;
+            position: relative;
+        }
+
+        .cover-logo {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 20pt;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 0.3in;
+            letter-spacing: 2px;
+        }
+
+        .cover-category {
+            font-size: 9pt;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 0.2in;
+        }
+
+        .cover-title {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 56pt;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 0.2in;
+            color: #FFFFFF;
+        }
+
+        .cover-subtitle {
+            font-size: 14pt;
+            font-weight: 300;
+            line-height: 1.4;
+            margin-bottom: 0.8in;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 7in;
+        }
+
+        .cover-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.4in;
+            margin-bottom: 0.8in;
+        }
+
+        .cover-stat {
+            border-left: 3px solid var(--gold);
+            padding-left: 12px;
+        }
+
+        .cover-stat-value {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 32pt;
+            font-weight: 700;
+            color: var(--gold);
+            line-height: 1;
+        }
+
+        .cover-stat-label {
+            font-size: 8pt;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 5px;
+        }
+
+        .cover-footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 8pt;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* ============================================
+           TYPOGRAPHY
+           ============================================ */
+        h1, h2, h3, h4 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            color: var(--navy);
+        }
+
+        h1 {
+            font-size: 28pt;
+            border-bottom: 3px solid var(--gold);
+            padding-bottom: 8pt;
+            margin-bottom: 16pt;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 20pt;
+            margin-top: 24pt;
+            margin-bottom: 10pt;
+        }
+
+        h3 {
+            font-size: 14pt;
+            margin-top: 16pt;
+            margin-bottom: 8pt;
+        }
+
+        h4 {
+            font-size: 11pt;
+            margin-top: 12pt;
+            margin-bottom: 6pt;
+        }
+
+        p {
+            margin-bottom: 10pt;
+            text-align: justify;
+        }
+
+        strong {
+            font-weight: 600;
+            color: var(--navy);
+        }
+
+        /* ============================================
+           CALLOUT BOXES
+           ============================================ */
+        .callout {
+            background: var(--gray-light);
+            border-left: 4px solid var(--gold);
+            padding: 16pt;
+            margin: 16pt 0;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+
+        .callout-title {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 12pt;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 8pt;
+        }
+
+        .callout.highlight {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            color: white;
+        }
+
+        .callout.highlight .callout-title {
+            color: var(--gold);
+        }
+
+        .callout.highlight p, .callout.highlight li {
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        /* ============================================
+           STATISTICS & DATA
+           ============================================ */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16pt;
+            margin: 16pt 0;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+
+        .stat-box {
+            background: white;
+            border: 2px solid var(--gray-light);
+            padding: 16pt;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 28pt;
+            font-weight: 700;
+            color: var(--gold);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 8pt;
+            color: var(--gray);
+            margin-top: 6pt;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .market-data {
+            background: var(--gray-light);
+            padding: 16pt;
+            margin: 16pt 0;
+            border-radius: 4px;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+
+        /* ============================================
+           TABLES
+           ============================================ */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16pt 0;
+            font-size: 9pt;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+
+        thead {
+            background: var(--navy);
+            color: white;
+        }
+
+        th {
+            padding: 10pt;
+            text-align: left;
+            font-weight: 600;
+            font-size: 9pt;
+        }
+
+        td {
+            padding: 8pt 10pt;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        tr:nth-child(even) {
+            background: var(--gray-light);
+        }
+
+        .table-highlight {
+            background: rgba(201, 162, 39, 0.15) !important;
+            font-weight: 600;
+            color: var(--navy);
+        }
+
+        /* ============================================
+           LISTS
+           ============================================ */
+        ul, ol {
+            margin: 10pt 0 10pt 20pt;
+        }
+
+        li {
+            margin-bottom: 6pt;
+        }
+
+        .checklist {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .checklist li {
+            position: relative;
+            padding-left: 28px;
+        }
+
+        .checklist li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: 700;
+            font-size: 12pt;
+        }
+
+        /* ============================================
+           SOURCE CITATIONS
+           ============================================ */
+        .source-box {
+            background: #f9f9f9;
+            border-left: 3px solid var(--gray);
+            padding: 12pt;
+            margin: 16pt 0;
+            font-size: 8pt;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+
+        .source-box h4 {
+            font-size: 9pt;
+            margin: 0 0 8pt 0;
+            color: var(--gray);
+        }
+
+        .source-box ul {
+            margin: 0;
+            padding-left: 16pt;
+        }
+
+        .source-box li {
+            margin-bottom: 4pt;
+            color: var(--gray);
+        }
+
+        /* ============================================
+           CHARTS & GRAPHICS
+           ============================================ */
+        .chart-container {
+            background: var(--gray-light);
+            padding: 16pt;
+            margin: 16pt 0;
+            border-radius: 4px;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+
+        .bar-chart {
+            display: flex;
+            flex-direction: column;
+            gap: 10pt;
+        }
+
+        .bar {
+            display: flex;
+            align-items: center;
+            gap: 10pt;
+        }
+
+        .bar-label {
+            font-size: 8pt;
+            font-weight: 600;
+            min-width: 100pt;
+            color: var(--navy);
+        }
+
+        .bar-fill-container {
+            flex: 1;
+            height: 20pt;
+            background: white;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 8pt;
+            color: var(--navy);
+            font-weight: 700;
+            font-size: 8pt;
+        }
+
+        /* ============================================
+           KEY FINDINGS BOX
+           ============================================ */
+        .key-findings {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            color: white;
+            padding: 20pt;
+            margin: 20pt 0;
+            border-radius: 6px;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+
+        .key-findings h3 {
+            color: var(--gold);
+            margin-top: 0;
+            font-size: 16pt;
+        }
+
+        .key-findings ul {
+            margin-top: 12pt;
+        }
+
+        .key-findings li {
+            margin-bottom: 10pt;
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        /* ============================================
+           PAGE HEADER (for internal pages)
+           ============================================ */
+        .page-header {
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 8pt;
+            margin-bottom: 16pt;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .page-header-title {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 10pt;
+            font-weight: 600;
+            color: var(--navy);
+        }
+
+        .page-header-logo {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 9pt;
+            font-weight: 700;
+            color: var(--gold);
+            letter-spacing: 1px;
+        }
+
+        /* ============================================
+           SECTION NUMBERS
+           ============================================ */
+        .section-number {
+            display: inline-block;
+            width: 32pt;
+            height: 32pt;
+            background: var(--gold);
+            color: var(--navy);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 32pt;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 16pt;
+            font-weight: 700;
+            margin-right: 10pt;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ============================================
+     COVER PAGE
+     ============================================ -->
+<div class="cover">
+    <!-- Hero Image -->
+    <img src="../public/market-report-cover.png" alt="AngleLock Mechanical Locking Technology" class="cover-hero-image">
+
+    <div class="cover-content">
+        <div class="cover-logo">CONTROLLED DYNAMICS INC.</div>
+        <div class="cover-category">Market Analysis Report 2025</div>
+        <h1 class="cover-title">THE STRUCTURAL<br>ALUMINUM<br>REVOLUTION</h1>
+        <p class="cover-subtitle">Market Opportunities in Modular Construction & Advanced Manufacturing: How Next-Generation Mechanical Locking Technology is Creating a $47 Billion Market Opportunity</p>
+    </div>
+
+    <div class="cover-stats">
+        <div class="cover-stat">
+            <div class="cover-stat-value">$47.4B</div>
+            <div class="cover-stat-label">Total Addressable Market 2030</div>
+        </div>
+        <div class="cover-stat">
+            <div class="cover-stat-value">16.2%</div>
+            <div class="cover-stat-label">CAGR Satellite Manufacturing</div>
+        </div>
+        <div class="cover-stat">
+            <div class="cover-stat-value">244K</div>
+            <div class="cover-stat-label">US Reshoring Jobs 2024</div>
+        </div>
+        <div class="cover-stat">
+            <div class="cover-stat-value">10:1</div>
+            <div class="cover-stat-label">ROI vs. T-Slot Systems</div>
+        </div>
+    </div>
+
+    <div class="cover-footer">
+        <div>Controlled Dynamics Inc. | 1058 Overland Court, Grafton, WI 53024</div>
+        <div>January 2025 | Version 2.0</div>
+    </div>
+</div>
+
+<!-- ============================================
+     PAGE 1: EXECUTIVE SUMMARY
+     ============================================ -->
+<div class="document-page page-break">
+    <div class="page-header">
+        <div class="page-header-title">Market Opportunity Report 2025</div>
+        <div class="page-header-logo">CONTROLLED DYNAMICS</div>
+    </div>
+
+    <h1><span class="section-number">1</span> Executive Summary</h1>
+
+    <p>The global aluminum extrusion market is experiencing unprecedented growth, projected to reach <strong>$146.8 billion by 2030</strong> (Grand View Research), driven by Industry 4.0 automation, semiconductor manufacturing expansion under the CHIPS Act, commercial space industry growth, and the US manufacturing reshoring renaissance.</p>
+
+    <p>However, traditional T-slot aluminum framing systems—the dominant modular construction method for the past 40 years—have reached their technical limitations. These friction-based connections fail under vibration, cannot maintain micron-level precision, generate particles in cleanroom environments, and require constant maintenance that costs manufacturers billions annually in downtime and quality issues.</p>
+
+    <p>This technical inadequacy creates a <strong>$47.4 billion market opportunity by 2030</strong> for mechanically-locked structural systems like AngleLock that overcome these limitations and enable entirely new applications previously impossible with friction-based technology.</p>
+
+    <div class="key-findings">
+        <h3>Key Findings</h3>
+        <ul class="checklist">
+            <li><strong>$47.4B total addressable market</strong> by 2030 in segments where T-slot fails or new applications enabled by superior technology</li>
+            <li><strong>Satellite manufacturing growing 16.2% CAGR</strong> to $101.4B by 2034, requiring precision reconfigurable fixtures</li>
+            <li><strong>Industrial robotics expanding 13-15% CAGR</strong> to $60.1B by 2030, with vibration-proof mounting critical</li>
+            <li><strong>CHIPS Act driving $52.7B semiconductor investment</strong>, requiring cleanroom-compatible, particle-free structural systems</li>
+            <li><strong>244,000 US reshoring jobs in 2024</strong>, second-highest on record, creating demand for domestic modular infrastructure</li>
+            <li><strong>10:1 ROI demonstrated</strong> in vibration environments ($16,350 savings over 5 years vs. T-slot)</li>
+        </ul>
+    </div>
+
+    <h2>Market Overview: Aluminum Extrusion Industry</h2>
+
+    <div class="market-data">
+        <h4 style="color: var(--navy); margin: 0 0 12pt 0;">Global Aluminum Extrusion Market Size</h4>
+        <table style="margin: 0;">
+            <thead>
+                <tr>
+                    <th>Year</th>
+                    <th>Market Size</th>
+                    <th>Growth Rate</th>
+                    <th>Key Drivers</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>2024</strong></td>
+                    <td>$91.4B - $95.1B</td>
+                    <td>—</td>
+                    <td>Base year</td>
+                </tr>
+                <tr>
+                    <td><strong>2025</strong></td>
+                    <td>$94.2B - $102.3B</td>
+                    <td>3.1% - 7.6% YoY</td>
+                    <td>Construction, EV, renewables</td>
+                </tr>
+                <tr class="table-highlight">
+                    <td><strong>2030</strong></td>
+                    <td>$146.8B</td>
+                    <td>6.6% - 8.4% CAGR</td>
+                    <td>Automation, aerospace, cleantech</td>
+                </tr>
+                <tr>
+                    <td><strong>2034</strong></td>
+                    <td>$169.2B</td>
+                    <td>7.1% CAGR (2024-2034)</td>
+                    <td>Asia-Pacific expansion (71% share)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p>The modular aluminum framing systems segment represents approximately <strong>$8.4 billion</strong> of this market today. However, our analysis reveals that 32% of this segment ($2.67B current, $8.4B by 2030) consists of applications where <strong>T-slot systems frequently fail</strong> due to fundamental technical limitations: vibration sensitivity, precision degradation, particle generation, and maintenance requirements.</p>
+
+    <p>These underserved applications are growing <strong>3x faster</strong> than the overall market (12.4% vs. 4.1% CAGR) and command <strong>5x higher average project values</strong> ($45K vs. $8K), creating a compelling economic opportunity for superior technology.</p>
+
+    <div class="source-box">
+        <h4>SOURCES:</h4>
+        <ul>
+            <li>Grand View Research - Aluminum Extrusion Market Report 2024</li>
+            <li>Precedence Research - Global Aluminum Extrusion Market Analysis 2024-2034</li>
+            <li>Straits Research - Aluminum Extrusion Market Size & Forecast</li>
+            <li>Research and Markets - Aluminum Extrusion Global Market Report 2025</li>
+        </ul>
+    </div>
+
+    <div class="page-number">1</div>
+</div>
+
+<!-- ============================================
+     PAGE 2: MARKET DRIVERS
+     ============================================ -->
+<div class="document-page page-break">
+    <div class="page-header">
+        <div class="page-header-title">Market Opportunity Report 2025</div>
+        <div class="page-header-logo">CONTROLLED DYNAMICS</div>
+    </div>
+
+    <h1><span class="section-number">2</span> Key Growth Drivers: Why Now?</h1>
+
+    <h2>Driver #1: Industry 4.0 & Industrial Automation Expansion</h2>
+
+    <div class="stats-grid">
+        <div class="stat-box">
+            <div class="stat-value">$60.1B</div>
+            <div class="stat-label">Industrial Robotics 2030</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">13-15%</div>
+            <div class="stat-label">CAGR</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">30%</div>
+            <div class="stat-label">Deployment Increase (McKinsey)</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">$290B</div>
+            <div class="stat-label">Total Automation 2029</div>
+        </div>
+    </div>
+
+    <p><strong>Market Reality:</strong> The industrial robotics market is exploding from $17.8B-$23.7B in 2024 to a projected $35B-$60.1B by 2030, representing 13-15% compound annual growth. McKinsey reports a 30% increase in robotics deployment and a 25% rise in demand for predictive maintenance solutions as manufacturers embrace Industry 4.0.</p>
+
+    <p>The broader factory automation market is expanding from $220B (2024) to $490B (2034) at 8.5% CAGR, while the industrial automation segment grows from $193.9B to $290.1B by 2029 (9.1% CAGR).</p>
+
+    <div class="callout highlight">
+        <div class="callout-title">The T-Slot Problem in Robotics</div>
+        <p>Robotic applications require <strong>vibration-resistant structures</strong> (robot motion at 1-10 Hz), <strong>precision mounting</strong> for vision systems and end effectors, and <strong>frequent reconfigurability</strong> (product changeovers every 2-4 weeks in modern manufacturing).</p>
+        <p style="margin-top: 10pt;"><strong>Current Gap:</strong> T-slot systems in robotic cells require recalibration every 5-7 days due to connection loosening, costing <strong>$100,800+ per year per cell</strong> in downtime, labor, and quality issues. Companies must choose between expensive welded steel (not reconfigurable) or inadequate T-slot (constant maintenance). Mechanically-locked modular systems eliminate this false choice.</p>
+    </div>
+
+    <div class="source-box">
+        <h4>SOURCES:</h4>
+        <ul>
+            <li>Precedence Research - Industrial Robotics Market 2024-2034</li>
+            <li>MarketsandMarkets - Future of Robotics: Market Forecasts 2025</li>
+            <li>Reports and Data - Factory Automation Market Size & Trends</li>
+            <li>McKinsey & Company - Is Industrial Automation Headed for a Tipping Point? (2024)</li>
+        </ul>
+    </div>
+
+    <h2>Driver #2: Semiconductor Manufacturing Revolution (CHIPS Act)</h2>
+
+    <div class="callout">
+        <div class="callout-title">CHIPS and Science Act of 2022: Transforming US Semiconductor Manufacturing</div>
+        <p><strong>Total Federal Investment:</strong> $52.7 billion</p>
+        <ul style="margin-top: 8pt;">
+            <li>$39 billion in manufacturing subsidies</li>
+            <li>$13 billion for research and workforce development</li>
+            <li>25% tax credit for manufacturing equipment costs</li>
+        </ul>
+        <p style="margin-top: 10pt;"><strong>Private Investment Mobilized:</strong> Over $540 billion</p>
+        <p><strong>Projects Announced:</strong> 90+ new semiconductor projects across 28 states</p>
+        <p><strong>Jobs Created:</strong> 58,000+ high-tech manufacturing jobs expected</p>
+    </div>
+
+    <div class="stats-grid">
+        <div class="stat-box">
+            <div class="stat-value">203%</div>
+            <div class="stat-label">US Capacity Increase by 2032</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">28%</div>
+            <div class="stat-label">US Share of Advanced Chips 2032</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">$697B</div>
+            <div class="stat-label">Semiconductor Sales 2025</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">$1T</div>
+            <div class="stat-label">Market Size 2030</div>
+        </div>
+    </div>
+
+    <p><strong>Impact on Structural Systems:</strong> Semiconductor fab construction requires extensive cleanroom infrastructure with <strong>ISO Class 1-8 certification</strong>. Each major fab (Intel, TSMC, Samsung, GlobalFoundries) requires 40-60 precision equipment bases, vibration-isolated wafer handling systems, and reconfigurable manufacturing cells.</p>
+
+    <p><strong>Current Challenge:</strong> Traditional T-slot systems generate aluminum oxide particles from micro-movements at connection points, violating cleanroom standards. Contamination events cost $50K-$500K per incident. Current workarounds—fabric covers (which shed particles) or welded stainless steel (10x cost, not reconfigurable)—are inadequate for the scale of CHIPS Act buildout.</p>
+
+    <p><strong>Market Timing:</strong> The specification window is <strong>NOW</strong> for infrastructure that will be installed in 2026-2028 as fabs come online. Decisions made today will determine the structural systems used for the next 10-20 years.</p>
+
+    <div class="source-box">
+        <h4>SOURCES:</h4>
+        <ul>
+            <li>Semiconductor Industry Association - 2025 State of the Industry Report</li>
+            <li>Infosys - Semiconductor Industry Outlook 2025</li>
+            <li>Vyrian - CHIPS Act Impact Analysis 2025</li>
+            <li>Manufacturing Dive - Semiconductor Manufacturing Trends 2025</li>
+        </ul>
+    </div>
+
+    <div class="page-number">2</div>
+</div>
+
+<!-- ============================================
+     PAGE 3: REMAINING MARKET DRIVERS
+     ============================================ -->
+<div class="document-page page-break">
+    <div class="page-header">
+        <div class="page-header-title">Market Opportunity Report 2025</div>
+        <div class="page-header-logo">CONTROLLED DYNAMICS</div>
+    </div>
+
+    <h2>Driver #3: Commercial Space Industry Acceleration</h2>
+
+    <div class="stats-grid">
+        <div class="stat-box">
+            <div class="stat-value">$101.4B</div>
+            <div class="stat-label">Satellite Manufacturing 2034</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">16.2%</div>
+            <div class="stat-label">CAGR 2024-2034</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">6,905</div>
+            <div class="stat-label">Satellites Launched 2024</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">58,000</div>
+            <div class="stat-label">Projected by 2030</div>
+        </div>
+    </div>
+
+    <p>The global satellite manufacturing market is experiencing explosive growth, projected to expand from $21.8 billion in 2024 to <strong>$101.4 billion by 2034</strong>, representing a 16.2% CAGR. This growth is driven by mega-constellations (Starlink, Amazon Kuiper), defense modernization, and Earth observation applications.</p>
+
+    <p><strong>Manufacturing Challenge:</strong> Modern satellite production requires precision assembly fixtures that maintain <strong>±0.001" (25 micron) tolerances</strong> under cleanroom conditions. Current satellite manufacturers face a critical infrastructure bottleneck:</p>
+
+    <ul>
+        <li><strong>Volume scaling:</strong> Production transitioning from 10-20 units/year to 100-500 units/year (mega-constellation demand)</li>
+        <li><strong>Rapid reconfiguration:</strong> Fixtures must adapt for multiple satellite bus sizes (1U, 3U, 6U CubeSats up to full-size GEO satellites)</li>
+        <li><strong>Precision requirements:</strong> Panel alignment tolerances tighter than achievable with T-slot systems</li>
+        <li><strong>Cleanroom compatibility:</strong> Zero particle generation from structural systems (ISO Class 7-8 requirements)</li>
+    </ul>
+
+    <div class="callout highlight">
+        <div class="callout-title">The Satellite Manufacturing Gap</div>
+        <p>SpaceX (Starlink) and Blue Origin have built custom welded steel fixtures at costs exceeding <strong>$2-5 million per production line</strong>. Smaller manufacturers cannot afford this capital investment and attempt to use T-slot systems, which cannot maintain the required precision.</p>
+        <p style="margin-top: 10pt;"><strong>Opportunity:</strong> A mechanically-locked modular system that maintains welded-steel precision while offering T-slot reconfigurability at <strong>40-60% lower cost</strong> unlocks satellite manufacturing for the entire industry, not just the top three players.</p>
+    </div>
+
+    <div class="source-box">
+        <h4>SOURCES:</h4>
+        <ul>
+            <li>Precedence Research - Satellite Manufacturing Market 2024-2034</li>
+            <li>Statista - Number of Satellites Launched Globally by Year</li>
+            <li>Bryce Tech - Smallsat Launch Market Report 2025</li>
+            <li>Space Foundation - The Space Report 2024</li>
+        </ul>
+    </div>
+
+    <h2>Driver #4: US Manufacturing Reshoring Renaissance</h2>
+
+    <div class="stats-grid">
+        <div class="stat-box">
+            <div class="stat-value">244,000</div>
+            <div class="stat-label">Jobs Reshored 2024</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">2nd</div>
+            <div class="stat-label">Highest Year on Record</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">$326B</div>
+            <div class="stat-label">Manufacturing Investment 2024</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">+66%</div>
+            <div class="stat-label">vs. 2023 Average</div>
+        </div>
+    </div>
+
+    <p>US manufacturing reshoring reached <strong>244,000 jobs in 2024</strong>, the second-highest year on record (after 2022's record-breaking 350,000). The Reshoring Initiative reports that 2024 brought the 7-year average back above pre-pandemic levels, representing a fundamental shift in manufacturing strategy driven by supply chain resilience, automation economics, and geopolitical considerations.</p>
+
+    <p><strong>Key Trends:</strong></p>
+    <ul>
+        <li><strong>Focus on high-value manufacturing:</strong> Electronics, aerospace, medical devices, precision machinery</li>
+        <li><strong>Preference for domestic suppliers:</strong> "Made in USA" sourcing requirements increasing in government contracts</li>
+        <li><strong>Speed-to-market advantage:</strong> 60-90 day lead times vs. 120-180 days from Asia</li>
+        <li><strong>Quality control:</strong> Closer oversight and faster iteration cycles</li>
+    </ul>
+
+    <div class="callout">
+        <div class="callout-title">Infrastructure Requirements for Reshored Manufacturing</div>
+        <p>Every reshored factory requires <strong>modular production infrastructure</strong> that can be installed quickly (weeks, not months) and reconfigured as product mix evolves. Reshored operations prioritize flexibility over fixed automation because demand uncertainty is higher in first 2-3 years.</p>
+        <p style="margin-top: 10pt;"><strong>Market Timing:</strong> Factory construction typically occurs 12-18 months after reshoring announcement. With 244K jobs announced in 2024, the infrastructure specification window for 2025-2026 installation is <strong>happening now</strong>.</p>
+    </div>
+
+    <div class="source-box">
+        <h4>SOURCES:</h4>
+        <ul>
+            <li>Reshoring Initiative - 2024 Reshoring Report</li>
+            <li>Industry Week - Manufacturing Investment Trends 2025</li>
+            <li>Thomas Net - State of US Manufacturing 2024</li>
+            <li>National Association of Manufacturers - Manufacturing Outlook 2025</li>
+        </ul>
+    </div>
+
+    <h2>Driver #5: Total Cost of Ownership (TCO) Becomes Decision Driver</h2>
+
+    <p>As industrial customers become more sophisticated in evaluating structural systems, purchasing decisions are shifting from <strong>upfront cost</strong> to <strong>total cost of ownership</strong> over 5-10 year lifecycle. This trend strongly favors mechanically-locked systems:</p>
+
+    <div class="chart-container">
+        <h4>5-Year TCO Comparison: Vibration Environment</h4>
+        <div class="bar-chart">
+            <div class="bar">
+                <div class="bar-label">T-Slot Initial Cost</div>
+                <div class="bar-fill-container">
+                    <div class="bar-fill" style="width: 30%;">$3,500</div>
+                </div>
+            </div>
+            <div class="bar">
+                <div class="bar-label">T-Slot Maintenance (5yr)</div>
+                <div class="bar-fill-container">
+                    <div class="bar-fill" style="width: 75%;">$16,350</div>
+                </div>
+            </div>
+            <div class="bar">
+                <div class="bar-label">T-Slot Total TCO</div>
+                <div class="bar-fill-container">
+                    <div class="bar-fill" style="width: 100%;">$19,850</div>
+                </div>
+            </div>
+            <div class="bar">
+                <div class="bar-label">AngleLock Initial Cost</div>
+                <div class="bar-fill-container">
+                    <div class="bar-fill" style="width: 60%;">$11,200</div>
+                </div>
+            </div>
+            <div class="bar">
+                <div class="bar-label">AngleLock Maintenance (5yr)</div>
+                <div class="bar-fill-container">
+                    <div class="bar-fill" style="width: 5%;">$900</div>
+                </div>
+            </div>
+            <div class="bar">
+                <div class="bar-label">AngleLock Total TCO</div>
+                <div class="bar-fill-container">
+                    <div class="bar-fill" style="width: 60%;">$12,100</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p><strong>Why TCO Favors Mechanical Locking:</strong></p>
+    <ul>
+        <li><strong>Zero loosening:</strong> No retightening labor costs ($4,800-$7,200/year eliminated)</li>
+        <li><strong>Maintains precision:</strong> No recalibration after assembly ($2,400-$4,800/year eliminated)</li>
+        <li><strong>Vibration resistance:</strong> No downtime from connection failures ($3,000-$9,000/year eliminated)</li>
+        <li><strong>Longer useful life:</strong> 20+ years vs. 10-15 years for T-slot in demanding applications</li>
+    </ul>
+
+    <div class="page-number">3</div>
+</div>
+
+<!-- ============================================
+     PAGE 4: THE $47B OPPORTUNITY
+     ============================================ -->
+<div class="document-page page-break">
+    <div class="page-header">
+        <div class="page-header-title">Market Opportunity Report 2025</div>
+        <div class="page-header-logo">CONTROLLED DYNAMICS</div>
+    </div>
+
+    <h1><span class="section-number">3</span> The $47.4 Billion Opportunity Gap</h1>
+
+    <p>While the total modular aluminum framing market will reach <strong>$26.2 billion by 2030</strong>, our analysis reveals that <strong>$47.4 billion</strong> of the broader manufacturing infrastructure market is currently underserved or completely unaddressed due to the technical limitations of T-slot systems.</p>
+
+    <h2>Market Segmentation: Where T-Slot Fails</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Application Segment</th>
+                <th>2024 Market Size</th>
+                <th>2030 Projection</th>
+                <th>CAGR</th>
+                <th>Why T-Slot Fails</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="table-highlight">
+                <td><strong>High-Precision Robotics</strong></td>
+                <td>$4.2B</td>
+                <td>$12.8B</td>
+                <td>20.4%</td>
+                <td>Cannot maintain micron tolerances under vibration</td>
+            </tr>
+            <tr>
+                <td><strong>Semiconductor Fab Infrastructure</strong></td>
+                <td>$2.1B</td>
+                <td>$8.4B</td>
+                <td>26.1%</td>
+                <td>Generates particles; violates cleanroom standards</td>
+            </tr>
+            <tr class="table-highlight">
+                <td><strong>Aerospace Assembly Systems</strong></td>
+                <td>$1.8B</td>
+                <td>$5.6B</td>
+                <td>20.8%</td>
+                <td>Precision degradation; cannot meet aerospace tolerances</td>
+            </tr>
+            <tr>
+                <td><strong>Satellite Manufacturing</strong></td>
+                <td>$0.9B</td>
+                <td>$4.2B</td>
+                <td>29.4%</td>
+                <td>Inadequate precision + cleanroom incompatibility</td>
+            </tr>
+            <tr class="table-highlight">
+                <td><strong>Automated Test Equipment</strong></td>
+                <td>$3.1B</td>
+                <td>$8.2B</td>
+                <td>17.6%</td>
+                <td>Frequent recalibration required; high maintenance</td>
+            </tr>
+            <tr>
+                <td><strong>Medical Device Manufacturing</strong></td>
+                <td>$1.4B</td>
+                <td>$4.6B</td>
+                <td>21.9%</td>
+                <td>Cleanroom particle generation; validation challenges</td>
+            </tr>
+            <tr>
+                <td><strong>Defense/Military Systems</strong></td>
+                <td>$1.2B</td>
+                <td>$3.6B</td>
+                <td>20.1%</td>
+                <td>Vibration environments; maintenance-intensive</td>
+            </tr>
+            <tr class="table-highlight">
+                <td><strong>TOTAL ADDRESSABLE MARKET</strong></td>
+                <td><strong>$14.7B</strong></td>
+                <td><strong>$47.4B</strong></td>
+                <td><strong>21.5%</strong></td>
+                <td><strong>—</strong></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="callout highlight">
+        <div class="callout-title">Critical Insight: The "Underserved Premium"</div>
+        <p>Applications where T-slot fails are growing <strong>5.2x faster</strong> than the overall modular framing market (21.5% vs. 4.1% CAGR) and command <strong>5x higher project values</strong> on average.</p>
+        <p style="margin-top: 10pt;">This creates a unique market dynamic: customers in these segments are <strong>desperately seeking alternatives</strong> and willing to pay premium prices for solutions that actually work. Current workarounds (custom welded steel, expensive stainless systems, or constantly maintained T-slot) are all economically suboptimal.</p>
+        <p style="margin-top: 10pt;"><strong>First-mover advantage:</strong> Whoever establishes credibility in these high-growth segments first will benefit from specifications lock-in, reference customer momentum, and the "nobody gets fired for choosing [proven vendor]" dynamic that dominates industrial purchasing.</p>
+    </div>
+
+    <h2>Geographic Distribution of Opportunity</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Region</th>
+                <th>2024 TAM</th>
+                <th>2030 TAM</th>
+                <th>Key Drivers</th>
+                <th>Competitive Intensity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="table-highlight">
+                <td><strong>United States</strong></td>
+                <td>$5.2B</td>
+                <td>$17.1B</td>
+                <td>CHIPS Act, reshoring, defense</td>
+                <td>Low (T-slot entrenched but failing)</td>
+            </tr>
+            <tr>
+                <td><strong>Europe</strong></td>
+                <td>$4.1B</td>
+                <td>$13.2B</td>
+                <td>Industry 4.0, automotive automation</td>
+                <td>Medium (Bosch Rexroth dominance)</td>
+            </tr>
+            <tr>
+                <td><strong>Asia-Pacific</strong></td>
+                <td>$4.8B</td>
+                <td>$15.4B</td>
+                <td>Semiconductor fabs, electronics mfg</td>
+                <td>High (price competition, local players)</td>
+            </tr>
+            <tr>
+                <td><strong>Rest of World</strong></td>
+                <td>$0.6B</td>
+                <td>$1.7B</td>
+                <td>Emerging aerospace, medical devices</td>
+                <td>Low (nascent markets)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><strong>Strategic Recommendation:</strong> Focus initial market entry on <strong>United States</strong> where (1) opportunity is largest, (2) competitive intensity is lowest, (3) CHIPS Act/reshoring tailwinds are strongest, and (4) "Made in USA" preference creates natural differentiation vs. Chinese alternatives.</p>
+
+    <div class="source-box">
+        <h4>SOURCES:</h4>
+        <ul>
+            <li>MarketsandMarkets - Modular Construction Market by Application 2024-2030</li>
+            <li>Precedence Research - Industrial Automation & Robotics Market Reports</li>
+            <li>Semiconductor Industry Association - Infrastructure Investment Analysis</li>
+            <li>Controlled Dynamics Inc. - Internal market segmentation model</li>
+        </ul>
+    </div>
+
+    <div class="page-number">4</div>
+</div>
+
+<!-- ============================================
+     PAGE 5: TARGET MARKET DEEP DIVE
+     ============================================ -->
+<div class="document-page page-break">
+    <div class="page-header">
+        <div class="page-header-title">Market Opportunity Report 2025</div>
+        <div class="page-header-logo">CONTROLLED DYNAMICS</div>
+    </div>
+
+    <h1><span class="section-number">4</span> Target Market Deep Dive</h1>
+
+    <h2>Priority #1: Industrial Robotics & Automation</h2>
+
+    <div class="stats-grid">
+        <div class="stat-box">
+            <div class="stat-value">$12.8B</div>
+            <div class="stat-label">Market Size 2030</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">20.4%</div>
+            <div class="stat-label">CAGR 2024-2030</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">$45K</div>
+            <div class="stat-label">Avg Project Value</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">8-12</div>
+            <div class="stat-label">Weeks Sales Cycle</div>
+        </div>
+    </div>
+
+    <p><strong>Customer Profile:</strong> Manufacturing engineers at mid-to-large manufacturers (500-5,000 employees) implementing robotic automation for assembly, welding, material handling, inspection, or packaging applications.</p>
+
+    <p><strong>Pain Points:</strong></p>
+    <ul>
+        <li><strong>Robot base deflection:</strong> T-slot frames shift under robot acceleration/deceleration, requiring daily recalibration</li>
+        <li><strong>Vision system drift:</strong> Camera mounting positions change over time, causing quality issues</li>
+        <li><strong>End-of-arm tooling misalignment:</strong> Precision grippers lose accuracy as frame loosens</li>
+        <li><strong>Changeover complexity:</strong> Reconfiguring workcells for new products takes 40-80 hours with current systems</li>
+        <li><strong>Maintenance burden:</strong> 4-8 hours/week spent retightening connections and recalibrating</li>
+    </ul>
+
+    <div class="callout">
+        <div class="callout-title">Value Proposition: AngleLock for Robotics</div>
+        <ul class="checklist">
+            <li><strong>10x stronger joints:</strong> 4,500 lbs shear force vs. 400-600 lbs for T-slot (actually gains strength under vibration)</li>
+            <li><strong>Zero calibration drift:</strong> Maintains micron-level precision over months/years of operation</li>
+            <li><strong>50% faster reconfiguration:</strong> Mechanical lock/unlock vs. iterative bolt tightening</li>
+            <li><strong>Documented ROI:</strong> $16,350 savings over 5 years vs. T-slot (maintenance + downtime reduction)</li>
+            <li><strong>Drop-in compatible:</strong> Uses standard aluminum extrusion profiles; no retraining required</li>
+        </ul>
+    </div>
+
+    <h2>Priority #2: Semiconductor Manufacturing (CHIPS Act)</h2>
+
+    <div class="stats-grid">
+        <div class="stat-box">
+            <div class="stat-value">$8.4B</div>
+            <div class="stat-label">Market Size 2030</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">26.1%</div>
+            <div class="stat-label">CAGR 2024-2030</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">$180K</div>
+            <div class="stat-label">Avg Project Value</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">6-18</div>
+            <div class="stat-label">Months Sales Cycle</div>
+        </div>
+    </div>
+
+    <p><strong>Customer Profile:</strong> Facilities engineers and cleanroom managers at semiconductor fabs (Intel, TSMC, Samsung, GlobalFoundries, Texas Instruments) implementing CHIPS Act funded expansions.</p>
+
+    <p><strong>Critical Requirements:</strong></p>
+    <ul>
+        <li><strong>Cleanroom certification:</strong> ISO Class 1-8 compliance (zero particle generation from structural systems)</li>
+        <li><strong>Vibration isolation:</strong> Equipment bases for lithography, metrology, wafer inspection systems</li>
+        <li><strong>Reconfigurability:</strong> Process tool layouts change as chip designs evolve (18-24 month cycles)</li>
+        <li><strong>Precision:</strong> ±0.0005" (12.7 microns) or better for critical alignment fixtures</li>
+        <li><strong>Material traceability:</strong> Full documentation of alloy composition for contamination control</li>
+    </ul>
+
+    <div class="callout highlight">
+        <div class="callout-title">The Cleanroom Contamination Problem</div>
+        <p>Every micro-movement in a T-slot connection generates aluminum oxide particles from fretting wear. In a typical 100,000 sq ft cleanroom with 200+ equipment bases, this results in <strong>3-8 contamination events per quarter</strong>, each costing $50K-$500K in yield loss, cleaning, and re-qualification.</p>
+        <p style="margin-top: 10pt;"><strong>Current "Solutions" Are Inadequate:</strong></p>
+        <ul style="margin-top: 8pt;">
+            <li>Fabric covers over T-slot (fabric sheds its own particles)</li>
+            <li>Stainless steel welded frames (10x cost, not reconfigurable, 6-month lead times)</li>
+            <li>Anodized T-slot with threadlocker (still generates particles, cannot be reconfigured)</li>
+        </ul>
+        <p style="margin-top: 10pt;"><strong>AngleLock Advantage:</strong> Mechanical locking eliminates micro-movements that cause particle generation. Material testing shows <strong>zero detectable particles</strong> in ISO Class 5 environment after 100,000 vibration cycles.</p>
+    </div>
+
+    <h2>Priority #3: Aerospace & Satellite Manufacturing</h2>
+
+    <div class="stats-grid">
+        <div class="stat-box">
+            <div class="stat-value">$9.8B</div>
+            <div class="stat-label">Combined Market 2030</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">23.2%</div>
+            <div class="stat-label">CAGR 2024-2030</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">$250K</div>
+            <div class="stat-label">Avg Project Value</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">9-24</div>
+            <div class="stat-label">Months Sales Cycle</div>
+        </div>
+    </div>
+
+    <p><strong>Customer Profile:</strong> Manufacturing engineering teams at aerospace primes (Boeing, Lockheed Martin, Northrop Grumman) and satellite manufacturers (SpaceX, Blue Origin, Rocket Lab, Planet Labs).</p>
+
+    <p><strong>Application Requirements:</strong></p>
+    <ul>
+        <li><strong>Panel assembly fixtures:</strong> Wing panels, fuselage sections, satellite bus structures</li>
+        <li><strong>Precision jigs:</strong> ±0.001" (25 micron) tolerances for composite layup molds</li>
+        <li><strong>Adaptability:</strong> Fixtures must accommodate multiple aircraft variants or satellite configurations</li>
+        <li><strong>Traceability:</strong> AS9100 quality system requirements for aerospace certification</li>
+        <li><strong>Long-term stability:</strong> Fixtures must maintain precision over 10-20 year production runs</li>
+    </ul>
+
+    <p><strong>Market Dynamic:</strong> Aerospace has historically avoided T-slot entirely, using custom welded steel tooling costing $500K-$5M per fixture. However, the shift to smaller satellites (CubeSats, smallsats) and higher production volumes (Starlink producing 5-7 satellites/day) makes custom tooling economically unviable. This creates a <strong>greenfield opportunity</strong> for modular systems that can meet aerospace precision standards.</p>
+
+    <div class="source-box">
+        <h4>SOURCES:</h4>
+        <ul>
+            <li>International Federation of Robotics - World Robotics Report 2024</li>
+            <li>SEMI - Semiconductor Equipment Market Data</li>
+            <li>Deloitte - 2025 Global Aerospace & Defense Industry Outlook</li>
+            <li>Controlled Dynamics Inc. - Customer discovery interviews (n=47)</li>
+        </ul>
+    </div>
+
+    <div class="page-number">5</div>
+</div>
+
+<!-- ============================================
+     PAGE 6: COMPETITIVE POSITIONING
+     ============================================ -->
+<div class="document-page page-break">
+    <div class="page-header">
+        <div class="page-header-title">Market Opportunity Report 2025</div>
+        <div class="page-header-logo">CONTROLLED DYNAMICS</div>
+    </div>
+
+    <h1><span class="section-number">5</span> Competitive Landscape & Positioning</h1>
+
+    <h2>The T-Slot Incumbents</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Vendor</th>
+                <th>Est. Market Share</th>
+                <th>Strengths</th>
+                <th>Vulnerabilities</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>80/20 Inc.</strong></td>
+                <td>22-28%</td>
+                <td>Brand recognition, extensive catalog, US-made</td>
+                <td>Cannot address precision/vibration segments</td>
+            </tr>
+            <tr>
+                <td><strong>Bosch Rexroth</strong></td>
+                <td>18-24%</td>
+                <td>European dominance, engineering support</td>
+                <td>Premium pricing, same T-slot limitations</td>
+            </tr>
+            <tr>
+                <td><strong>Item Industrietechnik</strong></td>
+                <td>8-12%</td>
+                <td>Design software, technical depth</td>
+                <td>Limited US presence, T-slot tech ceiling</td>
+            </tr>
+            <tr>
+                <td><strong>Misumi</strong></td>
+                <td>12-16%</td>
+                <td>Low cost, fast delivery, broad catalog</td>
+                <td>Asian sourcing, quality perception issues</td>
+            </tr>
+            <tr>
+                <td><strong>Other 100+ vendors</strong></td>
+                <td>32-40%</td>
+                <td>Price competition, niche applications</td>
+                <td>Fragmented, undifferentiated offerings</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><strong>Incumbent Trap:</strong> All major T-slot vendors are locked into a 40-year-old technology platform. They cannot innovate around friction-based connections without cannibalizing their existing product lines and installed base. This creates a <strong>classic disruption opportunity</strong> for a mechanically-locked alternative.</p>
+
+    <h2>Alternative Technologies: Why They Don't Solve the Problem</h2>
+
+    <div class="callout">
+        <div class="callout-title">Welded Steel Structures</div>
+        <p><strong>Use Cases:</strong> High-precision applications where T-slot is inadequate</p>
+        <p><strong>Cost:</strong> $80-$150 per linear foot installed (vs. $25-$40 for T-slot, $45-$65 for AngleLock)</p>
+        <p><strong>Lead Time:</strong> 8-16 weeks for custom fabrication</p>
+        <p><strong>Limitations:</strong> Not reconfigurable, heavy (difficult to move/modify), requires skilled welders, long lead times incompatible with agile manufacturing</p>
+        <p style="margin-top: 10pt;"><strong>Market Gap:</strong> Customers pay steel prices for <em>permanence</em> when what they actually need is <em>precision without permanence</em>.</p>
+    </div>
+
+    <div class="callout">
+        <div class="callout-title">Stainless Steel Modular Systems</div>
+        <p><strong>Use Cases:</strong> Cleanroom/food-grade applications (primarily T-slot mechanism in stainless material)</p>
+        <p><strong>Cost:</strong> $120-$200 per linear foot (8-10x standard T-slot)</p>
+        <p><strong>Limitations:</strong> Still friction-based connections (same loosening problems), extremely expensive, limited availability, same particle generation issues as aluminum T-slot</p>
+        <p style="margin-top: 10pt;"><strong>Market Gap:</strong> Premium material cannot overcome fundamental connection mechanism flaws.</p>
+    </div>
+
+    <h2>AngleLock Competitive Positioning</h2>
+
+    <div class="chart-container">
+        <h4>Technology Comparison Matrix</h4>
+        <table style="margin-top: 12pt;">
+            <thead>
+                <tr>
+                    <th>Attribute</th>
+                    <th>T-Slot Systems</th>
+                    <th>Welded Steel</th>
+                    <th>AngleLock</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Joint Strength</strong></td>
+                    <td>400-600 lbs (degrades)</td>
+                    <td>10,000+ lbs</td>
+                    <td class="table-highlight">4,500 lbs (improves)</td>
+                </tr>
+                <tr>
+                    <td><strong>Vibration Resistance</strong></td>
+                    <td>Poor (loosens over time)</td>
+                    <td>Excellent</td>
+                    <td class="table-highlight">Excellent (+3% after 100K cycles)</td>
+                </tr>
+                <tr>
+                    <td><strong>Precision Maintenance</strong></td>
+                    <td>Degrades 0.005-0.020"</td>
+                    <td>Maintains ±0.001"</td>
+                    <td class="table-highlight">Maintains ±0.001"</td>
+                </tr>
+                <tr>
+                    <td><strong>Reconfigurability</strong></td>
+                    <td>High (30-60 min)</td>
+                    <td>None (permanent)</td>
+                    <td class="table-highlight">High (15-30 min)</td>
+                </tr>
+                <tr>
+                    <td><strong>Cleanroom Compatible</strong></td>
+                    <td>No (particle generation)</td>
+                    <td>Yes</td>
+                    <td class="table-highlight">Yes (zero particles)</td>
+                </tr>
+                <tr>
+                    <td><strong>Cost per Linear Foot</strong></td>
+                    <td>$25-$40</td>
+                    <td>$80-$150</td>
+                    <td class="table-highlight">$45-$65</td>
+                </tr>
+                <tr>
+                    <td><strong>Lead Time</strong></td>
+                    <td>1-3 days</td>
+                    <td>8-16 weeks</td>
+                    <td class="table-highlight">3-7 days</td>
+                </tr>
+                <tr>
+                    <td><strong>Assembly Skill Required</strong></td>
+                    <td>Low</td>
+                    <td>High (certified welders)</td>
+                    <td class="table-highlight">Low</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="key-findings">
+        <h3>Strategic Differentiation</h3>
+        <ul class="checklist">
+            <li><strong>Only solution</strong> that combines welded-steel performance with T-slot reconfigurability and lead times</li>
+            <li><strong>Protected IP:</strong> 7 utility patents granted/pending on mechanical locking mechanism (barriers to imitation)</li>
+            <li><strong>Made in USA:</strong> Domestic manufacturing supports CHIPS Act/reshoring buy-American preferences</li>
+            <li><strong>Price positioning:</strong> Premium to T-slot but 40-60% below welded steel (value zone)</li>
+            <li><strong>First-mover advantage:</strong> No direct competition in mechanically-locked modular aluminum category</li>
+        </ul>
+    </div>
+
+    <div class="page-number">6</div>
+</div>
+
+<!-- ============================================
+     PAGE 7: MARKET ENTRY STRATEGY
+     ============================================ -->
+<div class="document-page page-break">
+    <div class="page-header">
+        <div class="page-header-title">Market Opportunity Report 2025</div>
+        <div class="page-header-logo">CONTROLLED DYNAMICS</div>
+    </div>
+
+    <h1><span class="section-number">6</span> Market Entry Strategy & Financial Projections</h1>
+
+    <h2>Phase 1 (2025-2026): Establish Beachhead in Robotics</h2>
+
+    <p><strong>Target:</strong> 25-40 robotic automation projects in automotive, electronics, food/beverage manufacturing</p>
+
+    <p><strong>Rationale for Robotics First:</strong></p>
+    <ul>
+        <li><strong>Shortest sales cycle:</strong> 8-12 weeks vs. 6-18 months for semiconductor</li>
+        <li><strong>Clear pain point:</strong> Maintenance burden is immediate and measurable</li>
+        <li><strong>Documented ROI:</strong> $16,350 savings over 5 years creates compelling business case</li>
+        <li><strong>Reference customer velocity:</strong> Can build portfolio of 25+ case studies in 12-18 months</li>
+        <li><strong>Lower technical risk:</strong> Applications are less demanding than aerospace/semiconductor</li>
+    </ul>
+
+    <p><strong>Go-to-Market Tactics:</strong></p>
+    <ul>
+        <li>Target system integrators (ABB, FANUC, KUKA partners) who specify structural components</li>
+        <li>Sponsor robotics trade shows (Automate, ProMat, Pack Expo)</li>
+        <li>Offer "vibration test challenge" (head-to-head vs. T-slot at customer sites)</li>
+        <li>Develop integrator partner program (10% referral fees, joint marketing)</li>
+    </ul>
+
+    <div class="stats-grid">
+        <div class="stat-box">
+            <div class="stat-value">$2.1M</div>
+            <div class="stat-label">Phase 1 Revenue Target</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">35</div>
+            <div class="stat-label">Reference Customers</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">8-12</div>
+            <div class="stat-label">Weeks Avg Sales Cycle</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">$55K</div>
+            <div class="stat-label">Avg Project Size</div>
+        </div>
+    </div>
+
+    <h2>Phase 2 (2026-2027): Penetrate Semiconductor (CHIPS Act Timing)</h2>
+
+    <p><strong>Target:</strong> 8-12 major fab projects (Intel, TSMC, Samsung, GlobalFoundries expansions)</p>
+
+    <p><strong>Critical Success Factors:</strong></p>
+    <ul>
+        <li><strong>Cleanroom certification:</strong> Third-party particle testing (ISO Class 5-8 validation)</li>
+        <li><strong>Reference customers:</strong> Leverage robotics success stories to establish credibility</li>
+        <li><strong>Material traceability:</strong> Full documentation of aluminum alloy composition/sourcing</li>
+        <li><strong>Specification process:</strong> Engage 12-18 months before installation (spec window closing Q2 2025 for 2026 installations)</li>
+    </ul>
+
+    <p><strong>Competitive Moat:</strong> Once specified into a fab design, switching costs are prohibitive. Infrastructure decisions made in 2025-2026 will determine installed base for 10-20 years, creating long-term recurring revenue from expansions and replacements.</p>
+
+    <div class="stats-grid">
+        <div class="stat-box">
+            <div class="stat-value">$9.8M</div>
+            <div class="stat-label">Phase 2 Revenue Target</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">10</div>
+            <div class="stat-label">Major Fab Projects</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">12-18</div>
+            <div class="stat-label">Months Avg Sales Cycle</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">$920K</div>
+            <div class="stat-label">Avg Project Size</div>
+        </div>
+    </div>
+
+    <h2>Phase 3 (2027-2030): Expand to Aerospace & Satellite Manufacturing</h2>
+
+    <p><strong>Target:</strong> 15-25 aerospace assembly systems and satellite production lines</p>
+
+    <p><strong>Entry Strategy:</strong></p>
+    <ul>
+        <li>Pursue AS9100 aerospace quality certification (18-24 month process)</li>
+        <li>Target satellite manufacturers first (faster sales cycles than aerospace primes)</li>
+        <li>Partner with composite tooling suppliers (established aerospace relationships)</li>
+        <li>Develop application engineering team with aerospace manufacturing experience</li>
+    </ul>
+
+    <div class="stats-grid">
+        <div class="stat-box">
+            <div class="stat-value">$48M</div>
+            <div class="stat-label">Phase 3 Revenue Target (cumulative 2027-2030)</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">22</div>
+            <div class="stat-label">Aerospace/Sat Projects</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-label">Months Avg Sales Cycle</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">$1.8M</div>
+            <div class="stat-label">Avg Project Size</div>
+        </div>
+    </div>
+
+    <h2>5-Year Financial Projections (2025-2030)</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Year</th>
+                <th>Revenue</th>
+                <th>Gross Margin</th>
+                <th>Market Share (TAM)</th>
+                <th>Key Milestone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>2025</strong></td>
+                <td>$1.2M</td>
+                <td>58%</td>
+                <td>0.008%</td>
+                <td>Robotics beachhead (15 customers)</td>
+            </tr>
+            <tr>
+                <td><strong>2026</strong></td>
+                <td>$4.8M</td>
+                <td>61%</td>
+                <td>0.028%</td>
+                <td>First semiconductor projects</td>
+            </tr>
+            <tr>
+                <td><strong>2027</strong></td>
+                <td>$12.4M</td>
+                <td>63%</td>
+                <td>0.065%</td>
+                <td>AS9100 certification complete</td>
+            </tr>
+            <tr>
+                <td><strong>2028</strong></td>
+                <td>$28.1M</td>
+                <td>64%</td>
+                <td>0.132%</td>
+                <td>Aerospace segment entry</td>
+            </tr>
+            <tr class="table-highlight">
+                <td><strong>2029</strong></td>
+                <td>$52.6M</td>
+                <td>65%</td>
+                <td>0.221%</td>
+                <td>Multi-segment leader</td>
+            </tr>
+            <tr class="table-highlight">
+                <td><strong>2030</strong></td>
+                <td>$87.3M</td>
+                <td>66%</td>
+                <td>0.184%</td>
+                <td>Category dominance</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><strong>Revenue Assumptions:</strong></p>
+    <ul>
+        <li>Phase 1 (Robotics): 30-40 projects/year at $45K-$65K average</li>
+        <li>Phase 2 (Semiconductor): 8-15 projects/year at $600K-$1.2M average</li>
+        <li>Phase 3 (Aerospace): 6-12 projects/year at $1.2M-$2.8M average</li>
+        <li>Annual expansion/replacement revenue: 18-25% of installed base starting Year 3</li>
+    </ul>
+
+    <p><strong>Margin Assumptions:</strong></p>
+    <ul>
+        <li>Material cost: 24-28% of revenue (aluminum extrusion, fasteners, packaging)</li>
+        <li>Manufacturing labor: 8-12% of revenue (assembly, QC, finishing)</li>
+        <li>Gross margin expansion: Economies of scale + product mix shift to larger projects</li>
+    </ul>
+
+    <div class="source-box">
+        <h4>SOURCES:</h4>
+        <ul>
+            <li>Controlled Dynamics Inc. - Internal financial model and customer pipeline analysis</li>
+            <li>Comparable company analysis: Misumi, 80/20, Bosch Rexroth public financials</li>
+        </ul>
+    </div>
+
+    <div class="page-number">7</div>
+</div>
+
+<!-- ============================================
+     PAGE 8: CONCLUSION & CALL TO ACTION
+     ============================================ -->
+<div class="document-page page-break">
+    <div class="page-header">
+        <div class="page-header-title">Market Opportunity Report 2025</div>
+        <div class="page-header-logo">CONTROLLED DYNAMICS</div>
+    </div>
+
+    <h1><span class="section-number">7</span> Conclusion: A Generational Market Opportunity</h1>
+
+    <p>The convergence of five powerful market forces—Industry 4.0 automation, the CHIPS Act semiconductor buildout, commercial space acceleration, US manufacturing reshoring, and the shift to total cost of ownership purchasing—has created a <strong>$47.4 billion market opportunity by 2030</strong> for mechanically-locked structural systems.</p>
+
+    <p>Traditional T-slot aluminum framing, the 40-year incumbent technology, cannot serve these high-growth segments due to fundamental technical limitations: vibration-induced loosening, precision degradation, particle generation, and maintenance burden. Current alternatives—welded steel and stainless modular systems—solve some problems but sacrifice reconfigurability, speed, or cost-effectiveness.</p>
+
+    <div class="key-findings">
+        <h3>Why This Opportunity Exists Now</h3>
+        <ul class="checklist">
+            <li><strong>Technology inflection point:</strong> Mechanical locking overcomes 40 years of T-slot limitations while maintaining modularity</li>
+            <li><strong>Market timing:</strong> CHIPS Act specification window (2025-2026) + reshoring wave create unprecedented demand</li>
+            <li><strong>Customer desperation:</strong> Engineers in robotics/semiconductor/aerospace actively seeking alternatives (willingness to pay premium)</li>
+            <li><strong>Competitive vacuum:</strong> Incumbents locked into T-slot platform; no direct competition in mechanical-lock category</li>
+            <li><strong>First-mover advantage:</strong> Specification lock-in + reference customer momentum create 5-10 year competitive moat</li>
+        </ul>
+    </div>
+
+    <h2>The Path Forward: Execution Priorities</h2>
+
+    <div class="callout">
+        <div class="callout-title">Immediate Actions (Q1-Q2 2025)</div>
+        <ol>
+            <li><strong>Robotics beachhead:</strong> Close 8-12 integrator partnerships; target 15+ projects by end of Q2</li>
+            <li><strong>Semiconductor preparation:</strong> Initiate third-party cleanroom particle testing (ISO 14644 validation)</li>
+            <li><strong>Reference customer development:</strong> Document 5+ detailed case studies with ROI quantification</li>
+            <li><strong>Production scaling:</strong> Secure aluminum extrusion supply agreements; expand assembly capacity</li>
+            <li><strong>Sales team build:</strong> Hire 2-3 application engineers with robotics/automation backgrounds</li>
+        </ol>
+    </div>
+
+    <div class="callout">
+        <div class="callout-title">Medium-Term Priorities (Q3 2025 - Q2 2026)</div>
+        <ol>
+            <li><strong>CHIPS Act engagement:</strong> Establish relationships with fab project teams at Intel, TSMC, Samsung</li>
+            <li><strong>Material traceability:</strong> Implement full supply chain documentation for aerospace/semiconductor compliance</li>
+            <li><strong>Geographic expansion:</strong> Open satellite sales offices in Austin (semiconductor) and Seattle (aerospace)</li>
+            <li><strong>Product line extension:</strong> Develop complementary accessories (vibration dampers, precision levelers, cable management)</li>
+            <li><strong>Channel development:</strong> Recruit 15-25 regional distributors for robotics segment</li>
+        </ol>
+    </div>
+
+    <div class="callout">
+        <div class="callout-title">Long-Term Strategic Investments (2026-2030)</div>
+        <ol>
+            <li><strong>AS9100 certification:</strong> Achieve aerospace quality system compliance (18-24 month process)</li>
+            <li><strong>International expansion:</strong> Establish presence in Germany (automotive) and Taiwan (semiconductor)</li>
+            <li><strong>Vertical integration:</strong> Consider aluminum extrusion die ownership for tighter supply control</li>
+            <li><strong>IP portfolio:</strong> Expand patent protection to adjacent fastening/connection technologies</li>
+            <li><strong>M&A opportunities:</strong> Potential acquisition of complementary product lines or regional distributors</li>
+        </ol>
+    </div>
+
+    <h2>Investment Thesis Summary</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Factor</th>
+                <th>Assessment</th>
+                <th>Impact</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="table-highlight">
+                <td><strong>Market Size</strong></td>
+                <td>$47.4B TAM by 2030, 21.5% CAGR</td>
+                <td>Massive addressable opportunity</td>
+            </tr>
+            <tr>
+                <td><strong>Timing</strong></td>
+                <td>CHIPS Act + reshoring peak 2025-2027</td>
+                <td>Policy tailwinds maximized NOW</td>
+            </tr>
+            <tr class="table-highlight">
+                <td><strong>Technology Advantage</strong></td>
+                <td>10x strength, vibration-proof, cleanroom-safe</td>
+                <td>Clear performance differentiation</td>
+            </tr>
+            <tr>
+                <td><strong>Competition</strong></td>
+                <td>No direct competitors; incumbents constrained</td>
+                <td>First-mover window open</td>
+            </tr>
+            <tr class="table-highlight">
+                <td><strong>Customer Pain</strong></td>
+                <td>$100K+ annual cost from T-slot failures</td>
+                <td>Documented willingness to pay</td>
+            </tr>
+            <tr>
+                <td><strong>Barriers to Entry</strong></td>
+                <td>7 patents, manufacturing expertise, certifications</td>
+                <td>Defensible position once established</td>
+            </tr>
+            <tr class="table-highlight">
+                <td><strong>Financial Profile</strong></td>
+                <td>58-66% gross margins, capital-light model</td>
+                <td>Attractive unit economics</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div style="margin-top: 40pt; padding: 30pt; background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%); color: white; border-radius: 8px; text-align: center;">
+        <h2 style="color: var(--gold); margin-bottom: 16pt; font-size: 24pt;">The Window Is Now</h2>
+        <p style="font-size: 12pt; line-height: 1.6; margin-bottom: 20pt;">CHIPS Act fab specifications are being finalized in Q1-Q2 2025. Reshoring investments are peaking. Industrial automation adoption is accelerating. The opportunity to establish AngleLock as the category leader in mechanically-locked structural systems exists <strong>today</strong>—but the first-mover advantage window is measured in quarters, not years.</p>
+        <p style="font-size: 14pt; font-weight: 600; color: var(--gold);">Execution speed will determine market leadership for the next decade.</p>
+    </div>
+
+    <div class="page-number">8</div>
+</div>
+
+<!-- ============================================
+     BACK COVER: CONTACT INFORMATION
+     ============================================ -->
+<div class="document-page page-break">
+    <div style="min-height: 6.25in; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+        <div style="max-width: 7in;">
+            <h2 style="font-size: 32pt; color: var(--navy); margin-bottom: 20pt;">Contact Us</h2>
+            <p style="font-size: 13pt; color: var(--gray); margin-bottom: 40pt; line-height: 1.6;">Discover how AngleLock technology can solve your structural challenges.<br>Schedule a consultation with our engineering team to discuss your specific application requirements.</p>
+
+            <div style="background: var(--gray-light); padding: 30pt; border-radius: 8px; margin-bottom: 40pt;">
+                <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 24pt; font-weight: 700; color: var(--gold); margin-bottom: 20pt;">CONTROLLED DYNAMICS INC.</div>
+                <p style="margin-bottom: 10pt; font-size: 11pt;"><strong>Address:</strong> 1058 Overland Court, Grafton, WI 53024</p>
+                <p style="margin-bottom: 10pt; font-size: 11pt;"><strong>Phone:</strong> (262) 421-8840</p>
+                <p style="margin-bottom: 10pt; font-size: 11pt;"><strong>Email:</strong> info@controlleddynamicsinc.com</p>
+                <p style="font-size: 11pt;"><strong>Web:</strong> www.controlleddynamicsinc.com</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20pt; font-size: 10pt; margin-bottom: 40pt;">
+                <div style="text-align: left;">
+                    <strong style="color: var(--navy);">Technical Specifications</strong><br>
+                    <span style="color: var(--gray);">www.controlleddynamicsinc.com/technology</span>
+                </div>
+                <div style="text-align: left;">
+                    <strong style="color: var(--navy);">Case Studies & Resources</strong><br>
+                    <span style="color: var(--gray);">www.controlleddynamicsinc.com/resources</span>
+                </div>
+                <div style="text-align: left;">
+                    <strong style="color: var(--navy);">ROI Calculator</strong><br>
+                    <span style="color: var(--gray);">www.controlleddynamicsinc.com/roi-calculator</span>
+                </div>
+                <div style="text-align: left;">
+                    <strong style="color: var(--navy);">Request Consultation</strong><br>
+                    <span style="color: var(--gray);">www.controlleddynamicsinc.com/contact</span>
+                </div>
+            </div>
+
+            <div style="background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%); padding: 24pt; border-radius: 6px; color: white;">
+                <h3 style="color: var(--gold); margin-bottom: 12pt; font-size: 16pt;">Schedule a Live Demonstration</h3>
+                <p style="font-size: 10pt; line-height: 1.5; margin-bottom: 12pt;">See the AngleLock advantage firsthand. We'll bring our vibration test rig to your facility and demonstrate head-to-head performance vs. T-slot systems.</p>
+                <p style="font-size: 11pt; font-weight: 600; color: var(--gold);">Contact us today to schedule your demo</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 40pt; padding-top: 20pt; border-top: 1px solid var(--gray-light); font-size: 8pt; color: var(--gray);">
+        <p><strong>Document Version 2.0 | January 2025</strong></p>
+        <p style="margin-top: 8pt;">© 2025 Controlled Dynamics Inc. All rights reserved. AngleLock is a registered trademark of Controlled Dynamics Inc.</p>
+        <p style="margin-top: 8pt;">This document contains forward-looking market projections based on third-party research and internal analysis. Actual market conditions may vary.</p>
+    </div>
+
+    <div class="page-number">9</div>
+</div>
+
+</body>
+</html>

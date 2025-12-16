@@ -470,7 +470,8 @@ export const RESOURCES_MENU = [
 export const ABOUT_MENU = [
   { name: 'Company', href: '/about' },
   { name: 'Manufacturing', href: '/about/manufacturing' },
-  { name: 'Careers', href: '/about/careers' }
+  { name: 'Careers', href: '/about/careers' },
+  { name: 'Partners', href: '/about/partners' }
 ];
 
 export const COMPANY_INFO = {

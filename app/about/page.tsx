@@ -161,16 +161,16 @@ export default function AboutPage() {
                 {/* Milestone markers */}
                 <div className="relative flex justify-between items-center">
                   {[
-                    { year: '2010', label: 'Discovery' },
-                    { year: '2011', label: 'Research' },
-                    { year: '2012', label: 'Concept' },
-                    { year: '2013', label: 'Prototype' },
-                    { year: '2015', label: 'Validation' },
-                    { year: '2017', label: 'Formation' },
-                    { year: '2019', label: 'Patents' },
-                    { year: '2020', label: 'Partnership' },
-                    { year: '2022', label: 'Expansion' },
-                    { year: '2025', label: 'Scale' }
+                    { year: '2010', label: 'Discovery', detail: 'Vibration Issue' },
+                    { year: '2011', label: 'Research', detail: 'Analysis' },
+                    { year: '2012', label: 'Concept', detail: 'AngleLock' },
+                    { year: '2013', label: 'Prototype', detail: 'First Build' },
+                    { year: '2015', label: 'Validation', detail: '50x Better' },
+                    { year: '2017', label: 'Formation', detail: 'CDI Born' },
+                    { year: '2019', label: 'Patents', detail: 'IP Secured' },
+                    { year: '2020', label: 'Partnership', detail: 'Nippon Pulse' },
+                    { year: '2022', label: 'Expansion', detail: 'Aerospace' },
+                    { year: '2025', label: 'Scale', detail: 'High Volume' }
                   ].map((milestone, idx) => (
                     <motion.div
                       key={milestone.year}
@@ -202,8 +202,13 @@ export default function AboutPage() {
                       </div>
 
                       {/* Label */}
-                      <div className="text-xs sm:text-sm text-white/60 group-hover:text-white transition-colors font-['Barlow_Condensed'] whitespace-nowrap">
+                      <div className="text-xs sm:text-sm text-white/60 group-hover:text-white transition-colors font-['Barlow_Condensed'] whitespace-nowrap mb-1">
                         {milestone.label}
+                      </div>
+
+                      {/* Detail - tiny comment */}
+                      <div className="text-[10px] sm:text-xs text-[#C9A227]/60 group-hover:text-[#C9A227] transition-colors font-['Barlow_Condensed'] italic whitespace-nowrap">
+                        {milestone.detail}
                       </div>
                     </motion.div>
                   ))}

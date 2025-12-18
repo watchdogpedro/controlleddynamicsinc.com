@@ -149,8 +149,71 @@ export default function AboutPage() {
                 Our Journey
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-transparent via-[#C9A227] to-transparent mx-auto mb-6" />
-              <p className="text-xl text-white/80 max-w-3xl mx-auto">
+              <p className="text-xl text-white/80 max-w-3xl mx-auto mb-12">
                 From identifying a critical problem to pioneering breakthrough solutions
+              </p>
+
+              {/* Horizontal Timeline Overview */}
+              <div className="relative py-12 px-4 max-w-6xl mx-auto">
+                {/* Horizontal line */}
+                <div className="absolute top-1/2 left-8 right-8 h-1 bg-gradient-to-r from-[#C9A227]/20 via-[#C9A227] to-[#C9A227]/20 transform -translate-y-1/2" />
+
+                {/* Milestone markers */}
+                <div className="relative flex justify-between items-center">
+                  {[
+                    { year: '2010', label: 'Discovery' },
+                    { year: '2011', label: 'Research' },
+                    { year: '2012', label: 'Concept' },
+                    { year: '2013', label: 'Prototype' },
+                    { year: '2015', label: 'Validation' },
+                    { year: '2017', label: 'Formation' },
+                    { year: '2019', label: 'Patents' },
+                    { year: '2020', label: 'Partnership' },
+                    { year: '2022', label: 'Expansion' },
+                    { year: '2025', label: 'Scale' }
+                  ].map((milestone, idx) => (
+                    <motion.div
+                      key={milestone.year}
+                      className="flex flex-col items-center group cursor-pointer"
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: idx * 0.05 }}
+                      whileHover={{ scale: 1.1 }}
+                    >
+                      {/* Bracket marker */}
+                      <div className="relative mb-3">
+                        <div className="absolute inset-0 bg-[#C9A227] blur-lg opacity-0 group-hover:opacity-75 transition-opacity" />
+                        <svg viewBox="0 0 40 40" className="w-8 h-8 sm:w-10 sm:h-10 relative">
+                          <rect x="8" y="8" width="4" height="24" fill="#C9A227" className="group-hover:fill-[#E5B730] transition-colors"/>
+                          <rect x="8" y="8" width="12" height="4" fill="#C9A227" className="group-hover:fill-[#E5B730] transition-colors"/>
+                          <rect x="8" y="28" width="12" height="4" fill="#C9A227" className="group-hover:fill-[#E5B730] transition-colors"/>
+                          <rect x="28" y="8" width="4" height="24" fill="#C9A227" className="group-hover:fill-[#E5B730] transition-colors"/>
+                          <rect x="20" y="8" width="12" height="4" fill="#C9A227" className="group-hover:fill-[#E5B730] transition-colors"/>
+                          <rect x="20" y="28" width="12" height="4" fill="#C9A227" className="group-hover:fill-[#E5B730] transition-colors"/>
+                          <circle cx="16" cy="20" r="2" fill="#0A1628"/>
+                          <circle cx="24" cy="20" r="2" fill="#0A1628"/>
+                        </svg>
+                      </div>
+
+                      {/* Year */}
+                      <div className="font-['Barlow_Condensed'] text-xl sm:text-2xl font-bold text-[#C9A227] group-hover:text-[#E5B730] transition-colors mb-1">
+                        {milestone.year}
+                      </div>
+
+                      {/* Label */}
+                      <div className="text-xs sm:text-sm text-white/60 group-hover:text-white transition-colors font-['Barlow_Condensed'] whitespace-nowrap">
+                        {milestone.label}
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Divider */}
+              <div className="w-full h-px bg-gradient-to-r from-transparent via-[#C9A227]/30 to-transparent mt-12 mb-8" />
+              <p className="text-sm text-white/50 font-['Barlow_Condensed'] uppercase tracking-wider mb-8">
+                Detailed Timeline
               </p>
             </motion.div>
 

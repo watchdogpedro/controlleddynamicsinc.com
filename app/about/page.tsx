@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Target, Award, Users, Rocket } from 'lucide-react';
+import { Target, Award, Users, Rocket, Calendar } from 'lucide-react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Container from '@/components/ui/Container';
@@ -123,6 +123,115 @@ export default function AboutPage() {
                   <p className="text-[#6B7C93] text-sm">
                     {value.description}
                   </p>
+                </motion.div>
+              ))}
+            </div>
+          </Container>
+        </section>
+
+        {/* Company History Timeline */}
+        <section className="py-20 bg-white">
+          <Container>
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="font-['Barlow_Condensed'] text-4xl sm:text-5xl font-bold text-[#0A1628] mb-4">
+                Our Journey
+              </h2>
+              <p className="text-lg text-[#6B7C93] max-w-3xl mx-auto">
+                From identifying a critical problem to pioneering breakthrough solutions
+              </p>
+            </motion.div>
+
+            <div className="max-w-4xl mx-auto">
+              {[
+                {
+                  year: '[YEAR]',
+                  title: 'Problem Discovery',
+                  description: 'Identified critical vibration issues affecting new generation 3D printer technology, threatening precision and reliability in advanced manufacturing applications.'
+                },
+                {
+                  year: '[YEAR]',
+                  title: 'Initial Research & Analysis',
+                  description: 'Conducted extensive research into vibration dynamics and structural stability. Analyzed existing solutions and identified fundamental limitations in traditional approaches.'
+                },
+                {
+                  year: '[YEAR]',
+                  title: 'Concept Development',
+                  description: 'Developed initial concept for mechanical locking mechanism. Filed provisional patents for AngleLock technology addressing vibration challenges without friction-based solutions.'
+                },
+                {
+                  year: '[YEAR]',
+                  title: 'Prototype Testing',
+                  description: 'Built and tested first working prototypes. Validated core technology principles through rigorous testing protocols and comparative analysis against traditional solutions.'
+                },
+                {
+                  year: '[YEAR]',
+                  title: 'Performance Validation',
+                  description: 'Achieved breakthrough results in vibration resistance and structural stability. Documented 50x improvement over industry-standard friction-based fasteners.'
+                },
+                {
+                  year: '[YEAR]',
+                  title: 'Company Formation',
+                  description: 'Officially established Controlled Dynamics Inc. to commercialize AngleLock technology. Assembled founding team of structural engineers and manufacturing experts.'
+                },
+                {
+                  year: '[YEAR]',
+                  title: 'Patent Portfolio Development',
+                  description: 'Secured core patents for AngleLock mechanical locking system. Established comprehensive intellectual property protection for technology platform.'
+                },
+                {
+                  year: '[YEAR]',
+                  title: 'Manufacturing Partnership',
+                  description: 'Established strategic partnership with Nippon Pulse America for precision manufacturing. Developed production capabilities for aerospace-grade components.'
+                },
+                {
+                  year: '[YEAR]',
+                  title: 'Market Expansion',
+                  description: 'Extended applications beyond 3D printing to aerospace, defense, and precision manufacturing. Demonstrated technology value across mission-critical industries.'
+                },
+                {
+                  year: '[YEAR]',
+                  title: 'Current Operations',
+                  description: 'Delivering structural solutions to world-leading organizations. Continuing innovation in mechanical locking technology and expanding application portfolio.'
+                }
+              ].map((milestone, idx) => (
+                <motion.div
+                  key={idx}
+                  className="relative pl-8 pb-12 last:pb-0"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: idx * 0.1 }}
+                >
+                  {/* Timeline line */}
+                  {idx !== 9 && (
+                    <div className="absolute left-[15px] top-8 bottom-0 w-0.5 bg-[#C9A227]/30" />
+                  )}
+
+                  {/* Timeline dot */}
+                  <div className="absolute left-0 top-0 w-8 h-8 bg-[#C9A227] rounded-full flex items-center justify-center">
+                    <Calendar className="w-4 h-4 text-[#0A1628]" />
+                  </div>
+
+                  {/* Content */}
+                  <div className="bg-[#F4F6F8] rounded-xl p-6 ml-4 hover:shadow-lg transition-shadow">
+                    <div className="flex items-baseline gap-4 mb-3">
+                      <span className="font-['Barlow_Condensed'] text-2xl font-bold text-[#C9A227]">
+                        {milestone.year}
+                      </span>
+                      <h3 className="font-['Barlow_Condensed'] text-2xl font-bold text-[#0A1628]">
+                        {milestone.title}
+                      </h3>
+                    </div>
+                    <p className="text-[#6B7C93] leading-relaxed">
+                      {milestone.description}
+                    </p>
+                  </div>
                 </motion.div>
               ))}
             </div>

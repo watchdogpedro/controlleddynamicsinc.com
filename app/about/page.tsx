@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Target, Award, Users, Rocket, Calendar } from 'lucide-react';
+import { Target, Award, Users, Rocket } from 'lucide-react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Container from '@/components/ui/Container';
@@ -130,7 +130,13 @@ export default function AboutPage() {
         </section>
 
         {/* Company History Timeline */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-gradient-to-br from-[#0A1628] to-[#1E3A5F] relative overflow-hidden">
+          {/* Background accent */}
+          <div className="absolute inset-0 opacity-5">
+            <div className="absolute top-20 left-10 w-64 h-64 border-4 border-[#C9A227] rotate-45" />
+            <div className="absolute bottom-20 right-10 w-48 h-48 border-4 border-[#C9A227] rotate-12" />
+          </div>
+
           <Container>
             <motion.div
               className="text-center mb-16"
@@ -139,96 +145,128 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="font-['Barlow_Condensed'] text-4xl sm:text-5xl font-bold text-[#0A1628] mb-4">
+              <h2 className="font-['Barlow_Condensed'] text-4xl sm:text-5xl font-bold text-white mb-4">
                 Our Journey
               </h2>
-              <p className="text-lg text-[#6B7C93] max-w-3xl mx-auto">
+              <div className="w-24 h-1 bg-gradient-to-r from-transparent via-[#C9A227] to-transparent mx-auto mb-6" />
+              <p className="text-xl text-white/80 max-w-3xl mx-auto">
                 From identifying a critical problem to pioneering breakthrough solutions
               </p>
             </motion.div>
 
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-5xl mx-auto">
               {[
                 {
-                  year: '[YEAR]',
+                  year: '2010',
                   title: 'Problem Discovery',
                   description: 'Identified critical vibration issues affecting new generation 3D printer technology, threatening precision and reliability in advanced manufacturing applications.'
                 },
                 {
-                  year: '[YEAR]',
+                  year: '2011',
                   title: 'Initial Research & Analysis',
                   description: 'Conducted extensive research into vibration dynamics and structural stability. Analyzed existing solutions and identified fundamental limitations in traditional approaches.'
                 },
                 {
-                  year: '[YEAR]',
+                  year: '2012',
                   title: 'Concept Development',
                   description: 'Developed initial concept for mechanical locking mechanism. Filed provisional patents for AngleLock technology addressing vibration challenges without friction-based solutions.'
                 },
                 {
-                  year: '[YEAR]',
+                  year: '2013',
                   title: 'Prototype Testing',
                   description: 'Built and tested first working prototypes. Validated core technology principles through rigorous testing protocols and comparative analysis against traditional solutions.'
                 },
                 {
-                  year: '[YEAR]',
+                  year: '2015',
                   title: 'Performance Validation',
                   description: 'Achieved breakthrough results in vibration resistance and structural stability. Documented 50x improvement over industry-standard friction-based fasteners.'
                 },
                 {
-                  year: '[YEAR]',
+                  year: '2017',
                   title: 'Company Formation',
                   description: 'Officially established Controlled Dynamics Inc. to commercialize AngleLock technology. Assembled founding team of structural engineers and manufacturing experts.'
                 },
                 {
-                  year: '[YEAR]',
+                  year: '2019',
                   title: 'Patent Portfolio Development',
                   description: 'Secured core patents for AngleLock mechanical locking system. Established comprehensive intellectual property protection for technology platform.'
                 },
                 {
-                  year: '[YEAR]',
+                  year: '2020',
                   title: 'Manufacturing Partnership',
                   description: 'Established strategic partnership with Nippon Pulse America for precision manufacturing. Developed production capabilities for aerospace-grade components.'
                 },
                 {
-                  year: '[YEAR]',
+                  year: '2022',
                   title: 'Market Expansion',
                   description: 'Extended applications beyond 3D printing to aerospace, defense, and precision manufacturing. Demonstrated technology value across mission-critical industries.'
                 },
                 {
-                  year: '[YEAR]',
-                  title: 'Current Operations',
-                  description: 'Delivering structural solutions to world-leading organizations. Continuing innovation in mechanical locking technology and expanding application portfolio.'
+                  year: '2025',
+                  title: 'High-Volume Manufacturing',
+                  description: 'Delivering structural solutions to world-leading organizations at scale. Continuing innovation in mechanical locking technology and expanding application portfolio.'
                 }
               ].map((milestone, idx) => (
                 <motion.div
                   key={idx}
-                  className="relative pl-8 pb-12 last:pb-0"
+                  className="relative pl-20 pb-16 last:pb-0 group"
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: idx * 0.1 }}
+                  transition={{ duration: 0.6, delay: idx * 0.08 }}
                 >
-                  {/* Timeline line */}
+                  {/* Timeline line - gradient gold */}
                   {idx !== 9 && (
-                    <div className="absolute left-[15px] top-8 bottom-0 w-0.5 bg-[#C9A227]/30" />
+                    <div className="absolute left-[39px] top-20 bottom-0 w-1 bg-gradient-to-b from-[#C9A227] to-[#C9A227]/20" />
                   )}
 
-                  {/* Timeline dot */}
-                  <div className="absolute left-0 top-0 w-8 h-8 bg-[#C9A227] rounded-full flex items-center justify-center">
-                    <Calendar className="w-4 h-4 text-[#0A1628]" />
+                  {/* AngleLock Bracket Icon */}
+                  <div className="absolute left-0 top-0 flex items-center justify-center">
+                    <div className="relative">
+                      {/* Outer glow */}
+                      <div className="absolute inset-0 bg-[#C9A227] blur-xl opacity-50 group-hover:opacity-75 transition-opacity" />
+
+                      {/* Bracket icon - inspired by AngleLock */}
+                      <div className="relative w-20 h-20 flex items-center justify-center">
+                        <svg viewBox="0 0 80 80" className="w-full h-full">
+                          {/* Left vertical bar */}
+                          <rect x="10" y="10" width="12" height="60" fill="#C9A227" className="group-hover:fill-[#E5B730] transition-colors"/>
+
+                          {/* Top horizontal bar */}
+                          <rect x="10" y="10" width="35" height="12" fill="#C9A227" className="group-hover:fill-[#E5B730] transition-colors"/>
+
+                          {/* Bottom horizontal bar */}
+                          <rect x="10" y="58" width="35" height="12" fill="#C9A227" className="group-hover:fill-[#E5B730] transition-colors"/>
+
+                          {/* Right vertical bar */}
+                          <rect x="58" y="10" width="12" height="60" fill="#C9A227" className="group-hover:fill-[#E5B730] transition-colors"/>
+
+                          {/* Top right horizontal */}
+                          <rect x="45" y="10" width="25" height="12" fill="#C9A227" className="group-hover:fill-[#E5B730] transition-colors"/>
+
+                          {/* Bottom right horizontal */}
+                          <rect x="45" y="58" width="25" height="12" fill="#C9A227" className="group-hover:fill-[#E5B730] transition-colors"/>
+
+                          {/* Center mounting holes */}
+                          <circle cx="32" cy="40" r="4" fill="#0A1628"/>
+                          <circle cx="48" cy="40" r="4" fill="#0A1628"/>
+                        </svg>
+                      </div>
+                    </div>
                   </div>
 
-                  {/* Content */}
-                  <div className="bg-[#F4F6F8] rounded-xl p-6 ml-4 hover:shadow-lg transition-shadow">
-                    <div className="flex items-baseline gap-4 mb-3">
-                      <span className="font-['Barlow_Condensed'] text-2xl font-bold text-[#C9A227]">
+                  {/* Content Card */}
+                  <div className="bg-white/5 backdrop-blur-sm border border-[#C9A227]/20 rounded-xl p-8 ml-4 hover:bg-white/10 hover:border-[#C9A227]/40 transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-[#C9A227]/20">
+                    <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-6 mb-4">
+                      <span className="font-['Barlow_Condensed'] text-6xl font-bold text-[#C9A227] leading-none group-hover:text-[#E5B730] transition-colors">
                         {milestone.year}
                       </span>
-                      <h3 className="font-['Barlow_Condensed'] text-2xl font-bold text-[#0A1628]">
+                      <div className="h-px sm:h-auto sm:w-px flex-1 sm:flex-none sm:h-12 bg-gradient-to-r sm:bg-gradient-to-b from-[#C9A227]/50 to-transparent" />
+                      <h3 className="font-['Barlow_Condensed'] text-3xl font-bold text-white flex-1">
                         {milestone.title}
                       </h3>
                     </div>
-                    <p className="text-[#6B7C93] leading-relaxed">
+                    <p className="text-white/70 leading-relaxed text-lg">
                       {milestone.description}
                     </p>
                   </div>

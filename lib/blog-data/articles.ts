@@ -51,6 +51,42 @@ export const blogArticles: BlogArticle[] = [
     readTime: '15 min read',
     featured: true,
     image: '/cost savings.png'
+  },
+  {
+    slug: 'precision-motion-platform-buyers-guide',
+    title: 'How to Choose a Precision Motion Platform: The Ultimate Buyer\'s Guide',
+    description: 'A comprehensive guide to selecting the right precision motion platform for your application, covering accuracy requirements, technologies, and key specifications.',
+    author: 'Controlled Dynamics Engineering Team',
+    publishedDate: '2025-12-26',
+    modifiedDate: '2025-12-26',
+    category: 'Buyer\'s Guide',
+    tags: ['precision motion', 'motion platform', 'positioning accuracy', 'motion control', 'linear motor', 'ball screw', 'sub-micron', 'automation', 'robotics'],
+    readTime: '14 min read',
+    featured: true
+  },
+  {
+    slug: 'sub-micron-positioning-explained',
+    title: 'Sub-Micron Positioning Explained: What Engineers Need to Know',
+    description: 'Understanding sub-micron positioning accuracy, repeatability specifications, and the technologies that enable precision motion in semiconductor and medical applications.',
+    author: 'Controlled Dynamics Engineering Team',
+    publishedDate: '2025-12-26',
+    modifiedDate: '2025-12-26',
+    category: 'Technical Guide',
+    tags: ['sub-micron', 'precision positioning', 'accuracy', 'repeatability', 'semiconductor', 'wafer inspection', 'motion control', 'metrology'],
+    readTime: '12 min read',
+    featured: true
+  },
+  {
+    slug: 'linear-motors-vs-ball-screws',
+    title: 'Linear Motors vs Ball Screws: Which Motion Technology is Right for You?',
+    description: 'Detailed technical comparison of linear motor and ball screw technologies covering speed, accuracy, maintenance, cost, and ideal applications for each.',
+    author: 'Controlled Dynamics Engineering Team',
+    publishedDate: '2025-12-26',
+    modifiedDate: '2025-12-26',
+    category: 'Technical Comparison',
+    tags: ['linear motor', 'ball screw', 'motion technology', 'high speed', 'precision motion', 'maintenance-free', 'comparison', 'motion systems'],
+    readTime: '13 min read',
+    featured: true
   }
 ];
 

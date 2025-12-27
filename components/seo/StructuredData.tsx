@@ -187,3 +187,160 @@ export function generateBreadcrumbSchema(items: Array<{ name: string; url: strin
     }))
   };
 }
+
+// Enhanced Organization Schema with Services
+export const enhancedOrganizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Controlled Dynamics Inc.",
+  "alternateName": ["CDI", "Controlled Dynamics"],
+  "url": "https://controlleddynamicsinc.com",
+  "logo": "https://controlleddynamicsinc.com/AngleLock Logo.png",
+  "description": "Custom engineering and manufacturing of high-precision motion platforms for semiconductor, medical device, robotics, and industrial automation. Specializing in multi-axis inspection platforms, linear motor gantries, and precision positioning systems built with AngleLock technology.",
+  "slogan": "Engineering Structures Without Limits",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1058 Overland Court",
+    "addressLocality": "Grafton",
+    "addressRegion": "WI",
+    "postalCode": "53024",
+    "addressCountry": "US"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-262-421-8840",
+    "contactType": "sales",
+    "email": "info@controlleddynamicsinc.com",
+    "areaServed": "US"
+  },
+  "sameAs": [
+    "https://controlleddynamicsinc.com"
+  ],
+  "makesOffer": [
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Custom Motion Platform Engineering",
+        "description": "Design and manufacturing of precision motion platforms including multi-axis inspection systems, linear motor gantries, and robotic positioning platforms"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Wafer Inspection Platforms",
+        "description": "Large-scale ultrasonic wafer inspection platforms for semiconductor and solar cell manufacturing with sub-micron accuracy"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "High-Speed Cartesian Robotics Stages",
+        "description": "Linear shaft motor XYZ stages for medical device and semiconductor manufacturing with precision motion control"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Robotic Gantry Systems",
+        "description": "Linear motor 7th axis gantries for industrial automation with zero maintenance and silent operation"
+      }
+    }
+  ],
+  "knowsAbout": [
+    "Precision motion platforms",
+    "Multi-axis inspection systems",
+    "Linear motor technology",
+    "Semiconductor manufacturing equipment",
+    "Medical device automation",
+    "Robotics positioning systems",
+    "High-precision gantry systems",
+    "AngleLock structural framing",
+    "Sub-micron positioning accuracy",
+    "Vibration-isolated platforms"
+  ],
+  "areaServed": {
+    "@type": "Country",
+    "name": "United States"
+  }
+};
+
+// Portfolio ItemList Schema Generator
+export function generatePortfolioSchema(projects: Array<{
+  id: string;
+  title: string;
+  industry: string;
+  description: string;
+  year: string;
+}>) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Controlled Dynamics Motion Platform Portfolio",
+    "description": "Custom-engineered precision motion platforms for mission-critical applications",
+    "numberOfItems": projects.length,
+    "itemListElement": projects.map((project, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "Product",
+        "@id": `https://controlleddynamicsinc.com/products#${project.id}`,
+        "name": project.title,
+        "description": project.description,
+        "category": project.industry,
+        "manufacturer": {
+          "@type": "Organization",
+          "name": "Controlled Dynamics Inc."
+        },
+        "releaseDate": project.year,
+        "brand": {
+          "@type": "Brand",
+          "name": "Controlled Dynamics Inc."
+        }
+      }
+    }))
+  };
+}
+
+// Individual Project Schema Generator
+export function generateProjectSchema(project: {
+  title: string;
+  description: string;
+  industry: string;
+  keySpecs: string[];
+  results: string[];
+  year: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": project.title,
+    "description": project.description,
+    "category": project.industry,
+    "manufacturer": {
+      "@type": "Organization",
+      "name": "Controlled Dynamics Inc."
+    },
+    "brand": {
+      "@type": "Brand",
+      "name": "Controlled Dynamics Inc."
+    },
+    "releaseDate": project.year,
+    "additionalProperty": project.keySpecs.map(spec => ({
+      "@type": "PropertyValue",
+      "name": "Specification",
+      "value": spec
+    })),
+    "review": project.results.map(result => ({
+      "@type": "Review",
+      "reviewBody": result,
+      "author": {
+        "@type": "Organization",
+        "name": "Controlled Dynamics Inc."
+      }
+    }))
+  };
+}

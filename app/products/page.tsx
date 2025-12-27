@@ -9,6 +9,7 @@ import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
 import { PORTFOLIO } from '@/lib/constants';
+import StructuredData, { generatePortfolioSchema, generateBreadcrumbSchema } from '@/components/seo/StructuredData';
 
 export default function ProductsPage() {
   const [selectedIndustry, setSelectedIndustry] = useState<string>('All');
@@ -44,8 +45,26 @@ export default function ProductsPage() {
     return icons[projectId] || Briefcase;
   };
 
+  // Generate schemas
+  const portfolioSchema = generatePortfolioSchema(
+    PORTFOLIO.map(p => ({
+      id: p.id,
+      title: p.title,
+      industry: p.industry,
+      description: p.description,
+      year: p.year
+    }))
+  );
+
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://controlleddynamicsinc.com' },
+    { name: 'Projects', url: 'https://controlleddynamicsinc.com/products' }
+  ]);
+
   return (
     <>
+      <StructuredData data={portfolioSchema} />
+      <StructuredData data={breadcrumbSchema} />
       <Header />
       <main className="pt-20">
         {/* Hero Section */}

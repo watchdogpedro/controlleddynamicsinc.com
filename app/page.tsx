@@ -7,7 +7,7 @@ import TechnologyFeatures from '@/components/sections/TechnologyFeatures';
 import Statistics from '@/components/sections/Statistics';
 import MarketReportCTA from '@/components/sections/MarketReportCTA';
 import CTASection from '@/components/sections/CTASection';
-import StructuredData, { organizationSchema, productSchema } from '@/components/seo/StructuredData';
+import StructuredData, { organizationSchema, productSchema, enhancedOrganizationSchema } from '@/components/seo/StructuredData';
 import NewsletterSignup from '@/components/newsletter/NewsletterSignup';
 import Container from '@/components/ui/Container';
 
@@ -15,6 +15,7 @@ export default function Home() {
   return (
     <>
       <StructuredData data={organizationSchema} />
+      <StructuredData data={enhancedOrganizationSchema} />
       <StructuredData data={productSchema} />
       <Header />
       <main>

@@ -488,3 +488,122 @@ export const COMPANY_INFO = {
     zip: '53024'
   }
 };
+
+// Portfolio Projects - Real CDI Projects
+export const PORTFOLIO = [
+  {
+    id: 'wafer-inspection-platform',
+    title: 'Large-Scale Ultrasonic Wafer Inspection Platform',
+    industry: 'Semiconductor',
+    year: '2024',
+    image: '/portfolio/wafer-inspection.jpg',
+    description: 'High-precision platform for ultrasonic inspection of solar cells and semiconductor wafers, engineered for large-scale production environments with exceptional stability.',
+    challenge: 'Required ultra-stable platform supporting large-format wafer inspection equipment with vibration isolation critical for ultrasonic measurement accuracy across extended work envelope.',
+    solution: 'Custom-engineered AngleLock platform with integrated vibration isolation, precision leveling system, and rigid structural design to maintain measurement accuracy during high-throughput inspection operations.',
+    keySpecs: [
+      'Large-scale work envelope for production throughput',
+      'Vibration-isolated for ultrasonic measurement accuracy',
+      'Supports solar cell and semiconductor wafer inspection',
+      'Designed for 24/7 production environment'
+    ],
+    results: [
+      'Maintains sub-micron stability during ultrasonic inspection cycles',
+      'Zero downtime for structural adjustments since installation',
+      'Enables high-throughput inspection across multiple wafer formats',
+      'Platform stability exceeds ultrasonic equipment specifications'
+    ],
+    featured: true
+  },
+  {
+    id: 'cartesian-xyz-stage',
+    title: 'High-Speed Linear Shaft Motor XYZ Stage',
+    industry: 'Life Sciences',
+    year: '2024',
+    image: '/portfolio/xyz-stage.jpg',
+    description: 'Ultra-high-speed cartesian robotics stage utilizing linear shaft motors for semiconductor and medical device manufacturing with precision positioning and rapid cycle times.',
+    challenge: 'Medical device manufacturer required high-speed, high-precision XYZ stage for automated assembly processes demanding exceptional repeatability and cycle time performance.',
+    solution: 'Engineered custom AngleLock frame integrating linear shaft motor technology with precision linear guides, creating an ultra-rigid structure that maintains accuracy at high acceleration rates.',
+    keySpecs: [
+      'Linear shaft motor drive for high-speed operation',
+      'XYZ cartesian configuration with precision motion control',
+      'Optimized for semiconductor and medical device processes',
+      'High acceleration with maintained positioning accuracy'
+    ],
+    results: [
+      'Achieved cycle time targets with positioning repeatability < 10 microns',
+      'Supports high-speed technology processes in production environment',
+      'AngleLock rigidity eliminates structural compliance issues',
+      'Enables advanced manufacturing processes previously not achievable'
+    ],
+    featured: true
+  },
+  {
+    id: 'mobile-robotics-platform',
+    title: '6-Axis Mobile Robotics Docking Platform',
+    industry: 'Robotics & Automation',
+    year: '2023',
+    image: '/portfolio/mobile-platform.jpg',
+    description: 'Precision 6-axis platform designed for mobile docking of automation machining centers, enabling flexible manufacturing cell configurations with repeatable robot positioning.',
+    challenge: 'Automation integrator needed mobile platform supporting 6-axis industrial robot with precision docking capability to multiple machining centers while maintaining calibration accuracy.',
+    solution: 'Custom AngleLock mobile base with integrated precision docking system, vibration isolation, and rigid structure ensuring robot maintains calibration through repeated docking cycles.',
+    keySpecs: [
+      '6-axis industrial robot support with mobile capability',
+      'Precision docking system for multiple machining centers',
+      'Maintains robot calibration through dock/undock cycles',
+      'Flexible manufacturing cell reconfiguration'
+    ],
+    results: [
+      'Robot maintains calibration accuracy through 1000+ docking cycles',
+      'Enables single robot to service multiple machining centers',
+      'Docking repeatability achieves ±0.05mm across all positions',
+      'Manufacturing flexibility increased while reducing robot investment'
+    ],
+    featured: true
+  },
+  {
+    id: 'linear-motor-gantry',
+    title: 'High-Precision Linear Motor 7th Axis Gantry',
+    industry: 'General Industrial',
+    year: '2024',
+    image: '/portfolio/7th-axis-gantry.jpg',
+    description: 'High-speed linear motor gantry system providing 7th axis motion for industrial robots in pick-and-place applications across all manufacturing sectors with silent, maintenance-free operation.',
+    challenge: 'Multi-market manufacturer required high-precision 7th axis extending robot reach for pick-and-place operations with zero maintenance requirements and quiet operation for production environment.',
+    solution: 'Engineered linear motor gantry utilizing AngleLock structural system for exceptional rigidity and vibration damping, creating silent high-speed motion with maintenance-free linear motor technology.',
+    keySpecs: [
+      'Linear motor drive eliminates mechanical wear components',
+      'High-speed travel with silent operation',
+      'Zero scheduled maintenance requirements',
+      'Applicable across all manufacturing markets'
+    ],
+    results: [
+      'Zero maintenance required over 2+ years of continuous operation',
+      'Silent operation ideal for production environments',
+      'High-speed motion increases robot productivity 40%+',
+      'Stable, vibration-free platform maintains robot accuracy'
+    ],
+    featured: true
+  },
+  {
+    id: '8-axis-inspection-platform',
+    title: '8-Axis Semiconductor Inspection Platform',
+    industry: 'Semiconductor',
+    year: '2024',
+    image: '/portfolio/8-axis-platform.jpg',
+    description: 'Ultra-high-precision 8-axis inspection platform with sub-micron accuracy, linear shaft motor Z-axis, magnetic counterbalance control, and 0.5-meter parallel motion for semiconductor metrology.',
+    challenge: 'Semiconductor manufacturer required advanced multi-axis inspection platform with sub-micron positioning accuracy, large parallel motion coplanarity, and balanced structure for precise measurement across extended work envelope.',
+    solution: 'Custom-engineered AngleLock platform integrating 8-axis motion control with linear shaft motor Z-axis and magnetic counterbalance system, achieving exceptional coplanarity and structural balance across 0.5-meter parallel motion range.',
+    keySpecs: [
+      '8-axis precision motion with sub-micron accuracy',
+      'Linear shaft motor Z-axis with magnetic counterbalance',
+      '0.5-meter parallel motion with high coplanarity',
+      'Balanced structure for vibration-free inspection'
+    ],
+    results: [
+      'Achieved sub-micron positioning repeatability across all 8 axes',
+      'Magnetic counterbalance maintains Z-axis stability throughout travel',
+      'Coplanarity specifications met across full 0.5m parallel motion',
+      'Platform rigidity enables advanced semiconductor metrology processes'
+    ],
+    featured: true
+  }
+];

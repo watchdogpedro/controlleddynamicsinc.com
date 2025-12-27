@@ -26,7 +26,7 @@ export default function Header() {
       items: SOLUTIONS.map(sol => ({ name: sol.name, href: `/solutions/${sol.id}` }))
     },
     {
-      name: 'Products',
+      name: 'Projects',
       href: '/products',
       hasDropdown: false
     },

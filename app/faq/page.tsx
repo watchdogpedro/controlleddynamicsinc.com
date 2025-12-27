@@ -7,6 +7,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
+import StructuredData, { generateFAQSchema } from '@/components/seo/StructuredData';
 
 interface FAQ {
   question: string;
@@ -169,6 +170,44 @@ const faqCategories: FAQCategory[] = [
     ]
   },
   {
+    category: 'Precision Motion Platforms',
+    icon: '🎯',
+    faqs: [
+      {
+        question: 'What precision levels can you achieve with motion platforms?',
+        answer: 'We routinely achieve sub-micron positioning accuracy on our custom motion platforms. For wafer inspection systems and semiconductor applications, we deliver platforms with ±0.01mm (10 micron) repeatability or better. Our 8-axis inspection platforms achieve sub-micron positioning across all axes with magnetic counterbalance control. High-speed XYZ stages reach positioning repeatability under 10 microns even at high acceleration rates. Every platform is engineered with FEA analysis and precision components to meet your exact accuracy requirements.'
+      },
+      {
+        question: 'Do you build wafer inspection platforms for semiconductor manufacturing?',
+        answer: 'Yes, wafer inspection platforms are a specialty. We design and build large-scale ultrasonic wafer inspection platforms for solar cell and semiconductor wafer manufacturing. These systems feature vibration-isolated bases critical for ultrasonic measurement accuracy, large work envelopes for production throughput, and structures designed for 24/7 operation. Our platforms maintain sub-micron stability during inspection cycles and support both solar cell and semiconductor wafer formats.'
+      },
+      {
+        question: 'Can you design high-speed linear motor motion systems?',
+        answer: 'Absolutely. We specialize in high-speed linear shaft motor systems including XYZ cartesian stages and 7th axis robot gantries. Our linear motor platforms feature zero mechanical wear components, silent operation, and zero scheduled maintenance. High-speed XYZ stages for medical device and semiconductor manufacturing achieve rapid cycle times while maintaining precision positioning. Our 7th axis gantries extend robot reach with high-speed motion and vibration-free operation - we have systems running 2+ years with zero maintenance.'
+      },
+      {
+        question: 'What is the largest motion platform you can build?',
+        answer: 'We have designed and delivered large-scale platforms exceeding 2 meters in travel range, including 0.5-meter parallel motion inspection platforms and multi-meter gantry systems. Our modular AngleLock construction allows shipping in sections and field assembly for very large platforms. Size is rarely a limitation - we engineer each system with FEA validation to ensure structural rigidity and precision across the entire work envelope, regardless of scale.'
+      },
+      {
+        question: 'Can you build multi-axis platforms (6-axis, 8-axis, etc.)?',
+        answer: 'Yes, multi-axis precision platforms are our specialty. We have built 6-axis mobile robotics docking platforms, 8-axis semiconductor inspection platforms with sub-micron accuracy, and custom multi-axis test fixtures. Each additional axis is carefully engineered to maintain overall system precision and structural balance. Our 8-axis platforms include linear shaft motor Z-axes with magnetic counterbalance control, achieving high coplanarity and balanced structures essential for precision positioning.'
+      },
+      {
+        question: 'Do you work on classified or confidential projects?',
+        answer: 'Yes, we regularly work on highly confidential projects for aerospace, defense, and semiconductor companies. We maintain strict confidentiality and can sign NDAs as required. Many of our precision motion platforms are for classified defense applications or proprietary manufacturing processes where we cannot disclose client names or specific details. Our Wisconsin manufacturing facility and U.S.-based engineering team support ITAR-controlled defense projects.'
+      },
+      {
+        question: 'Can you integrate linear motors, servo systems, and precision guides into platforms?',
+        answer: 'Yes, we are experienced integrating precision motion components including linear shaft motors, servo motor drives, precision linear guides, air bearings, piezo actuators, and encoder feedback systems. Our engineering team works with major motion control suppliers and can design platforms around your preferred components or recommend optimal solutions. We handle the complete integration - structural frame, precision mounting, vibration isolation, cable management, and validation that the complete system meets your performance specifications.'
+      },
+      {
+        question: 'What industries use your precision motion platforms?',
+        answer: 'Our motion platforms serve semiconductor (wafer inspection, cleanroom automation), medical device manufacturing (high-speed assembly automation), robotics & automation (mobile platforms, gantries, pick-and-place), aerospace & defense (test fixtures, precision positioning), and general industrial automation (7th axis systems, cartesian robots). Any application requiring sub-micron accuracy, high-speed motion, vibration isolation, or zero-maintenance operation is an ideal fit for our custom-engineered platforms.'
+      }
+    ]
+  },
+  {
     category: 'Getting Started',
     icon: '🚀',
     faqs: [
@@ -235,8 +274,13 @@ function FAQItem({ faq, index }: { faq: FAQ; index: number }) {
 }
 
 export default function FAQPage() {
+  // Generate FAQ schema for all questions
+  const allFAQs = faqCategories.flatMap(category => category.faqs);
+  const faqSchema = generateFAQSchema(allFAQs);
+
   return (
     <>
+      <StructuredData data={faqSchema} />
       <Header />
       <main className="pt-20">
         {/* Hero Section */}

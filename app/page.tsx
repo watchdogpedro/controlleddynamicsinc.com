@@ -11,37 +11,37 @@ import NewsletterSignup from '@/components/newsletter/NewsletterSignup';
 import Container from '@/components/ui/Container';
 
 export default function Home() {
-  return (
-    <>
-      <StructuredData data={organizationSchema} />
-      <StructuredData data={enhancedOrganizationSchema} />
-      <StructuredData data={productSchema} />
-      <Header />
-      <main>
-        <Hero />
-        <TrustBar />
-        <IndustryShowcase />
-        <TechnologyFeatures />
+ return (
+ <>
+ <StructuredData data={organizationSchema} />
+ <StructuredData data={enhancedOrganizationSchema} />
+ <StructuredData data={productSchema} />
+ <Header />
+ <main>
+ <Hero />
+ <TrustBar />
+ <IndustryShowcase />
+ <TechnologyFeatures />
 
-        {/* Market Report Download */}
-        <MarketReportCTA variant="default" />
+ {/* Market Report Download */}
+ <MarketReportCTA variant="default" />
 
-        {/* Newsletter Section */}
-        <section className="py-20 bg-white">
-          <Container>
-            <div className="max-w-3xl mx-auto">
-              <NewsletterSignup
-                variant="card"
-                title="Engineering Insights Delivered to Your Inbox"
-                description="Join 500+ engineers and manufacturers getting expert articles on aluminum framing systems, T-slot alternatives, and structural engineering best practices."
-              />
-            </div>
-          </Container>
-        </section>
+ {/* Newsletter Section */}
+ <section className="py-20 bg-white">
+ <Container>
+ <div className="max-w-3xl mx-auto">
+ <NewsletterSignup
+ variant="card"
+ title="Engineering Insights Delivered to Your Inbox"
+ description="Join 500+ engineers and manufacturers getting expert articles on aluminum framing systems, friction-based alternatives, and structural engineering best practices."
+ />
+ </div>
+ </Container>
+ </section>
 
-        <CTASection />
-      </main>
-      <Footer />
-    </>
-  );
+ <CTASection />
+ </main>
+ <Footer />
+ </>
+ );
 }

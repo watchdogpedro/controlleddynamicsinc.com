@@ -455,9 +455,7 @@ export const SOLUTIONS = [
 export const TECHNOLOGY_MENU = [
   { name: 'AngleLock Overview', href: '/technology' },
   { name: 'Technical Specifications', href: '/technology/specifications' },
-  { name: 'Technical Documentation', href: '/technology/documentation' },
-  { name: 'Compare vs. T-Slot', href: '/compare/t-slot' },
-  { name: '80/20 Alternative', href: '/compare/80-20-alternative' }
+  { name: 'Technical Documentation', href: '/technology/documentation' }
 ];
 
 export const RESOURCES_MENU = [

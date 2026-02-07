@@ -22,7 +22,7 @@ export default function CostComparison() {
 
         <div className="grid md:grid-cols-2 gap-6 mb-6">
           <div className="bg-[#F4F6F8] rounded-xl p-6">
-            <h3 className="font-['Barlow_Condensed'] text-2xl font-bold mb-4">T-Slot System</h3>
+            <h3 className="font-['Barlow_Condensed'] text-2xl font-bold mb-4">friction-based System</h3>
             <div className="space-y-3">
               <div className="flex justify-between">
                 <span className="text-[#6B7C93]">Extrusions (100 ft)</span>
@@ -65,7 +65,7 @@ export default function CostComparison() {
             </div>
             <div className="mt-4 bg-green-100 text-green-800 px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-2">
               <TrendingDown className="w-4 h-4" />
-              $150 less than T-slot (50% faster assembly)
+              $150 less than friction-based (50% faster assembly)
             </div>
           </div>
         </div>
@@ -81,7 +81,7 @@ export default function CostComparison() {
         <div className="bg-white border-2 border-gray-200 rounded-xl p-6 mb-6">
           <h3 className="font-['Barlow_Condensed'] text-xl font-bold mb-4 flex items-center gap-2">
             <DollarSign className="w-6 h-6 text-red-600" />
-            T-Slot: Hidden Costs Add Up
+            friction-based: Hidden Costs Add Up
           </h3>
           <div className="space-y-4">
             <div>
@@ -169,7 +169,7 @@ export default function CostComparison() {
         <div className="bg-gradient-to-br from-[#0A1628] to-[#1E3A5F] rounded-2xl p-8 text-white">
           <div className="grid md:grid-cols-2 gap-8 mb-6">
             <div>
-              <h3 className="font-['Barlow_Condensed'] text-2xl font-bold mb-4">T-Slot</h3>
+              <h3 className="font-['Barlow_Condensed'] text-2xl font-bold mb-4">friction-based</h3>
               <div className="space-y-2 text-white/80">
                 <div className="flex justify-between">
                   <span>Initial Investment</span>
@@ -271,7 +271,7 @@ export default function CostComparison() {
             Request Custom ROI Analysis
           </Link>
           <Link
-            href="/compare/t-slot"
+            href="/compare/friction-based"
             className="inline-block px-6 py-3 border-2 border-[#C9A227] text-[#C9A227] rounded-full font-semibold hover:bg-[#C9A227]/10 transition-colors text-center"
           >
             Full Technical Comparison

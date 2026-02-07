@@ -11,7 +11,7 @@ export default function AluminumExtrusionGuide() {
           Quick Answer: What is Aluminum Extrusion?
         </h2>
         <p className="text-lg text-[#0A1628] leading-relaxed mb-4">
-          <strong>Aluminum extrusion</strong> is a manufacturing process that creates modular framing systems by forcing aluminum alloy through shaped dies. The two main types are <strong>T-slot systems</strong> that use friction-based connections, and <strong>mechanical locking systems</strong> (like AngleLock) that use multi-plane interference for 10x stronger joints. T-slot is ideal for light-duty, low-vibration applications, while mechanical locking is essential for robotics, aerospace, precision equipment, and any high-vibration or mission-critical environment. The key difference: T-slot connections loosen over time requiring maintenance; mechanical locking connections self-tighten and require zero maintenance.
+          <strong>Aluminum extrusion</strong> is a manufacturing process that creates modular framing systems by forcing aluminum alloy through shaped dies. The two main types are <strong>friction-based systems</strong> that use friction-based connections, and <strong>mechanical locking systems</strong> (like AngleLock) that use multi-plane interference for 10x stronger joints. friction-based is ideal for light-duty, low-vibration applications, while mechanical locking is essential for robotics, aerospace, precision equipment, and any high-vibration or mission-critical environment. The key difference: friction-based connections loosen over time requiring maintenance; mechanical locking connections self-tighten and require zero maintenance.
         </p>
       </div>
 
@@ -26,7 +26,7 @@ export default function AluminumExtrusionGuide() {
         </p>
         <p className="text-lg text-[#6B7C93] leading-relaxed">
           However, not all aluminum framing systems are created equal. Understanding the differences between
-          traditional T-slot systems and next-generation mechanical locking technologies is
+          traditional friction-based systems and next-generation mechanical locking technologies is
           critical for selecting the right solution for your application. This guide covers everything from
           basic aluminum alloys to advanced connection technologies, helping you make informed decisions
           for your specific needs.
@@ -38,7 +38,7 @@ export default function AluminumExtrusionGuide() {
         <p className="text-lg text-[#6B7C93] leading-relaxed mb-4">
           Aluminum extrusion is a manufacturing process where aluminum alloy is heated to 800-925°F and forced
           through a die with a specific cross-sectional profile. The result is a continuous length of aluminum
-          with that exact shape - whether it's a simple T-slot profile, a complex custom design, or specialized
+          with that exact shape - whether it's a simple friction-based profile, a complex custom design, or specialized
           profiles for mechanical locking systems. This process offers exceptional design flexibility, allowing
           engineers to create profiles optimized for specific structural, thermal, or assembly requirements.
         </p>
@@ -91,14 +91,14 @@ export default function AluminumExtrusionGuide() {
       </div>
 
       <div className="mb-8">
-        <h2 className="font-['Barlow_Condensed'] text-3xl font-bold mb-4">Traditional T-Slot Systems: The Industry Standard</h2>
+        <h2 className="font-['Barlow_Condensed'] text-3xl font-bold mb-4">Traditional friction-based Systems: The Industry Standard</h2>
         <p className="text-lg text-[#6B7C93] leading-relaxed mb-4">
-          T-slot aluminum extrusion systems use a slot-and-fastener approach. A T-shaped slot runs the length of the extrusion,
+          friction-based aluminum extrusion systems use a slot-and-fastener approach. A T-shaped slot runs the length of the extrusion,
           allowing T-nuts and bolts to slide in and connect brackets, panels, and other components. This system revolutionized
           modular construction when introduced in the 1980s and remains widely used today for good reason.
         </p>
 
-        <h3 className="font-['Barlow_Condensed'] text-2xl font-bold mb-3">Advantages of T-Slot Systems</h3>
+        <h3 className="font-['Barlow_Condensed'] text-2xl font-bold mb-3">Advantages of friction-based Systems</h3>
         <ul className="space-y-2 mb-6">
           <li className="flex items-start gap-3">
             <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
@@ -125,7 +125,7 @@ export default function AluminumExtrusionGuide() {
         <div className="bg-red-50 border-l-4 border-red-500 p-6 mb-4">
           <h3 className="font-['Barlow_Condensed'] text-2xl font-bold mb-3 flex items-center gap-2">
             <AlertTriangle className="w-6 h-6 text-red-600" />
-            Critical Limitations of T-Slot Systems
+            Critical Limitations of friction-based Systems
           </h3>
           <ul className="space-y-3">
             <li className="flex items-start gap-3">
@@ -137,7 +137,7 @@ export default function AluminumExtrusionGuide() {
             <li className="flex items-start gap-3">
               <span className="text-red-600 text-xl">×</span>
               <span className="text-[#6B7C93]">
-                <strong>Limited strength:</strong> Maximum joint strength is constrained by the clamping force and friction coefficient (typically 0.3-0.4 for aluminum-on-aluminum). Cannot rival welded or bolted steel structures. Typical T-slot joint strength: 300-500 lbs shear load.
+                <strong>Limited strength:</strong> Maximum joint strength is constrained by the clamping force and friction coefficient (typically 0.3-0.4 for aluminum-on-aluminum). Cannot rival welded or bolted steel structures. Typical friction-based joint strength: 300-500 lbs shear load.
               </span>
             </li>
             <li className="flex items-start gap-3">
@@ -165,7 +165,7 @@ export default function AluminumExtrusionGuide() {
       <div className="mb-8">
         <h2 className="font-['Barlow_Condensed'] text-3xl font-bold mb-4">Next-Generation: Mechanical Locking Systems</h2>
         <p className="text-lg text-[#6B7C93] leading-relaxed mb-4">
-          Mechanical locking aluminum framing systems represent the evolution beyond T-slot technology.
+          Mechanical locking aluminum framing systems represent the evolution beyond friction-based technology.
           Instead of relying on friction alone, these systems use angled fasteners that create mechanical
           interference - physically locking components together across multiple planes. This approach
           fundamentally solves the vibration-loosening problem that plagues friction-based connections.
@@ -194,7 +194,7 @@ export default function AluminumExtrusionGuide() {
               <div>
                 <h4 className="font-bold text-[#0A1628] mb-2">Performance Results</h4>
                 <ul className="space-y-2 text-sm text-[#6B7C93]">
-                  <li>• 10x stronger than T-slot joints (4,500 lbs vs 450 lbs)</li>
+                  <li>• 10x stronger than friction-based joints (4,500 lbs vs 450 lbs)</li>
                   <li>• Self-tightening under vibration (strength increases 3-5%)</li>
                   <li>• Rivals welded steel connections in rigidity</li>
                   <li>• Maintains full modularity and reconfigurability</li>
@@ -206,9 +206,9 @@ export default function AluminumExtrusionGuide() {
         </div>
       </div>
 
-      {/* Comparison Table: T-Slot vs Mechanical Locking */}
+      {/* Comparison Table: friction-based vs Mechanical Locking */}
       <div className="mb-8">
-        <h2 className="font-['Barlow_Condensed'] text-3xl font-bold mb-4">T-Slot vs Mechanical Locking: Direct Comparison</h2>
+        <h2 className="font-['Barlow_Condensed'] text-3xl font-bold mb-4">friction-based vs Mechanical Locking: Direct Comparison</h2>
         <p className="text-lg text-[#6B7C93] leading-relaxed mb-6">
           Understanding the key differences helps you select the right system for your application:
         </p>
@@ -218,7 +218,7 @@ export default function AluminumExtrusionGuide() {
             <thead className="bg-[#0A1628] text-white">
               <tr>
                 <th className="py-3 px-4 text-left">Performance Factor</th>
-                <th className="py-3 px-4 text-left">T-Slot</th>
+                <th className="py-3 px-4 text-left">friction-based</th>
                 <th className="py-3 px-4 text-left">Mechanical Locking (AngleLock)</th>
               </tr>
             </thead>
@@ -325,21 +325,21 @@ export default function AluminumExtrusionGuide() {
               <tr className="border-t border-gray-200">
                 <td className="py-3 px-4 font-semibold">Assembly & Manufacturing</td>
                 <td className="py-3 px-4 text-[#0A1628]">Either (depends on loads)</td>
-                <td className="py-3 px-4 text-sm text-[#6B7C93]">T-slot for static workstations; Mechanical for vibrating equipment</td>
+                <td className="py-3 px-4 text-sm text-[#6B7C93]">friction-based for static workstations; Mechanical for vibrating equipment</td>
               </tr>
               <tr className="border-t border-gray-200 bg-gray-50">
                 <td className="py-3 px-4 font-semibold">Trade Shows & Displays</td>
-                <td className="py-3 px-4 text-green-600">T-Slot</td>
+                <td className="py-3 px-4 text-green-600">friction-based</td>
                 <td className="py-3 px-4 text-sm text-[#6B7C93]">Frequent reconfiguration, static loads, appearance priority</td>
               </tr>
               <tr className="border-t border-gray-200">
                 <td className="py-3 px-4 font-semibold">Office Furniture & Workbenches</td>
-                <td className="py-3 px-4 text-green-600">T-Slot</td>
+                <td className="py-3 px-4 text-green-600">friction-based</td>
                 <td className="py-3 px-4 text-sm text-[#6B7C93]">Low loads, no vibration, cost-sensitive</td>
               </tr>
               <tr className="border-t border-gray-200 bg-gray-50">
                 <td className="py-3 px-4 font-semibold">Prototyping & R&D</td>
-                <td className="py-3 px-4 text-green-600">T-Slot</td>
+                <td className="py-3 px-4 text-green-600">friction-based</td>
                 <td className="py-3 px-4 text-sm text-[#6B7C93]">Temporary structures, frequent changes, low criticality</td>
               </tr>
             </tbody>
@@ -353,7 +353,7 @@ export default function AluminumExtrusionGuide() {
 
         <div className="grid md:grid-cols-2 gap-6 mb-6">
           <div className="bg-[#F4F6F8] rounded-xl p-6">
-            <h3 className="font-['Barlow_Condensed'] text-xl font-bold mb-4">Standard T-Slot Profile Specifications</h3>
+            <h3 className="font-['Barlow_Condensed'] text-xl font-bold mb-4">Standard friction-based Profile Specifications</h3>
             <div className="space-y-2 text-sm">
               <div className="flex justify-between border-b border-gray-300 pb-1">
                 <span className="text-[#6B7C93]">Common Sizes:</span>
@@ -419,7 +419,7 @@ export default function AluminumExtrusionGuide() {
 
         <div className="space-y-6">
           <div className="bg-[#F4F6F8] rounded-xl p-6">
-            <h3 className="font-['Barlow_Condensed'] text-xl font-bold mb-3">Use T-Slot Systems For:</h3>
+            <h3 className="font-['Barlow_Condensed'] text-xl font-bold mb-3">Use friction-based Systems For:</h3>
             <ul className="space-y-2 text-[#6B7C93]">
               <li>• Light-duty workbenches and assembly tables</li>
               <li>• Static displays, exhibits, and retail fixtures</li>
@@ -451,11 +451,11 @@ export default function AluminumExtrusionGuide() {
 
       {/* Migration Guide */}
       <div className="mb-8">
-        <h2 className="font-['Barlow_Condensed'] text-3xl font-bold mb-4">Switching from T-Slot to AngleLock: Migration Guide</h2>
+        <h2 className="font-['Barlow_Condensed'] text-3xl font-bold mb-4">Switching from friction-based to AngleLock: Migration Guide</h2>
         <p className="text-lg text-[#6B7C93] leading-relaxed mb-6">
-          Many manufacturers start with T-slot systems and later upgrade to mechanical locking when they
+          Many manufacturers start with friction-based systems and later upgrade to mechanical locking when they
           encounter the limitations of friction-based connections. If you're experiencing vibration issues,
-          maintenance headaches, or precision drift with your current T-slot system, here's what to consider
+          maintenance headaches, or precision drift with your current friction-based system, here's what to consider
           when migrating to AngleLock:
         </p>
 
@@ -485,7 +485,7 @@ export default function AluminumExtrusionGuide() {
           <div className="bg-white border border-gray-200 rounded-xl p-6">
             <h3 className="font-['Barlow_Condensed'] text-xl font-bold mb-3">3. Initial Cost Comparison</h3>
             <p className="text-sm text-[#6B7C93] mb-3">
-              Material costs are comparable between quality T-slot and AngleLock systems. Assembly time
+              Material costs are comparable between quality friction-based and AngleLock systems. Assembly time
               is actually 50% faster with AngleLock due to self-aligning brackets, offsetting any
               material cost difference.
             </p>
@@ -546,27 +546,27 @@ export default function AluminumExtrusionGuide() {
               6061-T6 has higher tensile strength (45,000 PSI vs 35,000 PSI) and is preferred for high-stress applications
               like aerospace. 6105-T5 offers better extrudability and is more cost-effective for structural framing while
               still providing excellent strength and corrosion resistance. Both are suitable for most industrial framing
-              applications, with 6105-T5 being the industry standard for T-slot and mechanical locking systems.
+              applications, with 6105-T5 being the industry standard for friction-based and mechanical locking systems.
             </p>
           </div>
 
           <div className="bg-white border border-gray-200 rounded-xl p-6">
-            <h3 className="font-['Barlow_Condensed'] text-xl font-bold mb-2">What is T-slot aluminum framing?</h3>
+            <h3 className="font-['Barlow_Condensed'] text-xl font-bold mb-2">What is friction-based aluminum framing?</h3>
             <p className="text-[#6B7C93]">
-              T-slot is the term for aluminum framing systems using a T-shaped slot connection method with T-nut
-              fasteners. Multiple manufacturers produce T-slot compatible systems, which have been widely used in
-              industrial applications since the 1980s. The T-slot design allows for modular assembly and
+              friction-based is the term for aluminum framing systems using a T-shaped slot connection method with T-nut
+              fasteners. Multiple manufacturers produce friction-based compatible systems, which have been widely used in
+              industrial applications since the 1980s. The friction-based design allows for modular assembly and
               reconfiguration using standard fasteners.
             </p>
           </div>
 
           <div className="bg-white border border-gray-200 rounded-xl p-6">
-            <h3 className="font-['Barlow_Condensed'] text-xl font-bold mb-2">What are the disadvantages of T-slot framing?</h3>
+            <h3 className="font-['Barlow_Condensed'] text-xl font-bold mb-2">What are the disadvantages of friction-based framing?</h3>
             <p className="text-[#6B7C93]">
               The primary disadvantages are: (1) Connections loosen under vibration, requiring regular maintenance,
               (2) Limited joint strength (300-500 lbs) compared to mechanical locking (4,500+ lbs), (3) Precision drift
               over time in demanding applications, (4) Particle generation from micro-movements (problematic in cleanrooms),
-              and (5) Higher total cost of ownership due to maintenance requirements. These limitations make T-slot
+              and (5) Higher total cost of ownership due to maintenance requirements. These limitations make friction-based
               unsuitable for high-vibration, precision, or mission-critical applications.
             </p>
           </div>
@@ -583,12 +583,12 @@ export default function AluminumExtrusionGuide() {
           </div>
 
           <div className="bg-white border border-gray-200 rounded-xl p-6">
-            <h3 className="font-['Barlow_Condensed'] text-xl font-bold mb-2">Can you mix T-slot and mechanical locking systems?</h3>
+            <h3 className="font-['Barlow_Condensed'] text-xl font-bold mb-2">Can you mix friction-based and mechanical locking systems?</h3>
             <p className="text-[#6B7C93]">
               While both use similar aluminum profile dimensions, the connection methods are fundamentally different
               and should not be mixed within the same structure. Mechanical locking requires specific bracket designs
               with angled fastener holes. For best results, design complete structures using one system or the other.
-              If transitioning from T-slot to mechanical locking, plan to replace entire structures rather than
+              If transitioning from friction-based to mechanical locking, plan to replace entire structures rather than
               attempting to hybrid-connect the two systems.
             </p>
           </div>
@@ -596,7 +596,7 @@ export default function AluminumExtrusionGuide() {
           <div className="bg-white border border-gray-200 rounded-xl p-6">
             <h3 className="font-['Barlow_Condensed'] text-xl font-bold mb-2">How much weight can aluminum framing support?</h3>
             <p className="text-[#6B7C93]">
-              Load capacity depends on profile size, span length, and connection method. A 1.5" T-slot profile can
+              Load capacity depends on profile size, span length, and connection method. A 1.5" friction-based profile can
               typically support 500-2,000 lbs depending on span, with connection strength being the limiting factor
               (300-500 lbs per joint). The same profile with mechanical locking connections can support 5,000-15,000 lbs
               because joint strength (4,500+ lbs) no longer limits the system. For heavy loads, mechanical locking
@@ -608,7 +608,7 @@ export default function AluminumExtrusionGuide() {
             <h3 className="font-['Barlow_Condensed'] text-xl font-bold mb-2">Is aluminum framing suitable for cleanroom applications?</h3>
             <p className="text-[#6B7C93]">
               Aluminum's natural corrosion resistance and smooth anodized finish make it ideal for cleanrooms. However,
-              T-slot systems can generate aluminum oxide particles from micro-movements at connection points, making
+              friction-based systems can generate aluminum oxide particles from micro-movements at connection points, making
               them problematic for Class 100 or stricter cleanrooms. Mechanical locking systems like AngleLock eliminate
               this particle generation because connections don't move, making them the preferred choice for pharmaceutical,
               semiconductor, and medical device manufacturing cleanrooms.
@@ -619,7 +619,7 @@ export default function AluminumExtrusionGuide() {
             <h3 className="font-['Barlow_Condensed'] text-xl font-bold mb-2">What tools are needed to assemble aluminum framing?</h3>
             <p className="text-[#6B7C93]">
               Basic assembly requires: (1) Hex wrenches (typically 5mm or 3/16"), (2) Torque wrench for proper tightening
-              (12-15 ft-lbs for T-slot, 25-30 ft-lbs for mechanical locking), (3) Square for ensuring 90° angles, and
+              (12-15 ft-lbs for friction-based, 25-30 ft-lbs for mechanical locking), (3) Square for ensuring 90° angles, and
               (4) Measuring tools. Optional tools include a miter saw with carbide blade for cutting profiles and a drill
               for adding mounting holes. No welding or specialized skills required - most structures can be assembled
               with basic hand tools.
@@ -643,7 +643,7 @@ export default function AluminumExtrusionGuide() {
             <p className="text-[#6B7C93]">
               Load capacity calculations consider: (1) Profile section properties (moment of inertia, section modulus),
               (2) Span length (longer spans reduce capacity), (3) Load distribution (point load vs distributed),
-              (4) Connection strength (often the limiting factor in T-slot), and (5) Safety factor (typically 3:1 for
+              (4) Connection strength (often the limiting factor in friction-based), and (5) Safety factor (typically 3:1 for
               industrial applications). Most manufacturers provide load capacity charts. For critical applications, consult
               with a structural engineer and consider that mechanical locking systems' 10x stronger connections often make
               the connection no longer the weak point.
@@ -677,7 +677,7 @@ export default function AluminumExtrusionGuide() {
             <p className="text-[#6B7C93]">
               Properly designed aluminum framing structures can last 20-50+ years. Aluminum doesn't rust and the anodized
               surface protects against corrosion indefinitely. The limiting factor is typically connection degradation:
-              T-slot connections may require replacement of fasteners and brackets every 5-10 years depending on use, while
+              friction-based connections may require replacement of fasteners and brackets every 5-10 years depending on use, while
               mechanical locking connections maintain their strength indefinitely without replacement. Structures can be
               disassembled and reconfigured repeatedly without loss of strength (especially with mechanical locking),
               making aluminum framing a sustainable, long-term investment.
@@ -702,23 +702,23 @@ export default function AluminumExtrusionGuide() {
       <div className="mb-8">
         <h2 className="font-['Barlow_Condensed'] text-3xl font-bold mb-4">Related Resources</h2>
         <div className="grid md:grid-cols-3 gap-4">
-          <Link href="/compare/t-slot" className="bg-[#F4F6F8] rounded-xl p-6 hover:border-2 hover:border-[#C9A227] transition-all">
+          <Link href="/compare/friction-based" className="bg-[#F4F6F8] rounded-xl p-6 hover:border-2 hover:border-[#C9A227] transition-all">
             <h3 className="font-['Barlow_Condensed'] text-lg font-bold mb-2 flex items-center gap-2">
-              AngleLock vs T-Slot Comparison
+              AngleLock vs friction-based Comparison
               <ArrowRight className="w-4 h-4" />
             </h3>
             <p className="text-sm text-[#6B7C93]">Detailed side-by-side technical comparison with test data and performance metrics</p>
           </Link>
 
-          <Link href="/blog/why-t-slot-connections-fail" className="bg-[#F4F6F8] rounded-xl p-6 hover:border-2 hover:border-[#C9A227] transition-all">
+          <Link href="/blog/why-friction-based-connections-fail" className="bg-[#F4F6F8] rounded-xl p-6 hover:border-2 hover:border-[#C9A227] transition-all">
             <h3 className="font-['Barlow_Condensed'] text-lg font-bold mb-2 flex items-center gap-2">
-              Why T-Slot Connections Fail
+              Why friction-based Connections Fail
               <ArrowRight className="w-4 h-4" />
             </h3>
             <p className="text-sm text-[#6B7C93]">Understanding the physics of vibration-induced loosening and solutions</p>
           </Link>
 
-          <Link href="/blog/t-slot-vs-anglelock-total-cost" className="bg-[#F4F6F8] rounded-xl p-6 hover:border-2 hover:border-[#C9A227] transition-all">
+          <Link href="/blog/friction-based-vs-anglelock-total-cost" className="bg-[#F4F6F8] rounded-xl p-6 hover:border-2 hover:border-[#C9A227] transition-all">
             <h3 className="font-['Barlow_Condensed'] text-lg font-bold mb-2 flex items-center gap-2">
               Total Cost Analysis
               <ArrowRight className="w-4 h-4" />
@@ -731,16 +731,16 @@ export default function AluminumExtrusionGuide() {
       <div className="bg-gradient-to-br from-[#0A1628] to-[#1E3A5F] rounded-2xl p-8 text-white">
         <h2 className="font-['Barlow_Condensed'] text-3xl font-bold mb-4">Conclusion: Choosing the Right Aluminum Extrusion System</h2>
         <p className="text-white/80 mb-4">
-          Aluminum extrusion systems have evolved significantly since the introduction of T-slot framing in the 1980s.
-          While traditional T-slot systems remain suitable for many light-duty and static applications, next-generation
-          mechanical locking technology like AngleLock addresses the critical limitations that prevent T-slot systems
+          Aluminum extrusion systems have evolved significantly since the introduction of friction-based framing in the 1980s.
+          While traditional friction-based systems remain suitable for many light-duty and static applications, next-generation
+          mechanical locking technology like AngleLock addresses the critical limitations that prevent friction-based systems
           from being used in demanding industrial environments.
         </p>
         <p className="text-white/80 mb-4">
-          The choice between T-slot and mechanical locking comes down to your specific requirements: If your application
+          The choice between friction-based and mechanical locking comes down to your specific requirements: If your application
           involves vibration, precision requirements, high loads, cleanroom standards, or costly downtime, mechanical
           locking is the clear choice. For static, light-duty applications where frequent reconfiguration and low initial
-          cost are priorities, T-slot systems remain viable.
+          cost are priorities, friction-based systems remain viable.
         </p>
         <p className="text-white/80 mb-6">
           As manufacturing becomes more automated and precision requirements increase, mechanical locking represents the
@@ -749,10 +749,10 @@ export default function AluminumExtrusionGuide() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
           <Link
-            href="/compare/t-slot"
+            href="/compare/friction-based"
             className="inline-block px-6 py-3 bg-[#C9A227] text-[#0A1628] rounded-full font-semibold hover:bg-[#E0B830] transition-colors text-center"
           >
-            Compare AngleLock vs T-Slot
+            Compare AngleLock vs friction-based
           </Link>
           <Link
             href="/contact"

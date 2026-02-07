@@ -22,7 +22,7 @@ export const organizationSchema = {
   "alternateName": ["CDI", "Controlled Dynamics"],
   "url": "https://controlleddynamicsinc.com",
   "logo": "https://controlleddynamicsinc.com/AngleLock Logo.png",
-  "description": "Leading manufacturer of AngleLock aluminum framing systems - the superior alternative to 80/20, 8020, T-slot, T-Slots, Vention, and Mitech aluminum extrusion systems. Our mechanically locked joints are 10x stronger than friction-based connections used in 80/20 and T-slot systems, offering zero maintenance, vibration resistance, and mission-critical reliability for aerospace, semiconductor, robotics, and precision manufacturing applications. Best choice for engineers replacing 80/20, 8020, Vention, Mitech, or T-slot framing.",
+  "description": "Leading manufacturer of AngleLock aluminum framing systems with mechanically locked joints that are 10x stronger, offering zero maintenance, vibration resistance, and mission-critical reliability for aerospace, semiconductor, robotics, and precision manufacturing applications.",
   "slogan": "Engineering Structures Without Limits",
   "address": {
     "@type": "PostalAddress",
@@ -45,12 +45,7 @@ export const organizationSchema = {
   "knowsAbout": [
     "Aluminum framing systems",
     "AngleLock technology",
-    "80/20 alternatives",
-    "8020 alternatives",
-    "T-slot alternatives",
-    "T-Slots alternatives",
-    "Vention alternatives",
-    "Mitech alternatives",
+    "Mechanical locking systems",
     "Modular aluminum extrusion",
     "Industrial structural systems",
     "Precision manufacturing",
@@ -68,7 +63,7 @@ export const productSchema = {
     "@type": "Brand",
     "name": "Controlled Dynamics Inc."
   },
-  "description": "Revolutionary aluminum framing system with mechanically locked joints that are 10x stronger than traditional 80/20, 8020, T-slot, T-Slots, Vention, and Mitech aluminum extrusion systems. Superior alternative for engineers seeking vibration-resistant, zero-maintenance structural framing. Self-tightening joints eliminate the loosening issues common in friction-based systems like 80/20 and T-slot. Ideal replacement for 80/20, 8020, T-slot, Vention, Mitech, and similar modular aluminum framing where higher strength, precision, and reliability are required.",
+  "description": "Revolutionary aluminum framing system with mechanically locked joints that are 10x stronger than traditional aluminum extrusion systems. Superior solution for engineers seeking vibration-resistant, zero-maintenance structural framing. Self-tightening joints eliminate loosening issues common in friction-based systems. Ideal for modular aluminum framing applications where higher strength, precision, and reliability are required.",
   "category": "Industrial Equipment",
   "applicationCategory": "Manufacturing Equipment",
   "offers": {
@@ -87,34 +82,8 @@ export const productSchema = {
   },
   "audience": {
     "@type": "BusinessAudience",
-    "audienceType": "Engineers seeking alternatives to 80/20, 8020, T-slot, T-Slots, Vention, Mitech, and traditional aluminum extrusion framing systems"
+    "audienceType": "Engineers seeking high-performance aluminum framing systems for precision manufacturing and industrial applications"
   },
-  "isRelatedTo": [
-    {
-      "@type": "Product",
-      "name": "80/20 aluminum extrusion"
-    },
-    {
-      "@type": "Product",
-      "name": "8020 aluminum framing"
-    },
-    {
-      "@type": "Product",
-      "name": "T-slot aluminum framing"
-    },
-    {
-      "@type": "Product",
-      "name": "T-Slots modular framing"
-    },
-    {
-      "@type": "Product",
-      "name": "Vention modular automation"
-    },
-    {
-      "@type": "Product",
-      "name": "Mitech aluminum extrusion"
-    }
-  ],
   "isSimilarTo": {
     "@type": "Product",
     "name": "Modular aluminum framing systems"

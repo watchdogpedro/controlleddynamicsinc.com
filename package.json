@@ -12,6 +12,7 @@
     "node": "20.x"
   },
   "dependencies": {
+    "@next/third-parties": "^16.1.6",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.24",
     "googleapis": "^168.0.0",

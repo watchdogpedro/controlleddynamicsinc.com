@@ -11,33 +11,10 @@ import VideoModal from '@/components/ui/VideoModal';
 export default function Hero() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0A1628]">
-      {/* Hero Background Image */}
-      <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
-        <div className="relative w-full h-[70%]">
-          <Image
-            src="/robotics-hero.png"
-            alt="Advanced Robotics Manufacturing"
-            fill
-            className="object-cover opacity-70"
-            priority
-          />
-        </div>
-        {/* Dark overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0A1628]/30 via-[#0A1628]/40 to-[#0A1628]/60" />
-      </div>
-
-      {/* Animated Grid Background */}
-      <div className="absolute inset-0 opacity-10">
-        <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#C9A227" strokeWidth="0.5"/>
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#grid)" />
-        </svg>
-      </div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
+      {/* Subtle Gold Gradient Accents */}
+      <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-bl from-[#C9A227]/5 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-[#C9A227]/5 to-transparent rounded-full blur-3xl"></div>
 
       <Container className="relative z-10 pt-24 pb-16">
         <motion.div
@@ -47,27 +24,27 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
         >
           <motion.h1
-            className="font-['Barlow_Condensed'] text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-6 tracking-tight"
+            className="font-['Barlow_Condensed'] text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold text-[#0A1628] mb-6 tracking-tight"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Engineering Structures
+            Structures Engineered for
             <br />
-            <span className="text-[#C9A227]">Without Limits</span>
+            <span className="text-[#C9A227]">What Matters Most</span>
           </motion.h1>
 
           <motion.p
-            className="text-lg sm:text-xl lg:text-2xl text-white/80 mb-8 max-w-4xl mx-auto leading-relaxed"
+            className="text-lg sm:text-xl lg:text-2xl text-[#0A1628]/70 mb-8 max-w-4xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             Mission-critical aluminum framing systems
             <br />
-            powered by breakthrough <span className="font-bold">AngleLock</span> technology.
+            powered by breakthrough <span className="font-bold text-[#C9A227]">AngleLock</span> technology.
             <br className="hidden sm:block" />
-            <span className="text-[#C9A227]">Better than steel. Lighter than steel. Infinitely configurable.</span>
+            <span className="text-[#C9A227] font-semibold">Better than steel. Lighter than steel. Infinitely configurable.</span>
           </motion.p>
 
           <motion.div

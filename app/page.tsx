@@ -4,7 +4,6 @@ import Hero from '@/components/sections/Hero';
 import TrustBar from '@/components/sections/TrustBar';
 import IndustryShowcase from '@/components/sections/IndustryShowcase';
 import TechnologyFeatures from '@/components/sections/TechnologyFeatures';
-import Statistics from '@/components/sections/Statistics';
 import MarketReportCTA from '@/components/sections/MarketReportCTA';
 import CTASection from '@/components/sections/CTASection';
 import StructuredData, { organizationSchema, productSchema, enhancedOrganizationSchema } from '@/components/seo/StructuredData';
@@ -23,7 +22,6 @@ export default function Home() {
         <TrustBar />
         <IndustryShowcase />
         <TechnologyFeatures />
-        <Statistics />
 
         {/* Market Report Download */}
         <MarketReportCTA variant="default" />

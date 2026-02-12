@@ -64,8 +64,9 @@ next-env.d.ts
 Thumbs.db
 Desktop.ini
 
-# Claude Code
-.claude/
+# Claude Code (but allow rules.md)
+.claude/*
+!.claude/rules.md
 
 # Cache directories
 .cache

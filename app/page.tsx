@@ -1,6 +1,7 @@
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
+import CompatibilityBand from '@/components/sections/CompatibilityBand';
 import TrustBar from '@/components/sections/TrustBar';
 import IndustryShowcase from '@/components/sections/IndustryShowcase';
 import TechnologyFeatures from '@/components/sections/TechnologyFeatures';
@@ -19,6 +20,7 @@ export default function Home() {
  <Header />
  <main>
  <Hero />
+ <CompatibilityBand />
  <TrustBar />
  <IndustryShowcase />
  <TechnologyFeatures />

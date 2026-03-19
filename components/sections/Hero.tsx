@@ -64,7 +64,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
           >
-            Mission-Critical Structural Engineering
+            T-Slot Aluminum Extrusion Framing Systems
           </motion.p>
 
           <motion.h1
@@ -84,9 +84,9 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Precision aluminum framing systems powered by breakthrough{' '}
-            <span className="font-bold text-[#C9A227]">AngleLock</span> technology —
-            trusted across aerospace, life sciences, semiconductor, robotics, and industrial markets.
+            T-slot aluminum extrusion structures — compatible with standard profiles, built stronger with{' '}
+            <span className="font-bold text-[#C9A227]">AngleLock</span> technology.
+            Trusted across aerospace, life sciences, semiconductor, robotics, and industrial markets.
           </motion.p>
 
           <motion.div

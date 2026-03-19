@@ -4,14 +4,22 @@ import "./globals.css";
 
 export const metadata: Metadata = {
  metadataBase: new URL('https://controlleddynamicsinc.com'),
- title: "Controlled Dynamics Inc. | Advanced Industrial Structural Systems",
- description: "Mission-critical aluminum framing systems powered by breakthrough AngleLock technology. Superior mechanical locking system with 10x strength, zero maintenance, and 50% faster assembly for industrial applications.",
+ title: "Controlled Dynamics Inc. | T-Slot Aluminum Extrusion Framing Systems | AngleLock Technology",
+ description: "T-slot aluminum extrusion framing systems compatible with standard aluminum profiles — engineered stronger with AngleLock technology. The superior alternative for aerospace, semiconductor, robotics, and industrial applications. 10x stronger, zero maintenance, 50% faster assembly.",
  keywords: [
+ // T-slot & aluminum extrusion core terms (what people search)
+ "T-slot aluminum extrusion", "T slot aluminum framing", "aluminum extrusion framing system",
+ "modular aluminum extrusion", "aluminum T-slot framing", "T-slot framing system",
+ "aluminum profile framing", "aluminum structure framing", "T-slot aluminum structure",
+ "aluminum extrusion alternative", "T-slot alternative", "8020 alternative",
+ "8020 compatible", "8020 framing alternative", "modular aluminum structures",
+ "aluminum extrusion system", "T-slot compatible", "aluminum framing system",
+ "structural aluminum extrusion", "industrial aluminum framing", "aluminum framing profiles",
  // Core technology
  "AngleLock technology", "mechanical locking", "aluminum framing", "industrial structures",
  // Applications
  "aerospace", "life sciences", "semiconductor", "robotics", "modular systems",
- "aluminum extrusion", "modular framing system", "industrial framing",
+ "modular framing system", "industrial framing",
  "structural aluminum", "machine base", "workstation frame", "equipment support",
  "vibration resistant framing", "precision framing system", "heavy duty aluminum frame",
  "cleanroom structural systems", "vibration isolated platforms", "reconfigurable fixtures",
@@ -39,8 +47,8 @@ export const metadata: Metadata = {
  },
  },
  openGraph: {
- title: "Controlled Dynamics Inc. | Advanced Industrial Structural Systems",
- description: "Engineering structures without limits. Mission-critical aluminum framing systems powered by breakthrough AngleLock technology.",
+ title: "Controlled Dynamics Inc. | T-Slot Aluminum Extrusion Framing Systems",
+ description: "T-slot aluminum extrusion framing compatible with standard aluminum profiles — engineered stronger with AngleLock technology. The superior choice for precision industrial structures.",
  url: "https://controlleddynamicsinc.com",
  siteName: "Controlled Dynamics Inc.",
  type: "website",
@@ -56,8 +64,8 @@ export const metadata: Metadata = {
  },
  twitter: {
  card: 'summary_large_image',
- title: "Controlled Dynamics Inc. | Advanced Industrial Structural Systems",
- description: "Mission-critical aluminum framing systems powered by breakthrough AngleLock technology. 10x stronger with mechanical locking.",
+ title: "Controlled Dynamics Inc. | T-Slot Aluminum Extrusion Framing Systems",
+ description: "T-slot aluminum extrusion framing compatible with standard aluminum profiles — AngleLock technology makes it 10x stronger with zero maintenance.",
  images: ['/AngleLock Logo.png'],
  },
  verification: {

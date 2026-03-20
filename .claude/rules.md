@@ -249,7 +249,7 @@ git push --dry-run origin main
 - **Large pushes fail** with "unexpected disconnect while reading sideband packet"
 - **Small pushes work fine** (single commits or small batches)
 - **Not an IP block** - GitHub API, SSH auth, and fetches all work
-- **Network/ISP specific** - Heroku pushes of any size work fine
+- **Network/ISP specific** - issue is with large GitHub uploads from residential ISP
 
 ### Symptoms:
 ```
@@ -263,7 +263,7 @@ fatal: the remote end hung up unexpectedly
 - User IP: 75.73.101.218 (residential ISP)
 - Small data transfers work
 - Large data transfers timeout/disconnect
-- GitHub-specific (Heroku works fine with same data)
+- GitHub-specific upload size issue
 
 ### ✅ SOLUTION: Push in Small Batches
 
@@ -306,7 +306,6 @@ git fetch origin               # ✅ Pull/fetch
 git push origin main           # ❌ Large push (fails)
 
 # Alternative that should work:
-git push heroku main           # ✅ Heroku (different service)
 ```
 
 3. **Verify it's not a general block:**
@@ -323,7 +322,6 @@ When push fails, check:
 - [ ] Does GitHub API work? (`gh api rate_limit`)
 - [ ] Does SSH auth work? (`ssh -T git@github.com`)
 - [ ] Does fetch work? (`git fetch origin`)
-- [ ] Does Heroku push work? (`git push heroku main`)
 - [ ] How many commits trying to push? (`git log origin/main..HEAD --oneline | wc -l`)
 
 If tiny pushes work but large ones fail → **Use incremental push strategy**
@@ -348,7 +346,7 @@ If tiny pushes work but large ones fail → **Use incremental push strategy**
 
 **Network path difference:**
 - GitHub: Home ISP → GitHub's servers (residential connection, may throttle)
-- Heroku: Home ISP → Heroku's servers (different routing, no throttle)
+- Vercel: deploys via GitHub connection, not direct upload
 
 **ISP behavior:**
 - Some residential ISPs throttle large uploads to specific services

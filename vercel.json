@@ -1,0 +1,16 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "controlleddynamicsinc.com" }],
+      "destination": "https://anglelock.com/",
+      "permanent": false
+    },
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.controlleddynamicsinc.com" }],
+      "destination": "https://anglelock.com/",
+      "permanent": false
+    }
+  ]
+}

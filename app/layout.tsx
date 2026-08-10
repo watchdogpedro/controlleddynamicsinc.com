@@ -47,8 +47,8 @@ export const metadata: Metadata = {
  },
  },
  openGraph: {
- title: "Controlled Dynamics Inc. | T-Slot Aluminum Extrusion Framing Systems",
- description: "T-slot aluminum extrusion framing compatible with standard aluminum profiles — engineered stronger with AngleLock technology. The superior choice for precision industrial structures.",
+ title: "AngleLock — The Breakthrough Beyond T-Slot",
+ description: "Mechanically locked aluminum framing that goes beyond traditional T-slot — 10× stronger, zero maintenance, 50% faster assembly. Engineered for aerospace, semiconductor, life sciences, and robotics.",
  url: "https://controlleddynamicsinc.com",
  siteName: "Controlled Dynamics Inc.",
  type: "website",
@@ -64,8 +64,8 @@ export const metadata: Metadata = {
  },
  twitter: {
  card: 'summary_large_image',
- title: "Controlled Dynamics Inc. | T-Slot Aluminum Extrusion Framing Systems",
- description: "T-slot aluminum extrusion framing compatible with standard aluminum profiles — AngleLock technology makes it 10x stronger with zero maintenance.",
+ title: "AngleLock — The Breakthrough Beyond T-Slot",
+ description: "Mechanically locked aluminum framing that goes beyond traditional T-slot — 10× stronger, zero maintenance, 50% faster assembly.",
  images: ['/AngleLock Logo.png'],
  },
  verification: {
